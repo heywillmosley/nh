@@ -1,0 +1,54 @@
+[19-Jan-2018 23:47:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[28-Jan-2018 17:25:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/session.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/session.php on line 8
+[14-Mar-2018 21:45:57 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[14-Mar-2018 22:30:55 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[23-Mar-2018 04:52:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[23-Mar-2018 05:38:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[23-Mar-2018 06:51:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[23-Mar-2018 07:29:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[21-Aug-2018 06:08:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[11-Sep-2018 16:25:08 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[19-Nov-2018 19:25:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_robots() in /home/thenewhu/public_html/wp-includes/template-loader.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/template-loader.php on line 28
+[20-Nov-2018 01:37:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_robots() in /home/thenewhu/public_html/wp-includes/template-loader.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/template-loader.php on line 28
+[20-Nov-2018 06:12:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_robots() in /home/thenewhu/public_html/wp-includes/template-loader.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/template-loader.php on line 28
+[14-Dec-2018 12:26:24 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[01-Feb-2019 02:20:54 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[01-Feb-2019 09:02:17 UTC] PHP Fatal error:  Class 'Walker' not found in /home/thenewhu/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[27-Feb-2019 07:01:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[27-Feb-2019 13:57:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10

@@ -1,0 +1,322 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce - Copper CRM - Integration\n"
+"POT-Creation-Date: 2019-05-06 17:59+0300\n"
+"PO-Revision-Date: 2017-09-01 14:52+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: includes\n"
+"X-Poedit-SearchPath-1: admin\n"
+"X-Poedit-SearchPath-2: woocommerce-copper-integration.php\n"
+
+#: admin/RenderFields.php:19 admin/RenderFields.php:46
+#: admin/WcSettingsPage.php:359 admin/WcSettingsPage.php:396
+msgid "Not chosen"
+msgstr ""
+
+#: admin/RenderFields.php:41
+msgid "Default value"
+msgstr ""
+
+#: admin/RenderFields.php:61
+msgid "Form value (optional)"
+msgstr ""
+
+#: admin/WcBulkOrderToCrm.php:31
+msgid "Send to Copper"
+msgstr ""
+
+#: admin/WcBulkOrderToCrm.php:81
+#, php-format
+msgid ""
+"%s orders registered for sending to CRM, the dispatch time depends on "
+"the number of orders."
+msgstr ""
+
+#: admin/WcSettingsPage.php:45
+msgid "ERROR"
+msgstr ""
+
+#: admin/WcSettingsPage.php:46
+msgid "To integrate with Copper, your must fill API token and email."
+msgstr ""
+
+#: admin/WcSettingsPage.php:65
+msgid "Integration settings check is successfully."
+msgstr ""
+
+#: admin/WcSettingsPage.php:89
+msgid "Settings successfully updated."
+msgstr ""
+
+#: admin/WcSettingsPage.php:99 admin/WcSettingsPage.php:100
+msgid "Copper CRM"
+msgstr ""
+
+#: admin/WcSettingsPage.php:112
+msgid "Integration settings"
+msgstr ""
+
+#: admin/WcSettingsPage.php:117
+msgid "Plugin documentation: "
+msgstr ""
+
+#: admin/WcSettingsPage.php:119
+msgid "open"
+msgstr ""
+
+#: admin/WcSettingsPage.php:121
+msgid ""
+"Or open the folder `documentation` in the plugin and open index.html"
+msgstr ""
+
+#: admin/WcSettingsPage.php:133
+msgid "Enable"
+msgstr ""
+
+#: admin/WcSettingsPage.php:148
+msgid "API token"
+msgstr ""
+
+#: admin/WcSettingsPage.php:160
+msgid "Your personal API token"
+msgstr ""
+
+#: admin/WcSettingsPage.php:168
+msgid "User email"
+msgstr ""
+
+#: admin/WcSettingsPage.php:188
+msgid "Type"
+msgstr ""
+
+#: admin/WcSettingsPage.php:196
+msgid "Lead"
+msgstr ""
+
+#: admin/WcSettingsPage.php:201
+msgid "Opportunity"
+msgstr ""
+
+#: admin/WcSettingsPage.php:211
+msgid "Save"
+msgstr ""
+
+#: admin/WcSettingsPage.php:218
+msgid "Fields mapping"
+msgstr ""
+
+#: admin/WcSettingsPage.php:223
+msgid "In the following fields, you can use these tags:"
+msgstr ""
+
+#: admin/WcSettingsPage.php:250
+msgid "Utm-fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:265
+msgid "GA fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:276
+msgid "Additional tags"
+msgstr ""
+
+#: admin/WcSettingsPage.php:302
+msgid "Lead fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:307
+msgid "Opportunity fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:312
+msgid "Organization fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:317
+msgid "Person fields"
+msgstr ""
+
+#: admin/WcSettingsPage.php:322
+msgid "Status mapping"
+msgstr ""
+
+#: admin/WcSettingsPage.php:327 admin/WcSettingsPage.php:332
+msgid "Value - auto set"
+msgstr ""
+
+#: admin/WcSettingsPage.php:343
+msgid "For lead"
+msgstr ""
+
+#: admin/WcSettingsPage.php:356 includes/CrmFields.php:110
+msgid "Status"
+msgstr ""
+
+#: admin/WcSettingsPage.php:380
+msgid "For opportunity"
+msgstr ""
+
+#: admin/WcSettingsPage.php:393
+msgid "Stage / Pipeline"
+msgstr ""
+
+#: admin/WcSettingsPage.php:435
+msgid "Save settings"
+msgstr ""
+
+#: includes/Bootstrap.php:79
+msgid ""
+"To run the plug-in, you must first install and activate the WooCommerce "
+"plugin."
+msgstr ""
+
+#: includes/Bootstrap.php:83
+msgid "Error while activating the WooCommerce - Copper CRM - Integration"
+msgstr ""
+
+#: includes/Crm.php:221 includes/Crm.php:250
+msgid "Response Copper CRM"
+msgstr ""
+
+#: includes/Crm.php:227
+msgid ""
+"Empty response. Check the API token and email. An error occurred while "
+"verifying the connection to the Copper CRM."
+msgstr ""
+
+#: includes/Crm.php:258
+msgid "An error occurred while verifying the connection to the Copper CRM."
+msgstr ""
+
+#: includes/CrmFields.php:91
+msgid "Name"
+msgstr ""
+
+#: includes/CrmFields.php:92
+msgid "Title"
+msgstr ""
+
+#: includes/CrmFields.php:93
+msgid "First Name"
+msgstr ""
+
+#: includes/CrmFields.php:94
+msgid "Middle Name"
+msgstr ""
+
+#: includes/CrmFields.php:95
+msgid "Last Name"
+msgstr ""
+
+#: includes/CrmFields.php:96
+msgid "Prefix"
+msgstr ""
+
+#: includes/CrmFields.php:97
+msgid "Suffix"
+msgstr ""
+
+#: includes/CrmFields.php:98
+msgid "Company"
+msgstr ""
+
+#: includes/CrmFields.php:99
+msgid "Street"
+msgstr ""
+
+#: includes/CrmFields.php:100
+msgid "City"
+msgstr ""
+
+#: includes/CrmFields.php:101
+msgid "State"
+msgstr ""
+
+#: includes/CrmFields.php:102
+msgid "Zip"
+msgstr ""
+
+#: includes/CrmFields.php:103
+msgid "Country"
+msgstr ""
+
+#: includes/CrmFields.php:104
+msgid "Source"
+msgstr ""
+
+#: includes/CrmFields.php:105
+msgid "Description"
+msgstr ""
+
+#: includes/CrmFields.php:106 includes/CrmFields.php:107
+msgid "Email"
+msgstr ""
+
+#: includes/CrmFields.php:108
+msgid "Phone"
+msgstr ""
+
+#: includes/CrmFields.php:109
+msgid "Value"
+msgstr ""
+
+#: includes/CrmFields.php:111
+msgid "Tags"
+msgstr ""
+
+#: includes/CrmFields.php:112
+msgid "Contact Type"
+msgstr ""
+
+#: includes/CrmFields.php:113
+msgid "Email Domain"
+msgstr ""
+
+#: includes/CrmFields.php:114
+msgid "Owner"
+msgstr ""
+
+#: includes/CrmFields.php:115
+msgid "Pipeline - Stage"
+msgstr ""
+
+#: includes/Helper.php:22
+msgid ""
+"Please verify the purchase code on the plugin integration settings page "
+"- "
+msgstr ""
+
+#: includes/OrderToCrm.php:180 includes/OrderToCrm.php:234
+msgid "Order"
+msgstr ""
+
+#: includes/OrderToCrm.php:203
+msgid "Added lead in CRM #"
+msgstr ""
+
+#: includes/OrderToCrm.php:262
+msgid "Added opportunity in CRM #"
+msgstr ""
+
+#: includes/OrderToCrm.php:473
+msgid "Quantity"
+msgstr ""
+
+#: includes/OrderToCrm.php:477 includes/OrderToCrm.php:489
+msgid "Summ"
+msgstr ""
+
+#: includes/OrderToCrm.php:485
+msgid "Shipping"
+msgstr ""

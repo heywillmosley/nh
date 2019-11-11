@@ -1,0 +1,5 @@
+04/28/15 13:34:08: C:\Program Files\Poedit\GettextTools\bin\xgettext.exe: Non-ASCII string at assets/graph/scripts/jquery.jqplot.min.js:3.
+04/28/15 13:34:08:                                                        Please specify the source encoding through --from-code
+04/28/15 13:34:08:                                                        
+04/28/15 13:34:08: Entries in the catalog are probably incorrect.
+04/28/15 13:34:08: Updating the catalog failed. Click on 'Details >>' for details.

@@ -1,0 +1,24 @@
+<wpml-config>
+	<admin-texts>
+		<key name="woocommerce_print_products_options">
+			<key name="headerTopLeftText" />
+			<key name="headerTopMiddleText" />
+			<key name="headerTopRightText" />
+			<key name="headerTextAfterHeader" />
+			<key name="metaFreeText" />
+			<key name="footerTopLeftText" />
+			<key name="footerTopMiddleText" />
+			<key name="footerTopRightText" />
+			<key name="foooterTextBeforeFooter" />
+			<key name="headerTopLeftImage" />
+			<key name="headerTopMiddleImage" />
+			<key name="headerTopRightImage" />
+			<key name="footerTopLeftImage" />
+			<key name="footerTopMiddleImage" />
+			<key name="footerTopRightImage" />
+			<key name="textAlign" />
+			<key name="customCSS" />
+			<key name="customJS" />
+		</key> 
+	</admin-texts>
+</wpml-config>

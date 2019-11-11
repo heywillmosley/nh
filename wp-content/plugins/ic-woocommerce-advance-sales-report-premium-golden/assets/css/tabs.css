@@ -1,0 +1,204 @@
+
+div.clean_rounded-horizontal { /* The main container */
+	position:relative;
+	clear:both;
+	width:100%; /* Set the full width */
+}
+
+/* Directional Buttons (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean_rounded-horizontal > div.st_tabs a.st_prev, 
+div.clean_rounded-horizontal > div.st_tabs a.st_next { /* Directional buttons (previous/next) */
+	display:none;
+	position:absolute;
+	top:0px;
+	z-index:110;
+	height:35px;
+	width:43px;
+	text-indent:-999em;
+	border:1px solid #D4D4EE;
+	outline:none;
+	background:#fff url("../images/arrows_h.gif") no-repeat;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_prev { /* Previous button */
+	left:0px;
+	background-position:center 12px;
+	border-top-left-radius:5px;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_prev:hover { /* Previous button hover */	
+	background-position:center -48px;
+	background-color:#F8F5F0;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_next { /* Next button */
+	right:0px;
+	background-position:center -18px;
+	border-top-right-radius:5px;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_next:hover { /* Next button hover */	
+	background-position:center -78px;
+	background-color:#f8f8f8;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_prev.st_btn_disabled, 
+div.clean_rounded-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Previous and next buttons disabled state */
+	cursor:default;
+	background-color:#f8f8f8;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_prev.st_btn_disabled { /* Previous button disabled state */
+	background-position:center -108px;
+}
+div.clean_rounded-horizontal > div.st_tabs a.st_next.st_btn_disabled { /* Next button disabled state */
+	background-position:center -138px;
+}
+
+/* Tabs (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean_rounded-horizontal > div.st_tabs {
+	position:relative;
+	z-index:100;		
+	width:100% !important;	
+	/*height:35px;*/
+	margin-bottom:-1px;
+	overflow:hidden;
+}
+div.clean_rounded-horizontal.st_sliding_active > div.st_tabs {
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	overflow:visible;
+}
+div.clean_rounded-horizontal > div.st_tabs div.st_tabs_wrap {
+	position:relative !important; /* Don't remove: The tabs sliding position will be calculated from the tabs <ul> first parent element with position:relative */
+	width:100%;
+}
+div.clean_rounded-horizontal.st_sliding_active > div.st_tabs div.st_tabs_wrap { /* The '.st_sliding_active' class is added to the main container when tab sliding is activated */
+	width:auto !important;
+	margin:0px 44px; /* Adds side margins to make space for the arrow buttons */
+}
+div.clean_rounded-horizontal > div.st_tabs ul { /* Tabs unordered list */
+	width:10000px; /* Set to an arbitrary high value */
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+div.clean_rounded-horizontal > div.st_tabs ul li { /* Tab list elements */
+	display:block;
+	float:left;
+	margin:0px;
+	/*background:url(../images/nav-bg.jpg) left top repeat-x #F0EBDF;*/
+	border-radius:4px 4px 0 0;
+	height:40px;
+}
+
+div.clean_rounded-horizontal > div.st_tabs ul li .leftimg{
+	margin:0px;
+	/*z-index:200;*/
+	background:url(../images/step-blue.png) no-repeat left bottom;
+	display:block;
+	position:absolute;
+	height:39px;
+	width:15px;
+	top:0;
+	left:-13px;
+	padding:0;
+	border:none;
+	}
+	
+div.clean_rounded-horizontal > div.st_tabs ul li a { /* Tab links */
+	/*display:block;*/
+	height:39px;
+	line-height:39px;
+	margin:0px;
+	padding:0px 13px 0 13px;
+	color:#373737;
+	text-decoration:none;
+	outline:none;
+	border-top:1px solid #D4D4EE;
+	/*border-right:1px solid #D4D4EE;*/
+	
+	
+	display:inline;
+	float:left;
+	background:url(../images/step-blue.png) no-repeat -23px bottom;
+	/*height:39px;
+	line-height:39px;*/
+	/*padding:0 18px 0 13px;*/
+	position:relative;
+}
+
+div.clean_rounded-horizontal > div.st_tabs ul li span{padding-left:6px;}
+
+/*div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_first{background-position:-20px 0px}*/
+div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_last{background-position:right bottom}
+	
+div.clean_rounded-horizontal > div.st_tabs ul li a:hover{ /* Tabs hover state */
+	color:#333;
+	background-position:-50px 0px;
+}
+
+div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_first { /* First tab element */
+	border-left:1px solid #D4D4EE;
+	border-top-left-radius:5px;
+}
+div.clean_rounded-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_first { /* First tab element (with tab sliding activated) */
+	border-left:0 none;
+	border-top-left-radius:0px; /* Reset top-left border radius */
+	background-position:-22px bottom
+}
+div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_last { /* Last tab element */
+	border-top-right-radius:5px;
+	border-right:1px solid #D4D4EE
+}
+div.clean_rounded-horizontal.st_sliding_active > div.st_tabs ul li a.st_tab_last { /* Last tab element (with tab sliding activated) */
+	border-right:0 none;
+	border-top-right-radius:0px;
+}
+div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_active { /* Tab active/highlighted state */
+	/*background:#F4F4FD;*/
+	color:#3233BA;
+	height:39px;
+	background-position:-50px 0px;
+}
+
+div.clean_rounded-horizontal > div.st_tabs ul li a.st_tab_active .leftimg, 
+div.clean_rounded-horizontal > div.st_tabs ul li a:hover > .leftimg{background-position:left 0px ;}
+	
+
+/* Content (horizontal)
+------------------------------------------------------------------------------------- */
+div.clean_rounded-horizontal > div.st_views { /* Main content container */
+	position:relative;
+	min-height:300px;
+	padding:0px !important; /* No padding on this container */
+	/*line-height:19px;*/
+	border:1px solid #D4D4EE;
+	background-color:#F4F4FD;
+	overflow:hidden;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+
+div.clean_rounded-horizontal.st_sliding_active > div.st_views {
+	border-top-right-radius:0px; /* Remove top-right border radius when tab sliding is enabled */
+}
+div.clean_rounded-horizontal > div.st_views div.st_view { /* Content containers */
+	z-index:5;
+	width:100%;
+	/*height:100%;*/
+	/*overflow:auto;*/
+	background-image:none;
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
+	box-sizing:border-box; /* Set 'border-box' box-sizing when using 100% width/height combined with margin or padding */
+	/* Background-image attributes */
+	background-repeat:no-repeat !important;
+	background-position:center center !important;
+	background-color:transparent !important;
+	-webkit-font-smoothing:antialiased; /* Safari text rendering fix */
+}
+div.clean_rounded-horizontal > div.st_views div.st_view_inner { /* Inner content containers */
+	padding:20px 15px 20px 15px; /* Padding for the content */
+	height:auto
+}
+div.clean_rounded-horizontal > div.st_views div.st_view_first { /* First content container */
+	display:block; /* Show the first content container */
+}

@@ -1,0 +1,224 @@
+# Copyright (C) 2017 SkyVerge
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Elavon Converge Gateway 2.1.0\n"
+"Report-Msgid-Bugs-To: https://woocommerce.com/my-account/tickets/\n"
+"POT-Creation-Date: 2014-06-15 22:41:26+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/abstract-wc-gateway-elavon-converge.php:71
+msgid ""
+"Elavon Converge Payment Gateway provides a seamless and secure checkout "
+"process for your customers"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:74
+msgid "Production"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:75
+msgid "Demo"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:110
+msgid "Merchant ID"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:112
+msgid ""
+"Converge ID/Account ID as provided by Elavon.  This will be six digits "
+"long, and start with the number 5 or 6."
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:117
+msgid "User ID"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:119
+msgid "Converge user ID as configured on Converge"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:124
+msgid "PIN"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:126
+msgid "Converge PIN as generated within Converge"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:131
+msgid "Demo Merchant ID"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:133
+msgid ""
+"Converge ID/Account ID as provided by Elavon for your demo account.  This "
+"will be six digits long, and start with the number 5 or 6."
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:138
+msgid "Demo User ID"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:140
+msgid "Converge demo user ID as configured on Converge"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:145
+msgid "Demo PIN"
+msgstr ""
+
+#: includes/abstract-wc-gateway-elavon-converge.php:147
+msgid "Converge demo PIN as generated within Converge"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:52
+msgid "Elavon Converge Credit Card"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:91
+msgid "Multi-Currency"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:92
+msgid "Enable Multi-Currency transactions."
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:96
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
+msgid ""
+"Visa &amp; MasterCard only. Note that you %1$smust enable%2$s "
+"Multi-Currency for your account by contacting your merchant terminal "
+"representative."
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:112
+msgid "Merchant Terminal Currency"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:113
+msgid "The currency in which you accept settled payments."
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-credit-card.php:194
+msgid ""
+"Voice authorization required to complete transaction, please call your "
+"merchant account."
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-echeck.php:49
+msgid "Elavon Converge eCheck"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-echeck.php:71
+msgid "%1$sBilling Company%2$s is required for business eChecks"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-echeck.php:96
+msgid "Authorization Terms"
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-echeck.php:98
+msgid ""
+"Payment authorization terms that the customer will see and agree to during "
+"checkout."
+msgstr ""
+
+#: includes/class-wc-gateway-elavon-converge-echeck.php:100
+#. translators: Placeholders: %s - the {order_total} placeholder
+msgid "Use the %s tag to display the order total."
+msgstr ""
+
+#: includes/payment-forms/class-wc-elavon-converge-payment-form.php:52
+msgid "Test Amount"
+msgstr ""
+
+#: includes/payment-forms/class-wc-elavon-converge-payment-form.php:54
+msgid ""
+"Enter a test amount to trigger a specific error response, or leave blank to "
+"use the order total."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Elavon Converge Gateway"
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:259
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - the plugin name, %3$s
+#. - </strong> tag, %4$s - <a> tag, %5$s - </a> tag
+msgid ""
+"%1$s%2$s is almost ready!%3$s To get started, please ​%4$sconnect to Elavon "
+"Converge%5$s."
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:274
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - the plugin name, %3$s
+#. - </strong> tag, %4$s - <a> tag, %5$s - </a> tag
+msgid ""
+"%1$sThanks for installing %2$s!%3$s Need help? %4$sRead the "
+"documentation%5$s."
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:301
+msgid ""
+"%s is inactive because your store's currency requires Multi-Currency. "
+"Please confirm that Multi-Currency is enabled for your account."
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:309
+msgid ""
+"%1$s is inactive because your store's currency requires Multi-Currency. "
+"Please confirm that Multi-Currency is enabled for your account %2$sin the "
+"gateway settings%3$s."
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:351
+msgid "WooCommerce Elavon Converge"
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:367
+msgid "Configure eChecks"
+msgstr ""
+
+#: woocommerce-gateway-elavon.php:369
+msgid "Configure Credit Cards"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woocommerce.com/products/elavon-vm-payment-gateway/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds the Elavon Converge (Virtual Merchant) Gateway to your WooCommerce "
+"website. Requires an SSL certificate."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SkyVerge"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woocommerce.com/"
+msgstr ""
+
+#: includes/api/requests/abstract-wc-elavon-converge-api-transaction-request.php:70
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: includes/payment-forms/class-wc-elavon-converge-echeck-payment-form.php:63
+msgctxt "account type"
+msgid "Personal"
+msgstr ""
+
+#: includes/payment-forms/class-wc-elavon-converge-echeck-payment-form.php:64
+msgctxt "account type"
+msgid "Business"
+msgstr ""

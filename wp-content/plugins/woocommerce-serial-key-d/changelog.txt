@@ -1,0 +1,121 @@
+2017.12.25 - version 2.0.0
+ * New: Reading of serial key data for a user via WP REST API
+ * Fix: PHP Notice:  Undefined variable: found (WC 3.2.0+)
+ * Update: StoreApps Connector improvements
+ * Update: POT file
+
+2017.10.13 - version 1.9.1
+ * Update: StoreApps Connector improvements
+
+2017.10.09 - version 1.9.0
+ * New: Dashboard to view and manage serial keys (Beta)
+ * New: Tested upto WooCommerce 3.1.0+
+ * New: Show product name on Import Serial Keys page while importing product specific keys
+ * New: Store Connector
+ * New: Added WooCommerce version check meta
+ * Fix: A few warnings related to WooCommerce 3.0.0+
+ * Update: Placement and language of 'Save changes' button for notification count on Import Serial Keys page to avoid confusion
+ * Update: Will now support only WooCommerce 2.5+
+ * Update: POT file
+
+2017.04.24 - version 1.8.0
+ * New: Compatibility with WooCommerce 3.0.0+
+ * New: Import Serial Key using CSV file for products separately
+ * Update: Improved security for importing CSV file
+ * Update: Template for sending email about remaining serial keys
+ * Update: POT file
+
+2016.12.26 - version 1.7.9
+ * Fix: Serial Keys not visible on Downloads Tab on My Account page for WooCommerce Subscriptions products (version 2.0+)
+ * Update: POT file
+
+2016.11.14 - version 1.7.8
+ * Fix: Serial Keys not visible on Downloads Tab on My Account page if WooCommerce version is 2.6.5+
+ * Update: POT file
+
+2016.10.10 - version 1.7.7
+ * Update: Important changes related to Automatic Updates of this plugin
+ * Update: POT file
+
+2016.08.04 - version 1.7.6
+ * New: Fastest access to documentation in admin panel through Quick Help widget
+ * Fix: Showing error "Download has expired" for valid serial key as well
+ * Update: Carry forward UUIDs from previous orders to new order
+ * Update: During serial key validation, consider all previous UUIDs as well
+
+2016.06.20 - version 1.7.5
+ * New: Tested upto WooCommerce 2.6+
+ * Update: Serial Keys are now visible on Downloads Tab on My Account Page (WooCommerce 2.6+)
+ * Update: Added compatibility files for WooCommerce 2.5 & WooCommerce 2.6
+ * Update: Minor changes in upgrade file
+ * Update: Changes on Welcome Page
+ * Update: POT file
+
+2016.05.26 - version 1.7.4
+ * Fix: Upgrade file - Un-necessary calls for latest update on every background process
+ * Update: Minor jQuery change for social links styles on plugins page
+ * Update: Upgrade file - Update plugin's download url if required
+ * Update: Removal of PHP notices generated from upgrade file
+ * Update: Additional filter for modifying validation response
+
+2016.01.27 - version 1.7.3
+ * New: Tested up to WooCommerce 2.5
+ * New: Sample CSV file for importing Serial Keys
+ * Update: CSS tweaks for Welcome Page
+ * Update: POT file
+
+2015.12.10 - version 1.7.2
+ * Fix: Important fix related to WordPress 4.4, in StoreApps Upgrade file
+
+2015.08.13 - version 1.7.1
+ * New: WooCommerce 2.4 compatible
+ * Fix: Generating a new serial key for every completion of same order
+ * Fix: Not generating a new serial key for previously created orders
+ * Fix: Not showing count of remaining serial keys in email notification
+ * Update: Updated POT file
+
+2015.08.01 - version 1.7
+ * New: Import CSV file containing predefined Serial Keys
+ * New: Welcome Page
+ * New: Text Domain & Language loader
+ * Fix: Fatal error: Call to undefined function get_status() on non-object
+
+2015.02.20 - version 1.6
+ * Update: WooCommerce 2.3 Compatible
+ * Update: Made meta data protected which are added from Serial Key
+ * Fix: Removed unnecessary warnings from 'Manage Serial Key' page
+
+2015.01.02 - version 1.5
+ * New: Easily generate serial key from within Order admin page, if not generated already
+ * New: Update existing serial key from Order admin page
+
+2014.11.10 - version 1.4.1
+ * Fix: Error message on My Account & Order completed page when there is no serial key
+
+2014.09.22 - version 1.4
+ * Update: WooCommerce 2.2 Compatible
+ * Fix: Minor fix related to Serial Key usage limit
+
+2014.05.15 - version 1.3.4
+ * Fix: Serial key validating for any sku
+
+2014.04.16 - version 1.3.3
+ * Update: Important update related to 'update notification' of the plugin
+
+2014.04.10 - version 1.3.2
+ * Fix: Minor fix related to non-generation of serial key
+
+2014.04.04 - version 1.3.1
+ * Fix: Important fix related to plugin updates
+
+2014.03.18 - version 1.3
+* New: Feature to track & limit serial key usage
+
+2014.02.14 - version 1.2
+* Update: WooCommerce 2.1 compatibility
+
+2013.12.18 - version 1.1
+* Update: Set expiry of Serial Key based on order completion date & product's download expiry setting
+
+2013.10.30 - version 1.0
+* First Release

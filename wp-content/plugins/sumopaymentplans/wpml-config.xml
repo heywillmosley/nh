@@ -1,0 +1,11 @@
+<wpml-config>
+    <admin-texts>
+        <key name="_sumo_pp_add_to_cart_label"/>
+        <key name="_sumo_pp_pay_in_full_label"/>
+        <key name="_sumo_pp_pay_a_deposit_amount_label"/>
+        <key name="_sumo_pp_pay_with_payment_plans_label"/>
+        <key name="_sumo_pp_payment_plan_label"/>
+        <key name="_sumo_pp_balance_payable_amount_label"/>
+        <key name="_sumo_pp_next_payment_date_label"/>
+    </admin-texts>
+</wpml-config>

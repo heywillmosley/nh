@@ -1,0 +1,689 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Wholesale Order Form\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+
+#: includes/class-wwof-ajax.php:113 includes/class-wwof-settings.php:14
+#: includes/class-wwof-wws-license-settings.php:149
+msgid "Wholesale Ordering"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:127
+msgid "Failed to create wholesale ordering page."
+msgstr ""
+
+#: includes/class-wwof-ajax.php:651
+msgid "Access Denied"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:654
+msgid "You do not have permission to view wholesale product listing"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:662
+msgid "Login Here"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:696
+msgid "No Product Details Available"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:767
+msgid "Trying to add a variable product with no variation provided"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:780 includes/class-wwof-ajax.php:841
+#: includes/class-wwof-ajax.php:1024 includes/class-wwof-ajax.php:1121
+#, php-format
+msgid ""
+"Couldn't add <b>%1$s</b> to cart, selected quantity exceeds available stock "
+"amount <b>(%2$s)</b>."
+msgstr ""
+
+#: includes/class-wwof-ajax.php:789 includes/class-wwof-ajax.php:824
+#: includes/class-wwof-ajax.php:850 includes/class-wwof-ajax.php:1041
+#: includes/class-wwof-ajax.php:1074 includes/class-wwof-ajax.php:1137
+#: includes/class-wwof-ajax.php:1169
+#, php-format
+msgid "Failed to add <b>%1$s</b> to cart."
+msgstr ""
+
+#: includes/class-wwof-ajax.php:885
+#, php-format
+msgid "Failed to add <b>%1$s</b> to cart"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:892 includes/class-wwof-ajax.php:1181
+msgid "Failed to add product to cart"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:977
+msgid ""
+"Contains invalid variation id. Either empty, not numeric or less than zero"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:999 includes/class-wwof-ajax.php:1096
+#, php-format
+msgid ""
+"Couldn't add <b>%1$s</b> to cart, required product add-ons not filled.<br>"
+"%2$s"
+msgstr ""
+
+#: includes/class-wwof-ajax.php:1063 includes/class-wwof-ajax.php:1159
+#, php-format
+msgid "Failed to add <b>%1$s</b> to cart. The entered quantity is invalid."
+msgstr ""
+
+#: includes/class-wwof-bootstrap.php:289
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wwof-bootstrap.php:290
+msgid "License"
+msgstr ""
+
+#: includes/class-wwof-functions.php:303
+msgid "Category:"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:373
+msgid "Available on backorder"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:378
+#, php-format
+msgid "Min: %s of any variation combination"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:450
+msgid "Variations:"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:647
+#: includes/class-wwof-product-listing.php:654
+msgid "Product Add-ons"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:875
+#: includes/class-wwof-product-listing.php:882
+msgid "<em>Unavailable</em>"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:882
+#: includes/class-wwof-product-listing.php:891
+#: includes/class-wwof-product-listing.php:889
+#: includes/class-wwof-product-listing.php:898
+#: includes/class-wwof-wwp-wholesale-prices.php:291
+msgid "Out of Stock"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:885
+#: includes/class-wwof-product-listing.php:887
+#: includes/class-wwof-product-listing.php:892
+#: includes/class-wwof-product-listing.php:894
+msgid "Add To Cart"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:923
+#: includes/class-wwof-product-listing.php:930
+#, php-format
+msgid "%1$s Previous"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:924
+#: includes/class-wwof-product-listing.php:931
+#, php-format
+msgid "Next %1$s"
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:960
+#: includes/class-wwof-product-listing.php:965
+#: includes/class-wwof-product-listing.php:967
+#: includes/class-wwof-product-listing.php:972
+msgid "Subtotal: "
+msgstr ""
+
+#: includes/class-wwof-product-listing.php:971
+#: includes/class-wwof-product-listing.php:978
+msgid "Cart Empty"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:109
+msgid "Wholesale Ordering Page Created Successfully"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:110
+msgid "Failed To Create Wholesale Ordering Page"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:130
+msgid "Wholesale Ordering License Details Successfully Saved"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:131
+msgid "Failed To Save Wholesale Ordering License Details"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:173
+msgid "No variation selected"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:174
+msgid "Errors occured while adding selected products."
+msgstr ""
+
+#: includes/class-wwof-scripts.php:175
+msgid "Please choose the quantity of items you wish to add to your cart…"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:176
+msgid "Please enter a valid value."
+msgstr ""
+
+#: includes/class-wwof-scripts.php:177
+msgid ""
+"Please enter a valid value. The two nearest valid values are {low} and {high}"
+msgstr ""
+
+#: includes/class-wwof-scripts.php:178
+msgid ""
+"Please enter a valid value. The entered value is either lower than the "
+"allowed minimum ({min}) or higher than the allowed maximum ({max})."
+msgstr ""
+
+#: includes/class-wwof-scripts.php:179
+msgid "View Cart"
+msgstr ""
+
+#: includes/class-wwof-settings.php:38
+msgid "General"
+msgstr ""
+
+#: includes/class-wwof-settings.php:39
+msgid "Filters"
+msgstr ""
+
+#: includes/class-wwof-settings.php:40
+msgid "Permissions"
+msgstr ""
+
+#: includes/class-wwof-settings.php:41
+msgid "Help"
+msgstr ""
+
+#: includes/class-wwof-settings.php:160
+msgid "No Default"
+msgstr ""
+
+#: includes/class-wwof-settings.php:165
+msgid "General Options"
+msgstr ""
+
+#: includes/class-wwof-settings.php:172
+msgid "Use Alternate View Of Wholesale Page?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:174
+msgid ""
+"Checkbox on the right side of each product, and add to cart button at the "
+"bottom of the list"
+msgstr ""
+
+#: includes/class-wwof-settings.php:179
+msgid "Disable Pagination?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:181
+msgid ""
+"Shows all products by lazy loading them in when the user scrolls down. The "
+"form will load in groups of products based on the number specified in the "
+"Products Per Page setting."
+msgstr ""
+
+#: includes/class-wwof-settings.php:186
+msgid "Products Per Page"
+msgstr ""
+
+#: includes/class-wwof-settings.php:188
+msgid ""
+"Number of products to display per page (for pagination) or how many products "
+"to load at a time (for lazy loading). Default is 12 products when left empty."
+msgstr ""
+
+#: includes/class-wwof-settings.php:193
+msgid "Show In Stock Quantity?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:195
+msgid ""
+"Should we display product stock quantity on the product listing on the front "
+"end?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:200
+msgid "Show Product SKU?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:202
+msgid "Should we display product sku on the product listing on the front end?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:207
+msgid "Allow Product SKU Search?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:209
+msgid ""
+"Should we allow searching for products via sku on the product listing on the "
+"front end?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:214
+msgid "Show Product Thumbnail?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:216
+msgid ""
+"Should we display a small product thumbnail on the product listing on the "
+"front end?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:221
+msgid "Product Thumbnail Size"
+msgstr ""
+
+#: includes/class-wwof-settings.php:222
+msgid "This size is used in wholesale product listings"
+msgstr ""
+
+#: includes/class-wwof-settings.php:234
+msgid "Display the product details in a lightbox popup on click?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:236
+msgid ""
+"Should the product details be displayed in a popup or redirect the user to "
+"the product's page?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:241
+msgid "Display Zero Inventory Products?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:243
+msgid ""
+"Zero inventory products are products that are out of inventory and do not "
+"allow backorders. This also includes non simple products whose composition "
+"requires a certain products that have zero inventory."
+msgstr ""
+
+#: includes/class-wwof-settings.php:248
+msgid "Hide wholesale quantity discount prices."
+msgstr ""
+
+#: includes/class-wwof-settings.php:250
+#, php-format
+msgid ""
+"Hides the small table printed under the wholesale price when quantity based "
+"discounts are available for that product. Only used when <a href=\"%1$s\" "
+"target=\"blank\">WooCommerce Wholesale Prices Premium</a> is active."
+msgstr ""
+
+#: includes/class-wwof-settings.php:255
+msgid "Sort By"
+msgstr ""
+
+#: includes/class-wwof-settings.php:264
+msgid "Sort Order"
+msgstr ""
+
+#: includes/class-wwof-settings.php:270
+msgid "Ascending"
+msgstr ""
+
+#: includes/class-wwof-settings.php:271
+msgid "Descending"
+msgstr ""
+
+#: includes/class-wwof-settings.php:276
+msgid "Display Cart Subtotal?"
+msgstr ""
+
+#: includes/class-wwof-settings.php:278
+msgid "Display cart subtotal at the bottom of the order form"
+msgstr ""
+
+#: includes/class-wwof-settings.php:283
+msgid "Cart Sub Total Prices Display"
+msgstr ""
+
+#: includes/class-wwof-settings.php:285
+msgid ""
+"Either to include or exclude price on sub total. Only used if \"Display Cart "
+"Sub Total\" option above is enabled."
+msgstr ""
+
+#: includes/class-wwof-settings.php:290
+msgid "Including tax"
+msgstr ""
+
+#: includes/class-wwof-settings.php:291
+msgid "Excluding tax"
+msgstr ""
+
+#: includes/class-wwof-settings.php:297
+msgid "Default Product Category on Search Filter"
+msgstr ""
+
+#: includes/class-wwof-settings.php:299
+msgid ""
+"Select a product category to which product are under will be loaded by "
+"default in the order form."
+msgstr ""
+
+#: includes/class-wwof-settings.php:308
+msgid "List product variation individually"
+msgstr ""
+
+#: includes/class-wwof-settings.php:310
+msgid ""
+"Enabling this setting will list down each product variation individually and "
+"have its own row in the wholesale order form."
+msgstr ""
+
+#: includes/class-wwof-settings.php:354
+msgid "Filters Options"
+msgstr ""
+
+#: includes/class-wwof-settings.php:361
+msgid "Product Category Filter"
+msgstr ""
+
+#: includes/class-wwof-settings.php:363
+msgid "Only display products belonging to the selected category"
+msgstr ""
+
+#: includes/class-wwof-settings.php:370
+msgid "Select Some Product Categories..."
+msgstr ""
+
+#: includes/class-wwof-settings.php:376
+msgid "Exclude Product Filter"
+msgstr ""
+
+#: includes/class-wwof-settings.php:378
+msgid "Exclude selected products"
+msgstr ""
+
+#: includes/class-wwof-settings.php:385
+msgid "Select Some Products..."
+msgstr ""
+
+#: includes/class-wwof-settings.php:418
+msgid "Permissions Options"
+msgstr ""
+
+#: includes/class-wwof-settings.php:425
+msgid "User Role Filter"
+msgstr ""
+
+#: includes/class-wwof-settings.php:427
+msgid ""
+"Only allow a given user role/s to access the wholesale page. Left blank to "
+"disable filter."
+msgstr ""
+
+#: includes/class-wwof-settings.php:434
+msgid "Select Some User Roles..."
+msgstr ""
+
+#: includes/class-wwof-settings.php:445
+msgid "Access Denied Message"
+msgstr ""
+
+#: includes/class-wwof-settings.php:447
+msgid ""
+"Message to display to users who do not have permission to access the "
+"wholesale order form."
+msgstr ""
+
+#: includes/class-wwof-settings.php:452
+msgid "Title"
+msgstr ""
+
+#: includes/class-wwof-settings.php:454
+msgid "Defaults to <b>\"Access Denied\"</b> if left blank"
+msgstr ""
+
+#: includes/class-wwof-settings.php:461
+msgid "Message"
+msgstr ""
+
+#: includes/class-wwof-settings.php:463
+msgid ""
+"Defaults to <b>\"You do not have permission to view wholesale product listing"
+"\"</b> if left blank"
+msgstr ""
+
+#: includes/class-wwof-settings.php:470
+msgid "Login URL"
+msgstr ""
+
+#: includes/class-wwof-settings.php:472
+msgid "URL of the login page. Uses default WordPress login URL if left blank"
+msgstr ""
+
+#: includes/class-wwof-settings.php:498
+msgid "Help Options"
+msgstr ""
+
+#: includes/class-wwof-settings.php:512
+msgid "Create Wholesale Ordering Page"
+msgstr ""
+
+#: includes/class-wwof-settings.php:591
+msgid "Create Page"
+msgstr ""
+
+#: includes/class-wwof-settings.php:673
+msgid "Knowledge Base"
+msgstr ""
+
+#: includes/class-wwof-settings.php:676
+#, php-format
+msgid ""
+"Looking for documentation? Please see our growing <a href=\"%1$s\" target="
+"\"_blank\">Knowledge Base</a>"
+msgstr ""
+
+#: includes/class-wwof-wwp-wholesale-prices.php:317
+#, php-format
+msgid ""
+"NOTE: A minimum order quantity of <b>%1$s</b> %2$s minimum order subtotal of "
+"<b>%3$s</b> is required to activate wholesale pricing in the cart."
+msgstr ""
+
+#: includes/class-wwof-wwp-wholesale-prices.php:319
+#, php-format
+msgid ""
+"NOTE: A minimum order quantity of <b>%1$s</b> is required to activate "
+"wholesale pricing in the cart."
+msgstr ""
+
+#: includes/class-wwof-wwp-wholesale-prices.php:321
+#, php-format
+msgid ""
+"NOTE: A minimum order subtotal of <b>%1$s</b> is required to activate "
+"wholesale pricing in the cart."
+msgstr ""
+
+#: includes/class-wwof-wws-license-settings.php:102
+msgid "WooCommerce WholeSale Suit License Settings"
+msgstr ""
+
+#: includes/class-wwof-wws-license-settings.php:103
+msgid "WWS License"
+msgstr ""
+
+#: templates/wwof-product-details.php:94
+msgid "Out of stock"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate-lazyload.php:16
+#: templates/wwof-product-listing-alternate.php:19
+#: templates/wwof-product-listing-lazyload.php:19
+#: templates/wwof-product-listing.php:18
+msgid "Product"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate-lazyload.php:17
+#: templates/wwof-product-listing-alternate.php:20
+#: templates/wwof-product-listing-lazyload.php:20
+#: templates/wwof-product-listing.php:19
+#: woocommerce-wholesale-order-form.options.php:52
+msgid "SKU"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate-lazyload.php:18
+#: templates/wwof-product-listing-alternate.php:21
+#: templates/wwof-product-listing-lazyload.php:21
+#: templates/wwof-product-listing.php:20
+msgid "Price"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate-lazyload.php:19
+#: templates/wwof-product-listing-alternate.php:22
+msgid "Stock Quantity"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate-lazyload.php:20
+#: templates/wwof-product-listing-alternate.php:23
+#: templates/wwof-product-listing-lazyload.php:23
+#: templates/wwof-product-listing.php:22
+msgid "Quantity"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate.php:30
+#: templates/wwof-product-listing-alternate.php:161
+msgid "Add Selected Products To Cart"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate.php:34
+#: templates/wwof-product-listing-alternate.php:165
+msgid "View Cart &rarr;"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate.php:38
+#: templates/wwof-product-listing-alternate.php:169
+msgid " Product/s Added"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate.php:137
+#: templates/wwof-product-listing.php:122
+msgid "No Products Found"
+msgstr ""
+
+#: templates/wwof-product-listing-alternate.php:178
+#: templates/wwof-product-listing.php:147
+#, php-format
+msgid "%1$s Product/s Found"
+msgstr ""
+
+#: templates/wwof-product-listing-filter.php:26
+msgid "-- No Category Filter --"
+msgstr ""
+
+#: templates/wwof-product-listing-filter.php:31
+msgid "Search"
+msgstr ""
+
+#: templates/wwof-product-listing-filter.php:32
+msgid "Show All Products"
+msgstr ""
+
+#: templates/wwof-product-listing-lazyload.php:22
+#: templates/wwof-product-listing.php:21
+msgid "In Stock"
+msgstr ""
+
+#: views/shortcodes/wwof-shortcode-product-listing.php:10
+msgid "Search by name or SKU ..."
+msgstr ""
+
+#: views/shortcodes/wwof-shortcode-product-listing.php:12
+msgid "Search by name"
+msgstr ""
+
+#: views/wws-license-settings/view-wwof-general-wws-settings-page.php:12
+msgid "WWS License Settings"
+msgstr ""
+
+#: views/wws-license-settings/view-wwof-wss-settings-page.php:13
+msgid "License Email"
+msgstr ""
+
+#: views/wws-license-settings/view-wwof-wss-settings-page.php:22
+msgid "License Key"
+msgstr ""
+
+#: views/wws-license-settings/view-wwof-wss-settings-page.php:32
+msgid "Save Changes"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:95
+#, php-format
+msgid ""
+"Please <a href=\"%1$s\">enter your license details</a> for the "
+"<b>WooCommerce Wholesale Order Form</b> plugin to enable plugin updates."
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:96
+msgid "Hide Notice"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:145
+msgid "Click here to install from WordPress.org repo &rarr;"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:147
+msgid "Activate this plugin"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:147
+msgid "Click here to activate &rarr;"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:149
+#, php-format
+msgid ""
+"<br/>Please ensure you have the <a href=\"%1$s\" target=\"_blank\">%2$s</a> "
+"plugin installed and activated.<br/>"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.bootstrap.php:156
+msgid "<b>WooCommerce Wholesale Order Form</b> plugin missing dependency.<br/>"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.options.php:46
+msgid "Default Sorting"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.options.php:47
+msgid "Custom Ordering (menu order) + Name"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.options.php:48
+msgid "Name"
+msgstr ""
+
+#: woocommerce-wholesale-order-form.options.php:51
+msgid "Sort by Date"
+msgstr ""

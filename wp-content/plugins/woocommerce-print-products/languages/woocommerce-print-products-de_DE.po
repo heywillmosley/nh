@@ -1,0 +1,757 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Catalog\n"
+"POT-Creation-Date: 2016-04-13 08:54+0200\n"
+"PO-Revision-Date: 2016-04-13 08:57+0200\n"
+"Last-Translator: Daniel Barenkamp\n"
+"Language-Team: DB-Dzine <contact@db-dzine.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: admin/redux-framework\n"
+"X-Poedit-SearchPathExcluded-1: admin/redux-extensions\n"
+
+#: admin/options-init.php:90
+msgid "Information"
+msgstr "Informationen"
+
+#: admin/options-init.php:91
+msgid "<p>Need support? Please use the comment function on codecanyon.</p>"
+msgstr ""
+"<p>Brauchen Sie Hilfe? Dann schildern Sie uns bitte Ihr Problem auf "
+"Codecanyon.</p>"
+
+#: admin/options-init.php:113
+msgid "Print Products"
+msgstr "Drucke Produkte"
+
+#: admin/options-init.php:115
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr ""
+"Brauchen Sie Hilfe? Dann schildern Sie uns bitte Ihr Problem auf Codecanyon."
+
+#: admin/options-init.php:120
+msgid "General"
+msgstr "Allgemein"
+
+#: admin/options-init.php:128 admin/options-init.php:201
+#: admin/options-init.php:650
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: admin/options-init.php:129
+msgid "Enable Print Products to use the options below"
+msgstr "Aktiviere Produkte Drucken um die Optionen unten benutzen zu können"
+
+#: admin/options-init.php:135
+msgid "Enable PDF"
+msgstr "Aktiviere PDF"
+
+#: admin/options-init.php:141
+msgid "Enable Word"
+msgstr "Aktiviere Word"
+
+#: admin/options-init.php:147
+msgid "Enable Print"
+msgstr "Aktiviere Druck"
+
+#: admin/options-init.php:153
+msgid "Icon position"
+msgstr ""
+
+#: admin/options-init.php:154
+msgid "Choose the position of the icons on the product page."
+msgstr ""
+
+#: admin/options-init.php:156
+msgid "Meta start"
+msgstr ""
+
+#: admin/options-init.php:157
+msgid "Meta End"
+msgstr ""
+
+#: admin/options-init.php:158
+msgid "Before Product Summary"
+msgstr ""
+
+#: admin/options-init.php:159
+msgid "After Product Summary"
+msgstr ""
+
+#: admin/options-init.php:166
+msgid "Icon Size"
+msgstr ""
+
+#: admin/options-init.php:167
+msgid "Choose the icon size."
+msgstr ""
+
+#: admin/options-init.php:169
+msgid "Large"
+msgstr "Groß"
+
+#: admin/options-init.php:170
+msgid "2x larger"
+msgstr ""
+
+#: admin/options-init.php:171
+msgid "3x larger"
+msgstr ""
+
+#: admin/options-init.php:172
+msgid "4x larger"
+msgstr ""
+
+#: admin/options-init.php:173
+msgid "5x larger"
+msgstr ""
+
+#: admin/options-init.php:181
+msgid "Icon Display"
+msgstr ""
+
+#: admin/options-init.php:182
+msgid "Choose how the icons should appear."
+msgstr ""
+
+#: admin/options-init.php:184
+msgid "Horizontal"
+msgstr ""
+
+#: admin/options-init.php:185
+msgid "Vertical"
+msgstr ""
+
+#: admin/options-init.php:193
+msgid "Header"
+msgstr "Kopfzeile"
+
+#: admin/options-init.php:202
+msgid "Enable header"
+msgstr "Kopfzeile aktivieren"
+
+#: admin/options-init.php:208
+msgid "Header background color"
+msgstr ""
+
+#: admin/options-init.php:215
+msgid "Header text color"
+msgstr ""
+
+#: admin/options-init.php:222
+msgid "Header Layout"
+msgstr ""
+
+#: admin/options-init.php:225 admin/options-init.php:676
+msgid "1/1"
+msgstr ""
+
+#: admin/options-init.php:226 admin/options-init.php:677
+msgid "1/2 + 1/2"
+msgstr ""
+
+#: admin/options-init.php:227 admin/options-init.php:678
+msgid "1/3 + 1/3 + 1/3"
+msgstr ""
+
+#: admin/options-init.php:234
+msgid "Header Margin"
+msgstr ""
+
+#: admin/options-init.php:243
+msgid "Header Height"
+msgstr ""
+
+#: admin/options-init.php:252 admin/options-init.php:703
+msgid "Vertical Align"
+msgstr ""
+
+#: admin/options-init.php:255 admin/options-init.php:706
+msgid "Top"
+msgstr "Oben"
+
+#: admin/options-init.php:256 admin/options-init.php:707
+msgid "Middle"
+msgstr ""
+
+#: admin/options-init.php:257 admin/options-init.php:708
+msgid "Bottom"
+msgstr "Unten"
+
+#: admin/options-init.php:264
+msgid "Top Left Header"
+msgstr ""
+
+#: admin/options-init.php:267 admin/options-init.php:302
+#: admin/options-init.php:337 admin/options-init.php:718
+#: admin/options-init.php:753 admin/options-init.php:788
+msgid "None"
+msgstr "KeineKeine"
+
+#: admin/options-init.php:268 admin/options-init.php:303
+#: admin/options-init.php:338 admin/options-init.php:719
+#: admin/options-init.php:754 admin/options-init.php:789
+msgid "Blog information"
+msgstr "Blog Information"
+
+#: admin/options-init.php:269 admin/options-init.php:304
+#: admin/options-init.php:339 admin/options-init.php:720
+#: admin/options-init.php:755 admin/options-init.php:790
+msgid "Custom text"
+msgstr "Eigener Text"
+
+#: admin/options-init.php:270 admin/options-init.php:305
+#: admin/options-init.php:340 admin/options-init.php:721
+#: admin/options-init.php:756 admin/options-init.php:791
+msgid "Pagenumber"
+msgstr ""
+
+#: admin/options-init.php:271 admin/options-init.php:306
+#: admin/options-init.php:341 admin/options-init.php:722
+#: admin/options-init.php:757 admin/options-init.php:792
+msgid "Product info"
+msgstr "Produktinformation"
+
+#: admin/options-init.php:272 admin/options-init.php:307
+#: admin/options-init.php:342 admin/options-init.php:723
+#: admin/options-init.php:758 admin/options-init.php:793
+#: public/class-woocommerce-print-products-public.php:1221
+msgid "Image"
+msgstr "Bild"
+
+#: admin/options-init.php:273 admin/options-init.php:308
+#: admin/options-init.php:343 admin/options-init.php:724
+#: admin/options-init.php:759 admin/options-init.php:794
+msgid "Export Information"
+msgstr "Exportiere Informationen"
+
+#: admin/options-init.php:274 admin/options-init.php:309
+#: admin/options-init.php:344 admin/options-init.php:725
+#: admin/options-init.php:760 admin/options-init.php:795
+msgid "QR-Code"
+msgstr ""
+
+#: admin/options-init.php:280
+msgid "Top Left Header Text"
+msgstr ""
+
+#: admin/options-init.php:290
+msgid "Top Left Header Image"
+msgstr ""
+
+#: admin/options-init.php:299
+msgid "Top Middle Header"
+msgstr ""
+
+#: admin/options-init.php:315
+msgid "Top Middle Header Text"
+msgstr ""
+
+#: admin/options-init.php:325
+msgid "Top Middle Header Image"
+msgstr ""
+
+#: admin/options-init.php:334
+msgid "Top Right Header"
+msgstr ""
+
+#: admin/options-init.php:350
+msgid "Top Right Header Text"
+msgstr ""
+
+#: admin/options-init.php:360
+msgid "Top Right Header Image"
+msgstr ""
+
+#: admin/options-init.php:370
+msgid "Layout"
+msgstr ""
+
+#: admin/options-init.php:377
+msgid "Select Layout"
+msgstr ""
+
+#: admin/options-init.php:415
+msgid "Text Align"
+msgstr ""
+
+#: admin/options-init.php:417
+msgid "Left"
+msgstr ""
+
+#: admin/options-init.php:418
+msgid "Center"
+msgstr ""
+
+#: admin/options-init.php:419
+msgid "Right"
+msgstr ""
+
+#: admin/options-init.php:426
+msgid "Background color"
+msgstr ""
+
+#: admin/options-init.php:432
+msgid "Text Color"
+msgstr ""
+
+#: admin/options-init.php:438
+msgid "Link Color"
+msgstr ""
+
+#: admin/options-init.php:444
+msgid "Default Font"
+msgstr ""
+
+#: admin/options-init.php:446 admin/options-init.php:474
+msgid "Sans"
+msgstr ""
+
+#: admin/options-init.php:447 admin/options-init.php:475
+msgid "Serif"
+msgstr ""
+
+#: admin/options-init.php:448 admin/options-init.php:476
+msgid "Mono"
+msgstr ""
+
+#: admin/options-init.php:454
+msgid "Default font size"
+msgstr ""
+
+#: admin/options-init.php:463
+msgid "Default line height"
+msgstr ""
+
+#: admin/options-init.php:472
+msgid "Headings Font"
+msgstr ""
+
+#: admin/options-init.php:482
+msgid "Headings font size"
+msgstr ""
+
+#: admin/options-init.php:491
+msgid "Headings line height"
+msgstr ""
+
+#: admin/options-init.php:502
+msgid "Data to show"
+msgstr ""
+
+#: admin/options-init.php:509
+msgid "Show Product Image"
+msgstr "Zeige Produktbild"
+
+#: admin/options-init.php:515
+msgid "Show Gallery Images"
+msgstr ""
+
+#: admin/options-init.php:521
+msgid "Show Gallery Images Title"
+msgstr ""
+
+#: admin/options-init.php:527
+msgid "Show Gallery Images Caption"
+msgstr ""
+
+#: admin/options-init.php:533
+msgid "Show Gallery Images Alt Text"
+msgstr ""
+
+#: admin/options-init.php:539
+msgid "Show Gallery Images Description"
+msgstr ""
+
+#: admin/options-init.php:545
+msgid "Show Product Title"
+msgstr ""
+
+#: admin/options-init.php:551
+msgid "Show Product Price"
+msgstr "Zeige Preis"
+
+#: admin/options-init.php:557
+msgid "Show Short Description"
+msgstr ""
+
+#: admin/options-init.php:563
+msgid "Show Product SKU"
+msgstr ""
+
+#: admin/options-init.php:569
+msgid "Show Product Categories"
+msgstr "Zeige Produktkategorien"
+
+#: admin/options-init.php:575
+msgid "Show Product Tags"
+msgstr "Zeige Produkttags"
+
+#: admin/options-init.php:581
+msgid "Show QR-Code"
+msgstr ""
+
+#: admin/options-init.php:587
+msgid "Show Product Description"
+msgstr ""
+
+#: admin/options-init.php:593
+msgid "Show Product Attributes"
+msgstr "Zeige Produktattribute"
+
+#: admin/options-init.php:599
+msgid "Show Product Reviews"
+msgstr "Zeige Produktbewertungen"
+
+#: admin/options-init.php:605
+msgid "Show Product Upsells"
+msgstr "Zeige Produkt-Upsells"
+
+#: admin/options-init.php:611
+msgid "Show Variation Image"
+msgstr ""
+
+#: admin/options-init.php:617
+msgid "Show Variation SKU"
+msgstr ""
+
+#: admin/options-init.php:623
+msgid "Show Variation Price"
+msgstr ""
+
+#: admin/options-init.php:629
+msgid "Show Variation Description"
+msgstr ""
+
+#: admin/options-init.php:635
+msgid "Show Variation Attributes"
+msgstr ""
+
+#: admin/options-init.php:642
+msgid "Footer"
+msgstr ""
+
+#: admin/options-init.php:651
+msgid "Enable footer"
+msgstr "Aktiviere Fußzeile"
+
+#: admin/options-init.php:658
+msgid "Footer background color"
+msgstr ""
+
+#: admin/options-init.php:666
+msgid "Footer text color"
+msgstr ""
+
+#: admin/options-init.php:673
+msgid "Footer Layout"
+msgstr ""
+
+#: admin/options-init.php:685
+msgid "Footer Margin"
+msgstr ""
+
+#: admin/options-init.php:694
+msgid "Footer Height"
+msgstr ""
+
+#: admin/options-init.php:715
+msgid "Top Left Footer"
+msgstr ""
+
+#: admin/options-init.php:731
+msgid "Top Left Footer Text"
+msgstr ""
+
+#: admin/options-init.php:741
+msgid "Top Left Footer Image"
+msgstr ""
+
+#: admin/options-init.php:750
+msgid "Top Middle Footer"
+msgstr ""
+
+#: admin/options-init.php:766
+msgid "Top Middle Footer Text"
+msgstr ""
+
+#: admin/options-init.php:776
+msgid "Top Middle Footer Image"
+msgstr ""
+
+#: admin/options-init.php:785
+msgid "Top Right Footer"
+msgstr ""
+
+#: admin/options-init.php:801
+msgid "Top Right Footer Text"
+msgstr ""
+
+#: admin/options-init.php:811
+msgid "Top Right Footer Image"
+msgstr ""
+
+#: admin/options-init.php:821
+msgid "Advanced settings"
+msgstr "Erweiterte Einstellungen"
+
+#: admin/options-init.php:822
+msgid "Custom stylesheet / javascript."
+msgstr "Eigenes Stylesheet / Javascript."
+
+#: admin/options-init.php:829
+msgid "Custom CSS"
+msgstr "Eigenes CSS"
+
+#: admin/options-init.php:830
+msgid "Add some stylesheet if you want."
+msgstr "Gib dem Plugin dein eigenes Styling."
+
+#: admin/options-init.php:835
+msgid "Custom JS"
+msgstr "Eigenes JS"
+
+#: admin/options-init.php:836
+msgid "Add some javascript if you want."
+msgstr "Gib dem Plugin eigene Funktionen."
+
+#: public/class-woocommerce-print-products-public.php:293
+msgid "N/A"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:666
+msgid "Page:"
+msgstr "Seite:"
+
+#: public/class-woocommerce-print-products-public.php:732
+#: public/class-woocommerce-print-products-public.php:792
+msgid "SKU:"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:837
+msgid "Product Description"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:879
+msgid "Additional Information"
+msgstr "Zusätzliche Informationen"
+
+#: public/class-woocommerce-print-products-public.php:890
+msgid "Weight"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:897
+msgid "Dimensions"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:965
+msgid "There are no reviews yet."
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:972
+msgid "Reviews"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:999
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1000
+msgid "out of 5"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1057
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1124
+msgid "Gallery Images"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1213
+msgid "Variations"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1225
+msgid "SKU"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1229
+msgid "Price"
+msgstr "Preis"
+
+#: public/class-woocommerce-print-products-public.php:1233
+msgid "Description"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1237
+msgid "Attributes"
+msgstr "Attribute"
+
+#: woocommerce-print-products.php:83
+msgid ""
+"WooCommerce Print Products requires the WooCommerce plugin. Please install "
+"or activate WooCommerce!"
+msgstr "WooCommerce Print Products benötigt das WooCommerce plugin!"
+
+#~ msgid "Catalog Mode"
+#~ msgstr "Katalog Modus"
+
+#~ msgid "Remove add to cart button"
+#~ msgstr "Entferne den Warenkorb-Button"
+
+#~ msgid "Removes the add to cart button on single product and category pages."
+#~ msgstr ""
+#~ "Entfernt den „Zum Warenkorb hinzufügen“-Button auf Produkt- und "
+#~ "Kategorieseiten."
+
+#~ msgid "Remove price"
+#~ msgstr "Entferne den Preis"
+
+#~ msgid "Removes price on single product and category pages."
+#~ msgstr "Entfernt den Preis auf Produkt- und Kategorieseiten."
+
+#~ msgid "Redirect Cart / Checkout Page"
+#~ msgstr "Warenkorb und Kassen-Seiten Umleiten"
+
+#~ msgid "Redirects the cart and checkout page to your home page."
+#~ msgstr "Richtet eine Weiterleitung für die Warenkorb und Kassen-Seite ein."
+
+#~ msgid "Apply for users"
+#~ msgstr "Anwenden auf Nutzer"
+
+#~ msgid "Which user group should be affected by the catalog mode."
+#~ msgstr "Welche Nutzer sollen betroffen sein?"
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Only NOT logged in"
+#~ msgstr "Nur „NICHT“ eingeloggte User"
+
+#~ msgid "Only Logged in"
+#~ msgstr "Nur eingeloggte User"
+
+#~ msgid "Exclusions"
+#~ msgstr "Ausnahmen"
+
+#~ msgid ""
+#~ "With the below settings you can exclude products / categories so that the "
+#~ "price and add to cart will be shown."
+#~ msgstr "Der Preis und Warenkorb-Button wird trotzdem angezeigt."
+
+#~ msgid "Exclude Product Categories"
+#~ msgstr "Ausnahmen für Produktkategorien"
+
+#~ msgid "Which product categories should be excluded by the catalog mode."
+#~ msgstr "Welche Produktkategorien sollen nicht betroffen werden?"
+
+#~ msgid "Exclude Products "
+#~ msgstr "Ausnahmen für Produkte"
+
+#~ msgid "Which products should be excluded by the catalog mode."
+#~ msgstr "Welche Produkte sollen nicht betroffen werden?"
+
+#~ msgid ""
+#~ "Replace the add to cart button on category / archive / tag pages with "
+#~ "your own button."
+#~ msgstr ""
+#~ "Ersetzt den Warenkorb-Button auf Kategorie, Archiv und Tag-Seiten durch "
+#~ "einen eigenen."
+
+#~ msgid "Enables the custom button on loop pages."
+#~ msgstr "Aktivere den eigenen Button auf Schleifen-Seiten"
+
+#~ msgid "Button Text"
+#~ msgstr "Button Text"
+
+#~ msgid "Text inside the custom button."
+#~ msgstr "Text im Button"
+
+#~ msgid "Button Action"
+#~ msgstr "Button Aktion"
+
+#~ msgid "What happens when the User clicks the button."
+#~ msgstr "Was passiert wenn der Nutzer den Button klickt."
+
+#~ msgid "Go to product page"
+#~ msgstr "Gehe zur Produktseite"
+
+#~ msgid "Go to custom URL"
+#~ msgstr "Gehe zu URL"
+
+#~ msgid "Button custom URL"
+#~ msgstr "Eigene URL"
+
+#~ msgid "The URL where the user will be sent to when he clicked the button."
+#~ msgstr "URL wo der Nutzer hingeleitet wird, falls er auf den Button klickt."
+
+#~ msgid "Button custom URL target"
+#~ msgstr "Button URL-Target"
+
+#~ msgid "The target attribute of the link."
+#~ msgstr "Das Ziel-Attribut des Links."
+
+#~ msgid "_self (same Window)"
+#~ msgstr "_self (selbes Fenster)"
+
+#~ msgid "_blank (new Window)"
+#~ msgstr "_blank (neues Fenster)"
+
+#~ msgid "_parent (parent Window)"
+#~ msgstr "_parent (Eltern-Fenster)"
+
+#~ msgid "_top (full body of the Window)"
+#~ msgstr "_top (ganzes Fenster)"
+
+#~ msgid ""
+#~ "Replace the add to cart button on single product pages with your own."
+#~ msgstr ""
+#~ "Ersetzt den Warenkorb-Button auf Einzelprodukt-Seiten durch Ihren eigenen."
+
+#~ msgid "Enables the single product custom button."
+#~ msgstr "Aktiviert den Einzelprodukt-Seiten Button"
+
+#~ msgid "Open enquiry form"
+#~ msgstr "Öffne ein Kontaktformular"
+
+#~ msgid "Custom Button URL target"
+#~ msgstr "Ziel der URL"
+
+#~ msgid "Enquiry Title"
+#~ msgstr "Kontaktformular Titel"
+
+#~ msgid "The title of the enquiry Modal"
+#~ msgstr "Der Titel des Kontaktformulars."
+
+#~ msgid "Enquiry contact form"
+#~ msgstr "Kontaktformular"
+
+#~ msgid "Please insert your contact form shortcode."
+#~ msgstr "Shortcode des Kontaktformulars."
+
+#~ msgid "Enquiry Modal size"
+#~ msgstr "Größe des Pop-Up-Fensters"
+
+#~ msgid "Size of the Enquiry modal."
+#~ msgstr "Die Größe des Pop-Up-Fensters"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Small"
+#~ msgstr "Klein"
+
+#~ msgid "Loop Button"
+#~ msgstr "Schleifen-Button"
+
+#~ msgid "What happens when the User clicks this button."
+#~ msgstr "Was passiert wenn der Nutzer den Button klickt."

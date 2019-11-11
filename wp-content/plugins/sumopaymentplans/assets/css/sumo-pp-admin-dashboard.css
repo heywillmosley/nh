@@ -1,0 +1,98 @@
+
+ul._sumo_pp_payment_notes {
+    padding: 2px 0 0;
+}
+ul._sumo_pp_payment_notes li {
+    padding: 0 10px;
+}
+ul._sumo_pp_payment_notes li .note_content {
+    padding: 10px;
+    position: relative;
+}
+ul._sumo_pp_payment_notes li .note_content p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    color:#fff;
+}
+ul._sumo_pp_payment_notes li p.meta {
+    color: #999;
+    font-size: 11px;
+    margin: 0;
+    padding: 10px;
+}
+ul._sumo_pp_payment_notes li a.delete_note {
+    color: #a00;
+}
+ul._sumo_pp_payment_notes li .note_content::after {
+
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 0;
+    left: 20px;
+    position: absolute;
+    width: 0;
+}
+ul._sumo_pp_payment_notes li.success .note_content {
+    background: #62d162 none repeat scroll 0 0;
+}
+ul._sumo_pp_payment_notes li.success .note_content::after {
+    border-color: #62d162 transparent;
+}
+ul._sumo_pp_payment_notes li.failure .note_content {
+    background: #f2644a none repeat scroll 0 0;
+}
+ul._sumo_pp_payment_notes li.failure .note_content::after {
+    border-color: #f2644a transparent;
+}
+ul._sumo_pp_payment_notes li.processing .note_content {
+    background: #dd9a48 none repeat scroll 0 0;
+}
+ul._sumo_pp_payment_notes li.processing .note_content::after {
+    border-color: #dd9a48 transparent;
+}
+ul._sumo_pp_payment_notes li.pending .note_content {
+    background: #abb7ae none repeat scroll 0 0;
+}
+ul._sumo_pp_payment_notes li.pending .note_content::after {
+    border-color: #abb7ae transparent;
+}
+ul._sumo_pp_payment_notes .note_content::after {
+    border-color: #d7cad2 transparent;
+}
+._sumo_pp_add_payment_note {
+    border-top: 1px solid #ddd;
+    padding: 10px 10px 0;
+}
+._sumo_pp_add_payment_note h4 {
+    margin-top: 5px !important;
+}
+._sumo_pp_add_payment_note #_sumo_pp_add_payment_note {
+    height: 50px;
+    width: 100%;
+}
+.wc-order-totals {
+    float: right;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+.wc-order-data-row {
+    background: #fff;
+    padding: 12px;
+    background: #f8f8f8;
+    line-height: 2em;
+    text-align: right;
+
+    .wc-used-coupons {
+        text-align: left;
+
+        .tips { display: inline-block; }
+
+    }
+}
+#_sumo_pp_payment_details .handlediv{display:none}
+#_sumo_pp_payment_details .hndle{display:none}

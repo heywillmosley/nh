@@ -1,0 +1,4186 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Advance Sales Report Premium Gold v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-09-02 15:03+0530\n"
+"Last-Translator: developer <test@example.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: he_IL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:50
+#: includes/ic_commerce_premium_golden_all_report.php:39
+#: includes/ic_commerce_premium_golden_cross_tab.php:99
+#: includes/ic_commerce_premium_golden_custom_report.php:37
+#: includes/ic_commerce_premium_golden_custom_report_.php:38
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:37
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:37
+#: includes/ic_commerce_premium_golden_google_analytics.php:38
+#: includes/ic_commerce_premium_golden_plugin_settings.php:25
+#: includes/ic_commerce_premium_golden_projected_actual_sales.php:30
+#: includes/ic_commerce_premium_golden_tax_report.php:41
+#: includes/ic_commerce_premium_golden_variation.php:36
+#: includes/ic_commerce_premium_golden_variation_20150827.php:36
+msgid "You do not have sufficient permissions to access this page."
+msgstr "אין לך הרשאה מתאימה לגשת לעמוד זה."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:65
+msgid "Licence Key:"
+msgstr "קוד רישיון"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:76
+#: includes/ic_commerce_premium_golden_init.php:301
+#: includes/ic_commerce_premium_golden_init.php:316
+#: includes/ic_commerce_premium_golden_init.php:452
+msgid "Activate"
+msgstr "הפעל"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:222
+msgid "No license keys were specified for activation."
+msgstr "אין מפתחות הרישיון צוין עבור הפעלה."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:227
+msgid "Product deactivated successfully."
+msgstr "מוצר בוטל בהצלחה."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:229
+msgid "There was an error while deactivating the product."
+msgstr "אירעה שגיאה בעת ביטול ההפעלה של המוצר."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:236
+msgid "Products activated successfully."
+msgstr "מוצרים הופעל בהצלחה."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:246
+msgid "There was an error and not product were activated."
+msgstr "אירעה שגיאה בעת ביטול ההפעלה של המוצר."
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:139
+#: includes/ic_commerce_premium_golden_cross_tab.php:229
+#: includes/ic_commerce_premium_golden_custom_report.php:248
+#: includes/ic_commerce_premium_golden_custom_report_.php:254
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:246
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:246
+#: includes/ic_commerce_premium_golden_google_analytics.php:94
+#: includes/ic_commerce_premium_golden_projected_actual_sales.php:79
+#: includes/ic_commerce_premium_golden_stock_list.php:55
+#: includes/ic_commerce_premium_golden_tax_report.php:127
+#: includes/ic_commerce_premium_golden_variation.php:130
+#: includes/ic_commerce_premium_golden_variation_20150827.php:130
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:61
+msgid "Custom Search"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:152
+#: includes/ic_commerce_premium_golden_custom_report.php:257
+#: includes/ic_commerce_premium_golden_custom_report_.php:263
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:255
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:255
+#: includes/ic_commerce_premium_golden_tax_report.php:136
+#: includes/ic_commerce_premium_golden_variation.php:139
+#: includes/ic_commerce_premium_golden_variation_20150827.php:139
+msgid "From Date:"
+msgstr ":מתאריך"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:156
+#: includes/ic_commerce_premium_golden_custom_report.php:261
+#: includes/ic_commerce_premium_golden_custom_report_.php:267
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:259
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:259
+#: includes/ic_commerce_premium_golden_tax_report.php:140
+#: includes/ic_commerce_premium_golden_variation.php:143
+#: includes/ic_commerce_premium_golden_variation_20150827.php:143
+msgid "To Date:"
+msgstr ":עד כה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:166
+#: includes/ic_commerce_premium_golden_cross_tab.php:256
+#: includes/ic_commerce_premium_golden_cross_tab.php:380
+#: includes/ic_commerce_premium_golden_custom_report.php:279
+#: includes/ic_commerce_premium_golden_custom_report_.php:285
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:277
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:277
+#: includes/ic_commerce_premium_golden_stock_list.php:133
+#: includes/ic_commerce_premium_golden_variation.php:150
+#: includes/ic_commerce_premium_golden_variation_20150827.php:150
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:139
+msgid "Category:"
+msgstr ":קטגוריה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:175
+#: includes/ic_commerce_premium_golden_cross_tab.php:340
+#: includes/ic_commerce_premium_golden_cross_tab.php:415
+#: includes/ic_commerce_premium_golden_custom_report.php:289
+#: includes/ic_commerce_premium_golden_custom_report_.php:295
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:287
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:287
+#: includes/ic_commerce_premium_golden_stock_list.php:124
+#: includes/ic_commerce_premium_golden_variation.php:159
+#: includes/ic_commerce_premium_golden_variation_20150827.php:159
+msgid "Product:"
+msgstr "מוצר"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:191
+#: includes/ic_commerce_premium_golden_cross_tab.php:312
+#: includes/ic_commerce_premium_golden_cross_tab.php:389
+#: includes/ic_commerce_premium_golden_custom_report.php:311
+#: includes/ic_commerce_premium_golden_custom_report_.php:317
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:309
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:309
+#: includes/ic_commerce_premium_golden_tax_report.php:203
+#: includes/ic_commerce_premium_golden_variation.php:188
+#: includes/ic_commerce_premium_golden_variation_20150827.php:188
+msgid "Status:"
+msgstr ":סטטוס"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:229
+msgid "Parent Category:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:244
+msgid "Refund Type:"
+msgstr "סוג החזר כספי:"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:249
+msgid "Part Refund - Order status not refunded"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:250
+msgid "Order Status Refunded"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:260
+msgid "Show Refund Note:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:265
+#: includes/ic_commerce_premium_golden_variation.php:321
+#: includes/ic_commerce_premium_golden_variation_20150827.php:319
+msgid "Group By:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:270
+#: includes/ic_commerce_premium_golden_columns.php:428
+msgid "Refund ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:271
+#: includes/ic_commerce_premium_golden_columns.php:20
+#: includes/ic_commerce_premium_golden_columns.php:39
+#: includes/ic_commerce_premium_golden_columns.php:182
+#: includes/ic_commerce_premium_golden_columns.php:208
+#: includes/ic_commerce_premium_golden_columns.php:242
+#: includes/ic_commerce_premium_golden_columns.php:327
+#: includes/ic_commerce_premium_golden_columns.php:395
+#: includes/ic_commerce_premium_golden_columns.php:432
+#: includes/ic_commerce_premium_golden_custom_report.php:351
+#: includes/ic_commerce_premium_golden_custom_report_.php:357
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:349
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:349
+msgid "Order ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:272
+msgid "Refunded"
+msgstr "זוכתה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:273
+msgid "Daily"
+msgstr "יומי"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:274
+msgid "Monthly"
+msgstr "חודשי"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:275
+msgid "Yearly"
+msgstr "שנתי"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:288
+msgid "Coupon Codes:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:297
+msgid "Discount Type:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:336
+#: includes/ic_commerce_premium_golden_cross_tab.php:457
+#: includes/ic_commerce_premium_golden_custom_report.php:411
+#: includes/ic_commerce_premium_golden_custom_report_.php:414
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:407
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:407
+#: includes/ic_commerce_premium_golden_google_analytics.php:147
+#: includes/ic_commerce_premium_golden_plugin_settings.php:592
+#: includes/ic_commerce_premium_golden_tax_report.php:258
+#: includes/ic_commerce_premium_golden_variation.php:352
+#: includes/ic_commerce_premium_golden_variation_20150827.php:350
+msgid "Reset"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:338
+#: includes/ic_commerce_premium_golden_cross_tab.php:458
+#: includes/ic_commerce_premium_golden_custom_report.php:413
+#: includes/ic_commerce_premium_golden_custom_report_.php:416
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:409
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:409
+#: includes/ic_commerce_premium_golden_google_analytics.php:148
+#: includes/ic_commerce_premium_golden_projected_actual_sales.php:116
+#: includes/ic_commerce_premium_golden_tax_report.php:259
+#: includes/ic_commerce_premium_golden_variation.php:354
+#: includes/ic_commerce_premium_golden_variation_20150827.php:352
+msgid "Search"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:383
+#: includes/ic_commerce_premium_golden_cross_tab.php:472
+#: includes/ic_commerce_premium_golden_custom_report.php:523
+#: includes/ic_commerce_premium_golden_custom_report_.php:526
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:519
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:519
+#: includes/ic_commerce_premium_golden_tax_report.php:272
+#: includes/ic_commerce_premium_golden_variation.php:380
+#: includes/ic_commerce_premium_golden_variation_20150827.php:378
+msgid "In order to view the results please hit \"<strong>Search</strong>\" button."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:405
+#: includes/ic_commerce_premium_golden_all_report.php:2520
+#: includes/ic_commerce_premium_golden_cross_tab.php:2543
+#: includes/ic_commerce_premium_golden_custom_report.php:553
+#: includes/ic_commerce_premium_golden_custom_report.php:1237
+#: includes/ic_commerce_premium_golden_custom_report_.php:556
+#: includes/ic_commerce_premium_golden_custom_report_.php:1238
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:549
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1234
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:549
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1231
+#: includes/ic_commerce_premium_golden_google_analytics.php:1000
+#: includes/ic_commerce_premium_golden_tax_report.php:2343
+#: includes/ic_commerce_premium_golden_variation.php:1456
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1452
+msgid "Export to CSV - Additional Information"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:413
+#: includes/ic_commerce_premium_golden_custom_report.php:561
+#: includes/ic_commerce_premium_golden_custom_report_.php:564
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:557
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:557
+#: includes/ic_commerce_premium_golden_plugin_settings.php:479
+msgid "Billing Information:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:417
+#: includes/ic_commerce_premium_golden_custom_report.php:565
+#: includes/ic_commerce_premium_golden_custom_report_.php:568
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:561
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:561
+#: includes/ic_commerce_premium_golden_plugin_settings.php:481
+msgid "Shipping Information:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:422
+#: includes/ic_commerce_premium_golden_all_report.php:2520
+#: includes/ic_commerce_premium_golden_cross_tab.php:2543
+#: includes/ic_commerce_premium_golden_custom_report.php:570
+#: includes/ic_commerce_premium_golden_custom_report.php:1237
+#: includes/ic_commerce_premium_golden_custom_report_.php:573
+#: includes/ic_commerce_premium_golden_custom_report_.php:1238
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:566
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1234
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:566
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1231
+#: includes/ic_commerce_premium_golden_google_analytics.php:1000
+#: includes/ic_commerce_premium_golden_stock_list.php:877
+#: includes/ic_commerce_premium_golden_tax_report.php:2343
+#: includes/ic_commerce_premium_golden_variation.php:1456
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1452
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1110
+msgid "Export to CSV"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:443
+#: includes/ic_commerce_premium_golden_all_report.php:479
+#: includes/ic_commerce_premium_golden_cross_tab.php:498
+#: includes/ic_commerce_premium_golden_cross_tab.php:553
+#: includes/ic_commerce_premium_golden_custom_report.php:585
+#: includes/ic_commerce_premium_golden_custom_report.php:639
+#: includes/ic_commerce_premium_golden_custom_report_.php:588
+#: includes/ic_commerce_premium_golden_custom_report_.php:642
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:581
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:635
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:581
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:635
+#: includes/ic_commerce_premium_golden_google_analytics.php:186
+#: includes/ic_commerce_premium_golden_google_analytics.php:245
+#: includes/ic_commerce_premium_golden_plugin_settings.php:477
+#: includes/ic_commerce_premium_golden_plugin_settings.php:557
+#: includes/ic_commerce_premium_golden_stock_list.php:254
+#: includes/ic_commerce_premium_golden_tax_report.php:301
+#: includes/ic_commerce_premium_golden_tax_report.php:359
+#: includes/ic_commerce_premium_golden_variation.php:412
+#: includes/ic_commerce_premium_golden_variation.php:468
+#: includes/ic_commerce_premium_golden_variation_20150827.php:410
+#: includes/ic_commerce_premium_golden_variation_20150827.php:466
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:287
+msgid "Company Name:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:447
+#: includes/ic_commerce_premium_golden_all_report.php:483
+#: includes/ic_commerce_premium_golden_cross_tab.php:502
+#: includes/ic_commerce_premium_golden_cross_tab.php:557
+#: includes/ic_commerce_premium_golden_custom_report.php:589
+#: includes/ic_commerce_premium_golden_custom_report.php:643
+#: includes/ic_commerce_premium_golden_custom_report_.php:592
+#: includes/ic_commerce_premium_golden_custom_report_.php:646
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:585
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:639
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:585
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:639
+#: includes/ic_commerce_premium_golden_fuctions.php:2127
+#: includes/ic_commerce_premium_golden_google_analytics.php:190
+#: includes/ic_commerce_premium_golden_google_analytics.php:249
+#: includes/ic_commerce_premium_golden_google_analytics.php:1421
+#: includes/ic_commerce_premium_golden_stock_list.php:258
+#: includes/ic_commerce_premium_golden_tax_report.php:305
+#: includes/ic_commerce_premium_golden_tax_report.php:363
+#: includes/ic_commerce_premium_golden_variation.php:416
+#: includes/ic_commerce_premium_golden_variation.php:472
+#: includes/ic_commerce_premium_golden_variation_20150827.php:414
+#: includes/ic_commerce_premium_golden_variation_20150827.php:470
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:291
+msgid "Report Title:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:452
+#: includes/ic_commerce_premium_golden_cross_tab.php:562
+#: includes/ic_commerce_premium_golden_custom_report.php:648
+#: includes/ic_commerce_premium_golden_custom_report_.php:651
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:644
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:644
+#: includes/ic_commerce_premium_golden_google_analytics.php:254
+#: includes/ic_commerce_premium_golden_tax_report.php:368
+#: includes/ic_commerce_premium_golden_variation.php:477
+#: includes/ic_commerce_premium_golden_variation_20150827.php:475
+msgid "Print Logo:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:457
+#: includes/ic_commerce_premium_golden_cross_tab.php:568
+#: includes/ic_commerce_premium_golden_custom_report.php:653
+#: includes/ic_commerce_premium_golden_custom_report_.php:656
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:649
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:649
+#: includes/ic_commerce_premium_golden_google_analytics.php:259
+#: includes/ic_commerce_premium_golden_tax_report.php:373
+#: includes/ic_commerce_premium_golden_variation.php:482
+#: includes/ic_commerce_premium_golden_variation_20150827.php:480
+msgid "Print Date:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:462
+#: includes/ic_commerce_premium_golden_all_report.php:2523
+#: includes/ic_commerce_premium_golden_all_report.php:2560
+#: includes/ic_commerce_premium_golden_cross_tab.php:573
+#: includes/ic_commerce_premium_golden_cross_tab.php:2546
+#: includes/ic_commerce_premium_golden_cross_tab.php:2583
+#: includes/ic_commerce_premium_golden_custom_report.php:658
+#: includes/ic_commerce_premium_golden_custom_report.php:1240
+#: includes/ic_commerce_premium_golden_custom_report.php:1269
+#: includes/ic_commerce_premium_golden_custom_report_.php:661
+#: includes/ic_commerce_premium_golden_custom_report_.php:1241
+#: includes/ic_commerce_premium_golden_custom_report_.php:1270
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:654
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1237
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1266
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:654
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1234
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1263
+#: includes/ic_commerce_premium_golden_google_analytics.php:264
+#: includes/ic_commerce_premium_golden_google_analytics.php:1003
+#: includes/ic_commerce_premium_golden_google_analytics.php:1039
+#: includes/ic_commerce_premium_golden_tax_report.php:377
+#: includes/ic_commerce_premium_golden_tax_report.php:2346
+#: includes/ic_commerce_premium_golden_tax_report.php:2377
+#: includes/ic_commerce_premium_golden_variation.php:487
+#: includes/ic_commerce_premium_golden_variation.php:1459
+#: includes/ic_commerce_premium_golden_variation.php:1498
+#: includes/ic_commerce_premium_golden_variation_20150827.php:485
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1455
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1494
+msgid "Print"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:473
+#: includes/ic_commerce_premium_golden_all_report.php:2522
+#: includes/ic_commerce_premium_golden_cross_tab.php:492
+#: includes/ic_commerce_premium_golden_cross_tab.php:2545
+#: includes/ic_commerce_premium_golden_custom_report.php:579
+#: includes/ic_commerce_premium_golden_custom_report.php:1239
+#: includes/ic_commerce_premium_golden_custom_report_.php:582
+#: includes/ic_commerce_premium_golden_custom_report_.php:1240
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:575
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1236
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:575
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1233
+#: includes/ic_commerce_premium_golden_google_analytics.php:180
+#: includes/ic_commerce_premium_golden_google_analytics.php:1002
+#: includes/ic_commerce_premium_golden_stock_list.php:248
+#: includes/ic_commerce_premium_golden_stock_list.php:878
+#: includes/ic_commerce_premium_golden_tax_report.php:295
+#: includes/ic_commerce_premium_golden_tax_report.php:2345
+#: includes/ic_commerce_premium_golden_variation.php:406
+#: includes/ic_commerce_premium_golden_variation.php:1458
+#: includes/ic_commerce_premium_golden_variation_20150827.php:404
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1454
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:281
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1111
+msgid "Export to PDF"
+msgstr "ייצוא ל- PDF"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:488
+#: includes/ic_commerce_premium_golden_cross_tab.php:507
+#: includes/ic_commerce_premium_golden_custom_report.php:594
+#: includes/ic_commerce_premium_golden_custom_report_.php:597
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:590
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:590
+#: includes/ic_commerce_premium_golden_google_analytics.php:195
+#: includes/ic_commerce_premium_golden_stock_list.php:263
+#: includes/ic_commerce_premium_golden_tax_report.php:310
+#: includes/ic_commerce_premium_golden_variation.php:421
+#: includes/ic_commerce_premium_golden_variation_20150827.php:419
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:296
+msgid "Show Logo:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:493
+#: includes/ic_commerce_premium_golden_cross_tab.php:512
+#: includes/ic_commerce_premium_golden_custom_report.php:599
+#: includes/ic_commerce_premium_golden_custom_report_.php:602
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:595
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:595
+#: includes/ic_commerce_premium_golden_google_analytics.php:200
+#: includes/ic_commerce_premium_golden_stock_list.php:268
+#: includes/ic_commerce_premium_golden_tax_report.php:315
+#: includes/ic_commerce_premium_golden_variation.php:426
+#: includes/ic_commerce_premium_golden_variation_20150827.php:424
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:301
+msgid "Show Date:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:498
+#: includes/ic_commerce_premium_golden_cross_tab.php:517
+#: includes/ic_commerce_premium_golden_custom_report.php:604
+#: includes/ic_commerce_premium_golden_custom_report_.php:607
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:600
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:600
+#: includes/ic_commerce_premium_golden_google_analytics.php:204
+#: includes/ic_commerce_premium_golden_stock_list.php:272
+#: includes/ic_commerce_premium_golden_tax_report.php:319
+#: includes/ic_commerce_premium_golden_variation.php:432
+#: includes/ic_commerce_premium_golden_variation_20150827.php:430
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:305
+msgid "PDF Orientation:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:500
+#: includes/ic_commerce_premium_golden_cross_tab.php:519
+#: includes/ic_commerce_premium_golden_custom_report.php:606
+#: includes/ic_commerce_premium_golden_custom_report_.php:609
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:602
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:602
+#: includes/ic_commerce_premium_golden_google_analytics.php:206
+#: includes/ic_commerce_premium_golden_stock_list.php:274
+#: includes/ic_commerce_premium_golden_tax_report.php:321
+#: includes/ic_commerce_premium_golden_variation.php:434
+#: includes/ic_commerce_premium_golden_variation_20150827.php:432
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:307
+msgid "Portrait"
+msgstr "דיוקן"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:501
+#: includes/ic_commerce_premium_golden_cross_tab.php:520
+#: includes/ic_commerce_premium_golden_custom_report.php:607
+#: includes/ic_commerce_premium_golden_custom_report_.php:610
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:603
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:603
+#: includes/ic_commerce_premium_golden_google_analytics.php:207
+#: includes/ic_commerce_premium_golden_stock_list.php:275
+#: includes/ic_commerce_premium_golden_tax_report.php:322
+#: includes/ic_commerce_premium_golden_variation.php:435
+#: includes/ic_commerce_premium_golden_variation_20150827.php:433
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:308
+msgid "Landscape"
+msgstr "נוף"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:506
+#: includes/ic_commerce_premium_golden_cross_tab.php:525
+#: includes/ic_commerce_premium_golden_custom_report.php:612
+#: includes/ic_commerce_premium_golden_custom_report_.php:615
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:608
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:608
+#: includes/ic_commerce_premium_golden_google_analytics.php:212
+#: includes/ic_commerce_premium_golden_stock_list.php:280
+#: includes/ic_commerce_premium_golden_tax_report.php:327
+#: includes/ic_commerce_premium_golden_variation.php:440
+#: includes/ic_commerce_premium_golden_variation_20150827.php:438
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:313
+msgid "Paper Size:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:515
+#: includes/ic_commerce_premium_golden_cross_tab.php:534
+#: includes/ic_commerce_premium_golden_custom_report.php:621
+#: includes/ic_commerce_premium_golden_custom_report_.php:624
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:617
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:617
+#: includes/ic_commerce_premium_golden_google_analytics.php:221
+#: includes/ic_commerce_premium_golden_stock_list.php:289
+#: includes/ic_commerce_premium_golden_tax_report.php:336
+#: includes/ic_commerce_premium_golden_variation.php:449
+#: includes/ic_commerce_premium_golden_variation_20150827.php:447
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:322
+msgid "Export to PDF:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:548
+#: includes/ic_commerce_premium_golden_customization.php:1155
+msgid "Product"
+msgstr "מוצר"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:549
+#: includes/ic_commerce_premium_golden_customization.php:1157
+msgid "Customer"
+msgstr "לקוח"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:550
+#: includes/ic_commerce_premium_golden_columns.php:357
+#: includes/ic_commerce_premium_golden_custom_report.php:2178
+#: includes/ic_commerce_premium_golden_custom_report_.php:2171
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2171
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2166
+#: includes/ic_commerce_premium_golden_customization.php:1071
+#: includes/ic_commerce_premium_golden_customization.php:1158
+#: includes/ic_commerce_premium_golden_dashboard.php:1908
+msgid "Billing Country"
+msgstr "ארץ"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:551
+#: includes/ic_commerce_premium_golden_customization.php:1160
+msgid "Payment Gateway"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:552
+#: includes/ic_commerce_premium_golden_columns.php:311
+#: includes/ic_commerce_premium_golden_columns.php:397
+#: includes/ic_commerce_premium_golden_columns.php:434
+#: includes/ic_commerce_premium_golden_customization.php:1161
+#: includes/ic_commerce_premium_golden_dashboard.php:1698
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:883
+msgid "Order Status"
+msgstr "סטטוס:"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:553
+#: includes/ic_commerce_premium_golden_customization.php:1162
+msgid "Recent Order"
+msgstr "את ההזמנה האחרונה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:554
+#: includes/ic_commerce_premium_golden_customization.php:1165
+msgid "Refund Details"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:555
+#: includes/ic_commerce_premium_golden_customization.php:1166
+msgid "Coupon"
+msgstr "קופון"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:559
+#: includes/ic_commerce_premium_golden_columns.php:362
+#: includes/ic_commerce_premium_golden_custom_report.php:2196
+#: includes/ic_commerce_premium_golden_custom_report_.php:2189
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2189
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2184
+#: includes/ic_commerce_premium_golden_customization.php:1078
+#: includes/ic_commerce_premium_golden_customization.php:1171
+#: includes/ic_commerce_premium_golden_dashboard.php:1908
+msgid "Shipping Country"
+msgstr "משלוח בארץ"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:690
+msgid "Some thing going wrong on creating result data in \"add_filter\" or \"create_grid_items\""
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:973
+msgid "No Orders found"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:1104
+#: includes/ic_commerce_premium_golden_variation.php:995
+#: includes/ic_commerce_premium_golden_variation.php:1317
+#: includes/ic_commerce_premium_golden_variation_20150827.php:991
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1313
+msgid "Not Set"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2521
+#: includes/ic_commerce_premium_golden_cross_tab.php:2544
+#: includes/ic_commerce_premium_golden_custom_report.php:1238
+#: includes/ic_commerce_premium_golden_custom_report_.php:1239
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1235
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1232
+#: includes/ic_commerce_premium_golden_google_analytics.php:1001
+#: includes/ic_commerce_premium_golden_tax_report.php:2344
+#: includes/ic_commerce_premium_golden_variation.php:1457
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1453
+msgid "Export to Excel"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2521
+#: includes/ic_commerce_premium_golden_cross_tab.php:2544
+#: includes/ic_commerce_premium_golden_custom_report.php:1238
+#: includes/ic_commerce_premium_golden_custom_report_.php:1239
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1235
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1232
+#: includes/ic_commerce_premium_golden_google_analytics.php:1001
+#: includes/ic_commerce_premium_golden_tax_report.php:2344
+#: includes/ic_commerce_premium_golden_variation.php:1457
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1453
+msgid "Export to Excel - Additional Information"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2542
+#: includes/ic_commerce_premium_golden_all_report.php:2559
+#: includes/ic_commerce_premium_golden_cross_tab.php:2567
+#: includes/ic_commerce_premium_golden_cross_tab.php:2582
+#: includes/ic_commerce_premium_golden_custom_report.php:1260
+#: includes/ic_commerce_premium_golden_custom_report.php:1268
+#: includes/ic_commerce_premium_golden_custom_report_.php:1261
+#: includes/ic_commerce_premium_golden_custom_report_.php:1269
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1257
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1265
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1254
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1262
+#: includes/ic_commerce_premium_golden_google_analytics.php:1024
+#: includes/ic_commerce_premium_golden_google_analytics.php:1038
+#: includes/ic_commerce_premium_golden_stock_list.php:898
+#: includes/ic_commerce_premium_golden_tax_report.php:2368
+#: includes/ic_commerce_premium_golden_tax_report.php:2376
+#: includes/ic_commerce_premium_golden_variation.php:1480
+#: includes/ic_commerce_premium_golden_variation.php:1497
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1476
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1493
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1131
+msgid "Back to Previous"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2575
+#: includes/ic_commerce_premium_golden_custom_report.php:2104
+#: includes/ic_commerce_premium_golden_custom_report.php:2135
+#: includes/ic_commerce_premium_golden_custom_report_.php:2099
+#: includes/ic_commerce_premium_golden_custom_report_.php:2130
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2099
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2130
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2094
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2125
+#: includes/ic_commerce_premium_golden_variation.php:1513
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1509
+msgid "Something going wrong, contact to developer"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2593
+msgid "Purchased product not found in selected categroy"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:2603
+msgid "Some thing going wrong, contact to developer"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_all_report.php:3146
+#: includes/ic_commerce_premium_golden_custom_report.php:2656
+#: includes/ic_commerce_premium_golden_custom_report_.php:2641
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2644
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2639
+#: includes/ic_commerce_premium_golden_fuctions.php:2131
+#: includes/ic_commerce_premium_golden_google_analytics.php:1425
+#: includes/ic_commerce_premium_golden_stock_list.php:1200
+#: includes/ic_commerce_premium_golden_variation.php:1992
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1999
+msgid "Date:"
+msgstr "תאריך:"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:127
+msgid "Error - <strong>211</strong> External HTTP Block Setting"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:128
+#: includes/ic_commerce_premium_golden_api.php:137
+#: includes/ic_commerce_premium_golden_api.php:146
+msgid "Setting <strong>'WP_HTTP_BLOCK_EXTERNAL'</strong> constant to true in your wp-config.php file will stop all outgoing network requests from your site. This is typically set on sites that are sitting behind a closed environment."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:129
+#: includes/ic_commerce_premium_golden_api.php:138
+#: includes/ic_commerce_premium_golden_api.php:147
+msgid "WordPress uses another constant <strong>'WP_ACCESSIBLE_HOSTS'</strong> in tandem with <strong>'WP_HTTP_BLOCK_EXTERNAL'</strong> to whitelist specific hosts to get past the block"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:131
+#: includes/ic_commerce_premium_golden_api.php:140
+#: includes/ic_commerce_premium_golden_api.php:149
+msgid "define( <strong>'WP_HTTP_BLOCK_EXTERNAL'</strong>, <strong>true</strong> )"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:136
+msgid "Error - <strong>212</strong> External HTTP Block Setting"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:145
+msgid "Error - <strong>213</strong> External HTTP Block Setting"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_api.php:155
+msgid "Error - <strong>214</strong> Missing Extensions"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_api.php:156
+msgid "Request Error, \"curl\" and \"streams\" PHP extensions might be missing on your server in order to activate plug-in or Try after sometime."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:21
+#: includes/ic_commerce_premium_golden_columns.php:40
+#: includes/ic_commerce_premium_golden_columns.php:183
+#: includes/ic_commerce_premium_golden_columns.php:209
+#: includes/ic_commerce_premium_golden_columns.php:243
+#: includes/ic_commerce_premium_golden_columns.php:328
+#: includes/ic_commerce_premium_golden_custom_report.php:351
+#: includes/ic_commerce_premium_golden_custom_report_.php:357
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:349
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:349
+msgid "Name"
+msgstr "שם"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:22
+#: includes/ic_commerce_premium_golden_columns.php:41
+#: includes/ic_commerce_premium_golden_columns.php:184
+#: includes/ic_commerce_premium_golden_columns.php:210
+#: includes/ic_commerce_premium_golden_columns.php:244
+#: includes/ic_commerce_premium_golden_columns.php:329
+#: includes/ic_commerce_premium_golden_custom_report.php:351
+#: includes/ic_commerce_premium_golden_custom_report_.php:357
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:349
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:349
+msgid "Email"
+msgstr "אימייל"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:23
+#: includes/ic_commerce_premium_golden_columns.php:42
+#: includes/ic_commerce_premium_golden_columns.php:185
+#: includes/ic_commerce_premium_golden_columns.php:211
+#: includes/ic_commerce_premium_golden_columns.php:245
+#: includes/ic_commerce_premium_golden_columns.php:330
+#: includes/ic_commerce_premium_golden_columns.php:370
+#: includes/ic_commerce_premium_golden_custom_report.php:351
+#: includes/ic_commerce_premium_golden_custom_report_.php:357
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:349
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:349
+msgid "Date"
+msgstr "תאריך"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:25
+#: includes/ic_commerce_premium_golden_columns.php:43
+#: includes/ic_commerce_premium_golden_columns.php:186
+#: includes/ic_commerce_premium_golden_columns.php:212
+#: includes/ic_commerce_premium_golden_columns.php:249
+#: includes/ic_commerce_premium_golden_columns.php:251
+#: includes/ic_commerce_premium_golden_columns.php:331
+#: includes/ic_commerce_premium_golden_custom_report.php:351
+#: includes/ic_commerce_premium_golden_custom_report_.php:357
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:349
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:349
+msgid "Status"
+msgstr "סטטוס:"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:27
+#: includes/ic_commerce_premium_golden_columns.php:45
+#: includes/ic_commerce_premium_golden_columns.php:192
+#: includes/ic_commerce_premium_golden_columns.php:218
+#: includes/ic_commerce_premium_golden_columns.php:335
+msgid "Items"
+msgstr "פריטים"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:28
+#: includes/ic_commerce_premium_golden_columns.php:46
+#: includes/ic_commerce_premium_golden_columns.php:154
+#: includes/ic_commerce_premium_golden_columns.php:193
+#: includes/ic_commerce_premium_golden_columns.php:219
+#: includes/ic_commerce_premium_golden_columns.php:336
+#: includes/ic_commerce_premium_golden_columns.php:517
+#: includes/ic_commerce_premium_golden_customization.php:1051
+#: includes/ic_commerce_premium_golden_customization.php:1093
+#: includes/ic_commerce_premium_golden_tax_report.php:412
+#: includes/ic_commerce_premium_golden_tax_report.php:427
+#: includes/ic_commerce_premium_golden_tax_report.php:441
+#: includes/ic_commerce_premium_golden_tax_report.php:455
+#: includes/ic_commerce_premium_golden_tax_report.php:467
+msgid "Gross Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:29
+#: includes/ic_commerce_premium_golden_columns.php:47
+#: includes/ic_commerce_premium_golden_columns.php:157
+#: includes/ic_commerce_premium_golden_columns.php:196
+#: includes/ic_commerce_premium_golden_columns.php:222
+#: includes/ic_commerce_premium_golden_columns.php:339
+#: includes/ic_commerce_premium_golden_columns.php:520
+#: includes/ic_commerce_premium_golden_monthly_summary.php:303
+#: includes/ic_commerce_premium_golden_monthly_summary.php:320
+msgid "Total Discount Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:30
+#: includes/ic_commerce_premium_golden_columns.php:48
+#: includes/ic_commerce_premium_golden_columns.php:158
+#: includes/ic_commerce_premium_golden_columns.php:197
+#: includes/ic_commerce_premium_golden_columns.php:223
+#: includes/ic_commerce_premium_golden_columns.php:340
+#: includes/ic_commerce_premium_golden_columns.php:521
+#: includes/ic_commerce_premium_golden_customization.php:1050
+#: includes/ic_commerce_premium_golden_customization.php:1092
+#: includes/ic_commerce_premium_golden_tax_report.php:411
+#: includes/ic_commerce_premium_golden_tax_report.php:426
+#: includes/ic_commerce_premium_golden_tax_report.php:440
+#: includes/ic_commerce_premium_golden_tax_report.php:454
+#: includes/ic_commerce_premium_golden_tax_report.php:466
+msgid "Shipping Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:31
+#: includes/ic_commerce_premium_golden_columns.php:49
+#: includes/ic_commerce_premium_golden_columns.php:159
+#: includes/ic_commerce_premium_golden_columns.php:198
+#: includes/ic_commerce_premium_golden_columns.php:224
+#: includes/ic_commerce_premium_golden_columns.php:341
+#: includes/ic_commerce_premium_golden_columns.php:522
+msgid "Shipping Tax Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:34
+#: includes/ic_commerce_premium_golden_columns.php:51
+#: includes/ic_commerce_premium_golden_columns.php:162
+#: includes/ic_commerce_premium_golden_columns.php:201
+#: includes/ic_commerce_premium_golden_columns.php:227
+#: includes/ic_commerce_premium_golden_columns.php:344
+#: includes/ic_commerce_premium_golden_columns.php:525
+msgid "Part Refund Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:35
+#: includes/ic_commerce_premium_golden_columns.php:53
+#: includes/ic_commerce_premium_golden_columns.php:149
+#: includes/ic_commerce_premium_golden_columns.php:163
+#: includes/ic_commerce_premium_golden_columns.php:202
+#: includes/ic_commerce_premium_golden_columns.php:228
+#: includes/ic_commerce_premium_golden_columns.php:266
+#: includes/ic_commerce_premium_golden_columns.php:345
+#: includes/ic_commerce_premium_golden_columns.php:526
+#: includes/ic_commerce_premium_golden_customization.php:1052
+#: includes/ic_commerce_premium_golden_customization.php:1094
+#: includes/ic_commerce_premium_golden_tax_report.php:413
+#: includes/ic_commerce_premium_golden_tax_report.php:428
+#: includes/ic_commerce_premium_golden_tax_report.php:442
+#: includes/ic_commerce_premium_golden_tax_report.php:456
+#: includes/ic_commerce_premium_golden_tax_report.php:468
+msgid "Net Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:67
+#: includes/ic_commerce_premium_golden_columns.php:108
+#: includes/ic_commerce_premium_golden_variation.php:312
+#: includes/ic_commerce_premium_golden_variation_20150827.php:310
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:198
+msgid "Product ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:70
+#: includes/ic_commerce_premium_golden_variation.php:312
+#: includes/ic_commerce_premium_golden_variation.php:324
+#: includes/ic_commerce_premium_golden_variation_20150827.php:310
+#: includes/ic_commerce_premium_golden_variation_20150827.php:322
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:200
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1367
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1374
+msgid "Variation ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:73
+#: includes/ic_commerce_premium_golden_variation.php:324
+#: includes/ic_commerce_premium_golden_variation_20150827.php:322
+msgid "Order Item ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:75
+#: includes/ic_commerce_premium_golden_columns.php:95
+#: includes/ic_commerce_premium_golden_columns.php:109
+#: includes/ic_commerce_premium_golden_columns.php:281
+#: includes/ic_commerce_premium_golden_cross_tab.php:664
+#: includes/ic_commerce_premium_golden_cross_tab.php:686
+#: includes/ic_commerce_premium_golden_customization.php:1060
+msgid "Product SKU"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:76
+#: includes/ic_commerce_premium_golden_columns.php:96
+#: includes/ic_commerce_premium_golden_columns.php:110
+#: includes/ic_commerce_premium_golden_columns.php:282
+#: includes/ic_commerce_premium_golden_cross_tab.php:664
+#: includes/ic_commerce_premium_golden_cross_tab.php:679
+#: includes/ic_commerce_premium_golden_cross_tab.php:686
+#: includes/ic_commerce_premium_golden_customization.php:1062
+#: includes/ic_commerce_premium_golden_stock_list.php:178
+#: includes/ic_commerce_premium_golden_stock_list.php:1258
+#: includes/ic_commerce_premium_golden_stock_list.php:1265
+#: includes/ic_commerce_premium_golden_variation.php:312
+#: includes/ic_commerce_premium_golden_variation_20150827.php:310
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:197
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1369
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1376
+msgid "Product Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:83
+#: includes/ic_commerce_premium_golden_columns.php:98
+#: includes/ic_commerce_premium_golden_columns.php:111
+#: includes/ic_commerce_premium_golden_columns.php:284
+#: includes/ic_commerce_premium_golden_customization.php:1063
+msgid "Sales Qty."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:84
+#: includes/ic_commerce_premium_golden_columns.php:99
+#: includes/ic_commerce_premium_golden_columns.php:112
+#: includes/ic_commerce_premium_golden_columns.php:285
+#: includes/ic_commerce_premium_golden_customization.php:1064
+msgid "Current Stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:85
+#: includes/ic_commerce_premium_golden_columns.php:100
+#: includes/ic_commerce_premium_golden_columns.php:113
+#: includes/ic_commerce_premium_golden_columns.php:127
+#: includes/ic_commerce_premium_golden_columns.php:133
+#: includes/ic_commerce_premium_golden_columns.php:286
+#: includes/ic_commerce_premium_golden_columns.php:296
+#: includes/ic_commerce_premium_golden_columns.php:306
+#: includes/ic_commerce_premium_golden_columns.php:313
+#: includes/ic_commerce_premium_golden_columns.php:359
+#: includes/ic_commerce_premium_golden_columns.php:550
+#: includes/ic_commerce_premium_golden_customization.php:1037
+#: includes/ic_commerce_premium_golden_customization.php:1065
+#: includes/ic_commerce_premium_golden_customization.php:1073
+#: includes/ic_commerce_premium_golden_dashboard.php:1568
+#: includes/ic_commerce_premium_golden_dashboard.php:1700
+#: includes/ic_commerce_premium_golden_dashboard.php:1809
+#: includes/ic_commerce_premium_golden_dashboard.php:1910
+#: includes/ic_commerce_premium_golden_dashboard.php:2029
+#: includes/ic_commerce_premium_golden_dashboard.php:2128
+#: includes/ic_commerce_premium_golden_dashboard.php:2467
+#: includes/ic_commerce_premium_golden_dashboard.php:2588
+#: includes/ic_commerce_premium_golden_dashboard.php:2707
+#: includes/ic_commerce_premium_golden_variation.php:312
+#: includes/ic_commerce_premium_golden_variation_20150827.php:310
+msgid "Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:94
+msgid "ID"
+msgstr "מספר מזהה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:97
+#: includes/ic_commerce_premium_golden_columns.php:261
+#: includes/ic_commerce_premium_golden_init.php:329
+#: includes/ic_commerce_premium_golden_init.php:425
+msgid "Variation"
+msgstr "וריאציה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:125
+msgid "Variation Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:126
+#: includes/ic_commerce_premium_golden_columns.php:132
+#: includes/ic_commerce_premium_golden_columns.php:471
+#: includes/ic_commerce_premium_golden_customization.php:1117
+msgid "Sales Quantity"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:131
+#: includes/ic_commerce_premium_golden_columns.php:144
+#: includes/ic_commerce_premium_golden_columns.php:470
+#: includes/ic_commerce_premium_golden_customization.php:1110
+msgid "Product Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:143
+#: includes/ic_commerce_premium_golden_columns.php:153
+#: includes/ic_commerce_premium_golden_columns.php:295
+#: includes/ic_commerce_premium_golden_columns.php:305
+#: includes/ic_commerce_premium_golden_columns.php:312
+#: includes/ic_commerce_premium_golden_columns.php:358
+#: includes/ic_commerce_premium_golden_columns.php:482
+#: includes/ic_commerce_premium_golden_columns.php:489
+#: includes/ic_commerce_premium_golden_columns.php:500
+#: includes/ic_commerce_premium_golden_columns.php:508
+#: includes/ic_commerce_premium_golden_columns.php:514
+#: includes/ic_commerce_premium_golden_customization.php:1049
+#: includes/ic_commerce_premium_golden_customization.php:1072
+#: includes/ic_commerce_premium_golden_customization.php:1091
+#: includes/ic_commerce_premium_golden_customization.php:1124
+#: includes/ic_commerce_premium_golden_dashboard.php:1567
+#: includes/ic_commerce_premium_golden_dashboard.php:1699
+#: includes/ic_commerce_premium_golden_dashboard.php:1909
+#: includes/ic_commerce_premium_golden_dashboard.php:2028
+#: includes/ic_commerce_premium_golden_dashboard.php:2127
+#: includes/ic_commerce_premium_golden_dashboard.php:2466
+#: includes/ic_commerce_premium_golden_tax_report.php:410
+#: includes/ic_commerce_premium_golden_tax_report.php:425
+#: includes/ic_commerce_premium_golden_tax_report.php:439
+#: includes/ic_commerce_premium_golden_tax_report.php:453
+#: includes/ic_commerce_premium_golden_tax_report.php:465
+#: includes/ic_commerce_premium_golden_tax_report.php:478
+#: includes/ic_commerce_premium_golden_tax_report.php:487
+#: includes/ic_commerce_premium_golden_tax_report.php:495
+msgid "Order Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:145
+#: includes/ic_commerce_premium_golden_columns.php:262
+msgid "Qty."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:146
+#: includes/ic_commerce_premium_golden_columns.php:263
+msgid "Rate"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:147
+#: includes/ic_commerce_premium_golden_columns.php:264
+msgid "Prod. Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:148
+#: includes/ic_commerce_premium_golden_columns.php:265
+msgid "Prod. Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:33
+#: includes/ic_commerce_premium_golden_columns.php:52
+#: includes/ic_commerce_premium_golden_columns.php:161
+#: includes/ic_commerce_premium_golden_columns.php:200
+#: includes/ic_commerce_premium_golden_columns.php:226
+#: includes/ic_commerce_premium_golden_columns.php:343
+#: includes/ic_commerce_premium_golden_columns.php:524
+msgid "Total Tax Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:187
+#: includes/ic_commerce_premium_golden_columns.php:213
+#: includes/ic_commerce_premium_golden_customization.php:1047
+#: includes/ic_commerce_premium_golden_tax_report.php:191
+#: includes/ic_commerce_premium_golden_tax_report.php:407
+#: includes/ic_commerce_premium_golden_tax_report.php:422
+#: includes/ic_commerce_premium_golden_tax_report.php:436
+#: includes/ic_commerce_premium_golden_tax_report.php:449
+#: includes/ic_commerce_premium_golden_tax_report.php:463
+msgid "Tax Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:188
+#: includes/ic_commerce_premium_golden_columns.php:214
+msgid "Shipping Method"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:189
+#: includes/ic_commerce_premium_golden_columns.php:215
+#: includes/ic_commerce_premium_golden_columns.php:304
+#: includes/ic_commerce_premium_golden_dashboard.php:2126
+msgid "Payment Method"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:190
+#: includes/ic_commerce_premium_golden_columns.php:216
+msgid "Order Currency"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:191
+#: includes/ic_commerce_premium_golden_columns.php:217
+#: includes/ic_commerce_premium_golden_columns.php:254
+#: includes/ic_commerce_premium_golden_columns.php:350
+#: includes/ic_commerce_premium_golden_dashboard.php:2585
+msgid "Coupon Code"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:203
+#: includes/ic_commerce_premium_golden_columns.php:229
+#: includes/ic_commerce_premium_golden_columns.php:267
+msgid "Invoice Action"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:257
+#: includes/ic_commerce_premium_golden_customization.php:1156
+#: includes/ic_commerce_premium_golden_stock_list.php:1259
+#: includes/ic_commerce_premium_golden_stock_list.php:1267
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1370
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1377
+msgid "Category"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:259
+#: includes/ic_commerce_premium_golden_columns.php:369
+msgid "Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:260
+#: includes/ic_commerce_premium_golden_columns.php:367
+#: includes/ic_commerce_premium_golden_stock_list.php:1257
+#: includes/ic_commerce_premium_golden_stock_list.php:1264
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1368
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1375
+msgid "SKU"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:291
+#: includes/ic_commerce_premium_golden_custom_report.php:2171
+#: includes/ic_commerce_premium_golden_custom_report_.php:2164
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2164
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2159
+msgid "Billing First Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:292
+#: includes/ic_commerce_premium_golden_custom_report.php:2172
+#: includes/ic_commerce_premium_golden_custom_report_.php:2165
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2165
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2160
+msgid "Billing Last Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:294
+#: includes/ic_commerce_premium_golden_dashboard.php:2465
+msgid "Billing Email"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:351
+#: includes/ic_commerce_premium_golden_columns.php:533
+msgid "Coupon Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:352
+#: includes/ic_commerce_premium_golden_columns.php:534
+msgid "Coupon Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:667
+msgid "Country Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:371
+#: includes/ic_commerce_premium_golden_customization.php:1036
+msgid "Quantity"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:372
+msgid "Product Price Exc VAT"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:373
+msgid "VAT per Item"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:374
+msgid "Shipping"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:375
+msgid "Total Price Exl VAT and Shipping"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:376
+msgid "Total Price"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+# @ default
+#: includes/ic_commerce_premium_golden_stock_list.php:515
+#: includes/ic_commerce_premium_golden_variation.php:994
+#: includes/ic_commerce_premium_golden_variation_20150827.php:990
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:692
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:872
+msgid "Edit"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2179
+#: includes/ic_commerce_premium_golden_custom_report_.php:2172
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2172
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2167
+#: includes/ic_commerce_premium_golden_customization.php:1070
+#: includes/ic_commerce_premium_golden_customization.php:1159
+#: includes/ic_commerce_premium_golden_dashboard.php:2027
+msgid "Billing State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1034
+#: includes/ic_commerce_premium_golden_dashboard.php:2705
+msgid "Category Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:396
+#: includes/ic_commerce_premium_golden_columns.php:433
+msgid "Order Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:398
+#: includes/ic_commerce_premium_golden_columns.php:405
+#: includes/ic_commerce_premium_golden_columns.php:417
+#: includes/ic_commerce_premium_golden_columns.php:423
+#: includes/ic_commerce_premium_golden_columns.php:540
+msgid "Refund Counts"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:399
+#: includes/ic_commerce_premium_golden_columns.php:406
+#: includes/ic_commerce_premium_golden_columns.php:412
+#: includes/ic_commerce_premium_golden_columns.php:418
+#: includes/ic_commerce_premium_golden_columns.php:424
+#: includes/ic_commerce_premium_golden_columns.php:436
+#: includes/ic_commerce_premium_golden_columns.php:541
+msgid "Refund Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:404
+msgid "Refunded By"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:410
+#: includes/ic_commerce_premium_golden_columns.php:429
+msgid "Refund Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:411
+#: includes/ic_commerce_premium_golden_columns.php:443
+#: includes/ic_commerce_premium_golden_columns.php:545
+msgid "Order Counts"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:416
+#: includes/ic_commerce_premium_golden_google_analytics.php:121
+#: includes/ic_commerce_premium_golden_monthly_summary.php:294
+#: includes/ic_commerce_premium_golden_monthly_summary.php:313
+msgid "Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:422
+#: includes/ic_commerce_premium_golden_google_analytics.php:122
+msgid "Year"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:430
+msgid "Refund Status"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:431
+msgid "Refund By"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:435
+msgid "Refund Note"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:481
+msgid "Customer Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:488
+msgid "Country Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:499
+msgid "Payment Method Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:507
+msgid "Order Status Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:532
+msgid "Result Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1123
+msgid "Billing State Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1105
+#: includes/ic_commerce_premium_golden_customization.php:1109
+msgid "Category Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:539
+msgid "Results Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:192
+msgid "Prod./Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:193
+msgid "Variation/Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:195
+msgid "Prod./Country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:196
+msgid "Prod./State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:198
+msgid "Country/Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:199
+msgid "Payment G/Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:200
+msgid "Ord. Status/Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:202
+msgid "Summary/Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:238
+msgid "Start Month:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:242
+msgid "End Month:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:268
+#: includes/ic_commerce_premium_golden_cross_tab.php:350
+#: includes/ic_commerce_premium_golden_customization.php:45
+#: includes/ic_commerce_premium_golden_tax_report.php:147
+msgid "Country:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:280
+msgid "Payment Gatway:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:293
+msgid "Reports:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:297
+#: includes/ic_commerce_premium_golden_cross_tab.php:2069
+msgid "Order Total"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:298
+#: includes/ic_commerce_premium_golden_cross_tab.php:2070
+#: includes/ic_commerce_premium_golden_customization.php:1054
+#: includes/ic_commerce_premium_golden_customization.php:1096
+#: includes/ic_commerce_premium_golden_dashboard.php:390
+#: includes/ic_commerce_premium_golden_tax_report.php:415
+#: includes/ic_commerce_premium_golden_tax_report.php:430
+#: includes/ic_commerce_premium_golden_tax_report.php:444
+#: includes/ic_commerce_premium_golden_tax_report.php:458
+#: includes/ic_commerce_premium_golden_tax_report.php:470
+#: includes/ic_commerce_premium_golden_tax_report.php:480
+#: includes/ic_commerce_premium_golden_tax_report.php:489
+#: includes/ic_commerce_premium_golden_tax_report.php:497
+#: includes/ic_commerce_premium_golden_tax_report.php:504
+msgid "Order Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:299
+#: includes/ic_commerce_premium_golden_cross_tab.php:2071
+msgid "Order Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:300
+#: includes/ic_commerce_premium_golden_cross_tab.php:2072
+#: includes/ic_commerce_premium_golden_fuctions.php:2291
+msgid "Cart Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:301
+#: includes/ic_commerce_premium_golden_cross_tab.php:2073
+msgid "Order Shipping"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:302
+#: includes/ic_commerce_premium_golden_cross_tab.php:2074
+#: includes/ic_commerce_premium_golden_dashboard.php:403
+msgid "Order Shipping Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:303
+#: includes/ic_commerce_premium_golden_cross_tab.php:2075
+msgid "Product Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:365
+#: includes/ic_commerce_premium_golden_customization.php:55
+#: includes/ic_commerce_premium_golden_tax_report.php:160
+msgid "State:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:424
+#: includes/ic_commerce_premium_golden_variation.php:213
+#: includes/ic_commerce_premium_golden_variation_20150827.php:213
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:181
+msgid "Variations:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:434
+msgid "There is no order purchased in variable product."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:547
+msgid "Export to Print"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:670
+msgid "Status Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:673
+msgid "Payment Gatway"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:676
+msgid "Reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:679
+msgid "Item SKU"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:898
+#: includes/ic_commerce_premium_golden_cross_tab.php:1124
+#: includes/ic_commerce_premium_golden_google_analytics.php:1274
+msgid "Total"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:1187
+msgid "Order not found"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:2602
+#: includes/ic_commerce_premium_golden_cross_tab.php:2921
+msgid "Total Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cross_tab.php:2603
+msgid "Total Qty."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:76
+#: includes/ic_commerce_premium_golden_custom_report_.php:84
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:75
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:75
+msgid "Detail Search"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:151
+#: includes/ic_commerce_premium_golden_custom_report_.php:158
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:149
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:149
+msgid "Today's detail reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:157
+#: includes/ic_commerce_premium_golden_custom_report_.php:164
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:155
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:155
+msgid "Yesterday's detail reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:164
+#: includes/ic_commerce_premium_golden_custom_report_.php:171
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:162
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:162
+msgid "This week detail reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:171
+#: includes/ic_commerce_premium_golden_custom_report_.php:177
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:169
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:169
+msgid "This month detail reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:177
+#: includes/ic_commerce_premium_golden_custom_report_.php:183
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:175
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:175
+msgid "This year detail reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:207
+#: includes/ic_commerce_premium_golden_custom_report.php:220
+#: includes/ic_commerce_premium_golden_custom_report_.php:213
+#: includes/ic_commerce_premium_golden_custom_report_.php:226
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:205
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:218
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:205
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:218
+#, php-format
+msgid "Product detail of %s"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:211
+#: includes/ic_commerce_premium_golden_custom_report_.php:217
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:209
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:209
+#, php-format
+msgid "Product detail of %s country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:215
+#: includes/ic_commerce_premium_golden_custom_report_.php:221
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:213
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:213
+#, php-format
+msgid "Product detail of %s from %s country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:224
+#: includes/ic_commerce_premium_golden_custom_report_.php:230
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:222
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:222
+#, php-format
+msgid "Product detail of %s order ID"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:228
+#: includes/ic_commerce_premium_golden_custom_report_.php:234
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:226
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:226
+#, php-format
+msgid "Product detail of %s payment method"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:232
+#: includes/ic_commerce_premium_golden_custom_report_.php:238
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:230
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:230
+#, php-format
+msgid "Coupon detail of %s"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:236
+#: includes/ic_commerce_premium_golden_custom_report_.php:242
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:234
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:234
+#, php-format
+msgid "Coupons detail of %s"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:268
+#: includes/ic_commerce_premium_golden_custom_report_.php:274
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:266
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:266
+msgid "Order ID:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:272
+#: includes/ic_commerce_premium_golden_custom_report.php:302
+#: includes/ic_commerce_premium_golden_custom_report_.php:278
+#: includes/ic_commerce_premium_golden_custom_report_.php:308
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:270
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:300
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:270
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:300
+#: includes/ic_commerce_premium_golden_variation.php:171
+#: includes/ic_commerce_premium_golden_variation_20150827.php:171
+msgid "Customer:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:286
+#: includes/ic_commerce_premium_golden_custom_report.php:296
+#: includes/ic_commerce_premium_golden_custom_report_.php:292
+#: includes/ic_commerce_premium_golden_custom_report_.php:302
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:284
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:294
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:284
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:294
+msgid "Enable product selection by clicking 'Show Order Item Details'"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:342
+#: includes/ic_commerce_premium_golden_custom_report_.php:348
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:340
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:340
+msgid "Email:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:347
+#: includes/ic_commerce_premium_golden_custom_report_.php:353
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:345
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:345
+#: includes/ic_commerce_premium_golden_stock_list.php:175
+#: includes/ic_commerce_premium_golden_variation.php:309
+#: includes/ic_commerce_premium_golden_variation_20150827.php:307
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:193
+msgid "Order By:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:354
+#: includes/ic_commerce_premium_golden_custom_report_.php:360
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:352
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:352
+#: includes/ic_commerce_premium_golden_stock_list.php:180
+#: includes/ic_commerce_premium_golden_variation.php:314
+#: includes/ic_commerce_premium_golden_variation_20150827.php:312
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:204
+msgid "Ascending"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:354
+#: includes/ic_commerce_premium_golden_custom_report_.php:360
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:352
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:352
+#: includes/ic_commerce_premium_golden_stock_list.php:180
+#: includes/ic_commerce_premium_golden_variation.php:314
+#: includes/ic_commerce_premium_golden_variation_20150827.php:312
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:204
+msgid "Descending"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:367
+#: includes/ic_commerce_premium_golden_custom_report_.php:373
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:365
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:365
+msgid "Show Order Item Details:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:372
+#: includes/ic_commerce_premium_golden_custom_report_.php:378
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:370
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:370
+msgid "Coupon Used Only:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:412
+#: includes/ic_commerce_premium_golden_custom_report_.php:415
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:408
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:408
+msgid "Customize Column"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:421
+#: includes/ic_commerce_premium_golden_custom_report_.php:424
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:417
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:417
+msgid "Normal View Column: "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:421
+#: includes/ic_commerce_premium_golden_custom_report.php:426
+#: includes/ic_commerce_premium_golden_custom_report_.php:424
+#: includes/ic_commerce_premium_golden_custom_report_.php:429
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:417
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:422
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:417
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:422
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:160
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:170
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:185
+msgid "Select All"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:426
+#: includes/ic_commerce_premium_golden_custom_report_.php:429
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:422
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:422
+msgid "Order Item Details Column: "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:847
+#: includes/ic_commerce_premium_golden_custom_report.php:1075
+#: includes/ic_commerce_premium_golden_custom_report_.php:850
+#: includes/ic_commerce_premium_golden_custom_report_.php:1077
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:843
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1072
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:843
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1070
+#: includes/ic_commerce_premium_golden_tax_report.php:570
+msgid "No orders found"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:1184
+#: includes/ic_commerce_premium_golden_custom_report_.php:1185
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1181
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1178
+msgid "Order:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:1184
+#: includes/ic_commerce_premium_golden_custom_report_.php:1185
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:1181
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:1178
+msgid "Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2127
+#: includes/ic_commerce_premium_golden_custom_report_.php:2122
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2122
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2117
+msgid "Purchased product not found in selected category"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2173
+#: includes/ic_commerce_premium_golden_custom_report_.php:2166
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2166
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2161
+msgid "Billing Company"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2174
+#: includes/ic_commerce_premium_golden_custom_report_.php:2167
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2167
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2162
+msgid "Billing Address 1"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2175
+#: includes/ic_commerce_premium_golden_custom_report_.php:2168
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2168
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2163
+msgid "Billing Address 2"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2176
+#: includes/ic_commerce_premium_golden_custom_report_.php:2169
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2169
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2164
+msgid "Billing City"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2177
+#: includes/ic_commerce_premium_golden_custom_report_.php:2170
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2170
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2165
+msgid "Billing Post Code"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2180
+#: includes/ic_commerce_premium_golden_custom_report_.php:2173
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2173
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2168
+msgid "Billing Phone"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2189
+#: includes/ic_commerce_premium_golden_custom_report_.php:2182
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2182
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2177
+msgid "Shipping First Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2190
+#: includes/ic_commerce_premium_golden_custom_report_.php:2183
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2183
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2178
+msgid "Shipping Last Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2191
+#: includes/ic_commerce_premium_golden_custom_report_.php:2184
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2184
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2179
+msgid "Shipping Company"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2192
+#: includes/ic_commerce_premium_golden_custom_report_.php:2185
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2185
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2180
+msgid "Shipping Address 1"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2193
+#: includes/ic_commerce_premium_golden_custom_report_.php:2186
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2186
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2181
+msgid "Shipping Address 2"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2194
+#: includes/ic_commerce_premium_golden_custom_report_.php:2187
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2187
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2182
+msgid "Shipping City"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2195
+#: includes/ic_commerce_premium_golden_custom_report_.php:2188
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2188
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2183
+msgid "Shipping Post Code"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_custom_report.php:2197
+#: includes/ic_commerce_premium_golden_custom_report_.php:2190
+#: includes/ic_commerce_premium_golden_custom_report_20150820.php:2190
+#: includes/ic_commerce_premium_golden_custom_report_20150827.php:2185
+#: includes/ic_commerce_premium_golden_customization.php:1077
+#: includes/ic_commerce_premium_golden_customization.php:1172
+#: includes/ic_commerce_premium_golden_dashboard.php:2027
+msgid "Shipping State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:69
+#: includes/ic_commerce_premium_golden_variation.php:181
+#: includes/ic_commerce_premium_golden_variation_20150827.php:181
+msgid "Postcode(Zip):"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:73
+msgid "Min and Max By:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:78
+msgid "Order Net Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:79
+msgid "Order Discount Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:80
+msgid "Order Shipping Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:81
+msgid "Order Shipping Tax Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:86
+#: includes/ic_commerce_premium_golden_customization.php:93
+#: includes/ic_commerce_premium_golden_customization.php:99
+msgid "Enable this selection by uncheck 'Show Order Item Details'"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:91
+msgid "Min Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:97
+msgid "Max Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:251
+msgid "Summary"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:255
+#, php-format
+msgid "Summary From %1$s To %2$s"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:265
+#: includes/ic_commerce_premium_golden_dashboard.php:266
+#: includes/ic_commerce_premium_golden_dashboard.php:278
+#: includes/ic_commerce_premium_golden_dashboard.php:291
+#: includes/ic_commerce_premium_golden_dashboard.php:292
+#: includes/ic_commerce_premium_golden_dashboard.php:304
+#: includes/ic_commerce_premium_golden_dashboard.php:314
+#: includes/ic_commerce_premium_golden_dashboard.php:325
+#: includes/ic_commerce_premium_golden_dashboard.php:326
+#: includes/ic_commerce_premium_golden_dashboard.php:338
+#: includes/ic_commerce_premium_golden_dashboard.php:351
+#: includes/ic_commerce_premium_golden_dashboard.php:363
+#: includes/ic_commerce_premium_golden_dashboard.php:379
+#: includes/ic_commerce_premium_golden_dashboard.php:380
+#: includes/ic_commerce_premium_golden_dashboard.php:393
+#: includes/ic_commerce_premium_golden_dashboard.php:394
+#: includes/ic_commerce_premium_golden_dashboard.php:406
+#: includes/ic_commerce_premium_golden_dashboard.php:407
+#: includes/ic_commerce_premium_golden_dashboard.php:419
+#: includes/ic_commerce_premium_golden_dashboard.php:433
+#: includes/ic_commerce_premium_golden_dashboard.php:444
+#: includes/ic_commerce_premium_golden_dashboard.php:445
+#: includes/ic_commerce_premium_golden_dashboard.php:460
+#: includes/ic_commerce_premium_golden_dashboard.php:461
+#: includes/ic_commerce_premium_golden_dashboard.php:472
+#: includes/ic_commerce_premium_golden_dashboard.php:482
+#: includes/ic_commerce_premium_golden_dashboard.php:499
+#: includes/ic_commerce_premium_golden_dashboard.php:514
+#: includes/ic_commerce_premium_golden_dashboard.php:525
+#: includes/ic_commerce_premium_golden_dashboard.php:526
+#: includes/ic_commerce_premium_golden_dashboard.php:539
+#: includes/ic_commerce_premium_golden_dashboard.php:540
+#: includes/ic_commerce_premium_golden_dashboard.php:553
+#: includes/ic_commerce_premium_golden_dashboard.php:554
+#: includes/ic_commerce_premium_golden_dashboard.php:567
+#: includes/ic_commerce_premium_golden_dashboard.php:568
+#: includes/ic_commerce_premium_golden_dashboard.php:581
+msgid "0"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:262
+msgid "Total Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:457
+msgid "Total Coupons"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:429
+msgid "Order Shipping Total"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:441
+msgid "Last Order Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:491
+msgid "Todays Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:496
+msgid "Todays Total Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:512
+msgid "Todays Average Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:522
+msgid "Todays Total Refund"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:536
+msgid "Todays Total Coupons"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:625
+msgid "Sales Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:626
+msgid "Audience Overview"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:633
+msgid "Sales By Months"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:634
+msgid "Sales By Days"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:635
+msgid "Sales By Week"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:636
+msgid "Top Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:648
+msgid "Fetching data from Google Analytics..."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:649
+#: includes/ic_commerce_premium_golden_dashboard.php:679
+msgid "Please Wait!"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:652
+msgid "Last 30 day visit"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:691
+msgid "Order Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:703
+#: includes/ic_commerce_premium_golden_dashboard.php:706
+#: includes/ic_commerce_premium_golden_dashboard.php:707
+#: includes/ic_commerce_premium_golden_dashboard.php:708
+msgid "Sales Order Status"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:725
+#, php-format
+msgid "Top %s Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:728
+#: includes/ic_commerce_premium_golden_dashboard.php:729
+#: includes/ic_commerce_premium_golden_dashboard.php:730
+msgid "Top Product Status"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:771
+#, php-format
+msgid "Top %s Billing Country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:774
+#: includes/ic_commerce_premium_golden_dashboard.php:775
+#: includes/ic_commerce_premium_golden_dashboard.php:776
+msgid "Top Billing Country"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:862
+#, php-format
+msgid "Top %s Payment Gateway"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:865
+#: includes/ic_commerce_premium_golden_dashboard.php:866
+#: includes/ic_commerce_premium_golden_dashboard.php:867
+msgid "Top Payment Gateway"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:810
+#, php-format
+msgid "Recent %s Orders"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:822
+#, php-format
+msgid "Top %s Customers"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:825
+#: includes/ic_commerce_premium_golden_dashboard.php:826
+#: includes/ic_commerce_premium_golden_dashboard.php:827
+msgid "Top Customers"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:842
+#, php-format
+msgid "Top %s Coupons"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:845
+#: includes/ic_commerce_premium_golden_dashboard.php:846
+#: includes/ic_commerce_premium_golden_dashboard.php:847
+msgid "Top Coupons"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1566
+msgid "Sales Order"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:524
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:759
+msgid "No order found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1716
+#: includes/ic_commerce_premium_golden_dashboard.php:1826
+#: includes/ic_commerce_premium_golden_dashboard.php:1926
+#: includes/ic_commerce_premium_golden_dashboard.php:2047
+#: includes/ic_commerce_premium_golden_dashboard.php:2144
+#: includes/ic_commerce_premium_golden_dashboard.php:2365
+#: includes/ic_commerce_premium_golden_dashboard.php:2503
+#: includes/ic_commerce_premium_golden_dashboard.php:2605
+#: includes/ic_commerce_premium_golden_dashboard.php:2723
+msgid "View All"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1807
+msgid "Item Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1808
+#: includes/ic_commerce_premium_golden_dashboard.php:2706
+msgid "Qty"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1929
+msgid "No Country found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2050
+msgid "No State found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1590
+#: includes/ic_commerce_premium_golden_dashboard.php:2368
+msgid "No Order found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2464
+msgid "Billing Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2506
+msgid "No Customer found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2608
+#: includes/ic_commerce_premium_golden_dashboard.php:2726
+msgid "No Coupons found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_export_invoice.php:608
+msgid "Product Image"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_export_invoice.php:630
+#, php-format
+msgid "Download %d"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_export_invoice.php:632
+msgid "Download"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1812
+msgid "Letter"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1813
+msgid "Legal"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1814
+msgid "A0"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1815
+msgid "A1"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1816
+msgid "A2"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1817
+msgid "A3"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1818
+msgid "A4"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1819
+msgid "A5"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1820
+msgid "A6"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1957
+msgid "previous"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:1958
+msgid "next"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2179
+msgid "Summary Total:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2190
+#, php-format
+msgid "Total product variations: %s"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2292
+msgid "Cart % Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2293
+msgid "Product Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2294
+msgid "Product % Discount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_fuctions.php:2889
+#: includes/ic_commerce_premium_golden_variation.php:996
+#: includes/ic_commerce_premium_golden_variation_20150827.php:992
+msgid "-"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:47
+#: includes/ic_commerce_premium_golden_google_analytics.php:656
+msgid "<strong>Google Analytics:-</strong> file_get_contents() function not exists."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:64
+#: includes/ic_commerce_premium_golden_google_analytics.php:673
+#, php-format
+msgid "<a href=\"%s#ga_profile_id\">Click here </a> for google analytics settings."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:66
+#: includes/ic_commerce_premium_golden_google_analytics.php:675
+msgid "Request failed, fopen provides no further information, please try again later"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:67
+#: includes/ic_commerce_premium_golden_google_analytics.php:676
+msgid " <strong>Profile ID/View ID: - </strong><a href=\"https://www.youtube.com/watch?v=Qf2VT_ZCSGI\" target=\"_blank\">Click here </a> how to find your Google Analytics <strong>Profile Id</strong>"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:118
+#: includes/ic_commerce_premium_golden_google_analytics.php:714
+#: includes/ic_commerce_premium_golden_plugin_settings.php:194
+msgid "<strong>Bad Authentication of Google Analytics:-</strong>Username or Password is incorrect."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:146
+#: includes/ic_commerce_premium_golden_ga_data.php:167
+#: includes/ic_commerce_premium_golden_google_analytics.php:734
+msgid "<strong>Google Analytics:-</strong> Please enter your google analytics profile ID."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:208
+#: includes/ic_commerce_premium_golden_google_analytics.php:790
+msgid "<strong>Google Analytics Data Insufficient Permissions:-</strong> User "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_ga_data.php:333
+msgid "Please enter last Audience Overview Last day"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:78
+#: includes/ic_commerce_premium_golden_google_analytics.php:225
+#: includes/ic_commerce_premium_golden_google_analytics.php:226
+msgid "Google Analytics Overview"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:103
+msgid "Start Date:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:107
+msgid "End Date:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:115
+msgid "Overview By:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:119
+msgid "Day"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:120
+msgid "Week"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:681
+msgid "<strong>Google Analytics:-</strong> Please enter your google analytics usename and password."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:755
+msgid "<strong>Google Analytics:-</strong> Please enter valid google analytics profile ID."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:1060
+#: includes/ic_commerce_premium_golden_google_analytics.php:1254
+msgid "Orders/Site Visitor"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:1082
+#: includes/ic_commerce_premium_golden_google_analytics.php:1276
+msgid "Orders"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_google_analytics.php:1103
+#: includes/ic_commerce_premium_golden_google_analytics.php:1297
+msgid "Site Visitor"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:295
+#: includes/ic_commerce_premium_golden_init.php:310
+#: includes/ic_commerce_premium_golden_init.php:324
+#: includes/ic_commerce_premium_golden_init.php:369
+msgid "Dashboard"
+msgstr "לוח בקרה"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:297
+#: includes/ic_commerce_premium_golden_init.php:312
+msgid "Detail"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:298
+#: includes/ic_commerce_premium_golden_init.php:313
+#: includes/ic_commerce_premium_golden_init.php:340
+#: includes/ic_commerce_premium_golden_init.php:385
+#: includes/ic_commerce_premium_golden_init.php:448
+msgid "Settings"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:326
+#: includes/ic_commerce_premium_golden_init.php:377
+msgid "Details"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:327
+msgid "All Details"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:328
+#: includes/ic_commerce_premium_golden_init.php:419
+msgid "Crosstab"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:330
+#: includes/ic_commerce_premium_golden_init.php:431
+msgid "Google Analytics"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:331
+#: includes/ic_commerce_premium_golden_init.php:438
+#: includes/ic_commerce_premium_golden_stock_list.php:52
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:55
+msgid "Stock List"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:333
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:201
+msgid "Variation Stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:48
+#: includes/ic_commerce_premium_golden_plugin_settings.php:51
+msgid "Save Changes"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:57
+msgid "Please Wait"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:57
+msgid "Close"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:219
+msgid "Your are successfully logged in"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:235
+msgid "Settings saved"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:311
+msgid "Your are successfully logged out of Google Analytic account."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:420
+msgid "Dashboard Setting:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:421
+msgid "Recent Order:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:422
+msgid "Top Product:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:424
+msgid "Top Customer:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:425
+msgid "Top Billing Country:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:426
+msgid "Top State Country:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:427
+msgid "Top Payment Gateway:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:428
+msgid "Top Coupon:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:452
+msgid "Per Page:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:453
+msgid "Detail Page Orders:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:454
+msgid "Detail Stock Orders:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:455
+msgid "Detail Variation Stock Orders:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:456
+msgid "Detail View All Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:457
+msgid "Detail Variation Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:458
+msgid "Customer Page Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:462
+msgid "Default Settings:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:463
+msgid "Shop Order Status:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:464
+msgid "Hide Trash Order:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:468
+msgid "Cross Tab Reports:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:469
+msgid "Cross Tab Start Month:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:470
+msgid "Cross Tab End Month:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:473
+msgid "Export Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:475
+msgid "(Pdf/Print) Report Title:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:483
+#: includes/ic_commerce_premium_golden_plugin_settings.php:563
+msgid "Logo Image:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:487
+msgid "Email Reports:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:489
+msgid "Email Today Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:493
+msgid "Email Current Week Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:497
+msgid "Email Current Month Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:505
+msgid "Email Till Today Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:509
+msgid "Email Send To:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:510
+msgid "From Name:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:511
+msgid "From Email:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:512
+msgid "Subject:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:514
+msgid "Email Schedule:"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:84
+msgid "Once Minute"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:88
+msgid "Once Hourly"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+# @ default
+#: includes/ic_commerce_premium_golden_fuctions.php:3139
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:89
+msgid "Once Daily"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+# @ default
+#: includes/ic_commerce_premium_golden_fuctions.php:3140
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:90
+msgid "Once Weekly"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:92
+msgid "Twice Hourly"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:93
+msgid "Twice Daily"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:94
+msgid "Twice Weekly"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:514
+msgid "Unschedule Event"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:516
+msgid "Activate Email Reporting:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:524
+msgid "Active"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:525
+#: includes/ic_commerce_premium_golden_plugin_settings.php:529
+msgid "Schedule Status:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:528
+msgid "Schedule mailing stoped or not activated or unschedule event or try again"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:537
+msgid "Automatic Schedule mailing can not work, because \"DISABLE_WP_CRON\" is defined as \"TRUE\" on this plug-ins setting page in \"Cron URL Settings\" section."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:539
+msgid "Schedule mailing can not work, because \"DISABLE_WP_CRON\" is defined as \"TRUE\" in wp-config.php file or somewhere else. To define this to \"FALSE\" open wp-config.php file in WordPress root folder and set it to \"FALSE\" or comment."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:542
+msgid "WP CRON Status:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:545
+msgid "Action:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:545
+msgid "Test Mail"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:555
+msgid "PDF Invoice:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:559
+msgid "Company Address1:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:561
+msgid "Company Address2:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:564
+msgid "Comapany Name and Logo Align:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:566
+msgid "Comapany Name Left and Logo Left"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:571
+msgid "Show Signature:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:572
+msgid "Signature Align:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:572
+msgid "Left"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:572
+msgid "Center"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:572
+msgid "Right"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:573
+msgid "Signature Image:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:577
+msgid "Show Footer Note:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:578
+msgid "Footer Note(after signature):"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:582
+msgid "Show Invoice Creation Date:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:586
+msgid "Graph Setting:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:587
+msgid "Graph Height:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:588
+msgid "Tick Angle:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:589
+msgid "Tick Font Size:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:590
+msgid "Tick Character Length:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:591
+msgid "Tick Character Suffix:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:595
+msgid "Google Analytics Reports:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:603
+msgid "You are presently logged in to GA account; click on Logout button to <a href=\"\">Logout</a> of GA account."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:606
+msgid "You are presently logged out to GA account."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:609
+msgid "Account Status:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:614
+msgid "Username:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:615
+msgid "Password:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:617
+msgid "Profile ID:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:618
+msgid "Audience Overview Last day:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:59
+msgid "Please select Email Schedule."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:64
+msgid "Please select Activate Email Reporting."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:70
+msgid "Somehow next schedule is not set, please try re-activating schedule settting."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:79
+msgid "Email has been sent successfully."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:81
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:100
+msgid "Getting problem while sending mail."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:86
+msgid "Click on \"Save Changes\" button for saving changes and try again."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:97
+msgid "Email sent successfully."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:227
+msgid "Today's"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:238
+msgid "Yesterday"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:247
+msgid "Current Week"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:257
+msgid "Last Week"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:266
+msgid "Current Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:275
+msgid "Last Month"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:284
+msgid "Current Year"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:293
+msgid "Last Year"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:303
+msgid "Till Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:411
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:412
+msgid "Created Date/Time: "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:411
+msgid "(Wordpress Set Time Zone)"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:412
+msgid "(Default Server Time Zone)"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:413
+msgid "Site URL:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:778
+msgid "Summary -"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:785
+msgid "Total Sales:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:792
+msgid "Total Sales Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:799
+msgid "Discount Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:807
+msgid "Coupon Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:814
+msgid "Refund Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:822
+msgid "Shipping Tax Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:830
+msgid "Order Tax Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:840
+msgid "Total Tax Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:850
+msgid "Shipping Amount:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:860
+msgid "Average Sales:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_schedule_mailing_sales_status.php:871
+msgid "New Customer:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:63
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:69
+msgid "SKU No:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:67
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:73
+msgid "Product Name:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:75
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:81
+msgid "Min Stock:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:79
+msgid "Max Stock:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:88
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:94
+msgid "Product Stock:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:92
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:98
+msgid "Show all sub-types:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:103
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:109
+msgid "Stock Status:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:106
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:112
+msgid "In stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:106
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:112
+msgid "Out of stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:112
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:118
+msgid "Manage Stock:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:115
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:121
+msgid "Include items whose stock is mannaged"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:115
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:121
+msgid "Include items whose stock is not mannaged"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:148
+msgid "Product Type:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:161
+#: includes/ic_commerce_premium_golden_variation.php:281
+#: includes/ic_commerce_premium_golden_variation_20150827.php:279
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:167
+msgid "Product SKU:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:178
+#: includes/ic_commerce_premium_golden_stock_list.php:1260
+#: includes/ic_commerce_premium_golden_stock_list.php:1270
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1394
+msgid "Stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:190
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:214
+msgid "Basic Column:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:194
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:218
+msgid "Zero Stock:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:218
+msgid "Search Product"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:293
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:326
+msgid "Product variation"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:294
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:327
+msgid "List of products variation"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:321
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:944
+msgid "Show all sub-types"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:325
+#: includes/ic_commerce_premium_golden_stock_list.php:1273
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:948
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1381
+msgid "Downloadable"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:329
+#: includes/ic_commerce_premium_golden_stock_list.php:1274
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:952
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1382
+msgid "Virtual"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:340
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:964
+msgid "Show all product types"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:348
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:972
+msgid "Grouped product"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:350
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:974
+msgid "External/Affiliate product"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:352
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:976
+msgid "Simple product"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:354
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:978
+msgid "Variable"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1266
+msgid "Product Type"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1268
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1379
+msgid "Created Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1269
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1380
+msgid "Modified Date"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1271
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1385
+msgid "Regular Price"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1272
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1386
+msgid "Sale Price"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1275
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1383
+msgid "Manage Stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1276
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1384
+msgid "Backorders"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_stock_list.php:1277
+msgid "Stock Status"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:111
+#: includes/ic_commerce_premium_golden_variation.php:252
+#: includes/ic_commerce_premium_golden_variation_20150827.php:111
+#: includes/ic_commerce_premium_golden_variation_20150827.php:250
+msgid "Variation Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:232
+#: includes/ic_commerce_premium_golden_variation_20150827.php:230
+msgid "There is no any order purchased in variable product."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:236
+#: includes/ic_commerce_premium_golden_variation_20150827.php:234
+msgid "Enable variations selection by clicking show variable products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:248
+#: includes/ic_commerce_premium_golden_variation_20150827.php:246
+msgid "Show:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:252
+#: includes/ic_commerce_premium_golden_variation_20150827.php:250
+msgid "Simple Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:252
+#: includes/ic_commerce_premium_golden_variation_20150827.php:250
+msgid "All Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:262
+#: includes/ic_commerce_premium_golden_variation_20150827.php:260
+msgid "Style:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:265
+#: includes/ic_commerce_premium_golden_variation_20150827.php:263
+msgid "Columner"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:265
+#: includes/ic_commerce_premium_golden_variation_20150827.php:263
+msgid "Comma Separated"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:269
+#: includes/ic_commerce_premium_golden_variation_20150827.php:267
+msgid "Enable style selection by clicking show variable products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:289
+#: includes/ic_commerce_premium_golden_variation_20150827.php:287
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:158
+msgid "Variation SKU:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:540
+#: includes/ic_commerce_premium_golden_variation_20150827.php:538
+msgid "Product List"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:1122
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1118
+msgid "No order found"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:1493
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1489
+msgid "Total Result: "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation.php:1493
+#: includes/ic_commerce_premium_golden_variation_20150827.php:1489
+msgid ", Amount: "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:85
+msgid "MaxStock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:113
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:122
+msgid "All"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:130
+msgid ">Product:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:134
+msgid "All Product"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:143
+msgid "All Category"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:219
+msgid "Include items having 0 stock"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:872
+msgid "Edit this item"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_variation_stock_list.php:1066
+#, php-format
+msgid "Results: <strong>%1$s/%2$s</strong>"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: ic-woocommerce-advance-sales-report-premium-golden.php:51
+msgid "WooCommerce Advance Sales Report Premium Gold"
+msgstr "דוח מכירות WooCommerce מראש גולד פרימיום"
+
+# @ icwoocommerce_textdomains
+#: ic-woocommerce-advance-sales-report-premium-golden.php:52
+msgid "WooCommerce Report Premium"
+msgstr "ח WooCommerce פרימיום"
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_activate.php:88
+msgid "Product is Activated"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:91
+#: includes/ic_commerce_premium_golden_cog.php:184
+#: includes/ic_commerce_premium_golden_cog.php:207
+#: includes/ic_commerce_premium_golden_cog.php:242
+msgid "Cost Of Goods"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:94
+msgid "Total Cost Of Goods"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:106
+msgid "COGs"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:107
+msgid "Total COGs"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:156
+msgid "Cost Of Goods "
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:157
+#: includes/ic_commerce_premium_golden_cog.php:185
+#: includes/ic_commerce_premium_golden_cog.php:208
+#: includes/ic_commerce_premium_golden_cog.php:253
+msgid "Enter Cost Of Goods"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:158
+msgid "Enter the custom value here."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_cog.php:186
+#: includes/ic_commerce_premium_golden_cog.php:209
+msgid "Enter the Cost Of Goods."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:32
+#: includes/ic_commerce_premium_golden_columns.php:50
+#: includes/ic_commerce_premium_golden_columns.php:160
+#: includes/ic_commerce_premium_golden_columns.php:199
+#: includes/ic_commerce_premium_golden_columns.php:225
+#: includes/ic_commerce_premium_golden_columns.php:342
+#: includes/ic_commerce_premium_golden_columns.php:523
+msgid "Order Tax Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:155
+#: includes/ic_commerce_premium_golden_columns.php:194
+#: includes/ic_commerce_premium_golden_columns.php:220
+#: includes/ic_commerce_premium_golden_columns.php:337
+#: includes/ic_commerce_premium_golden_columns.php:518
+msgid "Order Discount Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:156
+#: includes/ic_commerce_premium_golden_columns.php:195
+#: includes/ic_commerce_premium_golden_columns.php:221
+#: includes/ic_commerce_premium_golden_columns.php:338
+#: includes/ic_commerce_premium_golden_columns.php:519
+msgid "Cart Discount Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:283
+msgid "Categories"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:472
+#: includes/ic_commerce_premium_golden_columns.php:483
+#: includes/ic_commerce_premium_golden_columns.php:490
+#: includes/ic_commerce_premium_golden_columns.php:501
+#: includes/ic_commerce_premium_golden_columns.php:509
+#: includes/ic_commerce_premium_golden_customization.php:1111
+#: includes/ic_commerce_premium_golden_customization.php:1118
+#: includes/ic_commerce_premium_golden_customization.php:1125
+msgid "Total Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_columns.php:494
+msgid "Shipping Country Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1048
+#: includes/ic_commerce_premium_golden_tax_report.php:409
+#: includes/ic_commerce_premium_golden_tax_report.php:424
+#: includes/ic_commerce_premium_golden_tax_report.php:438
+#: includes/ic_commerce_premium_golden_tax_report.php:451
+#: includes/ic_commerce_premium_golden_tax_report.php:464
+#: includes/ic_commerce_premium_golden_tax_report.php:502
+msgid "Tax Rate"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1053
+#: includes/ic_commerce_premium_golden_customization.php:1095
+#: includes/ic_commerce_premium_golden_tax_report.php:414
+#: includes/ic_commerce_premium_golden_tax_report.php:429
+#: includes/ic_commerce_premium_golden_tax_report.php:443
+#: includes/ic_commerce_premium_golden_tax_report.php:457
+#: includes/ic_commerce_premium_golden_tax_report.php:469
+#: includes/ic_commerce_premium_golden_tax_report.php:479
+#: includes/ic_commerce_premium_golden_tax_report.php:488
+#: includes/ic_commerce_premium_golden_tax_report.php:496
+#: includes/ic_commerce_premium_golden_tax_report.php:503
+msgid "Shipping Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1055
+#: includes/ic_commerce_premium_golden_customization.php:1097
+#: includes/ic_commerce_premium_golden_dashboard.php:416
+#: includes/ic_commerce_premium_golden_tax_report.php:416
+#: includes/ic_commerce_premium_golden_tax_report.php:431
+#: includes/ic_commerce_premium_golden_tax_report.php:445
+#: includes/ic_commerce_premium_golden_tax_report.php:459
+#: includes/ic_commerce_premium_golden_tax_report.php:471
+#: includes/ic_commerce_premium_golden_tax_report.php:481
+#: includes/ic_commerce_premium_golden_tax_report.php:490
+#: includes/ic_commerce_premium_golden_tax_report.php:498
+#: includes/ic_commerce_premium_golden_tax_report.php:505
+msgid "Total Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1061
+msgid "Customer Name"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1090
+msgid "Tax Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1128
+msgid "Shipping State Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1163
+msgid "Tax Report"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_customization.php:1164
+msgid "Customer Buy Products"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:279
+#: includes/ic_commerce_premium_golden_dashboard.php:339
+msgid "0%"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:302
+msgid "Average Sales Per Order"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:312
+msgid "Average Sales Per Day"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:375
+msgid "Total Refund"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:470
+msgid "Total Registered Customers"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:480
+msgid "Total Guest Customers"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:550
+msgid "Todays Order Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:564
+msgid "Todays Shipping Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:578
+msgid "Todays Total Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:592
+msgid "Todays Registered Customers"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:602
+msgid "Todays Guest Customers"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:665
+msgid "Monthly Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:676
+msgid "Map"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_dashboard.php:746
+#, php-format
+msgid "Top %s Category"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:749
+#: includes/ic_commerce_premium_golden_dashboard.php:750
+#: includes/ic_commerce_premium_golden_dashboard.php:751
+msgid "Top Category Status"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:771
+#, php-format
+msgid "Top %s Shipping Country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:791
+#, php-format
+msgid "Top %s Shipping State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:791
+#, php-format
+msgid "Top %s Billing State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:794
+#: includes/ic_commerce_premium_golden_dashboard.php:795
+#: includes/ic_commerce_premium_golden_dashboard.php:796
+msgid "Top Billing State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1719
+msgid "No Status found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:1829
+msgid "No Product found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2147
+msgid "No Payment found."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_dashboard.php:2587
+msgid "Coupon Used Count"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:334
+#: includes/ic_commerce_premium_golden_projected_actual_sales.php:59
+msgid "Projected Vs Actual Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:335
+#: includes/ic_commerce_premium_golden_init.php:462
+msgid "Tax Reports"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:403
+msgid "Advance Sales Report (Premium Gold Version)"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:413
+msgid "All Page"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:443
+msgid "Variation Stock List"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_init.php:456
+msgid "Projectd Vs Actual Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:295
+#: includes/ic_commerce_premium_golden_monthly_summary.php:314
+#: includes/ic_commerce_premium_golden_plugin_settings.php:446
+msgid "Projected Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:296
+#: includes/ic_commerce_premium_golden_monthly_summary.php:315
+msgid "Actual Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:297
+#: includes/ic_commerce_premium_golden_monthly_summary.php:316
+msgid "Difference"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:298
+#: includes/ic_commerce_premium_golden_monthly_summary.php:317
+msgid "%"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:300
+msgid "Total % to Sales"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:301
+#: includes/ic_commerce_premium_golden_monthly_summary.php:318
+msgid "Refund Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:302
+#: includes/ic_commerce_premium_golden_monthly_summary.php:319
+msgid "Part Refund Amount"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:304
+msgid "Tax Amt."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:305
+msgid "Shipping Order Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_monthly_summary.php:306
+msgid "Total Shipping Tax"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:423
+msgid "Top Category:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:429
+msgid "Show Selected Order Status only:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:429
+msgid "Setting for Dashboard \"<strong>Sales Order Status</strong>\" box."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:443
+msgid "Current Projected Year"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:444
+msgid "Current Projected Sales Year:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:447
+msgid "Projected Sales Year:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:463
+msgid "Ctrl + click to multiselect. <br /> Selected status will be used for calculating salse amount."
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:491
+msgid "Email Yesterday Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:495
+msgid "Email Last Week Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:499
+msgid "Email Last Month Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:501
+msgid "Email Current Year Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_plugin_settings.php:503
+msgid "Email Last Year Report:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_projected_actual_sales.php:88
+msgid "Select Year:"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:85
+msgid "Once 5 Minutes"
+msgstr ""
+
+# @ default
+#: includes/ic_commerce_premium_golden_schedule_mailing.php:86
+msgid "Once 10 Minutes"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:183
+msgid "Tax Group By:"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:188
+msgid "City"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:189
+msgid "State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:190
+msgid "Country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:192
+msgid "Tax Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:193
+msgid "City Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:194
+msgid "State Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:195
+msgid "Country Summary"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:404
+#: includes/ic_commerce_premium_golden_tax_report.php:420
+#: includes/ic_commerce_premium_golden_tax_report.php:435
+#: includes/ic_commerce_premium_golden_tax_report.php:475
+#: includes/ic_commerce_premium_golden_tax_report.php:485
+#: includes/ic_commerce_premium_golden_tax_report.php:494
+msgid "Tax Country"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:405
+#: includes/ic_commerce_premium_golden_tax_report.php:421
+#: includes/ic_commerce_premium_golden_tax_report.php:476
+#: includes/ic_commerce_premium_golden_tax_report.php:486
+msgid "Tax State"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:406
+#: includes/ic_commerce_premium_golden_tax_report.php:477
+msgid "Tax City"
+msgstr ""
+
+# @ icwoocommerce_textdomains
+#: includes/ic_commerce_premium_golden_tax_report.php:408
+#: includes/ic_commerce_premium_golden_tax_report.php:423
+#: includes/ic_commerce_premium_golden_tax_report.php:437
+#: includes/ic_commerce_premium_golden_tax_report.php:450
+msgid "Tax Rate Code"
+msgstr ""

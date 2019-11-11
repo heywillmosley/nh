@@ -1,0 +1,3 @@
+[18-Nov-2016 21:22:30 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/thenewhu/public_html/wp-content/plugins/lazy-load/lazy-load.php on line 111
+[21-Dec-2016 12:20:33 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/thenewhu/public_html/wp-content/plugins/lazy-load/lazy-load.php on line 111
+[21-May-2017 05:10:06 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/thenewhu/public_html/wp-content/plugins/lazy-load/lazy-load.php on line 111

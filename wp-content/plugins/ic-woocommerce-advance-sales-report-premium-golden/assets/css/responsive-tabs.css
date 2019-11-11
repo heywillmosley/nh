@@ -1,0 +1,113 @@
+/* Standard */
+.responsive-tabs{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	position:relative;
+	}
+
+ul.responsive-tabs{
+	width:100%;
+	display: table;
+    table-layout: fixed;
+	list-style:inside;
+	}
+
+.responsive-tabs li{
+	/*width:125px;*/
+	display:table-cell;
+	
+	margin:0;
+	text-align:center;
+	/*float:left;*/
+	}
+
+/*.responsive-tabs li a{
+	display:block;
+	padding:9px 10px 8px 10px;
+	text-decoration:none;
+	color:#333;
+	font-weight:bold;
+	font-size:14px;
+	text-shadow:1px 2px 0 #fff;
+	vertical-align:middle;
+	}*/
+	
+.responsive-tabs li a{
+	display:block;
+	padding:12px 10px 11px 10px;
+	text-decoration:none;
+	color:#333;
+	font-weight:bold;
+	font-size:15px;
+	text-shadow:1px 1px 0 #fff;
+	vertical-align:middle;
+	}
+	
+.responsive-tabs li img{vertical-align:middle;}
+	
+.responsive-tabs li a:hover{background:#F1F1F1;}
+.responsive-tabs li.active a:hover{background:none;}
+.responsive-tabs li.active a{color:#0073AA; /*text-shadow:1px 1px 1px #EFEFEF;*/}
+
+.responsive-tabs-content{margin-bottom:20px; box-shadow:2px 2px 3px #ccc;}
+
+.responsive-tabs-content .responsive-tabs-panel{padding:10px 10px 10px 10px;}
+
+.responsive-tabs-content .responsive-tabs-panel .responsive-tab-title{display:none;}
+
+
+@media only screen and (max-width:319px){
+	.responsive-tabs li{display:none;}
+	
+	.responsive-tabs-content .responsive-tabs-panel,
+	.responsive-tabs-content .responsive-tabs-panel .responsive-tab-title{display:block;}
+}
+
+
+
+/* Standard */
+.responsive-tabs-default .responsive-tabs li{
+	border:1px solid #CACACA;
+	border-right:0;
+	border-bottom:0;
+	background:url(../images/heading-bg.jpg) left bottom repeat-x #FBFBFB;
+	/*background-size: 100% 100%;*/
+	cursor:pointer;
+	position:relative;
+	z-index:2;
+	}
+
+.responsive-tabs-default .responsive-tabs li:last-child{
+	border-right:1px solid #CACACA;
+	}
+
+.responsive-tabs-default .responsive-tabs li.active{
+	border-bottom:1px solid #FFF;
+	background:#FFF;
+	}
+
+.responsive-tabs-default .responsive-tabs-content{
+	border:1px solid #CACACA;
+	background:#FFF;
+	position:relative;
+	top:-1px;
+	z-index:1;
+	}
+
+.responsive-tabs-default .responsive-tabs-content .responsive-tab-title{color:#0B8593;}
+
+
+.iccommercepluginwrap .summary_div .responsive-tabs-content .responsive-tabs-panel{
+	padding:30px 25px 10px 25px;
+	}
+
+
+@media (max-width:783px){
+	.summary_div .responsive-tabs i{display:none;}
+}
+
+
+
+
+

@@ -1,0 +1,842 @@
+# Copyright (C) 2017 WooCommerce Serial Key
+# This file is distributed under the same license as the WooCommerce Serial Key package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Serial Key 1.9.0\n"
+"Report-Msgid-Bugs-To: http://www.storeapps.org/support/contact-us/\n"
+"POT-Creation-Date: 2017-10-13 03:40:55+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: Fri, 13 Oct 2017 09:10:55 +0530\n"
+"Last-Translator: Ratnakar Dubey <ratnakar.dubey@storeapps.org>\n"
+"Language-Team: StoreApps <support@storeapps.org>, Icegram <hello@icegram."
+"com>\n"
+
+#: includes/class-sa-serial-key.php:134
+msgid ""
+"%s WooCommerce Serial Key is active but it will only work with WooCommerce "
+"2.5+. %s."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:134
+#: sa-includes/class-storeapps-upgrade-2-1.php:765
+msgid "Important"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:134
+msgid "Please update WooCommerce to the latest version"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:226
+msgid "Manage Serial Key Usage"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:263 includes/class-sa-serial-key.php:367
+#: includes/class-sa-serial-key.php:967
+#: includes/class-sk-admin-dashboard.php:28
+msgid "Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:310
+msgid "%s with Serial Key %s"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:322
+msgid "Serial Key Details"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:372
+msgid "Product ID"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:377
+msgid "Order ID"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:383
+msgid "Invalid Value for "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:390
+msgid "This Key is Already Used in %s"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:397
+msgid "Serial Key Updated Successfully"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:400
+msgid "Could Not Update Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:530
+msgid "No Serial Key Found"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:531
+msgid "Generate"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:621 includes/class-sa-serial-key.php:659
+msgid "Generate Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:621
+msgid "Enable this option to generate a serial key for the product."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:625
+msgid "Serial Key Usage Limit."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:625 includes/class-sa-serial-key.php:671
+msgid "How to track usage"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:625 includes/class-sa-serial-key.php:672
+msgid "Unlimited"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:625
+msgid "Leave blank for unlimited usage."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:630 includes/class-sa-serial-key.php:665
+msgid "Update limit for previous serial keys?"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:630
+msgid "Check to update serial key usage limit for previous orders."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:634 includes/class-sa-serial-key.php:1002
+msgid "Import Serial Keys"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:635 includes/class-sa-serial-key.php:677
+#: sa-includes/class-storeapps-upgrade-2-1.php:765
+msgid "%s"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:635 includes/class-sa-serial-key.php:677
+#: includes/class-sa-serial-key.php:1242
+msgid "Import Serial Keys Using CSV File"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:636 includes/class-sa-serial-key.php:678
+msgid ""
+"Imported serial keys will be used instead of automatically generated serial "
+"keys"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:659
+msgid "Enable this option to generate serial key for the product"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:665
+msgid "Check to update serial key usage limit for previous orders"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:671
+msgid "Serial Key Usage Limit"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:671
+msgid "Leave blank for unlimited usage"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:817
+msgid "Last Reminder: "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:822
+msgid "[%s] %sYou are running low in Serial Keys%s!"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:822 includes/class-sa-serial-key.php:826
+#: templates/email-notification-for-count.php:22
+msgid " for "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:826
+msgid "You have only %s Serial Keys left%s!"
+msgstr ""
+
+#. #-#-#-#-#  woocommerce-serial-key.pot (WooCommerce Serial Key 1.9.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/class-sa-serial-key.php:993
+msgid "WooCommerce Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:996
+msgid "About Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1000
+msgid "Dashboard %s"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1000
+msgid "beta"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1001
+msgid "How Validation Works"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1063 includes/class-sa-serial-key.php:1753
+msgid "Settings"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1068
+msgid "Display name for UUID"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1071
+msgid "This will be displayed with UUIDs of your customers"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1076
+msgid "Sync serial key usage?"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1079
+msgid ""
+"Check this to sync / update existing serial key usage with usage limit of "
+"respective products"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1085
+msgid "Save changes"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1087
+#: sa-includes/class-storeapps-upgrade-2-1.php:663
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1090
+msgid "To validate generated key against a product, you can send a request to "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1091
+msgid ""
+"<br>You'll receive validation result in JSON format. JSON decode it to get "
+"response in array format & use it as per your requirement."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1095
+msgid "Live Demo Of Serial Key Validation"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1098
+#: sa-includes/class-storeapps-upgrade-2-1.php:631
+msgid "Send"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1101
+msgid "Response"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1104
+msgid "Example of HTML code to validate serial key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1105
+msgid "Embed this code in your product & don't forget to replace "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1105
+msgid " with SKU of the product in code"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1137
+msgid "Code"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1138
+msgid "Output"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1259
+msgid ""
+"Before you can upload your import file, you will need to fix the following "
+"error:"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1269
+msgid "Have CSV file?"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1274
+msgid "Import"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1289
+msgid "Failed"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1359
+msgid "%s Imported, %s Skipped"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1361
+msgid "Following keys were skipped with reasons: "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1383 includes/class-sa-serial-key.php:1491
+#: includes/class-sa-serial-key.php:1548 includes/class-sa-serial-key.php:1568
+msgid "Serial Keys"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1386
+msgid "Duplicate in File"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1389
+msgid "Special Characters"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1392
+msgid "Already Used"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1435
+msgid "Successfully imported!"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1439
+msgid "You have not uploaded a CSV file."
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1459
+msgid "Notification"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1465
+msgid "Send e-mail notification when "
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1467
+msgid "Serial Keys are remaining"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1469
+msgid "Save this"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1752
+msgid "About WooCommerce Serial Key"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1752
+msgid "About"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1753
+msgid "WooCommerce Serial Key Settings"
+msgstr ""
+
+#: includes/class-sa-serial-key.php:1754
+msgid "Need Help?"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:31
+msgid "Usage / Limit"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:34
+msgid "Expires On"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:37
+#: sa-includes/class-storeapps-upgrade-2-1.php:610
+msgid "Product"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:40
+msgid "Order"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:43
+msgid "Purchased On"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:66
+msgid "Details does not exists."
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:79
+msgid "Serial Key deleted."
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:117
+msgid "Delete"
+msgstr ""
+
+#: includes/class-sk-admin-dashboard.php:189
+msgid "No records available."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:123
+msgid "Welcome to WooCommerce Serial Key %s"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:125
+msgid "Thanks for installing! We hope you enjoy using WooCommerce Serial Key."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:129
+msgid "Go To Serial Key Settings"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:133
+msgid "Questions? Need Help?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:134
+#: sa-includes/class-storeapps-upgrade-2-1.php:663
+msgid "Docs"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:141
+msgid "Know Serial Key"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:144
+msgid "FAQ's"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:162
+msgid "What is Serial Key?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:164
+msgid ""
+"WooCommerce Serial Key is a simple, easy to use add-on for your WooCommerce "
+"store."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:165
+msgid ""
+"It can make a WooCommerce downloadable product to generate unique serial "
+"keys for each purchase."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:169
+msgid "What it does?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:171
+msgid ""
+"When this feature is enabled for any downloadable product, store will "
+"automatically generate a unique serial key for each purchased product & it "
+"will also send those serial key in ‘Order completed’ email. The serial keys "
+"for product will also be available on customer’s account."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:175
+msgid "What is possible"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:178
+msgid "Validate a Serial Key"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:180
+msgid ""
+"Along with generation of serial key, it also gives power to validate them. "
+"It automatically enables validation process on your site. To know more about "
+"validation process, click"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:182
+msgid " here"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:187
+msgid "Add Serial Key for previously created orders"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:189
+msgid ""
+"If you already have an Order, and you want to add a serial key for that, "
+"then you can easily generate serial key from Order admin page. To know more "
+"about it, click "
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:191
+#: includes/class-sk-admin-welcome.php:200
+#: includes/class-sk-admin-welcome.php:211
+#: includes/class-sk-admin-welcome.php:220
+#: includes/class-sk-admin-welcome.php:229
+msgid "here"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:196
+msgid "Update Serial Key for an existing order"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:198
+msgid ""
+"If you already have a serial key for a particular Order and you want to "
+"update it, then you can update existing serial key from Order admin page. To "
+"know more about it, click "
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:207
+msgid "Generate/Use your own Serial Keys"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:209
+msgid ""
+"Want to upload a Serial Key of your choice? Then Serial Key plugin allows "
+"you to upload a CSV file containing a list of your Serial Keys which will "
+"used (instead of the default generated) when an order is completed. To know "
+"more about it, click "
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:216
+msgid "Search / Filter / Find orders using Serial Key"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:218
+msgid ""
+"If you want to locate or search orders using a serial key, you can filter "
+"order’s list using that serial key along with a prefix text <code>serial:</"
+"code>. Refer "
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:225
+msgid "How your customers can manage usage of Serial Key"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:227
+msgid ""
+"Your customers can manager their serial key usage from \"Manage Serial Key "
+"Usage\" page. By default, this page is added as a subpage of \"My Account\" "
+"page of your customers. If you do not want your customer to manage their "
+"serial keys, you can remove / trash this page. Refer "
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:237
+msgid "Do check out Some of our other products!"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:238
+msgid "Let me take to catalog"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:253
+msgid "FAQ / Common Problems"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:258
+msgid "Can serial keys be generated for all product types?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:259
+msgid ""
+"No, currently, Serial Keys will be generated only for Downloadable products "
+"of <code>Simple & Variable</code> product type."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:262
+msgid "What does UUID means?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:263
+msgid ""
+"UUID stands for 'Universal Unique Identifier'. It is that unique value using "
+"which you can track where your serial key is getting used."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:266
+msgid "What does 'Display name for UUID' means?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:267
+msgid ""
+"'Display name for UUID' is only a label & it can be anything. It is not used "
+"for anything other than a text identifier."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:270
+msgid "What is the use of 'Manage Serial Key' page under My Account Page?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:271
+msgid ""
+"Your customer's can easily manage and keep a track of all their serial keys "
+"under 'Manage Serial Key' page."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:274
+msgid "Can I implement Serial Key in my Mobile applications?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:275
+msgid "Yes, you can implement Serial key in your mobile applications."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:278
+msgid "Can I modify pattern, number of character used for serial key?"
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:279
+msgid ""
+"Yes, you can import a CSV file containing Serial Keys that you want to "
+"assign to the new orders."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:282
+msgid ""
+"I have imported my Serial Key file but Keys are not getting used from it for "
+"New Order."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:283
+msgid "Make sure it is a CSV file."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:286
+msgid "I can't find a way to do X..."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:287
+msgid ""
+"Serial Key is actively developed. If you can't find your favorite feature "
+"(or have a suggestion) %s. We'd love to hear from you."
+msgstr ""
+
+#: includes/class-sk-admin-welcome.php:287
+msgid "contact us"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:59
+msgid "Serial Key empty"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:64
+msgid "SKU empty"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:76
+msgid "Serial key not found"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:96
+#: includes/class-validate-serial-key.php:102
+msgid "Serial key usage exceeded the allowed limit"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:130
+#: includes/class-validate-serial-key.php:135
+#: includes/class-validate-serial-key.php:165
+msgid "Serial key invalid for this product"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:157
+msgid "Sorry, you have reached your download limit for this product"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:161
+msgid "Sorry, this download has expired"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:172
+msgid "Serial key valid"
+msgstr ""
+
+#: includes/class-validate-serial-key.php:176
+msgid "Invalid order"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:260
+#: sa-includes/class-storeapps-upgrade-2-1.php:811
+msgid ""
+"Your licence for %s %s. Please %s to continue receiving updates & support"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:260
+#: sa-includes/class-storeapps-upgrade-2-1.php:811
+msgid "has expired"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:260
+#: sa-includes/class-storeapps-upgrade-2-1.php:262
+#: sa-includes/class-storeapps-upgrade-2-1.php:811
+#: sa-includes/class-storeapps-upgrade-2-1.php:813
+msgid "renew your licence now"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:262
+msgid ""
+"Your licence for %s %swill expire in %d %s%s. Please %s to get %s50%% "
+"discount%s"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:262
+#: sa-includes/class-storeapps-upgrade-2-1.php:813
+msgid "day"
+msgid_plural "days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:296
+msgid "Disconnected"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:401
+msgid "Error at %s"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:602
+msgid "Name"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:606
+msgid "E-mail"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:614
+msgid "Subject"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:618
+msgid "Message"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:623
+msgid "Include plugins / environment details to help solve issue faster"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:678
+msgid "Disconnect from StoreApps.org"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:678
+msgid "Disconnect StoreApps.org"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:680
+#: sa-includes/class-storeapps-upgrade-2-1.php:1062
+msgid "Connect to StoreApps.org"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:680
+msgid "Connect StoreApps.org"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:762
+msgid "A %s of %s is available. %s"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:762
+msgid "new version"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:762
+msgid "Update now"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:813
+msgid ""
+"Your licence for %s %swill expire in %d %s%s. Please %s to get %sdiscount 50%"
+"%%s"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:816
+#: sa-includes/class-storeapps-upgrade-2-1.php:829
+msgid "Dismiss"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:828
+msgid "%s for %s is not found. Please %s to get automatic updates."
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:828
+msgid "Licence Key"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:828
+msgid "enter & validate licence key"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1061
+msgid "You are one step away from completing activation."
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1063
+msgid "You get"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1066
+msgid "Automatic license validation"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1067
+msgid "Freedom from manual plugin updates"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1068
+msgid "Instant notification about critical updates & security releases"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1071
+msgid "Connect Now!"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1167
+msgid "Congrats! Activation Completed"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1178
+msgid "Code not received"
+msgstr ""
+
+#: sa-includes/class-storeapps-upgrade-2-1.php:1403
+msgid "404 Not Found"
+msgstr ""
+
+#: templates/email-notification-for-count.php:22
+msgid "You have %s keys remaining%s."
+msgstr ""
+
+#: templates/email-notification-for-count.php:23
+msgid ""
+"Please upload a new file with Serial Keys. If you will not upload new Serial "
+"Keys, then the plugin will generate keys on its own."
+msgstr ""
+
+#: templates/serial-key-usage.php:19 templates/serial-key-usage.php:30
+msgid "Hide details"
+msgstr ""
+
+#: templates/serial-key-usage.php:21 templates/serial-key-usage.php:33
+#: templates/serial-key-usage.php:75
+msgid "Show details"
+msgstr ""
+
+#: templates/serial-key-usage.php:100
+msgid "Remove"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.storeapps.org/product/woocommerce-serial-key/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Automatically create, distribute & manage serial keys with each downloadable "
+"product purchases. Easy for both - you & your customers."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "StoreApps"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.storeapps.org/"
+msgstr ""

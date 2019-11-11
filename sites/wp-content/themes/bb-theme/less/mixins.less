@@ -1,0 +1,201 @@
+/*
+
+WARNING! DO NOT EDIT THEME FILES IF YOU PLAN ON UPDATING!
+
+Theme files will be overwritten and your changes will be lost 
+when updating. Instead, add custom code in the admin under 
+Appearance > Theme Settings > Code or create a child theme.
+
+*/
+
+/* General
+----------------------------------------------------------- */
+
+.fl-box-shadow(@value) {
+	-moz-box-shadow: @value;
+	-webkit-box-shadow: @value;
+	box-shadow: @value;
+}
+.fl-border-radius(@value) {
+	-moz-border-radius: @value;
+	-webkit-border-radius: @value;
+	border-radius: @value;
+}
+.fl-transition(@value) {
+	-moz-transition: @value;
+	-webkit-transition: @value;
+	transition: @value;
+}
+.fl-placeholder-text-color(@value: '#666') {
+	&::-webkit-input-placeholder { /* WebKit browsers */
+		color: @value;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: @value;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: @value;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color: @value;
+	}
+}
+
+/* Nav Separators
+----------------------------------------------------------- */
+
+.fl-nav-seps(@color) when (iscolor(@color)) {
+	.navbar-nav > li {
+		> a {
+			border-right: 1px solid fade(@color, 10%);
+			margin: 10px 0;
+			padding: 5px 15px;
+		}
+		&:last-child a {
+			border-right: none;
+		}
+	}
+}
+
+/* Vertical Gradient
+----------------------------------------------------------- */
+
+.fl-gradient-background(@start, @stop) {
+	background: @start; /* Old browsers */
+	background: -moz-linear-gradient(top,  @start 0%, @stop 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@stop)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @start 0%,@stop 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @start 0%,@stop 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @start 0%,@stop 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @start 0%,@stop 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start, endColorstr=@stop,GradientType=0 ); /* IE6-9 */
+}
+.fl-gradient(@hex, @amount) when (lightness(@hex) >= 50%) {
+	.fl-gradient-background(@hex, darken(@hex, @amount));
+}
+.fl-gradient(@hex, @amount) when (lightness(@hex) < 50%) {
+	.fl-gradient-background(lighten(@hex, @amount), @hex);
+}
+
+/* Radial Gradient
+----------------------------------------------------------- */
+
+.fl-radial-gradient-background(@start, @stop) {
+	background: rgb(51,51,51); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  @start 0%, @stop 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@start), color-stop(100%,@stop)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  @start 0%,@stop 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  @start 0%,@stop 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  @start 0%,@stop 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  @start 0%,@stop 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start, endColorstr=@stop,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.fl-radial-gradient(@hex, @amount) when (lightness(@hex) >= 50%) {
+	.fl-radial-gradient-background(@hex, darken(@hex, @amount));
+}
+.fl-radial-gradient(@hex, @amount) when (lightness(@hex) < 50%) {
+	.fl-radial-gradient-background(lighten(@hex, @amount), @hex);
+}
+
+/* Change Section Colors
+----------------------------------------------------------- */
+
+/* Foreground */
+.fl-change-row-color(
+	@fg-color, 
+	@color, 
+	@accent: false,
+	@gradient: 0, 
+	@gradient_type: 'vertical'
+) 
+when (iscolor(@fg-color)) {
+	.fl-change-row-fg-color(@fg-color, @accent);
+}
+
+/* Background */
+.fl-change-row-color(
+	@fg-color, 
+	@color, 
+	@accent: false,
+	@gradient: 0, 
+	@gradient_type: 'vertical'
+) 
+when (iscolor(@color))  {
+	background: @color;
+}
+
+/* Background Vertical Gradient */
+.fl-change-row-color(
+	@fg-color, 
+	@color, 
+	@accent: false,
+	@gradient: 0, 
+	@gradient_type: 'vertical'
+) 
+when (iscolor(@color)) and (@gradient > 0) and (@gradient_type = 'vertical') {
+	.fl-gradient(@color, @gradient);
+}
+
+/* Background Radial Gradient */
+.fl-change-row-color(
+	@fg-color, 
+	@color, 
+	@accent: false,
+	@gradient: 0,
+	@gradient_type: 'vertical'
+) 
+when (iscolor(@color)) and (@gradient > 0) and (@gradient_type = 'radial') {
+	.fl-radial-gradient(@color, @gradient);
+}
+
+/* Change Foreground Color */
+.fl-change-row-fg-color(@fg-color, @accent: false) {
+	border-color: @fg-color;
+	border-color: fade(@fg-color, 13%);
+	color: @fg-color;
+	color: fade(@fg-color, 65%);
+	*,
+	a.fa {
+		color: @fg-color;
+		color: fade(@fg-color, 65%);
+	}
+	h1, h2, h3, h4, h5, h6,
+	a:hover,
+	a:focus,
+	a.fa:hover,
+	a.fa:focus {
+		color: @fg-color;
+	}
+	.navbar-nav > li {
+		> a {
+			color: @fg-color;
+			color: fade(@fg-color, 65%);
+			&:hover,
+			&:focus {
+				color: @fg-color;
+			}   
+		}
+		&.current-menu-item > a {
+			color: @fg-color;
+		}
+	}
+}
+.fl-change-row-fg-color(@fg-color, @accent: false) when (iscolor(@accent)) {
+	a:hover,
+	a.fa:hover {
+		color: @accent;
+	}
+	.navbar-nav > li {
+		> a {
+			&:hover {
+				color: @accent;
+			}
+		}
+		&.current-menu-item {
+			color: @accent;
+			> a {
+				color: @accent;
+			}
+		}
+	}
+}

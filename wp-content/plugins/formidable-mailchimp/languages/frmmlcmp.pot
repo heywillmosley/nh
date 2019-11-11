@@ -1,0 +1,120 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Formidable MailChimp v2.03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"POT-Revision-Date: Thu Oct 26 2017 17:20:54 GMT-0700 (PDT)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: ../controllers/FrmMlcmpAppController.php:19
+msgid ""
+"You are running an outdated version of Formidable. This plugin may not work "
+"correctly if you do not update Formidable."
+msgstr ""
+
+#: ../controllers/FrmMlcmpAppController.php:409 ..
+#: /controllers/FrmMlcmpAppController.php:413
+msgid "You had an error communicating with the MailChimp API."
+msgstr ""
+
+#: ../controllers/FrmMlcmpSettingsController.php:82
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: ../controllers/FrmMlcmpSettingsController.php:87
+msgid "No api key code was sent"
+msgstr ""
+
+#. Description of the plugin
+msgid "Add new MailChimp contacts from your Formidable forms"
+msgstr ""
+
+#: ../models/FrmMlcmpAction.php:16
+msgid "Add to MailChimp"
+msgstr ""
+
+#: ../views/action-settings/_match_fields.php:19 ../views/action-
+#: settings/_match_fields.php:51 ../views/action-settings/email_setting.php:11 ..
+#: /views/action-settings/mailchimp_options.php:9
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: ../views/action-settings/_match_fields.php:78
+msgid "Opt In"
+msgstr ""
+
+#: ../views/action-settings/_match_fields.php:80
+msgid "Single"
+msgstr ""
+
+#: ../views/action-settings/_match_fields.php:81
+msgid "Double"
+msgstr ""
+
+#: ../views/action-settings/address_action_setting.php:7
+msgid "Action"
+msgstr ""
+
+#: ../views/action-settings/address_action_setting.php:12
+msgid "Subscribe or update user"
+msgstr ""
+
+#: ../views/action-settings/address_action_setting.php:15
+msgid "Unsubscribe address"
+msgstr ""
+
+#: ../views/action-settings/email_setting.php:6
+msgid "Email Address"
+msgstr ""
+
+#: ../views/action-settings/mailchimp_options.php:7
+msgid "List"
+msgstr ""
+
+#: ../views/action-settings/mailchimp_options.php:17
+msgid "No MailChimp mailing lists found"
+msgstr ""
+
+#: ../views/notices/update_database.php:3
+#, php-format
+msgid ""
+"Your Formidable MailChimp database needs to be updated.%1$sPlease deactivate "
+"and reactivate the plugin or %2$sUpdate Now%3$s"
+msgstr ""
+
+#: ../views/notices/update_database.php:12
+msgid "Loading&hellip;"
+msgstr ""
+
+#: ../views/notices/update_formidable.php:4
+msgid ""
+"Formidable MailChimp requires that Formidable Pro version 2.0 or greater be "
+"installed. Until then, keep Formidable MailChimp activated only to continue "
+"enjoying this insightful message."
+msgstr ""
+
+#: ../views/settings/form.php:3
+msgid "API Key"
+msgstr ""

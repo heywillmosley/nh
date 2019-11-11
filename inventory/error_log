@@ -1,0 +1,13 @@
+[20-Sep-2017 13:16:57 UTC] PHP Warning:  require_once(/home/thenewhu/public_html/inventory/wp-load.php): failed to open stream: No such file or directory in /home/thenewhu/public_html/inventory/index.php on line 1
+[20-Sep-2017 13:16:57 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/thenewhu/public_html/inventory/wp-load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thenewhu/public_html/inventory/index.php on line 1
+[20-Sep-2017 13:17:18 UTC] PHP Warning:  require_once(/home/thenewhu/public_html/inventory../wp-load.php): failed to open stream: No such file or directory in /home/thenewhu/public_html/inventory/index.php on line 1
+[20-Sep-2017 13:17:18 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/thenewhu/public_html/inventory../wp-load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thenewhu/public_html/inventory/index.php on line 1
+[20-Sep-2017 13:17:42 UTC] PHP Warning:  require_once(/home/thenewhu/public_html/inventory/wp-load.php): failed to open stream: No such file or directory in /home/thenewhu/public_html/inventory/index.php on line 2
+[20-Sep-2017 13:17:42 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/thenewhu/public_html/inventory/wp-load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thenewhu/public_html/inventory/index.php on line 2
+[20-Sep-2017 13:17:59 UTC] PHP Warning:  require_once(/home/thenewhu/public_html/inventory../wp-load.php): failed to open stream: No such file or directory in /home/thenewhu/public_html/inventory/index.php on line 2
+[20-Sep-2017 13:17:59 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/thenewhu/public_html/inventory../wp-load.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/thenewhu/public_html/inventory/index.php on line 2
+[20-Sep-2017 15:15:06 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/thenewhu/public_html/inventory/index.php on line 7
+[20-Sep-2017 15:34:17 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/thenewhu/public_html/inventory/index.php on line 37
+[20-Sep-2017 15:46:03 UTC] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY) in /home/thenewhu/public_html/inventory/index.php on line 28
+[22-Sep-2017 18:31:26 UTC] PHP Parse error:  syntax error, unexpected 'top' (T_STRING), expecting ',' or ';' in /home/thenewhu/public_html/inventory/index.php on line 88
+[22-Sep-2017 18:32:26 UTC] PHP Parse error:  syntax error, unexpected 'top' (T_STRING), expecting ',' or ';' in /home/thenewhu/public_html/inventory/index.php on line 88

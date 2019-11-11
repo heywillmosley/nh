@@ -1,0 +1,3 @@
+p.submit input[name='save'] {
+    display: none !important;
+}

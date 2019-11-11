@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: *.pdf$
+
+Sitemap: https://www.thenewhuman.com/sitemap.xml
