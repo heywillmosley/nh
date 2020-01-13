@@ -79,3 +79,11 @@ function add_role_to_body($classes) {
 
 setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
 if ( SITECOOKIEPATH != COOKIEPATH ) setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
+
+
+// Advanced Custom Fields Options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}

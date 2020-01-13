@@ -1,0 +1,881 @@
+# Copyright (C) 2019 WooCommerce
+# This file is distributed under the same license as the WooCommerce Ship to Multiple Addresses plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Ship to Multiple Addresses 3.6.6\n"
+"Report-Msgid-Bugs-To: https://docs.woocommerce.com/document/multiple-ship-to-addresses/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-02-05T14:55:33-07:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: wc_shipping_multiple_address\n"
+
+#. Plugin Name of the plugin
+msgid "WooCommerce Ship to Multiple Addresses"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://woothemes.com/woocommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "Allow customers to ship orders with multiple products or quantities to separate addresses instead of forcing them to place multiple orders for different delivery addresses."
+msgstr ""
+
+#. Author of the plugin
+#: includes/wcms-shipworks.php:54
+#: includes/wcms-shipworks.php:56
+#: includes/wcms-shipworks.php:59
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://woocommerce.com"
+msgstr ""
+
+#: settings.php:32
+#: woocommerce-shipping-multiple-address.php:240
+msgid "Multiple Shipping Settings"
+msgstr ""
+
+#: settings.php:35
+msgid "Your settings have been saved"
+msgstr ""
+
+#: settings.php:38
+msgid "Below you can set the shipping methods available for a specific product or product category. This functionality will allow you to define the shipping methods that are available to be used by your customers when purchasing products from your store. Pricing is managed by your existing shipping methods, or by the rates that you set in your store's settings. This just enables/disables specific methods for specific products."
+msgstr ""
+
+#: settings.php:45
+msgid "Origin Zip Code"
+msgstr ""
+
+#: settings.php:46
+msgid "Shipping Method"
+msgstr ""
+
+#: settings.php:47
+#: includes/wcms-order.php:140
+#: multi-shipping.php:225
+msgid "Products"
+msgstr ""
+
+#: settings.php:48
+#: multi-shipping.php:229
+msgid "Categories"
+msgstr ""
+
+#: settings.php:93
+msgid "Add Another"
+msgstr ""
+
+#: settings.php:95
+#: multi-shipping.php:148
+msgid "Cart Duplication"
+msgstr ""
+
+#: settings.php:96
+#: multi-shipping.php:149
+msgid "This functionality will allow your customers to duplicate the contents of their cart in order to be able to ship the same cart to multiple addresses in addition to individual products."
+msgstr ""
+
+#: settings.php:101
+msgid "Enable cart duplication"
+msgstr ""
+
+#: settings.php:105
+#: multi-shipping.php:234
+msgid "Text your shoppers see when Multiple Shipping is enabled at checkout"
+msgstr ""
+
+#: settings.php:110
+#: multi-shipping.php:238
+msgid "Checkout Notification"
+msgstr ""
+
+#: settings.php:114
+#: multi-shipping.php:244
+msgid "Button: Item Addresses"
+msgstr ""
+
+#: settings.php:122
+msgid "Save Changes"
+msgstr ""
+
+#: settings.php:177
+#: templates/shipping-address-drop.php:142
+#: templates/shipping-address-drop.php:226
+#: includes/wcms-cart.php:180
+msgid "Remove"
+msgstr ""
+
+#: templates/duplicate-form.php:8
+msgid "Select the addresses where you want to ship this order to."
+msgstr ""
+
+#: templates/duplicate-form.php:14
+#: templates/address-form.php:4
+msgid "No address on file. Please add one below."
+msgstr ""
+
+#: templates/duplicate-form.php:32
+#: templates/shipping-address-drop.php:47
+#: templates/shipping-address-table.php:51
+#: includes/wcms-cart.php:216
+msgid "Duplicate Cart"
+msgstr ""
+
+#: templates/duplicate-form.php:44
+#: templates/address-form.php:44
+msgid "Add a new address"
+msgstr ""
+
+#: templates/duplicate-form.php:71
+#: templates/account-address-form.php:42
+#: templates/shipping-address-drop.php:306
+#: templates/shipping-address-table.php:218
+#: templates/address-form.php:101
+#: includes/wcms-admin-user-addresses-list-table.php:106
+msgid "Save Address"
+msgstr ""
+
+#: templates/pip-template-body.php:144
+msgid "&nbsp;<small>via %s</small>"
+msgstr ""
+
+#: templates/pip-template-body.php:149
+msgid "Free!"
+msgstr ""
+
+#: templates/shipping-address-drop.php:5
+msgid "Cart Items"
+msgstr ""
+
+#: templates/shipping-address-drop.php:48
+#: templates/shipping-address-table.php:52
+msgid "Duplicating your cart will allow you to ship the exact same cart contents to multiple locations. This will also increase the price of your purchase."
+msgstr ""
+
+#: templates/shipping-address-drop.php:63
+msgid "Saved Addresses"
+msgstr ""
+
+#: templates/shipping-address-drop.php:64
+#: templates/shipping-address-drop.php:161
+msgid "Add New"
+msgstr ""
+
+#: templates/shipping-address-drop.php:97
+#: templates/shipping-address-drop.php:99
+#: templates/shipping-address-drop.php:101
+msgid "edit"
+msgstr ""
+
+#: templates/shipping-address-drop.php:150
+#: templates/shipping-address-drop.php:234
+#: includes/wcms-address-book.php:822
+msgid "Drag items here"
+msgstr ""
+
+#: templates/shipping-address-drop.php:160
+msgid "Shipping Addresses"
+msgstr ""
+
+#: templates/shipping-address-drop.php:254
+#: templates/shipping-address-table.php:157
+msgid "Save Addresses and Continue"
+msgstr ""
+
+#: templates/shipping-address-drop.php:280
+#: templates/shipping-address-table.php:194
+#: includes/wcms-address-book.php:484
+msgid "Use this address"
+msgstr ""
+
+#: templates/shipping-address-drop.php:315
+msgid "Select an existing address"
+msgstr ""
+
+#: templates/shipping-address-drop.php:363
+msgid "Duplicate Cart Items"
+msgstr ""
+
+#: templates/my-account-addresses.php:3
+#: includes/wcms-admin.php:152
+msgid "Other Shipping Addresses"
+msgstr ""
+
+#: templates/my-account-addresses.php:4
+msgid "Add Address"
+msgstr ""
+
+#: templates/my-account-addresses.php:9
+msgid "No shipping addresses set up yet."
+msgstr ""
+
+#: templates/my-account-addresses.php:10
+msgid "Set up shipping addresses"
+msgstr ""
+
+#: templates/shipping-address-table.php:44
+msgid "Add a new shipping address"
+msgstr ""
+
+#: templates/shipping-address-table.php:62
+#: woocommerce-shipping-multiple-address.php:508
+#: includes/wcms-order.php:705
+msgid "Product"
+msgstr ""
+
+#: templates/shipping-address-table.php:63
+#: includes/wcms-order.php:706
+msgid "Quantity"
+msgstr ""
+
+#: templates/shipping-address-table.php:65
+#: includes/wcms-checkout.php:142
+#: includes/wcms-checkout.php:163
+msgid "Shipping Address"
+msgstr ""
+
+#: templates/shipping-address-table.php:137
+#: templates/address-block.php:28
+#: includes/wcms-admin-user-addresses-list-table.php:66
+msgid "Delete"
+msgstr ""
+
+#: templates/shipping-address-table.php:153
+msgid "Update"
+msgstr ""
+
+#: templates/shipping-address-table.php:165
+msgid "Please note: To send a single item to more than one person, you must change the quantity of that item to match the number of people you're sending it to, then click the Update button."
+msgstr ""
+
+#: templates/address-duplicate-block.php:18
+#: includes/wcms-address-book.php:482
+msgid "You have not set up a shipping address yet."
+msgstr ""
+
+#: templates/address-duplicate-block.php:24
+msgid "Ship to this address"
+msgstr ""
+
+#: templates/address-form.php:42
+msgid "Edit address"
+msgstr ""
+
+#: templates/address-form.php:47
+msgid "Import billing address"
+msgstr ""
+
+#: templates/address-form.php:48
+msgid "Import shipping address"
+msgstr ""
+
+#: templates/address-form.php:99
+msgid "Update Address"
+msgstr ""
+
+#: templates/address-block.php:27
+#: includes/wcms-admin-user-addresses-list-table.php:65
+#: includes/wcms-order.php:450
+msgid "Edit"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:240
+#: includes/wcms-privacy.php:12
+#: includes/integrations/wcms-customer-order-csv-export.php:38
+#: multi-shipping.php:20
+#: multi-shipping.php:144
+msgid "Multiple Shipping"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:277
+#: woocommerce-shipping-multiple-address.php:605
+#: woocommerce-shipping-multiple-address.php:930
+msgid "Shipping Methods"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:416
+#: woocommerce-shipping-multiple-address.php:418
+msgid "New address saved"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:494
+msgid "Order could not be found"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:498
+msgid "This order does not ship to multiple addresses"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:508
+msgid "Qty"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:508
+#: includes/wcms-admin-user-addresses-list-table.php:28
+#: includes/wcms-order.php:141
+msgid "Address"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:623
+msgid "The following items do not have shipping addresses assigned."
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:642
+msgid "Assign Shipping Address"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:752
+msgid "(1) Sorry, it seems that there are no available shipping methods for your state. Please contact us if you require assistance or wish to make alternate arrangements."
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:757
+#: woocommerce-shipping-multiple-address.php:866
+#: woocommerce-shipping-multiple-address.php:1010
+msgid "Modify address"
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:861
+msgid "(2) Sorry, it seems that there are no available shipping methods for your state. Please contact us if you require assistance or wish to make alternate arrangements."
+msgstr ""
+
+#: woocommerce-shipping-multiple-address.php:1005
+msgid "(3) Sorry, it seems that there are no available shipping methods for your state. Please contact us if you require assistance or wish to make alternate arrangements."
+msgstr ""
+
+#: includes/wcms-order-shipment.php:40
+#: includes/wcms-notes.php:156
+msgid "Note"
+msgstr ""
+
+#: includes/wcms-order-shipment.php:44
+#: includes/wcms-notes.php:142
+msgid "Shipping Date"
+msgstr ""
+
+#: includes/wcms-order-shipment.php:82
+#: includes/wcms-order-shipment.php:127
+#: includes/wcms-order-shipment.php:171
+msgid "Error %d: Unable to create shipment. Please try again."
+msgstr ""
+
+#: includes/wcms-order-shipment.php:256
+msgid "Cannot create a shipment without an Order ID"
+msgstr ""
+
+#: includes/wcms-order-shipment.php:269
+msgid "Shipment &ndash; %s"
+msgstr ""
+
+#: includes/wcms-order-shipment.php:269
+msgctxt "Order date parsed by strftime"
+msgid "%b %d, %Y @ %I:%M %p"
+msgstr ""
+
+#: includes/wcms-order-shipment.php:274
+msgid "Invalid shipment status"
+msgstr ""
+
+#: includes/wcms-admin-user-addresses-list-table.php:105
+msgid "Cancel"
+msgstr ""
+
+#: includes/wcms-post-types.php:25
+msgid "Order Shipments"
+msgstr ""
+
+#: includes/wcms-post-types.php:26
+msgid "This is where store order shipments are stored."
+msgstr ""
+
+#: includes/wcms-admin.php:57
+#: includes/wcms-front.php:136
+#: includes/wcms-front.php:147
+#: includes/wcms-front.php:159
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: includes/wcms-admin.php:104
+#: includes/wcms-privacy.php:152
+msgid "Multiple Shipping Addresses"
+msgstr ""
+
+#: includes/wcms-admin.php:105
+msgid "Page contents: [woocommerce_select_multiple_addresses] Parent: \"Checkout\""
+msgstr ""
+
+#: includes/wcms-admin.php:124
+msgid "Account Shipping Addresses"
+msgstr ""
+
+#: includes/wcms-admin.php:125
+msgid "Page contents: [woocommerce_account_addresses] Parent: \"My Account\""
+msgstr ""
+
+#: includes/wcms-admin.php:143
+msgid "Shipping address deleted"
+msgstr ""
+
+#: includes/wcms-admin.php:155
+msgid "View Addresses"
+msgstr ""
+
+#: includes/wcms-order.php:88
+msgid "Ships to multiple addresses"
+msgstr ""
+
+#: includes/wcms-order.php:136
+msgid "This order ships to multiple addresses."
+msgstr ""
+
+#: includes/wcms-order.php:143
+msgid "Notes"
+msgstr ""
+
+#: includes/wcms-order.php:212
+msgid "Delivery date: %s"
+msgstr ""
+
+#: includes/wcms-order.php:232
+msgid "Ships to multiple addresses "
+msgstr ""
+
+#: includes/wcms-order.php:247
+msgid "Order Shipping Addresses"
+msgstr ""
+
+#: includes/wcms-order.php:361
+msgid "Pending"
+msgstr ""
+
+#: includes/wcms-order.php:362
+#: includes/wcms-order.php:367
+msgid "Completed"
+msgstr ""
+
+#: includes/wcms-order.php:364
+msgid "GO"
+msgstr ""
+
+#: includes/wcms-order.php:367
+msgid "Change"
+msgstr ""
+
+#: includes/wcms-order.php:394
+msgid "Do you want to send an email to the customer?"
+msgstr ""
+
+#: includes/wcms-order.php:655
+#: multi-shipping.php:270
+msgid "Part of your order has been shipped"
+msgstr ""
+
+#: includes/wcms-order.php:683
+msgid "Hi there. Part of your recent order on %s has been completed. Your order details are shown below for your reference:"
+msgstr ""
+
+#: includes/wcms-order.php:685
+msgid "Order:"
+msgstr ""
+
+#: includes/wcms-order.php:741
+msgid "Download %d:"
+msgstr ""
+
+#: includes/wcms-order.php:743
+msgid "Download:"
+msgstr ""
+
+#: includes/wcms-order.php:770
+msgid "Billing address"
+msgstr ""
+
+#: includes/wcms-order.php:774
+msgid "Shipping address"
+msgstr ""
+
+#: includes/wcms-gifts.php:55
+#: includes/wcms-gifts.php:125
+msgid "This is a gift"
+msgstr ""
+
+#: includes/wcms-gifts.php:159
+msgid "This is a Gift"
+msgstr ""
+
+#: includes/wcms-address-book.php:110
+#: includes/wcms-address-book.php:112
+msgid "Address deleted"
+msgstr ""
+
+#: includes/wcms-address-book.php:271
+#: includes/wcms-address-book.php:273
+msgid "Address saved"
+msgstr ""
+
+#: includes/wcms-address-book.php:309
+#: includes/wcms-address-book.php:661
+msgid "Please enter a valid postcode/ZIP."
+msgstr ""
+
+#: includes/wcms-address-book.php:321
+#: includes/wcms-address-book.php:323
+#: includes/wcms-address-book.php:673
+#: includes/wcms-address-book.php:675
+msgid "is not a valid phone number."
+msgstr ""
+
+#: includes/wcms-address-book.php:334
+#: includes/wcms-address-book.php:336
+#: includes/wcms-address-book.php:686
+#: includes/wcms-address-book.php:688
+msgid "is not a valid email address."
+msgstr ""
+
+#: includes/wcms-address-book.php:356
+#: includes/wcms-address-book.php:358
+#: includes/wcms-address-book.php:708
+#: includes/wcms-address-book.php:710
+msgid "is not valid. Please enter one of the following:"
+msgstr ""
+
+#: includes/wcms-address-book.php:372
+#: includes/wcms-address-book.php:374
+#: includes/wcms-address-book.php:723
+msgid "Please enter the complete address"
+msgstr ""
+
+#: includes/wcms-address-book.php:400
+#: includes/wcms-address-book.php:402
+#: includes/wcms-address-book.php:755
+msgid "Address is already in your address book"
+msgstr ""
+
+#: includes/wcms-address-book.php:461
+msgid "Address Book"
+msgstr ""
+
+#: includes/wcms-address-book.php:489
+msgid "You have no shipping addresses saved."
+msgstr ""
+
+#: includes/wcms-notes.php:160
+msgid "Character Limit: %d"
+msgstr ""
+
+#: includes/wcms-notes.php:263
+msgid "Shipping Date: %s"
+msgstr ""
+
+#: includes/wcms-front.php:252
+msgid "This order ships to multiple addresses.  <a class=\"button\" href=\"%s\">View Addresses</a>"
+msgstr ""
+
+#: includes/wcms-front.php:310
+msgid "Shipping address %d"
+msgstr ""
+
+#: includes/wcms-front.php:420
+msgid "%s is a required field."
+msgstr ""
+
+#: includes/wcms-front.php:437
+msgid "Please enter a valid postcode / ZIP."
+msgstr ""
+
+#: includes/wcms-front.php:446
+msgid "%s is not a valid phone number."
+msgstr ""
+
+#: includes/wcms-front.php:453
+msgid "%s is not a valid email address."
+msgstr ""
+
+#: includes/wcms-front.php:480
+msgid "Address added successfully."
+msgstr ""
+
+#: includes/wcms-front.php:483
+msgid "Address changed successfully."
+msgstr ""
+
+#: includes/wcms-front.php:555
+msgid "Delete address"
+msgstr ""
+
+#: includes/wcms-front.php:573
+msgid "Deleted address"
+msgstr ""
+
+#: includes/wcms-front.php:575
+msgid "Address could not be found"
+msgstr ""
+
+#: includes/wcms-front.php:593
+msgid "Add address"
+msgstr ""
+
+#: includes/wcms-checkout.php:146
+#: includes/wcms-checkout.php:167
+msgid "Modify/Add Address"
+msgstr ""
+
+#: includes/wcms-checkout.php:186
+msgid "Stored Addresses"
+msgstr ""
+
+#: includes/wcms-checkout.php:188
+msgid "Select an address to use..."
+msgstr ""
+
+#: includes/wcms-checkout.php:407
+#: includes/wcms-checkout.php:409
+msgid "One or more items has no shipping address."
+msgstr ""
+
+#: includes/wcms-privacy.php:14
+msgid "WooCommerce Multple Shipping Order Data"
+msgstr ""
+
+#: includes/wcms-privacy.php:15
+msgid "WooCommerce Multiple Shipping Order Data"
+msgstr ""
+
+#: includes/wcms-privacy.php:17
+#: includes/wcms-privacy.php:18
+msgid "WooCommerce Multiple Shipping Customer Data"
+msgstr ""
+
+#: includes/wcms-privacy.php:53
+msgid "By using this extension, you may be storing personal data or sharing data with an external service. <a href=\"%s\" target=\"_blank\">Learn more about how this works, including what you may want to include in your privacy policy.</a>"
+msgstr ""
+
+#: includes/wcms-privacy.php:79
+msgid "Products listing for shipping address \"%s\": "
+msgstr ""
+
+#: includes/wcms-privacy.php:86
+msgid ". Note: %s."
+msgstr ""
+
+#: includes/wcms-privacy.php:91
+#: includes/wcms-privacy.php:112
+msgid "Orders"
+msgstr ""
+
+#: includes/wcms-privacy.php:95
+msgid "Multiple Shipping package \"%s\""
+msgstr ""
+
+#: includes/wcms-privacy.php:116
+msgid "Multiple Shipping Order Shipment \"%s\""
+msgstr ""
+
+#: includes/wcms-privacy.php:148
+msgid "Customer Data"
+msgstr ""
+
+#: includes/wcms-privacy.php:185
+msgid "Multiple Shipping User Data Erased."
+msgstr ""
+
+#: includes/wcms-privacy.php:275
+msgid "Multiple Shipping Order Data Erased."
+msgstr ""
+
+#: includes/wcms-cart.php:204
+msgid "Shipping"
+msgstr ""
+
+#: includes/wcms-shipping-easy.php:75
+msgid "This is a gift!"
+msgstr ""
+
+#. translators: 1: tracking number 2: carrier key 3: carrier service key 4: cost
+#: includes/wcms-shipping-easy.php:107
+msgid "Shipping Tracking Number: %s<br/>Carrier Key: %s<br/>Carrier Service Key: %s<br/>Cost: %s"
+msgstr ""
+
+#: multi-shipping.php:21
+msgid "Multiple Shipping is used automatically by the WooCommerce Ship to Multiple Addresses."
+msgstr ""
+
+#: multi-shipping.php:141
+msgid "Title"
+msgstr ""
+
+#: multi-shipping.php:143
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: multi-shipping.php:152
+msgid "Enable Cart Duplication"
+msgstr ""
+
+#: multi-shipping.php:158
+msgid "Checkout Fields"
+msgstr ""
+
+#: multi-shipping.php:162
+msgid "Delivery Notes"
+msgstr ""
+
+#: multi-shipping.php:163
+#: multi-shipping.php:179
+#: multi-shipping.php:251
+#: multi-shipping.php:262
+msgid "Enable"
+msgstr ""
+
+#: multi-shipping.php:165
+msgid "Allow customers to write delivery notes to every shipping address selected."
+msgstr ""
+
+#: multi-shipping.php:170
+msgid "Limit Character Input"
+msgstr ""
+
+#: multi-shipping.php:171
+msgid "Characters"
+msgstr ""
+
+#: multi-shipping.php:172
+msgid "Limit the character input for delivery notes. Leave the box empty to disable the limit."
+msgstr ""
+
+#: multi-shipping.php:178
+msgid "Date Picker"
+msgstr ""
+
+#: multi-shipping.php:180
+msgid "Allow customers to pick delivery dates for every shipping address selected."
+msgstr ""
+
+#: multi-shipping.php:185
+msgid "Valid Shipping Days"
+msgstr ""
+
+#: multi-shipping.php:186
+msgid "Days"
+msgstr ""
+
+#: multi-shipping.php:187
+msgid "Days that customers can select for the \"Shipping Date\" during checkout."
+msgstr ""
+
+#: multi-shipping.php:189
+msgid "Sunday"
+msgstr ""
+
+#: multi-shipping.php:190
+msgid "Monday"
+msgstr ""
+
+#: multi-shipping.php:191
+msgid "Tuesday"
+msgstr ""
+
+#: multi-shipping.php:192
+msgid "Wednesday"
+msgstr ""
+
+#: multi-shipping.php:193
+msgid "Thursday"
+msgstr ""
+
+#: multi-shipping.php:194
+msgid "Friday"
+msgstr ""
+
+#: multi-shipping.php:195
+msgid "Saturday"
+msgstr ""
+
+#: multi-shipping.php:203
+msgid "Excluded Delivery Dates"
+msgstr ""
+
+#: multi-shipping.php:204
+msgid "Excluded Dates"
+msgstr ""
+
+#: multi-shipping.php:205
+msgid "Specific dates that customers cannnot select for the \"Shipping Date\" during checkout."
+msgstr ""
+
+#: multi-shipping.php:211
+msgid "Gift Packages"
+msgstr ""
+
+#: multi-shipping.php:212
+msgid "Allow customers to mark certain shipping packages as gifts"
+msgstr ""
+
+#: multi-shipping.php:215
+msgid "Enable Gift Packages"
+msgstr ""
+
+#: multi-shipping.php:221
+msgid "Excluded Products &amp; Categories"
+msgstr ""
+
+#: multi-shipping.php:222
+msgid "Do not allow multiple shipping addresses when any of the products and categories below are in the cart"
+msgstr ""
+
+#: multi-shipping.php:246
+msgid "Set Addresses"
+msgstr ""
+
+#: multi-shipping.php:249
+msgid "Partially Complete Orders"
+msgstr ""
+
+#: multi-shipping.php:252
+msgid "Partially complete order by shipping address"
+msgstr ""
+
+#: multi-shipping.php:257
+msgid "Partial Order Completed Email"
+msgstr ""
+
+#: multi-shipping.php:260
+msgid "Send Email"
+msgstr ""
+
+#: multi-shipping.php:263
+msgid "Send an email when an order has been marked as partially complete"
+msgstr ""
+
+#: multi-shipping.php:268
+msgid "Subject"
+msgstr ""
+
+#: multi-shipping.php:274
+msgid "Leave empty to use the default email message"
+msgstr ""
+
+#: multi-shipping.php:276
+msgid "Message"
+msgstr ""
+
+#: multi-shipping.php:278
+msgid "<p>Hi there. Part of your recent order on "
+msgstr ""
+
+#: multi-shipping.php:427
+#: multi-shipping.php:438
+#: multi-shipping.php:466
+msgid "Search for a product&hellip;"
+msgstr ""
+
+#: multi-shipping.php:523
+msgid "Select categories&hellip;"
+msgstr ""

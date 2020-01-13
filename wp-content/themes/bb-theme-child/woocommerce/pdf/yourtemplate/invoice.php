@@ -1,5 +1,9 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <?php do_action( 'wpo_wcpdf_before_document', $this->type, $this->order ); ?>
+<?php echo do_action( 'wpo_wcpdf_before_order_data', $this->type, $this->order ); ?>
+
+<?php //echo '<pre>'; print($order); echo '</pre>'; ?>
+<?php $coupons = $order->get_used_coupons(); ?>
 
 <table class="head container">
 	<tr>
@@ -64,11 +68,14 @@
 				<?php } ?>
 				<tr class="order-number">
 					<th><?php _e( 'Order Number:', 'woocommerce-pdf-invoices-packing-slips' ); ?></th>
-					<td><?php $this->order_number(); ?></td>
+					<td><?php $order_number = $this->order_number(); echo $order_number; ?></td>
 				</tr>
 				<tr class="order-date">
 					<th><?php _e( 'Order Date:', 'woocommerce-pdf-invoices-packing-slips' ); ?></th>
-					<td><?php $this->order_date(); ?></td>
+					<td><?php $this->order_date(); 
+					echo $order_number; 
+
+					?></td>
 				</tr>
 				<tr class="payment-method">
 					<th><?php _e( 'Payment Method:', 'woocommerce-pdf-invoices-packing-slips' ); ?></th>
@@ -126,12 +133,31 @@
 				<table class="totals">
 					<tfoot>
 						<?php foreach( $this->get_woocommerce_totals() as $key => $total ) : ?>
+						
 						<tr class="<?php echo $key; ?>">
 							<td class="no-borders"></td>
 							<th class="description"><?php echo $total['label']; ?></th>
-							<td class="price"><span class="totals-price"><?php echo $total['value']; ?></span></td>
+							<td class="price"><span class="totals-price"><?php echo $total['value'] ?></span></td>
 						</tr>
 						<?php endforeach; ?>
+						
+					</tfoot>
+				</table>
+				<table class="totals">
+					<tfoot>
+						<tr>
+							<td><strong>Coupon(s) used:</strong> 
+								<?php 
+									$i = 0;
+									$total = count($coupons);
+									foreach ($coupons as $coupon) { 
+										echo "$coupon";
+										$i++;
+										if($i != $total) echo ', ';
+									}
+								?>
+							</td>
+						</tr>
 					</tfoot>
 				</table>
 			</td>
