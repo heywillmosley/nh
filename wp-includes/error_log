@@ -52,3 +52,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/thenewhu/public_html/wp-includes/locale.php on line 10
+[03-Mar-2020 14:09:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/thenewhu/public_html/wp-includes/rss-functions.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/thenewhu/public_html/wp-includes/rss-functions.php on line 8

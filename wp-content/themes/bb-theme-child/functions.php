@@ -209,6 +209,8 @@ function my_forcelogin_whitelist( $whitelist ) {
   $whitelist[] = site_url( '/repertory' . $_SERVER['QUERY_STRING'] );
   $whitelist[] = site_url( '/repertory/ageless' . $_SERVER['QUERY_STRING'] );
   $whitelist[] = site_url( '/team' . $_SERVER['QUERY_STRING'] );
+  $whitelist[] = site_url( '/webinar' . $_SERVER['QUERY_STRING'] );
+  $whitelist[] = site_url( '/webinar/request' . $_SERVER['QUERY_STRING'] );
   return $whitelist;
 }
 add_filter('v_forcelogin_whitelist', 'my_forcelogin_whitelist', 10, 1);
@@ -245,6 +247,8 @@ function my_forcelogin_bypass( $bypass ) {
     || is_page(155533) // Sleep
     || is_page(155535) // Stress
     || is_page(176197) // Team
+    || is_page(239163) // Team
+    || is_page(238950) // Team
     ) {
     $bypass = true;
   }
@@ -264,3 +268,97 @@ function display_zd_logged_in(){
 	<?php };
 
 } // end function display_zd_logged_in()
+
+
+
+##### Shortcodes ######
+add_shortcode('webinar_dates', 'heywillmosley_webinar');
+//echo heywillmosley_webinar();
+
+
+function heywillmosley_webinar( $atts ) {
+
+    // set up default parameters
+    extract( shortcode_atts( array(
+     'start_date' => FALSE, // will default to today's date
+     'timespan' => '1 year',
+     'interval' => '1 week' // week
+    ), $atts) );
+
+    $interval_type = explode(" ", $interval); // day, week, month, year
+    $interval_count = $interval_type[0]; // gets how many weeks, days, etc
+    $type = $interval_type[1]; // get interval from string
+    $initial_interval = $interval_count;
+    $form_url = esc_url(get_permalink()) . 'request'; // current url + request
+
+    $render = "<div class='container'>";
+    $render .= "<div class='row'>";
+    $render .= "<div class='col'>";
+
+
+    $render .= "<table class='table'>";
+    $render .= "<thead>";
+    $render .= "<tr>";
+    $render .= "<th scope='col'>Date</th>";
+    $render .= "<th scope='col'>Attend</th>";
+    $render .= "</tr>";
+    $render .= "</thead>";
+    $render .= "<tbody>";
+
+    $end_date = strtotime( "$start_date +$timespan" ); // ends in 1 year
+    $count = 0; // adds 1 week every loop
+    $skip = $count;
+
+    do {
+        $cut = $count - $skip;
+        if( $cut == 15 ) // only show certain #
+            break;
+        
+        if( $count == 0 )
+            $date = strtotime( "$start_date" );
+        else {
+            $date = strtotime( "$start_date +$interval_count $type" );
+            $interval_count = $initial_interval + $interval_count;
+        }
+        
+        if( strtotime("now") < $date  ) {
+            $pretty_date = date('l F d, Y', $date );
+            $url_date = date('m-d-Y', $date );
+            $render .= "<tr>";
+            $render .= "<td>$pretty_date 1PM EST</td>"; // Date
+            $render .= "<td><a href='$form_url?d=$url_date'>Register</a></td>"; // Attend
+            $render .= "</tr>";
+
+            ++$count; // how many times we run through this loop
+
+        } else {
+
+            ++$count;
+            ++ $skip;
+        }
+
+    } while ($date < $end_date);
+
+
+    $render .= "</tbody>";
+    $render .= "</table>";
+
+    $render .= "</div>"; // col
+    $render .= "</div>"; // row
+    $render .= "</div>"; // container
+
+
+    return $render;
+}
+
+function redirect_webinar_direct_access( ) {
+
+    if( is_page( 238950 ) ) { // webinar request page // Prod 238950 // Dev 4973
+        if ( ! isset( $_GET[ 'd' ] ) || empty( $_GET[ 'd' ] ) ) {  // if date isn't set
+            wp_redirect( home_url( '/webinar/' ) );
+            exit();
+        }
+    }
+}
+
+add_action( 'template_redirect', 'redirect_webinar_direct_access' );
