@@ -56,3 +56,5 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/thenewhu/public_html/wp-includes/rss-functions.php on line 8
+[08-Apr-2020 23:21:32 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/thenewhu/public_html/wp-includes/functions.php on line 8
+[08-Apr-2020 23:21:32 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/thenewhu/public_html/wp-includes/functions.php on line 8

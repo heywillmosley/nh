@@ -13,7 +13,7 @@ final class FLPageDataWooCommerce {
 	 */
 	static public function init() {
 		FLPageData::add_group( 'woocommerce', array(
-			'label' => __( 'WooCommerce', 'fl-theme-builder' ),
+			'label' => __( 'WooCommerce', 'bb-theme-builder' ),
 		) );
 	}
 

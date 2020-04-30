@@ -1,8 +1,8 @@
 === Jetpack by WordPress.com ===
-Contributors: automattic, adamkheckler, aduth, akirk, allendav, alternatekev, andy, annezazu, apeatling, azaozz, batmoo, barry, beaulebens, blobaugh, cainm, cena, cfinke, chaselivingston, chellycat, clickysteve, csonnek, danielbachhuber, davoraltman, daniloercoli, designsimply, dllh, drawmyface, dsmart, dzver, ebinnion, egregor, eliorivero, enej, eoigal, erania-pinnera, ethitter, gcorne, georgestephanis, gibrown, goldsounds, hew, hugobaeta, hypertextranch, iammattthomas, iandunn, jblz, jasmussen, jeffgolenski, jeherve, jenhooks, jenia, jessefriedman, jgs, jkudish, jmdodd, joanrho, johnjamesjacoby, jshreve, kbrownkd, keoshi, koke, kraftbj, lancewillett, lschuyler, macmanx, martinremy, matt, matveb, mattwiebe, maverick3x6, mcsf, mdawaffe, MichaelArestad, migueluy, mikeyarce, mkaz, nancythanki, nickmomrik, obenland, oskosk, pento, professor44, rachelsquirrel, rdcoll, ryancowles, richardmuscat, richardmtl, roccotripaldi, samhotchkiss, scarstocea, sdquirk, stephdau, tmoorewp, tyxla, Viper007Bond, westi, yoavf, zinigor
+Contributors: automattic, adamkheckler, aduth, akirk, allendav, alternatekev, andy, annezazu, apeatling, azaozz, batmoo, barry, beaulebens, blobaugh, brbrr, cainm, cena, cfinke, chaselivingston, chellycat, clickysteve, csonnek, danielbachhuber, davoraltman, daniloercoli, delawski, designsimply, dllh, drawmyface, dsmart, dzver, ebinnion, egregor, eliorivero, enej, eoigal, erania-pinnera, ethitter, gcorne, georgestephanis, gibrown, goldsounds, hew, hugobaeta, hypertextranch, iammattthomas, iandunn, jblz, jasmussen, jeffgolenski, jeherve, jenhooks, jenia, jessefriedman, jgs, jkudish, jmdodd, joanrho, johnjamesjacoby, jshreve, kbrownkd, keoshi, koke, kraftbj, lancewillett, lschuyler, macmanx, martinremy, matt, matveb, mattwiebe, maverick3x6, mcsf, mdawaffe, MichaelArestad, migueluy, mikeyarce, mkaz, nancythanki, nickmomrik, obenland, oskosk, pento, professor44, rachelsquirrel, rdcoll, ryancowles, richardmuscat, richardmtl, roccotripaldi, samhotchkiss, scarstocea, scottsweb, sdquirk, simison, stephdau, tmoorewp, tyxla, Viper007Bond, westi, yoavf, zinigor
 Tags: Jetpack, WordPress.com, backup, security, related posts, CDN, speed, anti-spam, social sharing, SEO, video, stats
-Stable tag: 7.9
-Requires at least: 5.1
+Stable tag: 8.3
+Requires at least: 5.2
 Requires PHP: 5.6
 Tested up to: 5.3
 
@@ -96,80 +96,66 @@ There are opportunities for developers at all levels to contribute. [Learn more 
 
 == Changelog ==
 
-= 7.9 =
+= 8.3 =
 
-* Release date: November 5, 2019
-* Release post: https://wp.me/p1moTy-lzt
+* Release date: March 3, 2020
+* Release post: https://wp.me/p1moTy-nZT
 
-**Major enhancements**
+**Major Enhancements**
 
-* Block Editor: allow authors to upload videos to our Jetpack Videos service from the Video Block.
-* Block Editor: add new post-submission settings to the Form block.
-* Twenty Twenty: Ensure full compatibility with the upcoming default theme.
+* Google Calendar Block: a simple way to embed Google Calendars into your posts.
+* Revue Block: allow your readers to subscribe to your Revue newsletter right from your site.
 
 **Enhancements**
 
-* Admin Page: update icons for security settings.
-* Backup: support for Jetpack Backup functionality with simpler configuration.
-* Block Editor: provide block previews for Jetpack blocks.
-* Block Editor: add image size option to the Slideshow block.
-* Block Editor: improve the display of opening hours when using the Business Hours block.
-* CLI: no longer return exit code 1 if trying to disconnect a site that's already disconnected.
-* Connection flow: update connect buttons on main dashboard page and plugins page to use the new connection flow.
-* Connection flow: add plan billing period toggle.
-* Contact Form: synchronize form data with WordPress.com when submitting a form via the Form block.
-* Dashboard: update styles for visual parity with the WordPress.com dashboard.
-* Dashboard: improve performance of the Jetpack dashboard when the plugin is not connected to WordPress.com yet.
-* Dashboard: add new plans' information to Plans pages.
-* Dashboard: update design to better integrate with the updated design of the WordPress dashboard in WordPress 5.3.
-* Dashboard: improve experience for site owners looking to disconnect their site from WordPress.com.
-* Debug: provide additional information in Tools > Site Health when a site's connection to WordPress.com is broken.
-* Performance: modernize various parts of the code to use PHP 5.6+ functionality.
-* Progressive Web Apps: sunset feature. If you wish to continue to use that feature on your site, we recommend installing another plugin that offers the functionality you need.
-* Related Posts: remove nofollow attribute from links.
-* Related Posts: add Posts to the REST API response for all post types that support them.
-* Search: add new filter allowing one to adjuct Jetpack Search's ES query languages.
-* Search: continued work on upcoming Instant Search features.
-* Shortcodes: add support for tab sizing to Gist shortcodes and embeds.
-* Social Networks: update Facebook logo to match new color.
-* Sync: improve reliability of the information synchronized back to your site when connecting to WordPress.com.
-* Tiled Galleries: ensure that color profile information is retained for all images in Tiled Galleries.
-* Widgets: add aria-current attribute to links when on same page.
-* WordAds: improve speed & resource use of Ads' loading scripts.
+* Dashboard widget: clarify wording in Anti-spam and Protect sections.
+* Dashboard notices: allow permanent notices.
+* Dashboard notices: add option to provide action button for a notice.
+* Map block: add the ability to set the size of the map.
+* Map block: add a zoom control to the block sidebar.
+* Map block: add a fullscreen option.
+* Map block: add an option for toggling zoom to scroll behaviour in the published post.
+* Mobile Theme: sunset feature. We originally created the mobile theme feature as a fall-back when the regular theme did not include a mobile view. Most themes include a mobile view by default now, so the feature is no longer necessary.
+* OpenTable block: offer more embedding options.
+* Search: improvements to layout options when using the Search widget.
+* Security Scanning tool: improve message about threats found in dashboard.
+* Sharing: improve Open Graph Meta Tags on search result pages.
+* Shortcodes: improve accessibility of navigation buttons for the Slideshow shortcode.
+* Site Health Tests: improve ability to add additional tests.
+* Site Health Tests: Update Connection test with detailed descriptions and actions to resolve failing tests.
+* Synchronization: increase reliability of sync by not sending wp-rest-api-log posts.
+* Synchronization: increase reliability when synchronizing term IDs.
+* Tiled Gallery block: add a Rounded Corners option.
+* Tiled Gallery block: add an option to easily rearrange images within a gallery.
+* Cookies & Consents Banner widget: improve performance by removing reliance on jQuery.
+* Twitter widget: remove deprecated link color parameter.
 
 **Improved compatibility**
 
-* AMP: ensure that one can use the Slideshow and the MailChimp blocks when using the AMP plugin.
-* AMP: support the new Dev mode for Notifications and Stats features.
-* Admin Page: improve compatibility with themes and plugins that insert CSS in the dashboard.
-* Blocks: ensure that all blocks display well in the editor when using WordPress 5.3.
-* Carousel: ensure that the feature works with the new gallery markup introduced in WordPress 5.3.
-* Dashboard Notices: ensure that all notices redirect to the right page, including on WooCommerce dashboard pages.
-* General: use new functionality available in WordPress 5.3.
-* PHP: resolve deprecation warnings in anticipation of PHP 7.4.
-* Related Posts: avoid conflicts with other plugins adding elements below the post content, especially when the AMP plugin is active on the site.
-* SSO: ensure that the Secure Sign In Form is displayed properly when using WordPress 5.3.
-* Widgets: update deprecated option in the Facebook Page Plugin widget.
-* WordPress.com REST API: ensure compatibility with WordPress 5.3.
+* Autoloader: avoid conflicts when other plugins rely on the Autoloader to load Jetpack packages.
+* Beautiful Math: avoid layout issues with inline images when using the Twenty Twenty theme.
+* Blocks: improve compatibility with theme colors for block buttons.
+* Blocks: improve the layout of the blocks' placeholders when using the Gutenberg plugin.
+* Blocks: allow defining a minimum WordPress version or minimum Gutenberg plugin version when registering a block.
+* Lazy Images: add option to skip images with the `data-skip-lazy` attribute.
+* SSO: Add error argument for compatibility with a WordPress 5.4 hook change.
 
 **Bug fixes**
 
-* Admin Page: remove Jetpack dashboard link for registered users (non admins) when the site is not connected to WordPress.com.
-* Admin Page: translate empty Stats chart's message.
-* Admin Page: change default settings tab depending on your role.
-* Admin Page: do not display Composing header for editors.
-* Block Editor: ensure that the Ad block is compatible with dark themes.
-* Contact Form: revise the email validation function to include length limit.
-* Debug: reduce instances when an inconclusive response would result in an error.
-* Geo-Location: fix spacing for RSS geo-location namespaces.
-* Image CDN: remove wp-dom-ready dependency to improve performance on the frontend.
-* Search: add hooks for when Search falls back to using the local database.
-* Site Logo: ensure that the right stylesheet is loaded depending on your site's language.
-* Site Verification Tools: ensure that you can connect your site to Google Search Console even when Publicize is disabled.
-* Sync: prevent a PHP Notice in some cases where a post isn't actually a post.
-* Widgets: ensure that the Google Maps API key in the Contact Info widget can be set to only work on your domain.
-* Widgets: fix timeout issues that may sometimes occur in the GoodReads widget when user has added lots of books to their account.
-* WordPress.com REST API: better site preview support for sites using WordPress in a subdirectory.
+* Blocks: fix layout issues with previews in block sidebar.
+* Blocks: fix layout issues when using a custom CSS class for a block using the option in the block sidebar.
+* Calendly block: fix overlay to render properly in the editor.
+* Dashboard: remove Backups information from the Jetpack dashboard when on a Multisite network. Those do not support the Backup feature at this point.
+* Map block: only show the Add Marker UI if there are no markers.
+* Map block: prevent an unselected block from accidentally capturing scrolling.
+* Map block: fix the styling of the map theme buttons.
+* Mobile Apps: remove the edit post link when in app.
+* OpenTable block: avoid error when inserting some specific embed codes.
+* OpenTable block: fix alignment issues when center-aligning the block.
+* Secure Sign On: do not display feature message when logging in to WordPress.com's central dashboard.
+* Stats: hide Stats smiley in post embeds.
+* WooCommerce Analytics: improve product checks to avoid errors on order pages.
+* Wufoo shortcode: Security fix return early when invalid parameters.
 
 --------
 

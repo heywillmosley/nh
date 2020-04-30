@@ -160,30 +160,30 @@ final class FLThemeBuilderACF {
 			// Order
 			FLBuilder::render_settings_field('data_source_acf_order', array(
 				'type'    => 'select',
-				'label'   => __( 'Order', 'fl-theme-builder' ),
+				'label'   => __( 'Order', 'bb-theme-builder' ),
 				'options' => array(
-					'DESC' => __( 'Descending', 'fl-theme-builder' ),
-					'ASC'  => __( 'Ascending', 'fl-theme-builder' ),
+					'DESC' => __( 'Descending', 'bb-theme-builder' ),
+					'ASC'  => __( 'Ascending', 'bb-theme-builder' ),
 				),
 			), $settings);
 
 			// Order by
 			FLBuilder::render_settings_field('data_source_acf_order_by', array(
 				'type'    => 'select',
-				'label'   => __( 'Order By', 'fl-theme-builder' ),
+				'label'   => __( 'Order By', 'bb-theme-builder' ),
 				'default' => 'post__in',
 				'options' => array(
-					'author'         => __( 'Author', 'fl-theme-builder' ),
-					'comment_count'  => __( 'Comment Count', 'fl-theme-builder' ),
-					'date'           => __( 'Date', 'fl-theme-builder' ),
-					'modified'       => __( 'Date Last Modified', 'fl-theme-builder' ),
-					'ID'             => __( 'ID', 'fl-theme-builder' ),
-					'menu_order'     => __( 'Menu Order', 'fl-theme-builder' ),
-					'meta_value'     => __( 'Meta Value (Alphabetical)', 'fl-theme-builder' ),
-					'meta_value_num' => __( 'Meta Value (Numeric)', 'fl-theme-builder' ),
-					'rand'           => __( 'Random', 'fl-theme-builder' ),
-					'title'          => __( 'Title', 'fl-theme-builder' ),
-					'post__in'       => __( 'Selection Order', 'fl-theme-builder' ),
+					'author'         => __( 'Author', 'bb-theme-builder' ),
+					'comment_count'  => __( 'Comment Count', 'bb-theme-builder' ),
+					'date'           => __( 'Date', 'bb-theme-builder' ),
+					'modified'       => __( 'Date Last Modified', 'bb-theme-builder' ),
+					'ID'             => __( 'ID', 'bb-theme-builder' ),
+					'menu_order'     => __( 'Menu Order', 'bb-theme-builder' ),
+					'meta_value'     => __( 'Meta Value (Alphabetical)', 'bb-theme-builder' ),
+					'meta_value_num' => __( 'Meta Value (Numeric)', 'bb-theme-builder' ),
+					'rand'           => __( 'Random', 'bb-theme-builder' ),
+					'title'          => __( 'Title', 'bb-theme-builder' ),
+					'post__in'       => __( 'Selection Order', 'bb-theme-builder' ),
 				),
 				'toggle'  => array(
 					'meta_value'     => array(
@@ -198,7 +198,7 @@ final class FLThemeBuilderACF {
 			// Meta Key
 			FLBuilder::render_settings_field('data_source_acf_order_by_meta_key', array(
 				'type'  => 'text',
-				'label' => __( 'Meta Key', 'fl-theme-builder' ),
+				'label' => __( 'Meta Key', 'bb-theme-builder' ),
 			), $settings);
 
 		echo '</table>';

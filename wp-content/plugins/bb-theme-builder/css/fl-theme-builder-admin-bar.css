@@ -3,6 +3,17 @@
 	top: 2px;
 	margin-right: 3px;
 }
+#wp-admin-bar-fl-builder-frontend-edit-link .fl-builder-ab-wrench.ab-icon {
+	margin-right: 1px !important;
+	font-size: 15px !important;
+	margin-top: 1px;
+	padding-left: 3px !important;
+}
+
+#wp-admin-bar-fl-builder-frontend-edit-link .fl-builder-ab-wrench.ab-icon:before {
+	content: "\f111" !important;
+}
+
 #wp-admin-bar-fl-builder-frontend-edit-link .ab-submenu .ab-item {
 	display: flex;
 	min-width: 200px !important;

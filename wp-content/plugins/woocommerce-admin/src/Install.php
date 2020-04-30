@@ -9,6 +9,7 @@ namespace Automattic\WooCommerce\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
+use Automattic\WooCommerce\Admin\API\Reports\Cache;
 use \Automattic\WooCommerce\Admin\Notes\WC_Admin_Notes_Historical_Data;
 use \Automattic\WooCommerce\Admin\Notes\WC_Admin_Notes_Welcome_Message;
 
@@ -19,7 +20,7 @@ class Install {
 	/**
 	 * Plugin version option name.
 	 */
-	const VERSION_OPTION = 'wc_admin_version';
+	const VERSION_OPTION = 'woocommerce_admin_version';
 
 	/**
 	 * DB updates and callbacks that need to be run per version.
@@ -31,6 +32,30 @@ class Install {
 			'wc_admin_update_0201_order_status_index',
 			'wc_admin_update_0201_db_version',
 		),
+		'0.23.0' => array(
+			'wc_admin_update_0230_rename_gross_total',
+			'wc_admin_update_0230_db_version',
+		),
+		'0.25.1' => array(
+			'wc_admin_update_0251_remove_unsnooze_action',
+			'wc_admin_update_0251_db_version',
+		),
+	);
+
+	/**
+	 * Migrated option names mapping. New => old.
+	 *
+	 * @var array
+	 */
+	protected static $migrated_options = array(
+		'woocommerce_onboarding_profile'           => 'wc_onboarding_profile',
+		'woocommerce_admin_install_timestamp'      => 'wc_admin_install_timestamp',
+		'woocommerce_onboarding_opt_in'            => 'wc_onboarding_opt_in',
+		'woocommerce_admin_import_stats'           => 'wc_admin_import_stats',
+		'woocommerce_admin_version'                => 'wc_admin_version',
+		'woocommerce_admin_last_orders_milestone'  => 'wc_admin_last_orders_milestone',
+		'woocommerce_admin-wc-helper-last-refresh' => 'wc-admin-wc-helper-last-refresh',
+		'woocommerce_admin_report_export_status'   => 'wc_admin_report_export_status',
 	);
 
 	/**
@@ -42,6 +67,41 @@ class Install {
 
 		// Add wc-admin report tables to list of WooCommerce tables.
 		add_filter( 'woocommerce_install_get_tables', array( __CLASS__, 'add_tables' ) );
+
+		// Migrate option names by filtering their default values.
+		// This attaches a targeted filter for each migrated option name that will retreive
+		// the old value and use it as the default for the new option. This default
+		// will be used in the first retreival of the new option.
+		foreach ( self::$migrated_options as $new_option => $old_option ) {
+			add_filter( "default_option_{$new_option}", array( __CLASS__, 'handle_option_migration' ), 10, 2 );
+		}
+	}
+
+	/**
+	 * Migrate option values to their new keys/names.
+	 *
+	 * @param mixed  $default Default value for the option.
+	 * @param string $new_option Option name.
+	 * @return mixed Migrated option value.
+	 */
+	public static function handle_option_migration( $default, $new_option ) {
+		if ( isset( self::$migrated_options[ $new_option ] ) ) {
+			wc_maybe_define_constant( 'WC_ADMIN_MIGRATING_OPTIONS', true );
+
+			// Avoid infinite loops - this filter is applied in add_option(), update_option(), and get_option().
+			remove_filter( "default_option_{$new_option}", array( __CLASS__, 'handle_option_migration' ), 10, 2 );
+
+			// Migrate the old option value.
+			$old_option_name  = self::$migrated_options[ $new_option ];
+			$old_option_value = get_option( $old_option_name, $default );
+
+			update_option( $new_option, $old_option_value );
+			delete_option( $old_option_name );
+
+			return $old_option_value;
+		}
+
+		return $default;
 	}
 
 	/**
@@ -50,12 +110,29 @@ class Install {
 	 * This check is done on all requests and runs if the versions do not match.
 	 */
 	public static function check_version() {
-		if (
-			! defined( 'IFRAME_REQUEST' ) &&
-			version_compare( get_option( self::VERSION_OPTION ), WC_ADMIN_VERSION_NUMBER, '<' )
-		) {
+		if ( defined( 'IFRAME_REQUEST' ) ) {
+			return;
+		}
+
+		$version_option  = get_option( self::VERSION_OPTION );
+		$requires_update = version_compare( get_option( self::VERSION_OPTION ), WC_ADMIN_VERSION_NUMBER, '<' );
+
+		/*
+		 * When included as part of Core, no `on_activation` hook as been called
+		 * so there is no version in options. Make sure install gets called in this
+		 * case as well as a regular version update
+		 */
+		if ( ! $version_option || $requires_update ) {
 			self::install();
-			do_action( 'wc_admin_updated' );
+			do_action( 'woocommerce_admin_updated' );
+		}
+
+		/*
+		 * Add the version option if none is found, as would be the case when
+		 * initialized via Core for the first time.
+		 */
+		if ( ! $version_option ) {
+			add_option( self::VERSION_OPTION, WC_ADMIN_VERSION_NUMBER );
 		}
 	}
 
@@ -83,8 +160,10 @@ class Install {
 
 		delete_transient( 'wc_admin_installing' );
 
-		update_option( 'wc_admin_install_timestamp', time() );
-		do_action( 'wc_admin_installed' );
+		// Use add_option() here to avoid overwriting this value with each
+		// plugin version update. We base plugin age off of this value.
+		add_option( 'woocommerce_admin_install_timestamp', time() );
+		do_action( 'woocommerce_admin_installed' );
 	}
 
 	/**
@@ -109,7 +188,7 @@ class Install {
 			date_created datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 			date_created_gmt datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 			num_items_sold int(11) DEFAULT 0 NOT NULL,
-			gross_total double DEFAULT 0 NOT NULL,
+			total_sales double DEFAULT 0 NOT NULL,
 			tax_total double DEFAULT 0 NOT NULL,
 			shipping_total double DEFAULT 0 NOT NULL,
 			net_total double DEFAULT 0 NOT NULL,
@@ -284,7 +363,7 @@ class Install {
 	 * @return boolean
 	 */
 	public static function needs_db_update() {
-		$current_db_version = get_option( self::VERSION_OPTION );
+		$current_db_version = get_option( self::VERSION_OPTION, null );
 		$updates            = self::get_db_update_callbacks();
 		$update_versions    = array_keys( $updates );
 		usort( $update_versions, 'version_compare' );
@@ -329,6 +408,7 @@ class Install {
 							array( $update_callback ),
 							'woocommerce-db-updates'
 						);
+						Cache::invalidate();
 					}
 
 					$loop++;
@@ -354,6 +434,7 @@ class Install {
 		if ( ! wp_next_scheduled( 'wc_admin_daily' ) ) {
 			wp_schedule_event( time(), 'daily', 'wc_admin_daily' );
 		}
+		// @todo This is potentially redundant when the core package exists.
 		wp_schedule_single_event( time() + 10, 'generate_category_lookup_table' );
 	}
 
@@ -366,15 +447,17 @@ class Install {
 	}
 
 	/**
-	 * Delete all data from tables.
+	 * Drop WooCommerce Admin tables.
+	 *
+	 * @return void
 	 */
-	public static function delete_table_data() {
+	public static function drop_tables() {
 		global $wpdb;
 
 		$tables = self::get_tables();
 
 		foreach ( $tables as $table ) {
-			$wpdb->query( "TRUNCATE TABLE {$table}" ); // WPCS: unprepared SQL ok.
+			$wpdb->query( "DROP TABLE IF EXISTS {$table}" ); // WPCS: unprepared SQL ok.
 		}
 	}
 }

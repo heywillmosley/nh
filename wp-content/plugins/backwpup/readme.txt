@@ -2,9 +2,9 @@
 Contributors: inpsyde, danielhuesken, Bueltge, nullbyte, wido, dinamiko
 Tags: backup, database backup, cloud backup, restore, wordpress backup
 Requires at least: 3.9
-Tested up to: 5.2.2
+Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 3.6.10
+Stable tag: 3.7.0
 License: GPLv2+
 
 Schedule complete automatic backups of your WordPress installation. Decide which content will be stored (Dropbox, S3…). This is the free version
@@ -158,6 +158,18 @@ Yes. You need to have writing access to the wp-config.php file (usually residing
 [You can find a detailed tutorial in the BackWPup documentation.](https://backwpup.com/docs/install-backwpup-pro-activate-licence/)
 
 == Changelog ==
+
+= Version 3.7.0 =
+Release Date: Nov 27, 2019
+
+* Updated: Raise the minimum PHP version required by BWU to 5.6
+* Updated: Microsoft Azure Storage Blob PHP Client Library
+* Fixed: S3 custom url not used for bucket selection
+* Fixed: S3 malformed error message when authentication credentials are wrong
+* Fixed: S3 selecting an invalid service raise no error
+* Fixed: Rackspace uses old cacert.pem file
+* Fixed: Log page not correcty sorted
+* Added: Option to enable or disable the phone home client
 
 = Version 3.6.10 =
 Release Date: July 8, 2019

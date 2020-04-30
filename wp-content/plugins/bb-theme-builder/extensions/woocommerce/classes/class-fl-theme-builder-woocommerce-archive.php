@@ -292,51 +292,51 @@ final class FLThemeBuilderWooCommerceArchive {
 		}
 
 		$form['layout']['sections']['woo'] = array(
-			'title'  => __( 'WooCommerce', 'fl-theme-builder' ),
+			'title'  => __( 'WooCommerce', 'bb-theme-builder' ),
 			'fields' => array(
 				'woo_ordering'   => array(
 					'type'    => 'select',
-					'label'   => __( 'Product Ordering', 'fl-theme-builder' ),
+					'label'   => __( 'Product Ordering', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'woo_sale_flash' => array(
 					'type'    => 'select',
-					'label'   => __( 'Product Sale', 'fl-theme-builder' ),
+					'label'   => __( 'Product Sale', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'woo_rating'     => array(
 					'type'    => 'select',
-					'label'   => __( 'Product Rating', 'fl-theme-builder' ),
+					'label'   => __( 'Product Rating', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'woo_price'      => array(
 					'type'    => 'select',
-					'label'   => __( 'Product Price', 'fl-theme-builder' ),
+					'label'   => __( 'Product Price', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'woo_button'     => array(
 					'type'    => 'select',
-					'label'   => __( 'Cart Button', 'fl-theme-builder' ),
+					'label'   => __( 'Cart Button', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 
@@ -345,41 +345,41 @@ final class FLThemeBuilderWooCommerceArchive {
 
 		$form['layout']['sections']['general']['fields']['woo_styles_enable'] = array(
 			'type'    => 'select',
-			'label'   => __( 'WooCommerce Classes', 'fl-theme-builder' ),
-			'help'    => __( 'Add woocommerce and woocommerce-page classes to module wrapper.', 'fl-theme-builder' ),
+			'label'   => __( 'WooCommerce Classes', 'bb-theme-builder' ),
+			'help'    => __( 'Add woocommerce and woocommerce-page classes to module wrapper.', 'bb-theme-builder' ),
 			'default' => 'no',
 			'options' => array(
-				'no'  => __( 'No', 'fl-theme-builder' ),
-				'yes' => __( 'Yes', 'fl-theme-builder' ),
+				'no'  => __( 'No', 'bb-theme-builder' ),
+				'yes' => __( 'Yes', 'bb-theme-builder' ),
 			),
 		);
 
 		$form['style']['sections']['woo'] = array(
-			'title'  => __( 'WooCommerce', 'fl-theme-builder' ),
+			'title'  => __( 'WooCommerce', 'bb-theme-builder' ),
 			'fields' => array(
 				'woo_sale_flash_bg'    => array(
 					'type'       => 'color',
-					'label'      => __( 'Product Sale Background', 'fl-theme-builder' ),
+					'label'      => __( 'Product Sale Background', 'bb-theme-builder' ),
 					'show_reset' => true,
 				),
 				'woo_sale_flash_color' => array(
 					'type'       => 'color',
-					'label'      => __( 'Product Sale Text Color', 'fl-theme-builder' ),
+					'label'      => __( 'Product Sale Text Color', 'bb-theme-builder' ),
 					'show_reset' => true,
 				),
 				'woo_rating_fg'        => array(
 					'type'       => 'color',
-					'label'      => __( 'Product Rating Foreground', 'fl-theme-builder' ),
+					'label'      => __( 'Product Rating Foreground', 'bb-theme-builder' ),
 					'show_reset' => true,
 				),
 				'woo_rating_bg'        => array(
 					'type'       => 'color',
-					'label'      => __( 'Product Rating Background', 'fl-theme-builder' ),
+					'label'      => __( 'Product Rating Background', 'bb-theme-builder' ),
 					'show_reset' => true,
 				),
 				'woo_rating_font_size' => array(
 					'type'        => 'text',
-					'label'       => __( 'Product Rating Font Size', 'fl-theme-builder' ),
+					'label'       => __( 'Product Rating Font Size', 'bb-theme-builder' ),
 					'default'     => '',
 					'maxlength'   => '3',
 					'size'        => '4',
@@ -387,12 +387,12 @@ final class FLThemeBuilderWooCommerceArchive {
 				),
 				'woo_price_color'      => array(
 					'type'       => 'color',
-					'label'      => __( 'Product Price Text Color', 'fl-theme-builder' ),
+					'label'      => __( 'Product Price Text Color', 'bb-theme-builder' ),
 					'show_reset' => true,
 				),
 				'woo_price_font_size'  => array(
 					'type'        => 'text',
-					'label'       => __( 'Product Price Font Size', 'fl-theme-builder' ),
+					'label'       => __( 'Product Price Font Size', 'bb-theme-builder' ),
 					'default'     => '',
 					'maxlength'   => '3',
 					'size'        => '4',
@@ -402,17 +402,17 @@ final class FLThemeBuilderWooCommerceArchive {
 		);
 
 		$form['style']['sections']['woo_button'] = array(
-			'title'  => __( 'WooCommerce Cart Button', 'fl-theme-builder' ),
+			'title'  => __( 'WooCommerce Cart Button', 'bb-theme-builder' ),
 			'fields' => array(
 				'woo_button_bg_color'   => array(
 					'type'       => 'color',
-					'label'      => __( 'Background Color', 'fl-theme-builder' ),
+					'label'      => __( 'Background Color', 'bb-theme-builder' ),
 					'default'    => '',
 					'show_reset' => true,
 				),
 				'woo_button_text_color' => array(
 					'type'       => 'color',
-					'label'      => __( 'Text Color', 'fl-theme-builder' ),
+					'label'      => __( 'Text Color', 'bb-theme-builder' ),
 					'default'    => '',
 					'show_reset' => true,
 				),

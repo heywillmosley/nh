@@ -164,27 +164,27 @@ final class FLThemeBuilderRulesUser {
 
 		$rules = array(
 			'general' => array(
-				'label' => __( 'General', 'fl-theme-builder' ),
+				'label' => __( 'General', 'bb-theme-builder' ),
 				'rules' => array(
 					'all'        => array(
 						'id'    => 'all',
-						'label' => __( 'All Users', 'fl-theme-builder' ),
+						'label' => __( 'All Users', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'logged-in'  => array(
 						'id'    => 'logged-in',
-						'label' => __( 'Logged In', 'fl-theme-builder' ),
+						'label' => __( 'Logged In', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'logged-out' => array(
 						'id'    => 'logged-out',
-						'label' => __( 'Logged Out', 'fl-theme-builder' ),
+						'label' => __( 'Logged Out', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 				),
 			),
 			'role'    => array(
-				'label' => __( 'Roles', 'fl-theme-builder' ),
+				'label' => __( 'Roles', 'bb-theme-builder' ),
 				'rules' => array(),
 			),
 		);

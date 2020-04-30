@@ -12,10 +12,10 @@ class FLTheEventsCalendarExportLinksModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Event Export Links', 'fl-theme-builder' ),
-			'description'     => __( 'Displays links to export the current event to your calendar.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'The Events Calendar', 'fl-theme-builder' ),
+			'name'            => __( 'Event Export Links', 'bb-theme-builder' ),
+			'description'     => __( 'Displays links to export the current event to your calendar.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'The Events Calendar', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_DIR . 'modules/fl-the-events-calendar-export-links/',
 			'url'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_URL . 'modules/fl-the-events-calendar-export-links/',
@@ -26,19 +26,19 @@ class FLTheEventsCalendarExportLinksModule extends FLBuilderModule {
 
 FLBuilder::register_module( 'FLTheEventsCalendarExportLinksModule', array(
 	'general' => array(
-		'title'    => __( 'Style', 'fl-theme-builder' ),
+		'title'    => __( 'Style', 'bb-theme-builder' ),
 		'sections' => array(
 			'general' => array(
 				'title'  => '',
 				'fields' => array(
 					'align'         => array(
 						'type'    => 'select',
-						'label'   => __( 'Alignment', 'fl-theme-builder' ),
+						'label'   => __( 'Alignment', 'bb-theme-builder' ),
 						'default' => 'left',
 						'options' => array(
-							'left'   => __( 'Left', 'fl-theme-builder' ),
-							'center' => __( 'Center', 'fl-theme-builder' ),
-							'right'  => __( 'Right', 'fl-theme-builder' ),
+							'left'   => __( 'Left', 'bb-theme-builder' ),
+							'center' => __( 'Center', 'bb-theme-builder' ),
+							'right'  => __( 'Right', 'bb-theme-builder' ),
 						),
 						'preview' => array(
 							'type'     => 'css',
@@ -48,17 +48,17 @@ FLBuilder::register_module( 'FLTheEventsCalendarExportLinksModule', array(
 					),
 					'text_color'    => array(
 						'type'       => 'color',
-						'label'      => __( 'Text Color', 'fl-theme-builder' ),
+						'label'      => __( 'Text Color', 'bb-theme-builder' ),
 						'show_reset' => true,
 					),
 					'bg_color'      => array(
 						'type'       => 'color',
-						'label'      => __( 'Background Color', 'fl-theme-builder' ),
+						'label'      => __( 'Background Color', 'bb-theme-builder' ),
 						'show_reset' => true,
 					),
 					'border_radius' => array(
 						'type'        => 'text',
-						'label'       => __( 'Border Radius', 'fl-theme-builder' ),
+						'label'       => __( 'Border Radius', 'bb-theme-builder' ),
 						'default'     => '0',
 						'size'        => '5',
 						'description' => 'px',

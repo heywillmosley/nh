@@ -62,7 +62,7 @@ class BeRocket_sales_report extends BeRocket_Framework {
         if ( $this->init_validation() ) {
             add_filter ( 'BeRocket_updater_menu_order_custom_post', array($this, 'menu_order_custom_post') );
             add_shortcode( 'br_sales_report_part', array( $this, 'shortcode' ) );
-            add_filter( 'berocket_sales_report_send_date_types', array($this, 'report_send_date_types') );
+            add_filter( 'berocket_sales_report_send_date_types', array($this, 'report_send_date_types'), 1 );
             add_filter( 'berocket_report_start_end_data_date', array( $this, 'report_start_end_data_date'), 10, 3 );
         }
     }
@@ -203,7 +203,6 @@ class BeRocket_sales_report extends BeRocket_Framework {
     }
     public function init () {
         parent::init();
-        
         $version = get_option('br-sales_report-version');
         if( $version != $this->info['version'] ) {
             $this->new_version_changes();
@@ -482,15 +481,15 @@ class BeRocket_sales_report extends BeRocket_Framework {
                 }
             }
         }
-        $args = array(
+        $args = apply_filters('berocket_sales_report_get_order_args', array(
             'date_query' => $date,
             'post_type' => 'shop_order',
             'post_status' =>  $status,
             'posts_per_page' => '-1'
-        );
+        ), $html_data, $date);
         $query = new WP_Query( $args );
         $orders = $query->posts;
-        return $orders;
+        return apply_filters('berocket_sales_report_get_order_ids', $orders, $args, $html_data, $date);
     }
     public function get_html_order($html_data, $date, $date_string) {
         $options = $this->get_option();
@@ -504,12 +503,13 @@ class BeRocket_sales_report extends BeRocket_Framework {
             $total_price += $wc_order->get_total();
             $products = $wc_order->get_items();
             foreach($products as $product) {
-                if( isset($ready_products[$product['product_id']]) ) {
-                    $ready_products[$product['product_id']]['quantity'] += $product['qty'];
+                $product_id = (empty($product['variation_id']) ? $product['product_id'] : $product['variation_id']);
+                if( isset($ready_products[$product_id]) ) {
+                    $ready_products[$product_id]['quantity'] += $product['qty'];
                 } else {
-                    $ready_products[$product['product_id']] = array('name' => $product['name'], 'quantity' => $product['qty']);
+                    $ready_products[$product_id] = array('name' => $product['name'], 'quantity' => $product['qty']);
                     if ( is_array( $html_data['extend'] ) and in_array( 'sku', $html_data['extend'] ) or $html_data['extend'] == 'sku' ) {
-                        $ready_products[$product['product_id']]['sku'] = get_post_meta( $product['product_id'], '_sku', true );
+                        $ready_products[$product_id]['sku'] = get_post_meta( $product_id, '_sku', true );
                     }
                 }
             }
@@ -526,6 +526,7 @@ class BeRocket_sales_report extends BeRocket_Framework {
             array_multisort($sort_array, ($html_data['sort_product']['is_asc'] ? SORT_ASC : SORT_DESC), ($html_data['sort_product']['is_name'] ? SORT_REGULAR : SORT_NUMERIC), $ready_products);
         }
         if( $order_count > 0 && count($ready_products) > 0 ) {
+            $ready_products = apply_filters('berocket_sales_report_ready_products', $ready_products, $orders, $html_data, $date, $date_string);
             set_query_var( 'total_price', $total_price );
             set_query_var( 'order_count', $order_count );
             set_query_var( 'ready_products', $ready_products );

@@ -34,49 +34,49 @@ final class FLThemeBuilderSupportGeneratePress {
 	static public function register_part_hooks() {
 		return array(
 			array(
-				'label' => __( 'Header', 'fl-theme-builder' ),
+				'label' => __( 'Header', 'bb-theme-builder' ),
 				'hooks' => array(
-					'generate_before_header'         => __( 'Before Header', 'fl-theme-builder' ),
-					'generate_before_header_content' => __( 'Before Header Content', 'fl-theme-builder' ),
-					'generate_after_header_content'  => __( 'After Header Content', 'fl-theme-builder' ),
-					'generate_after_header'          => __( 'After Header', 'fl-theme-builder' ),
+					'generate_before_header'         => __( 'Before Header', 'bb-theme-builder' ),
+					'generate_before_header_content' => __( 'Before Header Content', 'bb-theme-builder' ),
+					'generate_after_header_content'  => __( 'After Header Content', 'bb-theme-builder' ),
+					'generate_after_header'          => __( 'After Header', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Content', 'fl-theme-builder' ),
+				'label' => __( 'Content', 'bb-theme-builder' ),
 				'hooks' => array(
-					'generate_before_main_content' => __( 'Before Main Content', 'fl-theme-builder' ),
-					'generate_before_content'      => __( 'Before Content', 'fl-theme-builder' ),
-					'generate_after_content'       => __( 'After Content', 'fl-theme-builder' ),
-					'generate_after_main_content'  => __( 'After Main Content', 'fl-theme-builder' ),
+					'generate_before_main_content' => __( 'Before Main Content', 'bb-theme-builder' ),
+					'generate_before_content'      => __( 'Before Content', 'bb-theme-builder' ),
+					'generate_after_content'       => __( 'After Content', 'bb-theme-builder' ),
+					'generate_after_main_content'  => __( 'After Main Content', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Footer', 'fl-theme-builder' ),
+				'label' => __( 'Footer', 'bb-theme-builder' ),
 				'hooks' => array(
-					'generate_before_footer'         => __( 'Before Footer', 'fl-theme-builder' ),
-					'generate_before_footer_content' => __( 'Before Footer Content', 'fl-theme-builder' ),
-					'generate_after_footer_widgets'  => __( 'After Footer Widgets', 'fl-theme-builder' ),
-					'generate_after_footer_content'  => __( 'After Footer Content', 'fl-theme-builder' ),
-					'wp_footer'                      => __( 'After Footer', 'fl-theme-builder' ),
+					'generate_before_footer'         => __( 'Before Footer', 'bb-theme-builder' ),
+					'generate_before_footer_content' => __( 'Before Footer Content', 'bb-theme-builder' ),
+					'generate_after_footer_widgets'  => __( 'After Footer Widgets', 'bb-theme-builder' ),
+					'generate_after_footer_content'  => __( 'After Footer Content', 'bb-theme-builder' ),
+					'wp_footer'                      => __( 'After Footer', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Sidebar', 'fl-theme-builder' ),
+				'label' => __( 'Sidebar', 'bb-theme-builder' ),
 				'hooks' => array(
-					'generate_before_right_sidebar_content' => __( 'Before Right Sidebar Content', 'fl-theme-builder' ),
-					'generate_after_right_sidebar_content' => __( 'After Right Sidebar Content', 'fl-theme-builder' ),
-					'generate_before_left_sidebar_content' => __( 'Before Left Sidebar Content', 'fl-theme-builder' ),
-					'generate_after_left_sidebar_content'  => __( 'After Left Sidebar Content', 'fl-theme-builder' ),
+					'generate_before_right_sidebar_content' => __( 'Before Right Sidebar Content', 'bb-theme-builder' ),
+					'generate_after_right_sidebar_content' => __( 'After Right Sidebar Content', 'bb-theme-builder' ),
+					'generate_before_left_sidebar_content' => __( 'Before Left Sidebar Content', 'bb-theme-builder' ),
+					'generate_after_left_sidebar_content'  => __( 'After Left Sidebar Content', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Posts', 'fl-theme-builder' ),
+				'label' => __( 'Posts', 'bb-theme-builder' ),
 				'hooks' => array(
-					'generate_before_entry_title'  => __( 'Before Title', 'fl-theme-builder' ),
-					'generate_after_entry_title'   => __( 'After Title', 'fl-theme-builder' ),
-					'generate_after_entry_header'  => __( 'After Title Header', 'fl-theme-builder' ),
-					'generate_after_entry_content' => __( 'After Post Content', 'fl-theme-builder' ),
+					'generate_before_entry_title'  => __( 'Before Title', 'bb-theme-builder' ),
+					'generate_after_entry_title'   => __( 'After Title', 'bb-theme-builder' ),
+					'generate_after_entry_header'  => __( 'After Title Header', 'bb-theme-builder' ),
+					'generate_after_entry_content' => __( 'After Post Content', 'bb-theme-builder' ),
 				),
 			),
 		);
@@ -115,7 +115,7 @@ final class FLThemeBuilderSupportGeneratePress {
 
 		if ( FLThemeBuilderLayoutData::current_post_is( array( 'singular', 'archive', '404' ) ) ) {
 			$templates = array_merge( $templates, array(
-				'fl-theme-layout-full-width.php' => __( 'Full Width', 'fl-theme-builder' ),
+				'fl-theme-layout-full-width.php' => __( 'Full Width', 'bb-theme-builder' ),
 			) );
 		}
 

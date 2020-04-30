@@ -13,7 +13,7 @@ final class FLPageDataACF {
 	 */
 	static public function init() {
 		FLPageData::add_group( 'acf', array(
-			'label' => __( 'Advanced Custom Fields', 'fl-theme-builder' ),
+			'label' => __( 'Advanced Custom Fields', 'bb-theme-builder' ),
 		) );
 	}
 
@@ -54,10 +54,31 @@ final class FLPageDataACF {
 			case 'radio':
 				$content = self::general_compare( $settings, $object );
 				break;
+			case 'page_link':
+				$content = '';
+
+				if ( 'string' == gettype( $object['value'] ) ) {
+					$content = $object['value'];
+				} elseif ( ! empty( $object['value'] ) && ( 'array' == gettype( $object['value'] ) ) ) {
+					$separator = ( isset( $settings->separator ) ) ? $settings->separator : false;
+					if ( $separator ) {
+						$content = array();
+						foreach ( $object['value'] as $v ) {
+							$content[] = "<a href='{$v}'>{$v}</a>";
+						}
+						$content = implode( $separator, $content );
+					} else {
+						$content = '<ul>';
+						foreach ( $object['value'] as $v ) {
+							$content .= "<li><a href='{$v}'>{$v}</a></li>";
+						}
+						$content .= '</ul>';
+					}
+				}
+				break;
 			case 'password':
 			case 'wysiwyg':
 			case 'oembed':
-			case 'page_link':
 			case 'date_time_picker':
 			case 'time_picker':
 				$content = isset( $object['value'] ) ? $object['value'] : '';
@@ -115,7 +136,7 @@ final class FLPageDataACF {
 				} else {
 					if ( isset( $settings->format ) && '' !== $settings->format && isset( $object['value'] ) ) {
 						$date    = str_replace( '/', '-', $object['value'] );
-						$content = date( $settings->format, strtotime( $date ) );
+						$content = date( $settings->format, strtotime( $date ) ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
 					} else {
 						$content = isset( $object['value'] ) ? $object['value'] : '';
 					}
@@ -209,7 +230,26 @@ final class FLPageDataACF {
 			case 'select':
 			case 'radio':
 			case 'page_link':
-				$content = isset( $object['value'] ) ? $object['value'] : '';
+				$content = '';
+
+				if ( 'string' == gettype( $object['value'] ) ) {
+					$content = $object['value'];
+				} elseif ( ! empty( $object['value'] ) && ( 'array' == gettype( $object['value'] ) ) ) {
+					$separator = ( isset( $settings->separator ) ) ? $settings->separator : false;
+					if ( $separator ) {
+						$content = array();
+						foreach ( $object['value'] as $v ) {
+							$content[] = "<a href='{$v}'>{$v}</a>";
+						}
+						$content = implode( $separator, $content );
+					} else {
+						$content = '<ul>';
+						foreach ( $object['value'] as $v ) {
+							$content .= "<li><a href='{$v}'>{$v}</a></li>";
+						}
+						$content .= '</ul>';
+					}
+				}
 				break;
 			case 'image':
 				$content = self::get_file_url_from_object( $object, $settings->image_size );
@@ -307,23 +347,23 @@ final class FLPageDataACF {
 	 */
 	static public function relational_field( $settings, $property ) {
 		$content = '';
-		$object  = get_field_object( trim( $settings->name ), self::get_object_id( $property ) );
 
-		if ( empty( $object ) || ! isset( $object['type'] ) || ! in_array( $object['type'], array( 'user', 'post_object' ) ) ) {
+		if ( function_exists( 'acf_get_loop' ) && acf_get_loop( 'active' ) ) {
+			$object = get_sub_field_object( trim( $settings->name ) );
+		} else {
+			$object = get_field_object( trim( $settings->name ), self::get_object_id( $property ) );
+		}
+
+		if ( empty( $object ) || ! isset( $object['type'] ) || ! in_array( $object['type'], array( 'user', 'post_object', 'page_link' ) ) ) {
 			return $content;
 		} elseif ( ! empty( $object['value'] ) ) {
-			$values = 1 == $object['multiple'] ? $object['value'] : array( $object['value'] );
+			$values = ( 1 == $object['multiple'] ) ? $object['value'] : array( $object['value'] );
 
 			if ( 'user' == $object['type'] ) {
 				$users = array();
 				$name  = '';
 
 				foreach ( $values as $user_data ) {
-
-					if ( is_object( $user_data ) && isset( $user_data->data ) ) {
-						$user_data = (array) $user_data->data;
-					}
-
 					switch ( $settings->display_type ) {
 						case 'display':
 							$name = $user_data['display_name'];
@@ -397,6 +437,12 @@ final class FLPageDataACF {
 					$text = get_the_title( $post_id );
 
 					$content .= "<li class='post-{$post_id}'><a href='{$href}' title='{$title}'>{$text}</a></li>";
+				}
+				$content .= '</ul>';
+			} elseif ( ! empty( $object['type'] ) && ( 'page_link' == $object['type'] ) ) {
+				$content = '<ul>';
+				foreach ( $values as $v ) {
+					$content .= "<li><a href='{$v}'>{$v}</a></li>";
 				}
 				$content .= '</ul>';
 			}

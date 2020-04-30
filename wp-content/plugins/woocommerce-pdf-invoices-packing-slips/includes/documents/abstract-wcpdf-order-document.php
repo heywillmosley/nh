@@ -151,6 +151,15 @@ abstract class Order_Document {
 			WCX_Order::update_meta_data( $this->order, "_wcpdf_{$this->slug}_settings", $settings );
 		}
 
+		// display date & display number were checkbox settings but now a select setting that could be set but empty - should behave as 'unchecked'
+		if ( array_key_exists( 'display_date', $settings ) && empty( $settings['display_date'] ) ) {
+			unset( $settings['display_date'] );
+		}
+		
+		if ( array_key_exists( 'display_number', $settings ) && empty( $settings['display_number'] ) ) {
+			unset( $settings['display_number'] );
+		}
+
 		return $settings;
 	}
 
@@ -261,6 +270,8 @@ abstract class Order_Document {
 				}
 			}
 		}
+
+		do_action( 'wpo_wcpdf_save_document', $this, $order );
 	}
 
 	public function delete( $order = null ) {
@@ -280,7 +291,7 @@ abstract class Order_Document {
 			WCX_Order::delete_meta_data( $order, "_wcpdf_{$this->slug}_{$data_key}" );
 		}
 
-		do_action( 'wpo_wcpdf_delete_document', $this );
+		do_action( 'wpo_wcpdf_delete_document', $this, $order );
 	}
 
 	public function is_allowed() {
@@ -743,11 +754,22 @@ abstract class Order_Document {
 	 * @return array   $emails       list of all email ids/slugs and names
 	 */
 	public function get_wc_emails() {
+		// only run this in the context of the settings page or setup wizard
+		// prevents WPML language mixups
+		if ( empty( $_GET['page'] ) || !in_array( $_GET['page'], array('wpo-wcpdf-setup','wpo_wcpdf_options_page') ) ) {
+			return array();
+		}
+
 		// get emails from WooCommerce
 		if (function_exists('WC')) {
 			$mailer = WC()->mailer();
 		} else {
 			global $woocommerce;
+
+			if ( empty( $woocommerce ) ) { // bail if WooCommerce not active
+				return apply_filters( 'wpo_wcpdf_wc_emails', array() );
+			}
+			
 			$mailer = $woocommerce->mailer();
 		}
 		$wc_emails = $mailer->get_emails();

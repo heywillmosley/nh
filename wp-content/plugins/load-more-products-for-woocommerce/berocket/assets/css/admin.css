@@ -1507,3 +1507,19 @@
 .wp-list-table .berocket_disabled_post:hover {
     opacity: 0.8;
 }
+/*WORDPRESS 5.3 FIX*/
+.br_framework_settings input[type=date],
+.br_framework_settings input[type=datetime-local],
+.br_framework_settings input[type=datetime],
+.br_framework_settings input[type=email],
+.br_framework_settings input[type=month],
+.br_framework_settings input[type=number],
+.br_framework_settings input[type=password],
+.br_framework_settings input[type=search],
+.br_framework_settings input[type=tel],
+.br_framework_settings input[type=text],
+.br_framework_settings input[type=time],
+.br_framework_settings input[type=url],
+.br_framework_settings input[type=week]{
+    padding: 0 0 0 2px;
+}

@@ -372,11 +372,18 @@ final class FLThemeBuilderFieldConnections {
 	 * @return object
 	 */
 	static public function connect_node_settings( $settings, $node ) {
+		global $wp_the_query;
 		global $post;
 
-		$repeater  = array();
-		$nested    = array();
-		$cache_key = $post && isset( $post->ID ) ? $node->node . '_' . $post->ID : $node->node;
+		$repeater = array();
+		$nested   = array();
+
+		// Get the connection cache key.
+		if ( is_object( $wp_the_query->post ) && 'fl-theme-layout' === $wp_the_query->post->post_type ) {
+			$cache_key = $node->node;
+		} else {
+			$cache_key = $post && isset( $post->ID ) ? $node->node . '_' . $post->ID : $node->node;
+		}
 
 		// Gather any repeater or nested settings.
 		foreach ( $settings as $key => $value ) {
@@ -538,13 +545,13 @@ final class FLThemeBuilderFieldConnections {
 	 */
 	static public function parse_conditional_shortcode( $attrs, $content = '' ) {
 		if ( ! isset( $attrs ) || ! isset( $attrs[0] ) ) {
-			return __( 'Incorrect wpbb-if shortcode attributes.', 'fl-theme-builder' );
+			return __( 'Incorrect wpbb-if shortcode attributes.', 'bb-theme-builder' );
 		}
 
 		$parts = explode( ':', $attrs[0] );
 
 		if ( count( $parts ) < 2 ) {
-			return __( 'Incorrect wpbb-if shortcode attributes.', 'fl-theme-builder' );
+			return __( 'Incorrect wpbb-if shortcode attributes.', 'bb-theme-builder' );
 		}
 
 		$else     = false;

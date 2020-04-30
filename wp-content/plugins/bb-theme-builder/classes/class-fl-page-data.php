@@ -77,28 +77,28 @@ final class FLPageData {
 	static public function init_defaults() {
 		self::$groups = array(
 			'general'  => array(
-				'label' => __( 'General', 'fl-theme-builder' ),
+				'label' => __( 'General', 'bb-theme-builder' ),
 			),
 			'archives' => array(
-				'label' => __( 'Archives', 'fl-theme-builder' ),
+				'label' => __( 'Archives', 'bb-theme-builder' ),
 			),
 			'posts'    => array(
-				'label' => __( 'Posts', 'fl-theme-builder' ),
+				'label' => __( 'Posts', 'bb-theme-builder' ),
 			),
 			'comments' => array(
-				'label' => __( 'Comments', 'fl-theme-builder' ),
+				'label' => __( 'Comments', 'bb-theme-builder' ),
 			),
 			'author'   => array(
-				'label' => __( 'Author', 'fl-theme-builder' ),
+				'label' => __( 'Author', 'bb-theme-builder' ),
 			),
 			'site'     => array(
-				'label' => __( 'Site', 'fl-theme-builder' ),
+				'label' => __( 'Site', 'bb-theme-builder' ),
 			),
 			'user'     => array(
-				'label' => __( 'User', 'fl-theme-builder' ),
+				'label' => __( 'User', 'bb-theme-builder' ),
 			),
 			'advanced' => array(
-				'label' => __( 'Advanced', 'fl-theme-builder' ),
+				'label' => __( 'Advanced', 'bb-theme-builder' ),
 			),
 		);
 

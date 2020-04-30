@@ -42,6 +42,7 @@ final class FLThemeBuilderTheEventsCalendarArchive {
 
 		if ( $is_event_preview && $is_theme_layout && 'archive' === $theme_layout_type ) {
 			add_filter( 'body_class', __CLASS__ . '::body_class' );
+			add_filter( 'tribe_events_views_v2_assets_should_enqueue_frontend', '__return_true' );
 		} elseif ( is_post_type_archive( 'tribe_events' ) ) {
 			add_filter( 'fl_builder_loop_query', __CLASS__ . '::builder_loop_query', 10, 2 );
 			add_action( 'fl_theme_builder_before_render_content', __CLASS__ . '::before_render_content' );
@@ -149,69 +150,78 @@ final class FLThemeBuilderTheEventsCalendarArchive {
 		}
 
 		$form['layout']['sections']['events'] = array(
-			'title'  => __( 'The Events Calendar', 'fl-theme-builder' ),
+			'title'  => __( 'The Events Calendar', 'bb-theme-builder' ),
 			'fields' => array(
 				'event_date'    => array(
 					'type'    => 'select',
-					'label'   => __( 'Event Date', 'fl-theme-builder' ),
+					'label'   => __( 'Event Date', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
+					),
+				),
+				'event_venue'   => array(
+					'type'    => 'select',
+					'label'   => __( 'Event Venue', 'bb-theme-builder' ),
+					'default' => 'hide',
+					'options' => array(
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'event_address' => array(
 					'type'    => 'select',
-					'label'   => __( 'Event Address', 'fl-theme-builder' ),
+					'label'   => __( 'Event Address', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'event_cost'    => array(
 					'type'    => 'select',
-					'label'   => __( 'Event Cost', 'fl-theme-builder' ),
+					'label'   => __( 'Event Cost', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'event_orderby' => array(
 					'type'    => 'select',
-					'label'   => __( 'Events Order By', 'fl-theme-builder' ),
+					'label'   => __( 'Events Order By', 'bb-theme-builder' ),
 					'default' => '',
 					'options' => array(
-						''               => __( 'Default', 'fl-theme-builder' ),
-						'EventStartDate' => __( 'Start Date', 'fl-theme-builder' ),
-						'EventEndDate'   => __( 'End Date', 'fl-theme-builder' ),
+						''               => __( 'Default', 'bb-theme-builder' ),
+						'EventStartDate' => __( 'Start Date', 'bb-theme-builder' ),
+						'EventEndDate'   => __( 'End Date', 'bb-theme-builder' ),
 					),
 				),
 				'event_order'   => array(
 					'type'    => 'select',
-					'label'   => __( 'Events Order', 'fl-theme-builder' ),
+					'label'   => __( 'Events Order', 'bb-theme-builder' ),
 					'default' => 'Ascending',
 					'options' => array(
-						'ASC'  => __( 'Ascending', 'fl-theme-builder' ),
-						'DESC' => __( 'Descending', 'fl-theme-builder' ),
+						'ASC'  => __( 'Ascending', 'bb-theme-builder' ),
+						'DESC' => __( 'Descending', 'bb-theme-builder' ),
 					),
 				),
 			),
 		);
 
 		$form['style']['sections']['events_button'] = array(
-			'title'  => __( 'The Events Calendar Cart Button', 'fl-theme-builder' ),
+			'title'  => __( 'The Events Calendar Cart Button', 'bb-theme-builder' ),
 			'fields' => array(
 				'events_button_bg_color'   => array(
 					'type'       => 'color',
-					'label'      => __( 'Background Color', 'fl-theme-builder' ),
+					'label'      => __( 'Background Color', 'bb-theme-builder' ),
 					'default'    => '',
 					'show_reset' => true,
 				),
 				'events_button_text_color' => array(
 					'type'       => 'color',
-					'label'      => __( 'Text Color', 'fl-theme-builder' ),
+					'label'      => __( 'Text Color', 'bb-theme-builder' ),
 					'default'    => '',
 					'show_reset' => true,
 				),
@@ -278,6 +288,16 @@ final class FLThemeBuilderTheEventsCalendarArchive {
 		}
 
 		// Event location
+
+		if ( 'show' === $settings->event_venue ) {
+			$venue = FLPageData::get_value( 'post', 'the_events_calendar_venue' );
+			if ( $venue ) {
+				echo '<div class="fl-post-grid-event-calendar-venue">';
+				echo $venue;
+				echo '</div>';
+			}
+		}
+
 		if ( 'show' === $settings->event_address ) {
 			$address = FLPageData::get_value( 'post', 'the_events_calendar_address' );
 			if ( $address ) {

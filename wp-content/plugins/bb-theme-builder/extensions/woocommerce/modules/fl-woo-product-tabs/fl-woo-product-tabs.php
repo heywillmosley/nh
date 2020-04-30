@@ -12,10 +12,10 @@ class FLWooProductTabsModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Product Tabs', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the data tabs for the current product.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'WooCommerce', 'fl-theme-builder' ),
+			'name'            => __( 'Product Tabs', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the data tabs for the current product.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'WooCommerce', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_DIR . 'extensions/woocommerce/modules/fl-woo-product-tabs/',
 			'url'             => FL_THEME_BUILDER_URL . 'extensions/woocommerce/modules/fl-woo-product-tabs/',

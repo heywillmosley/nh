@@ -16,115 +16,151 @@
             }
         };
         this.reset_option = function () {
-            var popup_data = {timer_interval: undefined, close_delay: undefined, can_close_popup: true, opened:false};
+            var popup_data = {timer_interval: undefined, close_delay: undefined, can_close_popup: true, opened:false, can_close_popup_count:0};
             this.data('br_popup_data', popup_data);
+            jQuery(this).trigger('br_popup-after_reset_option', this);
         };
         this.create_popup = function() {
+            jQuery(this).trigger('br_popup-before_create_popup', this);
             var settings = this.data('br_popup_settings');
-                $header = settings.title;
 
-				$popup_html = '<div id="br_popup" class="br_popup animated';
+            $popup_html  = '<div id="br_popup" class="br_popup animated'+this.builder.popup_class(settings)+'" style="'+this.builder.popup_style(settings)+'">';
+            $popup_html += '<div class="br_popup_wrapper'+this.builder.popup_wrapper_class(settings)+'" style="'+this.builder.popup_wrapper_style(settings)+'">';
+            $popup_html += '<div class="animated popup_animation'+this.builder.popup_animation_class(settings)+'">';
+            
+            $popup_html += this.builder.close_button(settings);
+            $popup_html += this.builder.close_delay(settings);
+            $popup_html += this.builder.header_title(settings);
+            
+            $popup_html += '<div class="br_popup_inner">';
+            if (
+                ( settings.yes_no_buttons.show == true
+                  && settings.yes_no_buttons.custom == false
+                  || settings.print_button == true
+                )
+                && settings.yes_no_buttons.location == 'content'
+            ) {
+                $popup_html += '<div class="br_popup_buttons">';
+                $popup_html += this.builder.buttons(settings);
+                $popup_html += '</div>';
+            }
+            $popup_html += '</div>';
+            
+            if (
+                ( settings.yes_no_buttons.show == true
+                  && settings.yes_no_buttons.custom == false
+                  || settings.print_button == true
+                )
+                && settings.yes_no_buttons.location == 'popup'
+            ) {
+                $popup_html += '<div class="br_popup_buttons">';
+                $popup_html += this.builder.buttons(settings);
+                $popup_html += '</div>';
+            }
+            
+            $popup_html += '</div></div>';
+            
+            if ( settings.no_overlay == false ) {
+                $popup_html += '<div class="br_popup_overlay"></div>';
+            }
+            
+            $popup_html += '</div>';
+            $popup_html = $($popup_html);
+            $popup_html.appendTo('body');
+            $popup_html.data('br_popup_main', this);
+            this.data('br_popup_object', $popup_html);
+            jQuery(this).trigger('br_popup-after_create_popup', this);
+		};
+        this.builder = {
+            popup_class: function(settings) {
+                var text = '';
                 if ( settings.theme != 'default' && settings.theme != '' ) {
-                    $popup_html += ' ' + settings.theme;
+                    text += ' ' + settings.theme;
                 }
-                $popup_html += '"><div class="br_popup_wrapper" style="';
-				if ( settings.width ) {
-					$popup_html += 'width: '+settings.width+';';
-				}
-				if ( settings.height ) {
-					$popup_html += 'height: '+settings.height+';';
-				}
-				
-				$popup_html += '"><div class="animated popup_animation';
-				if ( settings.yes_no_buttons.show == true
+                return text;
+            },
+            popup_style: function(settings) {return '';},
+            popup_wrapper_class: function(settings) {return '';},
+            popup_wrapper_style: function(settings) {
+                var text = '';
+                if ( settings.width ) {
+                    text += 'width: '+settings.width+';';
+                }
+                if ( settings.height ) {
+                    text += 'height: '+settings.height+';';
+                }
+                return text;
+            },
+            popup_animation_class: function(settings) {
+                var text = '';
+                if ( settings.yes_no_buttons.show == true
                      && settings.yes_no_buttons.custom == false
                      && settings.yes_no_buttons.location == 'popup'
                      || settings.print_button == true
                 ) {
-					$popup_html += ' with_yes_no_buttons';
-				}
-				$popup_html += ' yes_no_buttons_'+settings.yes_no_buttons.align;
-				if ( $header != '' ) {
-					$popup_html += ' with_header';
-				}
+                    text += ' with_yes_no_buttons';
+                }
+                text += ' yes_no_buttons_'+settings.yes_no_buttons.align;
+                if ( settings.title && settings.title != '' ) {
+                    text += ' with_header';
+                }
                 if ( settings.print_button == true ) {
-                    $popup_html += ' with_print_button';
+                    text += ' with_print_button';
                 }
-				$popup_html += '">';
-				
-				if ( settings.no_x_button == false ) {
-					$popup_html += '<a href="#" class="br_popup_close">×</a>';
-				}
-				
-				if ( settings.close_delay * 1 > 0 ) {
-					$popup_html += '<span class="counters after_close"><span>' + ( settings.close_delay * 1 ) + '</span> second(s) before close</span>';
-				}
-
-                if ( $header != '' ) {
-                    $popup_html += '<div class="br_popup_header popup_header_' + settings.header_align + '">' + $header + '</div>';
+                return text;
+            },
+            close_button: function(settings) {
+                var text = '';
+                if ( settings.no_x_button == false ) {
+                    text += '<a href="#" class="br_popup_close">×</a>';
                 }
-				
-				$popup_html += '<div class="br_popup_inner">';
-				if (
-                    ( settings.yes_no_buttons.show == true
-                      && settings.yes_no_buttons.custom == false
-                      || settings.print_button == true
-                    )
-                    && settings.yes_no_buttons.location == 'content'
-                ) {
-					$popup_html += '<div class="br_popup_buttons">';
-                    if ( settings.yes_no_buttons.show == true && settings.yes_no_buttons.custom == false ) {
-                        $popup_html += '<a href="' + settings.yes_no_buttons.yes_text + '" class="br_yes_button ' +
-                            settings.yes_no_buttons.yes_classes + '">' + settings.yes_no_buttons.yes_text + '</a><a href="' +
-                            settings.yes_no_buttons.no_text + '" class="br_no_button ' + settings.yes_no_buttons.no_classes + '">' +
-                            settings.yes_no_buttons.no_text + '</a>';
+                return text;
+            },
+            close_delay: function(settings) {
+                var text = '';
+                if ( settings.close_delay * 1 > 0 ) {
+                    var close_delay_text = '%s second(s) before close';
+                    if( settings.close_delay_text && (typeof(settings.close_delay_text) === 'string' || settings.close_delay_text instanceof String) ) {
+                        close_delay_text = settings.close_delay_text;
                     }
-                    if ( settings.print_button == true ) {
-                        $popup_html += '<a href="Print" class="print_button">Print</a>';
-                    }
-                    $popup_html += '</div>';
-				}
-				$popup_html += '</div>';
-				
-				if (
-                    ( settings.yes_no_buttons.show == true
-                      && settings.yes_no_buttons.custom == false
-                      || settings.print_button == true
-                    )
-                    && settings.yes_no_buttons.location == 'popup'
-                ) {
-                    $popup_html += '<div class="br_popup_buttons">';
-                    if ( settings.yes_no_buttons.show == true && settings.yes_no_buttons.custom == false ) {
-                        $popup_html += '<a href="' + settings.yes_no_buttons.yes_text +'" class="br_yes_button ' +
-                            settings.yes_no_buttons.yes_classes + '">' + settings.yes_no_buttons.yes_text + '</a><a href="' +
-                            settings.yes_no_buttons.no_text +'" class="br_no_button ' +
-                            settings.yes_no_buttons.no_classes + '">' + settings.yes_no_buttons.no_text + '</a>';
-                    }
-                    if ( settings.print_button == true ) {
-                        $popup_html += '<a href="Print" class="print_button">Print</a>';
-                    }
-                    $popup_html += '</div>';
-				}
-				
-				$popup_html += '</div></div>';
-				
-				if ( settings.no_overlay == false ) {
-					$popup_html += '<div class="br_popup_overlay"></div>';
-				}
-				
-				$popup_html += '</div>';
-				$popup_html = $($popup_html);
-                $popup_html.appendTo('body');
-                $popup_html.data('br_popup_main', this);
-                this.data('br_popup_object', $popup_html);
-		};
+                    close_delay_text = close_delay_text.replace('%s', '<span>' + ( settings.close_delay * 1 ) + '</span>');
+                    text += '<span class="counters after_close">'+close_delay_text+'</span>';
+                }
+                return text;
+            },
+            header_title: function(settings) {
+                var text = '';
+                if ( settings.title && settings.title != '' ) {
+                    text += '<div class="br_popup_header popup_header_' + settings.header_align + '">' + settings.title + '</div>';
+                }
+                return text;
+            },
+            buttons: function(settings) {
+                var text = '';
+                if ( settings.yes_no_buttons.show == true && settings.yes_no_buttons.custom == false ) {
+                    text += '<a href="' + settings.yes_no_buttons.yes_text + '" '
+                        + 'class="br_yes_button ' + settings.yes_no_buttons.yes_classes + '">'
+                        + settings.yes_no_buttons.yes_text
+                        + '</a>';
+                    text += '<a href="' + settings.yes_no_buttons.no_text + '" '
+                        + 'class="br_no_button ' +settings.yes_no_buttons.no_classes + '">'
+                        + settings.yes_no_buttons.no_text
+                        + '</a>';
+                }
+                if ( settings.print_button == true ) {
+                    text += '<a href="Print" class="print_button">Print</a>';
+                }
+                return text;
+            }
+        };
 		this.add_content = function() {
             var settings = this.data('br_popup_settings');
             if( settings.content ) {
                 this.data('br_popup_object').find('.br_popup_inner').prepend( settings.content );
             } else {
                 this.data('br_popup_object').find('.br_popup_inner').prepend( this.html() );
-            } 
+            }
+            jQuery(this).trigger('br_popup-after_add_content', this);
 		};
         this.add_events = function() {
             var settings = this.data('br_popup_settings');
@@ -205,11 +241,12 @@
                     $this.print();
                 });
             }
+            jQuery(this).trigger('br_popup-after_add_events', this);
         };
         this.show_popup = function() {
             var settings = this.data('br_popup_settings');
             var popup_data = this.data('br_popup_data');
-			if ( this.data('br_popup_object') && this.data('br_popup_object').is(':hidden') ) {
+            if ( this.data('br_popup_object') && this.data('br_popup_object').is(':hidden') ) {
                 var $this = this;
                 popup_data.opened = true;
 
@@ -219,31 +256,66 @@
                     $('body').addClass('hide_scroll');
                 }
 
-                jQuery(this).trigger('br_popup-show_popup', this);
-				this.data('br_popup_object').css({display:'block'});
-				this.animateCss(this.data('br_popup_object'), 'fadeIn');
-				this.animateCss(this.data('br_popup_object').find('.popup_animation'), 'fadeInDown');
-				
-				if ( settings.close_delay * 1 > 0 ) {
-					this.data('br_popup_object').addClass('counting');
-					popup_data.can_close_popup = false;
-					
-					popup_data.close_delay = settings.close_delay * 1 - 1;
-					popup_data.timer_interval = setInterval(function (){
-						if ( popup_data.close_delay <= 0 ) {
-                            popup_data.can_close_popup = true;
-							clearInterval(popup_data.timer_interval);
-                            $this.data('br_popup_object').removeClass('counting');
-						} else {
-							$this.data('br_popup_object').find('.counters span').text(popup_data.close_delay);
-						}
-						popup_data.close_delay--;
-                        $this.data('br_popup_data', popup_data);
-					}, 1000);
-				}
+                this.data('br_popup_object').css({display:'block'});
+                this.animateCss(this.data('br_popup_object'), 'fadeIn');
+                this.animateCss(this.data('br_popup_object').find('.popup_animation'), 'fadeInDown');
+                popup_data = this.set_close_delay(popup_data);
                 this.data('br_popup_data', popup_data);
-			}
-		};
+                jQuery(this).trigger('br_popup-show_popup', this);
+            }
+        };
+        this.set_close_delay = function (popup_data, close_delay_sec) {
+            var settings = this.data('br_popup_settings');
+            var $this = this;
+            if( typeof(popup_data) == 'undefined' || ! popup_data ) {
+                popup_data = this.data('br_popup_data');
+            }
+            if( typeof(close_delay_sec) == 'undefined' || ! close_delay_sec ) {
+                close_delay_sec = settings.close_delay;
+            }
+            if ( close_delay_sec * 1 > 0 ) {
+                this.data('br_popup_object').addClass('counting');
+                this.disable_close();
+                
+                popup_data.close_delay = close_delay_sec * 1 - 1;
+                popup_data.timer_interval = setInterval(function (){
+                    if ( popup_data.close_delay <= 0 ) {
+                        $this.enable_close();
+                        clearInterval(popup_data.timer_interval);
+                        $this.data('br_popup_object').removeClass('counting');
+                    } else {
+                        $this.data('br_popup_object').find('.counters span').text(popup_data.close_delay);
+                    }
+                    popup_data.close_delay--;
+                    $this.data('br_popup_data', popup_data);
+                }, 1000);
+            }
+            this.data('br_popup_data', popup_data);
+            return popup_data;
+        }
+        this.disable_close = function (popup_data) {
+            if( typeof(popup_data) == 'undefined' || ! popup_data ) {
+                popup_data = this.data('br_popup_data');
+            }
+            popup_data.can_close_popup = false;
+            popup_data.can_close_popup_count = popup_data.can_close_popup_count*1 + 1;
+            this.data('br_popup_object').addClass('cannot_be_closed');
+            this.data('br_popup_data', popup_data);
+            return popup_data;
+        }
+        this.enable_close = function (popup_data) {
+            if( typeof(popup_data) == 'undefined' || ! popup_data ) {
+                popup_data = this.data('br_popup_data');
+            }
+            popup_data.can_close_popup_count = popup_data.can_close_popup_count*1 - 1;
+            if( popup_data.can_close_popup_count <= 0 ) {
+                popup_data.can_close_popup_count = 0;
+                popup_data.can_close_popup = true;
+                this.data('br_popup_object').removeClass('cannot_be_closed');
+            }
+            this.data('br_popup_data', popup_data);
+            return popup_data;
+        }
 		this.hide_popup = function () {
             var $this = this;
             var popup_data = this.data('br_popup_data');

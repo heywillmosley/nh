@@ -48,9 +48,9 @@ final class FLThemeBuilderFrontendEdit {
 			'layouts'      => FLThemeBuilderLayoutData::get_current_page_layouts(),
 			'strings'      => array(
 				/* translators: 1: post type label, 2: custom builder branding */
-				'overrideWarning'       => sprintf( _x( 'This %1$s has a Themer layout assigned to it. Using %2$s here will override that layout. Do you want to continue?', '%1$s post type label. %2$s custom builder branding.', 'fl-theme-builder' ), $post_label, FLBuilderModel::get_branding() ),
-				'overrideWarningOk'     => __( 'Yes, use the builder', 'fl-theme-builder' ),
-				'overrideWarningCancel' => __( 'No, take me back', 'fl-theme-builder' ),
+				'overrideWarning'       => sprintf( _x( 'This %1$s has a Themer layout assigned to it. Using %2$s here will override that layout. Do you want to continue?', '%1$s post type label. %2$s custom builder branding.', 'bb-theme-builder' ), $post_label, FLBuilderModel::get_branding() ),
+				'overrideWarningOk'     => __( 'Yes, use the builder', 'bb-theme-builder' ),
+				'overrideWarningCancel' => __( 'No, take me back', 'bb-theme-builder' ),
 			),
 		) );
 	}

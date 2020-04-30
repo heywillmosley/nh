@@ -30,7 +30,7 @@ $condition_types = apply_filters($hook_name.'_types', array());
         <div class="br_cond_example" style="display:none;">
             <?php
             foreach($condition_types as $condition_type_slug => $condition_type_name) {
-                $condition_html = apply_filters($hook_name . '_type_' . $condition_type_slug, '', '%name%[%id%][%current_id%]', array());
+                $condition_html = apply_filters($hook_name . '_type_' . $condition_type_slug, '', '%name%[%id%][%current_id%]', array('is_example' => true));
                 if( ! empty($condition_html) ) {
                     echo '<div class="br_cond br_cond_', $condition_type_slug, '">
                     ', $condition_html, '

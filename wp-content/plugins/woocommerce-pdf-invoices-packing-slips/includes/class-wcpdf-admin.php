@@ -17,10 +17,14 @@ class Admin {
 		add_filter( 'manage_edit-shop_order_columns', array( $this, 'add_invoice_number_column' ), 999 );
 		add_action( 'manage_shop_order_posts_custom_column', array( $this, 'invoice_number_column_data' ), 2 );
 		add_action( 'add_meta_boxes_shop_order', array( $this, 'add_meta_boxes' ) );
-		add_action( 'admin_footer', array( $this, 'bulk_actions' ) );
+		if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '>=' ) ) {
+			add_action( 'bulk_actions-edit-shop_order', array( $this, 'bulk_actions' ), 20 );
+		} else {
+			add_action( 'admin_footer', array( $this, 'bulk_actions_js' ) );
+		}
 		add_filter( 'woocommerce_shop_order_search_fields', array( $this, 'search_fields' ) );
 
-		add_action( 'save_post', array( $this,'save_invoice_number_date' ) );
+		add_action( 'woocommerce_process_shop_order_meta', array( $this,'save_invoice_number_date' ), 35, 2 );
 
 		// manually send emails
 		// WooCommerce core processes order actions at priority 50
@@ -388,6 +392,9 @@ class Admin {
 							</p>
 						</p>
 					</div>
+
+					<?php do_action( 'wpo_wcpdf_meta_box_after_document_data', $invoice, $order ); ?>
+
 					<?php else : ?>
 					<span class="wpo-wcpdf-set-date-number button"><?php _e( 'Set invoice number & date', 'woocommerce-pdf-invoices-packing-slips' ) ?></span>
 					<?php endif; ?>
@@ -408,7 +415,7 @@ class Admin {
 						<?php if ( $invoice->exists() && !empty($invoice_date) ) : ?>
 						<input type="text" class="date-picker-field" name="wcpdf_invoice_date" id="wcpdf_invoice_date" maxlength="10" value="<?php echo $invoice_date->date_i18n( 'Y-m-d' ); ?>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" disabled="disabled"/>@<input type="number" class="hour" placeholder="<?php _e( 'h', 'woocommerce' ) ?>" name="wcpdf_invoice_date_hour" id="wcpdf_invoice_date_hour" min="0" max="23" size="2" value="<?php echo $invoice_date->date_i18n( 'H' ) ?>" pattern="([01]?[0-9]{1}|2[0-3]{1})" />:<input type="number" class="minute" placeholder="<?php _e( 'm', 'woocommerce' ) ?>" name="wcpdf_invoice_date_minute" id="wcpdf_invoice_date_minute" min="0" max="59" size="2" value="<?php echo $invoice_date->date_i18n( 'i' ); ?>" pattern="[0-5]{1}[0-9]{1}" />
 						<?php else : ?>
-						<input type="text" class="date-picker-field" name="wcpdf_invoice_date" id="wcpdf_invoice_date" maxlength="10" disabled="disabled" value="" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" />@<input type="number" class="hour" disabled="disabled" placeholder="<?php _e( 'h', 'woocommerce' ) ?>" name="wcpdf_invoice_date_hour" id="wcpdf_invoice_date_hour" min="0" max="23" size="2" value="" pattern="([01]?[0-9]{1}|2[0-3]{1})" />:<input type="number" class="minute" placeholder="<?php _e( 'm', 'woocommerce' ) ?>" name="wcpdf_invoice_date_minute" id="wcpdf_invoice_date_minute" min="0" max="59" size="2" value="" pattern="[0-5]{1}[0-9]{1}" disabled="disabled" />
+						<input type="text" class="date-picker-field" name="wcpdf_invoice_date" id="wcpdf_invoice_date" maxlength="10" disabled="disabled" value="<?php echo date_i18n( 'Y-m-d' ); ?>" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" />@<input type="number" class="hour" disabled="disabled" placeholder="<?php _e( 'h', 'woocommerce' ) ?>" name="wcpdf_invoice_date_hour" id="wcpdf_invoice_date_hour" min="0" max="23" size="2" value="<?php echo date_i18n( 'H' ); ?>" pattern="([01]?[0-9]{1}|2[0-3]{1})" />:<input type="number" class="minute" placeholder="<?php _e( 'm', 'woocommerce' ) ?>" name="wcpdf_invoice_date_minute" id="wcpdf_invoice_date_minute" min="0" max="59" size="2" value="<?php echo date_i18n( 'i' ); ?>" pattern="[0-5]{1}[0-9]{1}" disabled="disabled" />
 						<?php endif; ?>
 					</p>
 				</div>
@@ -420,22 +427,24 @@ class Admin {
 	}
 
 	/**
-	 * Add actions to menu
+	 * Add actions to menu, WP3.5+
 	 */
-	public function bulk_actions() {
-		if ( $this->is_order_page() ) {
-			$bulk_actions = array();
-			$documents = WPO_WCPDF()->documents->get_documents();
-			foreach ($documents as $document) {
-				$bulk_actions[$document->get_type()] = "PDF " . $document->get_title();
-			}
+	public function bulk_actions( $actions ) {
+		foreach ($this->get_bulk_actions() as $action => $title) {
+			$actions[$action] = $title;
+		}
+		return $actions;
+	}
 
-			$bulk_actions = apply_filters( 'wpo_wcpdf_bulk_actions', $bulk_actions );
-			
+	/**
+	 * Add actions to menu, legacy method
+	 */
+	public function bulk_actions_js() {
+		if ( $this->is_order_page() ) {
 			?>
 			<script type="text/javascript">
 			jQuery(document).ready(function() {
-				<?php foreach ($bulk_actions as $action => $title) { ?>
+				<?php foreach ($this->get_bulk_actions() as $action => $title) { ?>
 				jQuery('<option>').val('<?php echo $action; ?>').html('<?php echo esc_attr( $title ); ?>').appendTo("select[name='action'], select[name='action2']");
 				<?php }	?>
 			});
@@ -444,10 +453,20 @@ class Admin {
 		}
 	}
 
+	public function get_bulk_actions() {
+		$actions = array();
+		$documents = WPO_WCPDF()->documents->get_documents();
+		foreach ($documents as $document) {
+			$actions[$document->get_type()] = "PDF " . $document->get_title();
+		}
+
+		return apply_filters( 'wpo_wcpdf_bulk_actions', $actions );
+	}
+
 	/**
 	 * Save invoice number
 	 */
-	public function save_invoice_number_date($post_id) {
+	public function save_invoice_number_date($post_id, $post) {
 		$post_type = get_post_type( $post_id );
 		if( $post_type == 'shop_order' ) {
 			// bail if this is not an actual 'Save order' action

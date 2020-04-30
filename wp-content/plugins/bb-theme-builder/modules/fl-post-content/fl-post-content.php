@@ -11,10 +11,10 @@ class FLPostContentModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Post Content', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the content for a post.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'Posts', 'fl-theme-builder' ),
+			'name'            => __( 'Post Content', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the content for a post.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'Posts', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_DIR . 'modules/fl-post-content/',
 			'url'             => FL_THEME_BUILDER_URL . 'modules/fl-post-content/',

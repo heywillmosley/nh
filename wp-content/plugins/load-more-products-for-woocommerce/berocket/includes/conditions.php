@@ -124,7 +124,7 @@ if( ! class_exists('BeRocket_conditions') ) {
             if( ! empty($extension['equal_more']) ) {
                 $equal_list['equal_more'] = __('Equal or more', 'BeRocket_domain');
             }
-            $html = '<select name="' . $name . '[equal]">';
+            $html = '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[equal]">';
             foreach($equal_list as $equal_slug => $equal_name) {
                 $html .= '<option value="' . $equal_slug . '"' . ($equal == $equal_slug ? ' selected' : '') . '>' . $equal_name . '</option>';
             }
@@ -166,9 +166,9 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_sale($html, $name, $options) {
-            $def_options = array('sale' => 'yes');
+            $def_options = array('sale' => 'yes', 'is_example' => false);
             $options = array_merge($def_options, $options);
-            $html .= '<label>' . __('Is on sale', 'BeRocket_domain') . '<select name="' . $name . '[sale]">
+            $html .= '<label>' . __('Is on sale', 'BeRocket_domain') . '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[sale]">
                 <option value="yes"' . ($options['sale'] == 'yes' ? ' selected' : '') . '>' . __('Yes', 'BeRocket_domain') . '</option>
                 <option value="no"' . ($options['sale'] == 'no' ? ' selected' : '') . '>' . __('No', 'BeRocket_domain') . '</option>
             </select></label>';
@@ -176,9 +176,9 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_bestsellers($html, $name, $options) {
-            $def_options = array('bestsellers' => '1');
+            $def_options = array('bestsellers' => '1', 'is_example' => false);
             $options = array_merge($def_options, $options);
-            $html .= '<label>' . __('Count of product', 'BeRocket_domain') . '<input type="number" min="1" name="' . $name . '[bestsellers]" value="' . $options['bestsellers'] . '"></label>';
+            $html .= '<label>' . __('Count of product', 'BeRocket_domain') . '<input type="number" min="1" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[bestsellers]" value="' . $options['bestsellers'] . '"></label>';
             return $html;
         }
 
@@ -188,7 +188,7 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_shippingclass($html, $name, $options) {
-            $def_options = array('term' => '');
+            $def_options = array('term' => '', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $terms = get_terms(array(
                 'taxonomy' => 'product_shipping_class',
@@ -201,7 +201,7 @@ if( ! class_exists('BeRocket_conditions') ) {
                 }
             }
             $html = static::supcondition($name, $options);
-            $html .= '<select name="' . $name . '[term]">';
+            $html .= '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[term]">';
             foreach($terms_i as $term_id => $term_name) {
                 $html .= '<option value="' . $term_id . '"' . ($options['term'] == $term_id ? ' selected' : '') . '>' . $term_name . '</option>';
             }
@@ -210,10 +210,10 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_type($html, $name, $options) {
-            $def_options = array('product_type' => '');
+            $def_options = array('product_type' => '', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html = static::supcondition($name, $options);
-            $html .= '<select name="' . $name . '[product_type]">';
+            $html .= '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[product_type]">';
             $product_types = wc_get_product_types();
             foreach($product_types as $term_id => $term_name) {
                 $html .= '<option value="' . $term_id . '"' . ($options['product_type'] == $term_id ? ' selected' : '') . '>' . $term_name . '</option>';
@@ -222,10 +222,10 @@ if( ! class_exists('BeRocket_conditions') ) {
             return $html;
         }
         public static function condition_product_rating($html, $name, $options) {
-            $def_options = array('has_rating' => '');
+            $def_options = array('has_rating' => '', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html .= __('Has Rating:', 'BeRocket_domain');
-            $html .= '<select name="' . $name . '[has_rating]">';
+            $html .= '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[has_rating]">';
             $html .= '<option value=""' . ($options['has_rating'] == '' ? ' selected' : '') . '>' . __('Yes', 'BeRocket_domain') . '</option>';
             $html .= '<option value="no"' . ($options['has_rating'] == 'no' ? ' selected' : '') . '>' . __('No', 'BeRocket_domain') . '</option>';
             $html .= '</select>';
@@ -233,21 +233,21 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_price($html, $name, $options) {
-            $def_options = array('price' => array('from' => '1', 'to' => '1'), 'price_tax' => 'product_price');
+            $def_options = array('price' => array('from' => '1', 'to' => '1'), 'price_tax' => 'product_price', 'is_example' => false);
             $options = array_merge($def_options, $options);
             if( ! is_array($options['price']) ) {
                 $options['price'] = array();
             }
             $options['price'] = array_merge($def_options['price'], $options['price']);
             $html .= static::supcondition($name, $options);
-            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" name="' . $name . '[price][from]" value="' . $options['price']['from'] . '">' .
-                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" name="' . $name . '[price][to]"   value="' . $options['price']['to']   . '">';
+            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[price][from]" value="' . $options['price']['from'] . '">' .
+                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[price][to]"   value="' . $options['price']['to']   . '">';
             $tax_type = array(
                 'product_price' => __('Product price', 'BeRocket_domain'),
                 'with_tax' => __('With tax', 'BeRocket_domain'),
                 'without_tax' => __('Without tax', 'BeRocket_domain'),
             );
-            $html .= '<select name="' . $name . '[price_tax]">';
+            $html .= '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[price_tax]">';
             foreach($tax_type as $tax_type_val => $tax_type_name) {
                 $html .= '<option value="'.$tax_type_val.'"'.($tax_type_val == $options['price_tax'] ? ' selected' : '').'>'.$tax_type_name.'</option>';
             }
@@ -256,10 +256,10 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_stockstatus($html, $name, $options) {
-            $def_options = array('stockstatus' => 'in_stock');
+            $def_options = array('stockstatus' => 'in_stock', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html .= '
-            <select name="' . $name . '[stockstatus]">
+            <select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[stockstatus]">
                 <option value="in_stock"' . ($options['stockstatus'] == 'in_stock' ? ' selected' : '') . '>' . __('In stock', 'BeRocket_domain') . '</option>
                 <option value="out_of_stock"' . ($options['stockstatus'] == 'out_of_stock' ? ' selected' : '') . '>' . __('Out of stock', 'BeRocket_domain') . '</option>
                 <option value="is_on_backorder"' . ($options['stockstatus'] == 'is_on_backorder' ? ' selected' : '') . '>' . __('On Backorder', 'BeRocket_domain') . '</option>
@@ -268,15 +268,15 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_totalsales($html, $name, $options) {
-            $def_options = array('totalsales' => '1');
+            $def_options = array('totalsales' => '1', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html .= static::supcondition($name, $options, array('equal_less' => true, 'equal_more' => true));
-            $html .= '<label>' . __('Count of product', 'BeRocket_domain') . '<input type="number" min="0" name="' . $name . '[totalsales]" value="' . $options['totalsales'] . '"></label>';
+            $html .= '<label>' . __('Count of product', 'BeRocket_domain') . '<input type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[totalsales]" value="' . $options['totalsales'] . '"></label>';
             return $html;
         }
 
         public static function condition_product_category($html, $name, $options) {
-            $def_options = array('category' => array());
+            $def_options = array('category' => array(), 'is_example' => false);
             $options = array_merge($def_options, $options);
             if( ! is_array($options['category']) ) {
                 $options['category'] = array($options['category']);
@@ -286,14 +286,14 @@ if( ! class_exists('BeRocket_conditions') ) {
                 'hide_empty' => false,
             ));
             if( is_array($product_categories) && count($product_categories) > 0 ) {
-                $def_options = array('category' => '');
+                $def_options = array('category' => '', 'is_example' => false);
                 $options = array_merge($def_options, $options);
                 $html .= static::supcondition($name, $options);
-                $html .= '<label><input type="checkbox" name="' . $name . '[subcats]" value="1"' . (empty($options['subcats']) ? '' : ' checked') . '>' . __('Include subcategories', 'BeRocket_domain') . '</label>';
+                $html .= '<label><input type="checkbox" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[subcats]" value="1"' . (empty($options['subcats']) ? '' : ' checked') . '>' . __('Include subcategories', 'BeRocket_domain') . '</label>';
                 $html .= '<div style="max-height:150px;overflow:auto;border:1px solid #ccc;padding: 5px;">';
                 foreach($product_categories as $category) {
                     $html .= '<div><label>
-                    <input type="checkbox" name="' . $name . '[category][]" value="' . $category->term_id . '"' . ( (! empty($options['category']) && is_array($options['category']) && in_array($category->term_id, $options['category']) ) ? ' checked' : '' ) . '>
+                    <input type="checkbox" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[category][]" value="' . $category->term_id . '"' . ( (! empty($options['category']) && is_array($options['category']) && in_array($category->term_id, $options['category']) ) ? ' checked' : '' ) . '>
                     ' . $category->name . '
                     </label></div>';
                 }
@@ -303,7 +303,7 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_attribute($html, $name, $options) {
-            $def_options = array('attribute' => '');
+            $def_options = array('attribute' => '', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $attributes = get_object_taxonomies( 'product', 'objects');
             $product_attributes = array();
@@ -323,7 +323,7 @@ if( ! class_exists('BeRocket_conditions') ) {
             }
             $html .= static::supcondition($name, $options);
             $html .= '<label>' . __('Select attribute', 'BeRocket_domain') . '</label>';
-            $html .= '<select name="' . $name . '[attribute]" class="br_cond_attr_select">';
+            $html .= '<select '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[attribute]" class="br_cond_attr_select">';
             $has_selected_attr = false;
             foreach($product_attributes as $attribute) {
                 $html .= '<option value="' . $attribute['name'] . '"' . ( isset($options['attribute']) && $attribute['name'] == $options['attribute'] ? ' selected' : '' ) . '>' . $attribute['label'] . '</option>';
@@ -334,7 +334,7 @@ if( ! class_exists('BeRocket_conditions') ) {
             $html .= '</select>';
             $is_first_attr = ! $has_selected_attr;
             foreach($product_attributes as $attribute) {
-                $html .= '<select class="br_attr_values br_attr_value_' . $attribute['name'] . '" name="' . $name . '[values][' . $attribute['name'] . ']"' . ($is_first_attr || $attribute['name'] == $options['attribute'] ? '' : ' style="display:none;"') . '>';
+                $html .= '<select class="br_attr_values br_attr_value_' . $attribute['name'] . '" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[values][' . $attribute['name'] . ']"' . ($is_first_attr || $attribute['name'] == $options['attribute'] ? '' : ' style="display:none;"') . '>';
                 $html .= '<option value="">==Any==</option>';
                 foreach($attribute['value'] as $term_id => $term_name) {
                     $html .= '<option value="' . $term_id . '"' . (! empty($options['values'][$attribute['name']]) && $options['values'][$attribute['name']] == $term_id ? ' selected' : '') . '>' . $term_name . '</option>';
@@ -346,45 +346,45 @@ if( ! class_exists('BeRocket_conditions') ) {
         }
 
         public static function condition_product_age($html, $name, $options) {
-            $def_options = array('age' => '1');
+            $def_options = array('age' => '1', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html .= br_supcondition_equal($name, $options, array('equal_less' => true, 'equal_more' => true));
-            $html .= '<input type="number" min="0" name="' . $name . '[age]" value="' . $options['age'] . '">' . __('day(s)', 'BeRocket_domain');
+            $html .= '<input type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[age]" value="' . $options['age'] . '">' . __('day(s)', 'BeRocket_domain');
             return $html;
         }
 
         public static function condition_product_saleprice($html, $name, $options) {
-            $def_options = array('saleprice' => array('from' => '1', 'to' => '1'));
+            $def_options = array('saleprice' => array('from' => '1', 'to' => '1'), 'is_example' => false);
             $options = array_merge($def_options, $options);
             if( ! is_array($options['saleprice']) ) {
                 $options['saleprice'] = array();
             }
             $options['price'] = array_merge($def_options['saleprice'], $options['saleprice']);
             $html .= br_supcondition_equal($name, $options);
-            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" name="' . $name . '[saleprice][from]" value="' . $options['saleprice']['from'] . '">' .
-                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" name="' . $name . '[saleprice][to]"   value="' . $options['saleprice']['to']   . '">';
+            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[saleprice][from]" value="' . $options['saleprice']['from'] . '">' .
+                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[saleprice][to]"   value="' . $options['saleprice']['to']   . '">';
             return $html;
         }
 
         public static function condition_product_regularprice($html, $name, $options) {
-            $def_options = array('regularprice' => array('from' => '1', 'to' => '1'));
+            $def_options = array('regularprice' => array('from' => '1', 'to' => '1'), 'is_example' => false);
             $options = array_merge($def_options, $options);
             if( ! is_array($options['regularprice']) ) {
                 $options['regularprice'] = array();
             }
             $options['price'] = array_merge($def_options['regularprice'], $options['regularprice']);
             $html .= br_supcondition_equal($name, $options);
-            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" name="' . $name . '[regularprice][from]" value="' . $options['regularprice']['from'] . '">' .
-                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" name="' . $name . '[regularprice][to]"   value="' . $options['regularprice']['to']   . '">';
+            $html .= __('From:', 'BeRocket_domain') . '<input class="price_from" type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[regularprice][from]" value="' . $options['regularprice']['from'] . '">' .
+                     __('To:', 'BeRocket_domain')   . '<input class="price_to"   type="number" min="1" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[regularprice][to]"   value="' . $options['regularprice']['to']   . '">';
             return $html;
         }
 
         public static function condition_product_stockquantity($html, $name, $options) {
-            $def_options = array('stockquantity' => '1', 'backorder' => 'any');
+            $def_options = array('stockquantity' => '1', 'backorder' => 'any', 'is_example' => false);
             $options = array_merge($def_options, $options);
             $html .= br_supcondition_equal($name, $options, array('equal_less' => true, 'equal_more' => true));
             $html .= __('Products in stock', 'BeRocket_domain');
-            $html .= '<input type="number" min="0" name="' . $name . '[stockquantity]" value="' . $options['stockquantity'] . '">';
+            $html .= '<input type="number" min="0" '.(empty($options['is_example']) ? '' : 'data-').'name="' . $name . '[stockquantity]" value="' . $options['stockquantity'] . '">';
             $html .= '<label>'.__('Backorder allowed', 'BeRocket_domain').' <select name="' . $name . '[backorder]">
                 <option value="any"' . ($options['backorder'] == 'any' ? ' selected' : '') . '>' . __('Any', 'BeRocket_domain') . '</option>
                 <option value="yes"' . ($options['backorder'] == 'yes' ? ' selected' : '') . '>' . __('Yes', 'BeRocket_domain') . '</option>

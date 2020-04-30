@@ -9,7 +9,7 @@
  * Copyright: (c) 2018 Beaver Builder
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: fl-theme-builder
+ * Text Domain: bb-theme-builder
  */
 
 require_once 'core/classes/class-bb-logic-plugin-loader.php';

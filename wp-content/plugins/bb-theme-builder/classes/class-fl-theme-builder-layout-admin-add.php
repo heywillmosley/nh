@@ -102,9 +102,9 @@ final class FLThemeBuilderLayoutAdminAdd {
 	 * @return array
 	 */
 	static public function filter_config( $config ) {
-		$action = __( 'Add', 'fl-theme-builder' );
+		$action = __( 'Add', 'bb-theme-builder' );
 		/* translators: %s: action like Add, Edit or View */
-		$string = sprintf( _x( '%s Themer Layout', '%s is an action like Add, Edit or View.', 'fl-theme-builder' ), $action );
+		$string = sprintf( _x( '%s Themer Layout', '%s is an action like Add, Edit or View.', 'bb-theme-builder' ), $action );
 
 		$config['strings']['addButton']['theme-layout'] = $string;
 
@@ -121,7 +121,7 @@ final class FLThemeBuilderLayoutAdminAdd {
 	static public function filter_type_select( $types ) {
 		$types[51] = array(
 			'key'   => 'theme-layout',
-			'label' => __( 'Themer Layout', 'fl-theme-builder' ),
+			'label' => __( 'Themer Layout', 'bb-theme-builder' ),
 		);
 
 		ksort( $types );

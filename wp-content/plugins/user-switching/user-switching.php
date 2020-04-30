@@ -5,12 +5,12 @@
  * @package   user-switching
  * @link      https://github.com/johnbillion/user-switching
  * @author    John Blackbourn <john@johnblackbourn.com>
- * @copyright 2009-2019 John Blackbourn
+ * @copyright 2009-2020 John Blackbourn
  * @license   GPL v2 or later
  *
  * Plugin Name:  User Switching
  * Description:  Instant switching between user accounts in WordPress
- * Version:      1.5.2
+ * Version:      1.5.4
  * Plugin URI:   https://johnblackbourn.com/wordpress-plugin-user-switching/
  * Author:       John Blackbourn & contributors
  * Author URI:   https://github.com/johnbillion/user-switching/graphs/contributors
@@ -457,7 +457,7 @@ class user_switching {
 		$old_user = self::get_old_user();
 
 		if ( $old_user ) {
-			$wp_admin_bar->add_menu( array(
+			$wp_admin_bar->add_node( array(
 				'parent' => $parent,
 				'id'     => 'switch-back',
 				'title'  => esc_html( sprintf(
@@ -480,7 +480,7 @@ class user_switching {
 				), $url );
 			}
 
-			$wp_admin_bar->add_menu( array(
+			$wp_admin_bar->add_node( array(
 				'parent' => $parent,
 				'id'     => 'switch-off',
 				/* Translators: "switch off" means to temporarily log out */
@@ -491,7 +491,7 @@ class user_switching {
 
 		if ( ! is_admin() && is_author() && ( get_queried_object() instanceof WP_User ) ) {
 			if ( $old_user ) {
-				$wp_admin_bar->add_menu( array(
+				$wp_admin_bar->add_node( array(
 					'parent' => 'edit',
 					'id'     => 'author-switch-back',
 					'title'  => esc_html( sprintf(
@@ -505,7 +505,7 @@ class user_switching {
 					), self::switch_back_url( $old_user ) ),
 				) );
 			} elseif ( current_user_can( 'switch_to_user', get_queried_object_id() ) ) {
-				$wp_admin_bar->add_menu( array(
+				$wp_admin_bar->add_node( array(
 					'parent' => 'edit',
 					'id'     => 'author-switch-to',
 					'title'  => esc_html__( 'Switch&nbsp;To', 'user-switching' ),
@@ -985,6 +985,8 @@ if ( ! function_exists( 'user_switching_set_olduser_cookie' ) ) {
 		 */
 		do_action( 'set_user_switching_cookie', $auth_cookie, $expiration, $old_user_id, $scheme, $token );
 
+		$scheme = 'logged_in';
+
 		/**
 		 * Fires immediately before the User Switching old user cookie is set.
 		 *
@@ -997,10 +999,16 @@ if ( ! function_exists( 'user_switching_set_olduser_cookie' ) ) {
 		 * @param string $scheme         Authentication scheme. Default 'logged_in'.
 		 * @param string $token          User's session token to use for this cookie.
 		 */
-		do_action( 'set_olduser_cookie', $olduser_cookie, $expiration, $old_user_id, 'logged_in', $token );
+		do_action( 'set_olduser_cookie', $olduser_cookie, $expiration, $old_user_id, $scheme, $token );
 
-		/** This filter is documented in wp-includes/pluggable.php */
-		if ( ! apply_filters( 'send_auth_cookies', true ) ) {
+		/**
+		 * Allows preventing auth cookies from actually being sent to the client.
+		 *
+		 * @since 1.5.4
+		 *
+		 * @param bool $send Whether to send auth cookies to the client.
+		 */
+		if ( ! apply_filters( 'user_switching_send_auth_cookies', true ) ) {
 			return;
 		}
 
@@ -1028,8 +1036,8 @@ if ( ! function_exists( 'user_switching_clear_olduser_cookie' ) ) {
 			 */
 			do_action( 'clear_olduser_cookie' );
 
-			/** This filter is documented in wp-includes/pluggable.php */
-			if ( ! apply_filters( 'send_auth_cookies', true ) ) {
+			/** This filter is documented in user-switching.php */
+			if ( ! apply_filters( 'user_switching_send_auth_cookies', true ) ) {
 				return;
 			}
 

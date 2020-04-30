@@ -13,7 +13,7 @@ final class FLPageDataTheEventsCalendar {
 	 */
 	static public function init() {
 		FLPageData::add_group( 'the-events-calendar', array(
-			'label' => __( 'The Events Calendar', 'fl-theme-builder' ),
+			'label' => __( 'The Events Calendar', 'bb-theme-builder' ),
 		) );
 	}
 
@@ -120,7 +120,7 @@ final class FLPageDataTheEventsCalendar {
 	 * @return string
 	 */
 	static public function back_link() {
-		return '<a href="' . tribe_get_events_link() . '">' . __( '&laquo; All Events', 'fl-theme-builder' ) . '</a>';
+		return '<a href="' . tribe_get_events_link() . '">' . __( '&laquo; All Events', 'bb-theme-builder' ) . '</a>';
 	}
 }
 

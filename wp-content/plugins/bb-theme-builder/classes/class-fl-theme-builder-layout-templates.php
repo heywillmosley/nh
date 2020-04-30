@@ -93,6 +93,10 @@ final class FLThemeBuilderLayoutTemplates {
 			$filter[] = 'Products';
 		}
 
+		if ( ! function_exists( 'bigcommerce' ) ) {
+			$filter[] = 'BigCommerce';
+		}
+
 		if ( ! defined( 'TRIBE_EVENTS_FILE' ) ) {
 			$filter[] = 'Event';
 			$filter[] = 'Events';

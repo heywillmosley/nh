@@ -12,10 +12,10 @@ class FLWooBreadcrumbModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Breadcrumb', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the WooCommerce breadcrumb for the current page.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'WooCommerce', 'fl-theme-builder' ),
+			'name'            => __( 'Breadcrumb', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the WooCommerce breadcrumb for the current page.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'WooCommerce', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_DIR . 'extensions/woocommerce/modules/fl-woo-breadcrumb/',
 			'url'             => FL_THEME_BUILDER_URL . 'extensions/woocommerce/modules/fl-woo-breadcrumb/',
@@ -26,19 +26,19 @@ class FLWooBreadcrumbModule extends FLBuilderModule {
 
 FLBuilder::register_module( 'FLWooBreadcrumbModule', array(
 	'general' => array(
-		'title'    => __( 'Style', 'fl-theme-builder' ),
+		'title'    => __( 'Style', 'bb-theme-builder' ),
 		'sections' => array(
 			'general' => array(
 				'title'  => '',
 				'fields' => array(
 					'align'      => array(
 						'type'    => 'select',
-						'label'   => __( 'Alignment', 'fl-theme-builder' ),
+						'label'   => __( 'Alignment', 'bb-theme-builder' ),
 						'default' => 'left',
 						'options' => array(
-							'left'   => __( 'Left', 'fl-theme-builder' ),
-							'center' => __( 'Center', 'fl-theme-builder' ),
-							'right'  => __( 'Right', 'fl-theme-builder' ),
+							'left'   => __( 'Left', 'bb-theme-builder' ),
+							'center' => __( 'Center', 'bb-theme-builder' ),
+							'right'  => __( 'Right', 'bb-theme-builder' ),
 						),
 						'preview' => array(
 							'type'     => 'css',
@@ -48,7 +48,7 @@ FLBuilder::register_module( 'FLWooBreadcrumbModule', array(
 					),
 					'font_size'  => array(
 						'type'        => 'text',
-						'label'       => __( 'Font Size', 'fl-theme-builder' ),
+						'label'       => __( 'Font Size', 'bb-theme-builder' ),
 						'default'     => '',
 						'size'        => '5',
 						'description' => 'px',
@@ -61,7 +61,7 @@ FLBuilder::register_module( 'FLWooBreadcrumbModule', array(
 					),
 					'link_color' => array(
 						'type'       => 'color',
-						'label'      => __( 'Link Color', 'fl-theme-builder' ),
+						'label'      => __( 'Link Color', 'bb-theme-builder' ),
 						'show_reset' => true,
 						'preview'    => array(
 							'type'     => 'css',
@@ -71,7 +71,7 @@ FLBuilder::register_module( 'FLWooBreadcrumbModule', array(
 					),
 					'text_color' => array(
 						'type'       => 'color',
-						'label'      => __( 'Text Color', 'fl-theme-builder' ),
+						'label'      => __( 'Text Color', 'bb-theme-builder' ),
 						'show_reset' => true,
 						'preview'    => array(
 							'type'     => 'css',

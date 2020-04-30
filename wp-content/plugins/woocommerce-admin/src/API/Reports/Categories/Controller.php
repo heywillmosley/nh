@@ -27,7 +27,7 @@ class Controller extends ReportsController implements ExportableInterface {
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'wc/v4';
+	protected $namespace = 'wc-analytics';
 
 	/**
 	 * Route base.
@@ -179,7 +179,7 @@ class Controller extends ReportsController implements ExportableInterface {
 					'readonly'    => true,
 				),
 				'net_revenue'    => array(
-					'description' => __( 'Gross revenue.', 'woocommerce-admin' ),
+					'description' => __( 'Total Sales.', 'woocommerce-admin' ),
 					'type'        => 'number',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

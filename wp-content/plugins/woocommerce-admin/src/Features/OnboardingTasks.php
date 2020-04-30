@@ -44,7 +44,7 @@ class OnboardingTasks {
 	 * Constructor
 	 */
 	public function __construct() {
-		// This hook needs to run when options are updated via REST.		
+		// This hook needs to run when options are updated via REST.
 		add_action( 'add_option_woocommerce_task_list_complete', array( $this, 'add_completion_note' ), 10, 2 );
 
 		if ( ! is_admin() ) {
@@ -58,9 +58,97 @@ class OnboardingTasks {
 		// New settings injection.
 		add_filter( 'woocommerce_shared_settings', array( $this, 'component_settings' ), 30 );
 
-		add_action( 'admin_init', array( $this, 'set_active_task' ), 20 );
-		add_filter( 'post_updated_messages', array( $this, 'update_product_success_message' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'add_onboarding_homepage_notice_admin_script' ), 10, 1 );
+		add_action( 'admin_init', array( $this, 'set_active_task' ), 5 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_onboarding_product_notice_admin_script' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_onboarding_homepage_notice_admin_script' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_onboarding_tax_notice_admin_script' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'add_onboarding_product_import_notice_admin_script' ) );
+
+		// Update payment cache on payment gateways update.
+		add_action( 'update_option_woocommerce_stripe_settings', array( $this, 'check_stripe_completion' ), 10, 2 );
+		add_action( 'add_option_woocommerce_stripe_settings', array( $this, 'check_stripe_completion' ), 10, 2 );
+		add_action( 'update_option_woocommerce_ppec_paypal_settings', array( $this, 'check_paypal_completion' ), 10, 2 );
+		add_action( 'add_option_woocommerce_ppec_paypal_settings', array( $this, 'check_paypal_completion' ), 10, 2 );
+		add_action( 'add_option_wc_square_refresh_tokens', array( $this, 'check_square_completion' ), 10, 2 );
+	}
+
+	/**
+	 * Check if Square payment settings are complete.
+	 *
+	 * @param string $option Option name.
+	 * @param array  $value Current value.
+	 */
+	public static function check_square_completion( $option, $value ) {
+		if ( empty( $value ) ) {
+			return;
+		}
+
+		self::mark_payment_method_configured( 'square' );
+	}
+
+
+	/**
+	 * Check if Paypal payment settings are complete.
+	 *
+	 * @param mixed $old_value Old value.
+	 * @param array $value Current value.
+	 */
+	public static function check_paypal_completion( $old_value, $value ) {
+		if (
+			! isset( $value['enabled'] ) ||
+			'yes' !== $value['enabled'] ||
+			! isset( $value['api_username'] ) ||
+			empty( $value['api_username'] ) ||
+			! isset( $value['api_password'] ) ||
+			empty( $value['api_password'] )
+		) {
+			return;
+		}
+
+		self::mark_payment_method_configured( 'paypal' );
+	}
+
+	/**
+	 * Check if Stripe payment settings are complete.
+	 *
+	 * @param mixed $old_value Old value.
+	 * @param array $value Current value.
+	 */
+	public static function check_stripe_completion( $old_value, $value ) {
+		if (
+			! isset( $value['enabled'] ) ||
+			'yes' !== $value['enabled'] ||
+			! isset( $value['publishable_key'] ) ||
+			empty( $value['publishable_key'] ) ||
+			! isset( $value['secret_key'] ) ||
+			empty( $value['secret_key'] )
+		) {
+			return;
+		}
+
+		self::mark_payment_method_configured( 'stripe' );
+	}
+
+	/**
+	 * Update the payments cache to complete if not already.
+	 *
+	 * @param string $payment_method Payment method slug.
+	 */
+	public static function mark_payment_method_configured( $payment_method ) {
+		$task_list_payments         = get_option( 'woocommerce_task_list_payments', array() );
+		$payment_methods            = isset( $task_list_payments['methods'] ) ? $task_list_payments['methods'] : array();
+		$configured_payment_methods = isset( $task_list_payments['configured'] ) ? $task_list_payments['configured'] : array();
+
+		if ( ! in_array( $payment_method, $configured_payment_methods, true ) ) {
+			$configured_payment_methods[]     = $payment_method;
+			$task_list_payments['configured'] = $configured_payment_methods;
+		}
+
+		if ( 0 === count( array_diff( $payment_methods, $configured_payment_methods ) ) ) {
+			$task_list_payments['completed'] = 1;
+		}
+
+		update_option( 'woocommerce_task_list_payments', $task_list_payments );
 	}
 
 	/**
@@ -74,15 +162,21 @@ class OnboardingTasks {
 	 * Add task items to component settings.
 	 *
 	 * @param array $settings Component settings.
+	 * @return array
 	 */
 	public function component_settings( $settings ) {
-		$products = wp_count_posts( 'product' );
+		// Bail early if not on a wc-admin powered page, or task list shouldn't be shown.
+		if (
+			! \Automattic\WooCommerce\Admin\Loader::is_admin_page() ||
+			! \Automattic\WooCommerce\Admin\Features\Onboarding::should_show_tasks()
+		) {
+			return $settings;
+		}
 
 		// @todo We may want to consider caching some of these and use to check against
 		// task completion along with cache busting for active tasks.
 		$settings['onboarding']['automatedTaxSupportedCountries'] = self::get_automated_tax_supported_countries();
-		$settings['onboarding']['customLogo']                     = get_theme_mod( 'custom_logo', false );
-		$settings['onboarding']['hasHomepage']                    = self::check_task_completion( 'homepage' );
+		$settings['onboarding']['hasHomepage']                    = self::check_task_completion( 'homepage' ) || 'classic' === get_option( 'classic-editor-replace' );
 		$settings['onboarding']['hasPhysicalProducts']            = count(
 			wc_get_products(
 				array(
@@ -92,8 +186,12 @@ class OnboardingTasks {
 			)
 		) > 0;
 		$settings['onboarding']['hasProducts']                    = self::check_task_completion( 'products' );
-		$settings['onboarding']['isTaxComplete']                  = 'yes' === get_option( 'wc_connect_taxes_enabled' ) || count( DataStore::get_taxes( array() ) ) > 0;
+		$settings['onboarding']['isAppearanceComplete']           = get_option( 'woocommerce_task_list_appearance_complete' );
+		$settings['onboarding']['isTaxComplete']                  = self::check_task_completion( 'tax' );
 		$settings['onboarding']['shippingZonesCount']             = count( \WC_Shipping_Zones::get_zones() );
+		$settings['onboarding']['stylesheet']                     = get_option( 'stylesheet' );
+		$settings['onboarding']['taxJarActivated']                = class_exists( 'WC_Taxjar' );
+		$settings['onboarding']['themeMods']                      = get_theme_mods();
 
 		return $settings;
 	}
@@ -118,10 +216,21 @@ class OnboardingTasks {
 	}
 
 	/**
-	 * Check for active task completion, and clears the transient.
+	 * Get the name of the active task.
+	 *
+	 * @return string
 	 */
-	public static function check_active_task_completion() {
-		$active_task = get_transient( self::ACTIVE_TASK_TRANSIENT );
+	public static function get_active_task() {
+		return get_transient( self::ACTIVE_TASK_TRANSIENT );
+	}
+
+	/**
+	 * Check for active task completion, and clears the transient.
+	 *
+	 * @return bool
+	 */
+	public static function is_active_task_complete() {
+		$active_task = self::get_active_task();
 
 		if ( ! $active_task ) {
 			return false;
@@ -139,7 +248,7 @@ class OnboardingTasks {
 	 * Check for task completion of a given task.
 	 *
 	 * @param string $task Name of task.
-	 * @return bool;
+	 * @return bool
 	 */
 	public static function check_task_completion( $task ) {
 		switch ( $task ) {
@@ -154,29 +263,70 @@ class OnboardingTasks {
 				$post      = get_post( $homepage_id );
 				$completed = $post && 'publish' === $post->post_status;
 				return $completed;
+			case 'tax':
+				return 'yes' === get_option( 'wc_connect_taxes_enabled' ) || count( DataStore::get_taxes( array() ) ) > 0;
 		}
 		return false;
 	}
 
 	/**
-	 * Updates the product published message with a continue setup link, if the products task is currently active.
+	 * Hooks into the product page to add a notice to return to the task list if a product was added.
+	 *
+	 * @param string $hook Page hook.
 	 */
-	function update_product_success_message( $messages ) {
-		if ( ! $this->check_active_task_completion() ) {
-			return $messages;
+	public static function add_onboarding_product_notice_admin_script( $hook ) {
+		global $post;
+		if (
+			'post.php' !== $hook ||
+			'product' !== $post->post_type ||
+			'products' !== self::get_active_task() ||
+			! self::is_active_task_complete()
+		) {
+			return;
 		}
-		/* translators: 1: onboarding task list url */
-		$messages['product'][6] = sprintf( __( 'You created your first product! <a href="%s">Continue Setup</a>.', 'woocommerce-admin' ), esc_url( wc_admin_url() ) );
-		return $messages;
+
+		wp_enqueue_script( 'onboarding-product-notice', Loader::get_url( 'wp-admin-scripts/onboarding-product-notice.js' ), array( 'wc-navigation', 'wp-i18n', 'wp-data' ), WC_ADMIN_VERSION_NUMBER, true );
 	}
 
 	/**
 	 * Hooks into the post page to display a different success notice and sets the active page as the site's home page if visted from onboarding.
+	 *
+	 * @param string $hook Page hook.
 	 */
-	function add_onboarding_homepage_notice_admin_script( $hook ) {
+	public static function add_onboarding_homepage_notice_admin_script( $hook ) {
 		global $post;
-		if ( $hook == 'post.php' && 'page' === $post->post_type && isset( $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) && 'homepage' === $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) { // WPCS: csrf ok.
-			wp_enqueue_script(  'onboarding-homepage-notice', Loader::get_url( 'wp-admin-scripts/onboarding-homepage-notice.js' ), array( 'wc-navigation' ) );
+		if ( 'post.php' === $hook && 'page' === $post->post_type && isset( $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) && 'homepage' === $_GET[ self::ACTIVE_TASK_TRANSIENT ] ) { // phpcs:ignore csrf ok.
+			wp_enqueue_script( 'onboarding-homepage-notice', Loader::get_url( 'wp-admin-scripts/onboarding-homepage-notice.js' ), array( 'wc-navigation', 'wp-i18n', 'wp-data' ), WC_ADMIN_VERSION_NUMBER, true );
+		}
+	}
+
+	/**
+	 * Adds a notice to return to the task list when the save button is clicked on tax settings pages.
+	 */
+	public static function add_onboarding_tax_notice_admin_script() {
+		$page = isset( $_GET['page'] ) ? $_GET['page'] : ''; // phpcs:ignore csrf ok, sanitization ok.
+		$tab  = isset( $_GET['tab'] ) ? $_GET['tab'] : ''; // phpcs:ignore csrf ok, sanitization ok.
+
+		if (
+			'wc-settings' === $page &&
+			'tax' === $tab &&
+			'tax' === self::get_active_task() &&
+			! self::is_active_task_complete()
+		) {
+			wp_enqueue_script( 'onboarding-tax-notice', Loader::get_url( 'wp-admin-scripts/onboarding-tax-notice.js' ), array( 'wc-navigation', 'wp-i18n', 'wp-data' ), WC_ADMIN_VERSION_NUMBER, true );
+		}
+	}
+
+	/**
+	 * Adds a notice to return to the task list when the product importeris done running.
+	 *
+	 * @param string $hook Page hook.
+	 */
+	public function add_onboarding_product_import_notice_admin_script( $hook ) {
+		$step = isset( $_GET['step'] ) ? $_GET['step'] : ''; // phpcs:ignore csrf ok, sanitization ok.
+		if ( 'product_page_product_importer' === $hook && 'done' === $step && 'product-import' === self::get_active_task() ) {
+			delete_transient( self::ACTIVE_TASK_TRANSIENT );
+			wp_enqueue_script( 'onboarding-product-import-notice', Loader::get_url( 'wp-admin-scripts/onboarding-product-import-notice.js' ), array( 'wc-navigation', 'wp-i18n', 'wp-data' ), WC_ADMIN_VERSION_NUMBER, true );
 		}
 	}
 

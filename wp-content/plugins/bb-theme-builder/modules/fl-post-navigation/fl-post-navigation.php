@@ -11,10 +11,10 @@ class FLPostNavigationModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Post Navigation', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the next / previous post navigation links.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'Posts', 'fl-theme-builder' ),
+			'name'            => __( 'Post Navigation', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the next / previous post navigation links.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'Posts', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_DIR . 'modules/fl-post-navigation/',
 			'url'             => FL_THEME_BUILDER_URL . 'modules/fl-post-navigation/',
@@ -25,42 +25,42 @@ class FLPostNavigationModule extends FLBuilderModule {
 
 FLBuilder::register_module( 'FLPostNavigationModule', array(
 	'general' => array(
-		'title'    => __( 'Settings', 'fl-theme-builder' ),
+		'title'    => __( 'Settings', 'bb-theme-builder' ),
 		'sections' => array(
 			'general' => array(
 				'title'  => '',
 				'fields' => array(
 					'prev_text'    => array(
 						'type'    => 'text',
-						'label'   => __( 'Previous Text', 'fl-theme-builder' ),
+						'label'   => __( 'Previous Text', 'bb-theme-builder' ),
 						'default' => '&larr; %title',
 					),
 					'next_text'    => array(
 						'type'    => 'text',
-						'label'   => __( 'Next Text', 'fl-theme-builder' ),
+						'label'   => __( 'Next Text', 'bb-theme-builder' ),
 						'default' => '%title &rarr;',
 					),
 					'in_same_term' => array(
 						'type'    => 'select',
-						'label'   => __( 'Navigate in same taxonomy', 'fl-theme-builder' ),
+						'label'   => __( 'Navigate in same taxonomy', 'bb-theme-builder' ),
 						'default' => '0',
-						'help'    => __( 'Whether to navigate in the same taxonomy as the current post or not.', 'fl-theme-builder' ),
+						'help'    => __( 'Whether to navigate in the same taxonomy as the current post or not.', 'bb-theme-builder' ),
 						'toggle'  => array(
 							'1' => array(
 								'fields' => array( 'tax_select' ),
 							),
 						),
 						'options' => array(
-							'1' => __( 'Enable', 'fl-theme-builder' ),
-							'0' => __( 'Disable', 'fl-theme-builder' ),
+							'1' => __( 'Enable', 'bb-theme-builder' ),
+							'0' => __( 'Disable', 'bb-theme-builder' ),
 						),
 					),
 					'tax_select'   => array(
 						'type'    => 'text',
 						'size'    => 16,
-						'label'   => __( 'Taxonomy', 'fl-theme-builder' ),
+						'label'   => __( 'Taxonomy', 'bb-theme-builder' ),
 						'default' => 'category',
-						'help'    => __( 'The default taxonomy is category.', 'fl-theme-builder' ),
+						'help'    => __( 'The default taxonomy is category.', 'bb-theme-builder' ),
 					),
 				),
 			),

@@ -107,10 +107,14 @@ final class FLPageDataPost {
 	static public function get_content() {
 		remove_filter( 'the_content', 'FLBuilder::render_content' );
 
+		if ( has_filter( 'the_content', '_restore_wpautop_hook' ) && ! has_filter( 'the_content', 'wpautop' ) ) {
+			add_filter( 'the_content', 'wpautop' );
+		}
+
 		$content = apply_filters( 'the_content', get_the_content() );
 
 		$content .= wp_link_pages( array(
-			'before'      => '<div class="page-links">' . __( 'Pages:', 'fl-theme-builder' ),
+			'before'      => '<div class="page-links">' . __( 'Pages:', 'bb-theme-builder' ),
 			'after'       => '</div>',
 			'link_before' => '<span class="page-number">',
 			'link_after'  => '</span>',
@@ -265,8 +269,12 @@ final class FLPageDataPost {
 				$terms_list = strip_tags( $terms_list );
 			}
 		}
-
-		return $terms_list;
+		/**
+		 * Modify output of get_terms_list()
+		 * @see fl_theme_builder_terms_list
+		 * @since 1.3
+		 */
+		return apply_filters( 'fl_theme_builder_terms_list', $terms_list );
 	}
 
 	/**
@@ -398,9 +406,14 @@ final class FLPageDataPost {
 	 * @return string
 	 */
 	static public function get_author_name( $settings ) {
-
-		$user = get_userdata( self::get_author_id() );
+		global $post;
 		$name = '';
+
+		if ( ! isset( $post ) ) {
+			$user = get_userdata( self::get_author_id() );
+		} else {
+			$user = get_userdata( $post->post_author );
+		}
 
 		if ( ! $user ) {
 			return '';

@@ -190,6 +190,10 @@ abstract class MailChimp_WooCommerce_Abstract_Sync extends Mailchimp_Woocommerce
         $this->setData('sync.syncing', true);
         $this->setData('sync.started_at', time());
 
+        if (! $this->getData('sync.completed_at')) {
+            $this->setData('sync.initial_sync', 1);
+        } else $this->removeData('sync.initial_sync');
+
         global $wpdb;
         try {
             $wpdb->show_errors(false);
@@ -223,6 +227,8 @@ abstract class MailChimp_WooCommerce_Abstract_Sync extends Mailchimp_Woocommerce
 
         // flag the store as sync_finished
         mailchimp_get_api()->flagStoreSync(mailchimp_get_store_id(), false);
+        
+        mailchimp_update_communication_status();
 
         return $this;
     }

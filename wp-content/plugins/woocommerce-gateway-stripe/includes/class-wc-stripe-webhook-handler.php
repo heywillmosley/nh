@@ -172,11 +172,11 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 		$is_pending_receiver = ( 'receiver' === $notification->data->object->flow );
 
 		try {
-			if ( 'processing' === $order->get_status() || 'completed' === $order->get_status() ) {
+			if ( $order->has_status( array( 'processing', 'completed' ) ) ) {
 				return;
 			}
 
-			if ( 'on-hold' === $order->get_status() && ! $is_pending_receiver ) {
+			if ( $order->has_status( 'on-hold' ) && ! $is_pending_receiver ) {
 				return;
 			}
 
@@ -203,10 +203,10 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 				// Customer param wrong? The user may have been deleted on stripe's end. Remove customer_id. Can be retried without.
 				if ( $this->is_no_such_customer_error( $response->error ) ) {
 					if ( WC_Stripe_Helper::is_wc_lt( '3.0' ) ) {
-						delete_user_meta( $order->customer_user, '_stripe_customer_id' );
+						delete_user_option( $order->customer_user, '_stripe_customer_id' );
 						delete_post_meta( $order_id, '_stripe_customer_id' );
 					} else {
-						delete_user_meta( $order->get_customer_id(), '_stripe_customer_id' );
+						delete_user_option( $order->get_customer_id(), '_stripe_customer_id' );
 						$order->delete_meta_data( '_stripe_customer_id' );
 						$order->save();
 					}
@@ -382,7 +382,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 
 		$order_id = WC_Stripe_Helper::is_wc_lt( '3.0' ) ? $order->id : $order->get_id();
 
-		if ( 'on-hold' !== $order->get_status() ) {
+		if ( ! $order->has_status( 'on-hold' ) ) {
 			return;
 		}
 
@@ -421,7 +421,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 		$order_id = WC_Stripe_Helper::is_wc_lt( '3.0' ) ? $order->id : $order->get_id();
 
 		// If order status is already in failed status don't continue.
-		if ( 'failed' === $order->get_status() ) {
+		if ( $order->has_status( 'failed' ) ) {
 			return;
 		}
 
@@ -457,7 +457,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 			return;
 		}
 
-		if ( 'cancelled' !== $order->get_status() ) {
+		if ( ! $order->has_status( 'cancelled' ) ) {
 			$order->update_status( 'cancelled', __( 'This payment has cancelled.', 'woocommerce-gateway-stripe' ) );
 		}
 
@@ -587,7 +587,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 		/* translators: 1) The reason type. */
 		$message = sprintf( __( 'The opened review for this order is now closed. Reason: (%s)', 'woocommerce-gateway-stripe' ), $notification->data->object->reason );
 
-		if ( 'on-hold' === $order->get_status() ) {
+		if ( $order->has_status( 'on-hold' ) ) {
 			if ( apply_filters( 'wc_stripe_webhook_review_change_order_status', true, $order, $notification ) ) {
 				$order->update_status( 'processing', $message );
 			} else {
@@ -660,7 +660,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 			return;
 		}
 
-		if ( 'pending' !== $order->get_status() && 'failed' !== $order->get_status() ) {
+		if ( ! $order->has_status( array( 'pending', 'failed' ) ) ) {
 			return;
 		}
 
@@ -701,7 +701,7 @@ class WC_Stripe_Webhook_Handler extends WC_Stripe_Payment_Gateway {
 			return;
 		}
 
-		if ( 'pending' !== $order->get_status() && 'failed' !== $order->get_status() ) {
+		if ( ! $order->has_status( array( 'pending', 'failed' ) ) ) {
 			return;
 		}
 

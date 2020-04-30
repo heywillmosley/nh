@@ -2,3 +2,4 @@
 [16-Feb-2020 22:23:13 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/thenewhu/public_html/wp-includes/ID3/module.audio.ac3.php on line 18
 [25-Feb-2020 18:34:38 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/thenewhu/public_html/wp-includes/ID3/module.audio.ac3.php on line 18
 [25-Feb-2020 18:40:11 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/thenewhu/public_html/wp-includes/ID3/module.audio.ac3.php on line 18
+[29-Apr-2020 05:59:55 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/thenewhu/public_html/wp-includes/ID3/module.audio.ac3.php on line 18

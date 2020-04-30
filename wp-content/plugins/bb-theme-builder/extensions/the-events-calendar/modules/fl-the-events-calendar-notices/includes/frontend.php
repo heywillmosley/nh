@@ -10,7 +10,7 @@ if ( ! $notices ) {
 		?>
 		<div class="tribe-events-notices">
 			<ul>
-				<li><?php _e( 'Event notices will appear here.', 'fl-theme-builder' ); ?></li>
+				<li><?php _e( 'Event notices will appear here.', 'bb-theme-builder' ); ?></li>
 			</ul>
 		</div>
 		<?php

@@ -35,7 +35,7 @@ class WC_Stripe_Customer {
 	public function __construct( $user_id = 0 ) {
 		if ( $user_id ) {
 			$this->set_user_id( $user_id );
-			$this->set_id( get_user_meta( $user_id, '_stripe_customer_id', true ) );
+			$this->set_id( $this->get_id_from_meta( $user_id ) );
 		}
 	}
 
@@ -56,7 +56,7 @@ class WC_Stripe_Customer {
 		if ( is_array( $id ) && isset( $id['customer_id'] ) ) {
 			$id = $id['customer_id'];
 
-			update_user_meta( $this->get_user_id(), '_stripe_customer_id', $id );
+			$this->update_id_in_meta( $id );
 		}
 
 		$this->id = wc_clean( $id );
@@ -94,11 +94,12 @@ class WC_Stripe_Customer {
 	}
 
 	/**
-	 * Create a customer via API.
-	 * @param array $args
-	 * @return WP_Error|int
+	 * Generates the customer request, used for both creating and updating customers.
+	 *
+	 * @param  array $args Additional arguments (optional).
+	 * @return array
 	 */
-	public function create_customer( $args = array() ) {
+	protected function generate_customer_request( $args = array() ) {
 		$billing_email = isset( $_POST['billing_email'] ) ? filter_var( $_POST['billing_email'], FILTER_SANITIZE_EMAIL ) : '';
 		$user          = $this->get_user();
 
@@ -136,11 +137,19 @@ class WC_Stripe_Customer {
 			);
 		}
 
-		$metadata = array();
-
+		$metadata             = array();
 		$defaults['metadata'] = apply_filters( 'wc_stripe_customer_metadata', $metadata, $user );
 
-		$args     = wp_parse_args( $args, $defaults );
+		return wp_parse_args( $args, $defaults );
+	}
+
+	/**
+	 * Create a customer via API.
+	 * @param array $args
+	 * @return WP_Error|int
+	 */
+	public function create_customer( $args = array() ) {
+		$args     = $this->generate_customer_request( $args );
 		$response = WC_Stripe_API::request( apply_filters( 'wc_stripe_create_customer_args', $args ), 'customers' );
 
 		if ( ! empty( $response->error ) ) {
@@ -152,12 +161,56 @@ class WC_Stripe_Customer {
 		$this->set_customer_data( $response );
 
 		if ( $this->get_user_id() ) {
-			update_user_meta( $this->get_user_id(), '_stripe_customer_id', $response->id );
+			$this->update_id_in_meta( $response->id );
 		}
 
 		do_action( 'woocommerce_stripe_add_customer', $args, $response );
 
 		return $response->id;
+	}
+
+	/**
+	 * Updates the Stripe customer through the API.
+	 *
+	 * @param array $args Additional arguments for the request (optional).
+	 */
+	public function update_customer( $args = array() ) {
+		if ( empty( $this->get_id() ) ) {
+			throw new WC_Stripe_Exception( 'id_required_to_update_user', __( 'Attempting to update a Stripe customer without a customer ID.', 'woocommerce-gateway-stripe' ) );
+		}
+
+		$args     = $this->generate_customer_request( $args );
+		$args     = apply_filters( 'wc_stripe_update_customer_args', $args );
+		$response = WC_Stripe_API::request( $args, 'customers/' . $this->get_id() );
+
+		if ( ! empty( $response->error ) ) {
+			if ( $this->is_no_such_customer_error( $response->error ) ) {
+				$message = $response->error->message;
+
+				if ( ! preg_match( '/similar object exists/i', $message ) ) {
+					$options  = get_option( 'woocommerce_stripe_settings' );
+					$testmode = isset( $options['testmode'] ) && 'yes' === $options['testmode'];
+
+					$message = sprintf(
+						( $testmode
+							// Translators: %s is a message, which states that no such customer exists, without a full stop at the end.
+							? __( '%s. Was the customer created in live mode? ', 'woocommerce-gateway-stripe' )
+							// Translators: %s is a message, which states that no such customer exists, without a full stop at the end.
+							: __( '%s. Was the customer created in test mode? ', 'woocommerce-gateway-stripe' ) ),
+						$message
+					);
+				}
+
+				throw new WC_Stripe_Exception( print_r( $response, true ), $message );
+			}
+
+			throw new WC_Stripe_Exception( print_r( $response, true ), $response->error->message );
+		}
+
+		$this->clear_cache();
+		$this->set_customer_data( $response );
+
+		do_action( 'woocommerce_stripe_update_customer', $args, $response );
 	}
 
 	/**
@@ -199,7 +252,7 @@ class WC_Stripe_Customer {
 			// but no longer exists. Instead of failing, lets try to create a
 			// new customer.
 			if ( $this->is_no_such_customer_error( $response->error ) ) {
-				delete_user_meta( $this->get_user_id(), '_stripe_customer_id' );
+				$this->delete_id_from_meta();
 				$this->create_customer();
 				return $this->add_source( $source_id );
 			} else {
@@ -340,5 +393,31 @@ class WC_Stripe_Customer {
 		delete_transient( 'stripe_sources_' . $this->get_id() );
 		delete_transient( 'stripe_customer_' . $this->get_id() );
 		$this->customer_data = array();
+	}
+
+	/**
+	 * Retrieves the Stripe Customer ID from the user meta.
+	 *
+	 * @param  int $user_id The ID of the WordPress user.
+	 * @return string|bool  Either the Stripe ID or false.
+	 */
+	public function get_id_from_meta( $user_id ) {
+		return get_user_option( '_stripe_customer_id', $user_id );
+	}
+
+	/**
+	 * Updates the current user with the right Stripe ID in the meta table.
+	 *
+	 * @param string $id The Stripe customer ID.
+	 */
+	public function update_id_in_meta( $id ) {
+		update_user_option( $this->get_user_id(), '_stripe_customer_id', $id, false );
+	}
+
+	/**
+	 * Deletes the user ID from the meta table with the right key.
+	 */
+	public function delete_id_from_meta() {
+		delete_user_option( $this->get_user_id(), '_stripe_customer_id', false );
 	}
 }

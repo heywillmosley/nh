@@ -7,10 +7,10 @@
  */
 FLBuilder::register_module_alias( 'fl-post-title', array(
 	'module'      => 'heading',
-	'name'        => __( 'Post Title', 'fl-theme-builder' ),
-	'description' => __( 'Displays the title for the current post.', 'fl-theme-builder' ),
-	'group'       => __( 'Themer Modules', 'fl-theme-builder' ),
-	'category'    => __( 'Posts', 'fl-theme-builder' ),
+	'name'        => __( 'Post Title', 'bb-theme-builder' ),
+	'description' => __( 'Displays the title for the current post.', 'bb-theme-builder' ),
+	'group'       => __( 'Themer Modules', 'bb-theme-builder' ),
+	'category'    => __( 'Posts', 'bb-theme-builder' ),
 	'enabled'     => FLThemeBuilderLayoutData::current_post_is( 'singular' ),
 	'settings'    => array(
 		'tag'         => 'h1',

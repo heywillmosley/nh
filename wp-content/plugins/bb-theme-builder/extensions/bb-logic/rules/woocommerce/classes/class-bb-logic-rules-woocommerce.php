@@ -41,8 +41,9 @@ final class BB_Logic_Rules_WooCommerce {
 	 * @return bool
 	 */
 	static public function cart( $rule ) {
+		$contents = WC()->cart ? WC()->cart->get_cart_contents() : array();
 		return BB_Logic_Rules::evaluate_rule( array(
-			'value'    => count( WC()->cart->get_cart_contents() ),
+			'value'    => count( $contents ),
 			'operator' => $rule->operator,
 		) );
 	}
@@ -56,8 +57,9 @@ final class BB_Logic_Rules_WooCommerce {
 	 */
 	static public function cart_products( $rule ) {
 		$products = array();
+		$contents = WC()->cart ? WC()->cart->get_cart_contents() : array();
 
-		foreach ( WC()->cart->get_cart_contents() as $item ) {
+		foreach ( $contents as $item ) {
 			$products[] = $item['product_id'];
 		}
 
@@ -76,8 +78,9 @@ final class BB_Logic_Rules_WooCommerce {
 	 * @return bool
 	 */
 	static public function cart_total( $rule ) {
+		$total = WC()->cart ? WC()->cart->get_total( false ) : 0;
 		return BB_Logic_Rules::evaluate_rule( array(
-			'value'    => WC()->cart->get_total( false ),
+			'value'    => $total,
 			'operator' => $rule->operator,
 			'compare'  => floatval( $rule->compare ),
 		) );

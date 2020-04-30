@@ -90,15 +90,15 @@ final class FLThemeBuilderLayoutAdminEdit {
 				'userRules'  => FLThemeBuilderRulesUser::get_saved( $post->ID ),
 				'strings'    => array(
 					/* translators: %s: post or taxonomy name */
-					'allObjects'       => _x( 'All %s', '%s is the post or taxonomy name.', 'fl-theme-builder' ),
+					'allObjects'       => _x( 'All %s', '%s is the post or taxonomy name.', 'bb-theme-builder' ),
 					/* translators: 1: post title, 2: post label */
-					'alreadySaved'     => _x( 'This location has already been added to the "%1$s" %2$s. Would you like to remove it and add it to this %1$s?', '%1$s is the post title. %2$s is the post type label.', 'fl-theme-builder' ),
+					'alreadySaved'     => _x( 'This location has already been added to the "%1$s" %2$s. Would you like to remove it and add it to this %1$s?', '%1$s is the post title. %2$s is the post type label.', 'bb-theme-builder' ),
 					/* translators: %s: post title */
-					'assignedTo'       => _x( 'Assigned to %s', '%s stands for post title.', 'fl-theme-builder' ),
-					'choose'           => __( 'Choose...', 'fl-theme-builder' ),
+					'assignedTo'       => _x( 'Assigned to %s', '%s stands for post title.', 'bb-theme-builder' ),
+					'choose'           => __( 'Choose...', 'bb-theme-builder' ),
 					'postTypePlural'   => $object->label,
 					'postTypeSingular' => $object->labels->singular_name,
-					'search'           => __( 'Search...', 'fl-theme-builder' ),
+					'search'           => __( 'Search...', 'bb-theme-builder' ),
 				),
 			) );
 		}
@@ -170,17 +170,17 @@ final class FLThemeBuilderLayoutAdminEdit {
 				$posts = array_pop( $common );
 
 				if ( $common ) {
-					$posts = implode( ', ', $common ) . ' ' . __( 'and', 'fl-theme-builder' ) . ' ' . $posts;
+					$posts = implode( ', ', $common ) . ' ' . __( 'and', 'bb-theme-builder' ) . ' ' . $posts;
 				}
 
 				$posts = '<strong>' . $posts . '</strong>';
 
 				if ( 0 === count( $common ) ) {
 					/* translators: %s: post title */
-					$message = sprintf( _x( 'The layout %s is assigned to the same location and may not show.', '% is a post title.', 'fl-theme-builder' ), $posts );
+					$message = sprintf( _x( 'The layout %s is assigned to the same location and may not show.', '% is a post title.', 'bb-theme-builder' ), $posts );
 				} else {
 					/* translators: %s: post titles */
-					$message = sprintf( _x( 'The layouts %s are assigned to the same location and may not show.', '% is post titles.', 'fl-theme-builder' ), $posts );
+					$message = sprintf( _x( 'The layouts %s are assigned to the same location and may not show.', '% is post titles.', 'bb-theme-builder' ), $posts );
 				}
 
 				echo '<div class="error">';
@@ -210,7 +210,7 @@ final class FLThemeBuilderLayoutAdminEdit {
 
 		add_meta_box(
 			'fl-theme-builder-settings',
-			__( 'Themer Layout Settings', 'fl-theme-builder' ),
+			__( 'Themer Layout Settings', 'bb-theme-builder' ),
 			__CLASS__ . '::settings_meta_box',
 			'fl-theme-layout',
 			'normal',

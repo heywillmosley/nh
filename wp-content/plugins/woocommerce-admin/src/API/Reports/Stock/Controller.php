@@ -26,7 +26,7 @@ class Controller extends \WC_REST_Reports_Controller implements ExportableInterf
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'wc/v4';
+	protected $namespace = 'wc-analytics';
 
 	/**
 	 * Route base.
@@ -290,7 +290,7 @@ class Controller extends \WC_REST_Reports_Controller implements ExportableInterf
 		$data = array(
 			'id'               => $product->get_id(),
 			'parent_id'        => $product->get_parent_id(),
-			'name'             => $product->get_name(),
+			'name'             => wp_strip_all_tags( $product->get_name() ),
 			'sku'              => $product->get_sku(),
 			'stock_status'     => $product->get_stock_status(),
 			'stock_quantity'   => (float) $product->get_stock_quantity(),

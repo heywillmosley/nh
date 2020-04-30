@@ -61,10 +61,11 @@ final class BB_Logic_Asset_Loader {
 
 		// Rules
 		foreach ( self::$rules as $rule ) {
+
 			$url = BB_LOGIC_URL . "rules/$rule/build/index.js";
 			$dir = BB_LOGIC_DIR . "rules/$rule/build/index.js";
 
-			if ( in_array( $rule, self::$classes ) && ! class_exists( self::$classes[ $rule ] ) ) {
+			if ( isset( self::$classes[ $rule ] ) && ! class_exists( self::$classes[ $rule ] ) ) {
 				continue;
 			} elseif ( $rules && ! in_array( $rule, $rules ) ) {
 				continue;

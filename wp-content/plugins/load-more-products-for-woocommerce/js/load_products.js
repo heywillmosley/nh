@@ -9,7 +9,12 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
     + '</div>' ) );
     $(document).ready( function () {
         $( '.berocket_load_more_preload' ).remove();
-        $( the_lmp_js_data.products ).find( the_lmp_js_data.item ).first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(location.href));
+        if( $( the_lmp_js_data.products ).find( the_lmp_js_data.item ).first().length ) {
+            $( the_lmp_js_data.products ).find( the_lmp_js_data.item ).first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(location.href));
+        }
+        if( $( the_lmp_js_data.products ).find( '.berocket_lgv_additional_data' ).first().length ) {
+            $( the_lmp_js_data.products ).find( '.berocket_lgv_additional_data' ).first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(location.href));
+        }
         var lmp_is_loading = false,
             lmp_loading_style;
         var lmp_count_start = 0, lmp_count_end = 0, lmp_count_laststart = 0, lmp_count_lastend = 0, lmp_count_text = '';
@@ -35,9 +40,11 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                         if( ! lmp_is_loading ) {
                             lmp_is_loading = true;
                             if( $('.berocket_lmp_first_on_page[data-url="'+decodeURIComponent(location.href)+'"]').length ) {
-                                $('html, body').animate({
+                                $('html, body').stop().animate({
                                     scrollTop: $('.berocket_lmp_first_on_page[data-url="'+decodeURIComponent(location.href)+'"]').offset().top
                                 }, 500, function(){lmp_is_loading = false;});
+                            } else {
+                                location.reload();
                             }
                         }
                     } else {
@@ -45,7 +52,7 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                             lmp_ajax_instance.abort();
                             end_ajax_loading();
                         }
-                        load_next_page(true, location.href);
+                        load_next_page(true, decodeURIComponent(location.href));
                     }
                 });
                 function br_load_more_html5() {
@@ -54,6 +61,9 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                             if(lmp_loading_style !== 'pagination') {
                                 var next_page = '';
                                 $('.berocket_lmp_first_on_page').each(function(i, o) {
+                                    if( ! $(o).is(':visible') ) {
+                                        return true;
+                                    }
                                     if( $(o).offset().top > $(window).scrollTop()+($(window).height()/2) ) {
                                         return false;
                                     }
@@ -62,7 +72,7 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                                 if( ! next_page ) {
                                     next_page = $('.berocket_lmp_first_on_page').first().attr('data-url');
                                 }
-                                if( next_page && location.href != next_page ) {
+                                if( next_page && decodeURIComponent(location.href) != next_page ) {
                                     history.pushState('br_lmp_popstate', $('.woocommerce-breadcrumb').text(), next_page);
                                 }
                             }
@@ -125,7 +135,9 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                     } else {
                         next_page = $next_page.attr('href');
                     }
-                    lmp_ajax_instance = $.get( next_page, function( data ) {
+                    lmp_ajax_instance = $.ajax({method:"GET", url: next_page, beforeSend: function(xhr) {
+                            xhr.setRequestHeader('X-Braapfdisable', '1');
+                        }, success: function( data ) {
                         lmp_ajax_instance = false;
                         var $data = $('<div>'+data+'</div>');
                         if( the_lmp_js_data.lazy_load_m && $(window).width() <= the_lmp_js_data.mobile_width || the_lmp_js_data.lazy_load && $(window).width() > the_lmp_js_data.mobile_width ) {
@@ -135,7 +147,12 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                             });
                             $data.find(the_lmp_js_data.item+', .berocket_lgv_additional_data').addClass('lazy');
                         }
-                        $data.find( the_lmp_js_data.products ).find(the_lmp_js_data.item).first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(next_page));
+                        if( $data.find( the_lmp_js_data.products ).find(the_lmp_js_data.item).first().length ) {
+                            $data.find( the_lmp_js_data.products ).find(the_lmp_js_data.item).first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(next_page));
+                        }
+                        if( $data.find( the_lmp_js_data.products ).find('.berocket_lgv_additional_data').first().length ) {
+                            $data.find( the_lmp_js_data.products ).find('.berocket_lgv_additional_data').first().addClass('berocket_lmp_first_on_page').attr('data-url', decodeURIComponent(next_page));
+                        }
                         var $products = $data.find( the_lmp_js_data.products ).html();
                         if ( replace == 1 ) {
                             $( the_lmp_js_data.products ).html( $products );
@@ -219,7 +236,7 @@ var lmp_update_state, load_next_page, lmp_ajax_instance = false, lmp_update_lazy
                         if( replace != 2 ) {
                             end_ajax_loading();
                         }
-                    });
+                    }});
                 }
             }
         }

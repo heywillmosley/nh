@@ -624,6 +624,7 @@ jQuery(document).on('change', '.br_cond_type', function(event) {
     html_need = html_need.replace(/%id%/g, id);
     html_need = html_need.replace(/%current_id%/g, current_id);
     html_need = html_need.replace(/%name%/g, condition_name);
+    html_need = html_need.replace(/data-name=/g, 'name=');
     $parent.find('.br_current_cond').html(html_need);
 });
 jQuery(document).on('click', '.berocket_add_condition', function() {

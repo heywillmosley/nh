@@ -23,11 +23,11 @@ final class FLPageDataArchive {
 			$title = get_the_author();
 		} elseif ( is_search() ) { // Search
 			/* translators: %s: Search results title */
-			$title = sprintf( _x( 'Search Results: %s', 'Search results title.', 'fl-theme-builder' ), get_search_query() );
+			$title = sprintf( _x( 'Search Results: %s', 'Search results title.', 'bb-theme-builder' ), get_search_query() );
 		} elseif ( is_post_type_archive() ) { // Post Type
 			$title = post_type_archive_title( '', false );
 		} elseif ( is_home() ) { // Posts Archive
-			$title = __( 'Posts', 'fl-theme-builder' );
+			$title = __( 'Posts', 'bb-theme-builder' );
 		} else { // Everything else...
 			$title = get_the_archive_title();
 		}
@@ -76,8 +76,8 @@ final class FLPageDataArchive {
 		$of         = $query->found_posts;
 
 		// Return the information
-		$showing = _x( 'Showing', 'Showing 1-5 of 25', 'fl-theme-builder' );
-		$oftxt   = _x( 'of', 'Showing 1-5 of 25', 'fl-theme-builder' );
+		$showing = _x( 'Showing', 'Showing 1-5 of 25', 'bb-theme-builder' );
+		$oftxt   = _x( 'of', 'Showing 1-5 of 25', 'bb-theme-builder' );
 		return sprintf( '%s %s-%s %s %s.', $showing, $from, $to, $oftxt, $of );
 	}
 
@@ -95,8 +95,8 @@ final class FLPageDataArchive {
 
 		$total_pages = ceil( $query->found_posts / $query->query_vars['posts_per_page'] );
 		// Return the information
-		$page = _x( 'Page', 'Page 1 of 5', 'fl-theme-builder' );
-		$of   = _x( 'of', 'Page 1 of 5', 'fl-theme-builder' );
+		$page = _x( 'Page', 'Page 1 of 5', 'bb-theme-builder' );
+		$of   = _x( 'of', 'Page 1 of 5', 'bb-theme-builder' );
 		return sprintf( '%s %s %s %s.', $page, $paged, $of, $total_pages );
 	}
 }

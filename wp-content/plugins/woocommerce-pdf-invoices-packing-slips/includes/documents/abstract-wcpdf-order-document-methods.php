@@ -527,8 +527,8 @@ abstract class Order_Document_Methods extends Order_Document {
 				$data['line_tax'] = $this->format_price( $item['line_tax'] );
 				$data['single_line_tax'] = $this->format_price( $item['line_tax'] / max( 1, abs( $item['qty'] ) ) );
 				
-				$data['tax_rates'] = $this->get_tax_rate( $item, $this->order, true );
-				$data['calculated_tax_rates'] = $this->get_tax_rate( $item, $this->order, false );
+				$data['tax_rates'] = $this->get_tax_rate( $item, $this->order, false );
+				$data['calculated_tax_rates'] = $this->get_tax_rate( $item, $this->order, true );
 				
 				// Set the line subtotal (=before discount)
 				$data['line_subtotal'] = $this->format_price( $item['line_subtotal'] );
@@ -598,20 +598,32 @@ abstract class Order_Document_Methods extends Order_Document {
 	 * @return string $tax_rates imploded list of tax rates
 	 */
 	public function get_tax_rate( $item, $order, $force_calculation = false ) {
-		$tax_class = $item['tax_class'];
-		$line_total = $item['line_total'];
-		$line_tax = $item['line_tax'];
-		$line_tax_data = maybe_unserialize( isset( $item['line_tax_data'] ) ? $item['line_tax_data'] : '' );
+		if ( version_compare( WOOCOMMERCE_VERSION, '3.0', '>=' ) ) {
+	        $tax_data_container = ( $item['type'] == 'line_item' ) ? 'line_tax_data' : 'taxes';
+	        $tax_data_key = ( $item['type'] == 'line_item' ) ? 'subtotal' : 'total';
+	        $line_total_key = ( $item['type'] == 'line_item' ) ? 'line_total' : 'total';
+	        $line_tax_key = ( $item['type'] == 'shipping' ) ? 'total_tax' : 'line_tax';
+
+			$tax_class = isset($item['tax_class']) ? $item['tax_class'] : '';
+			$line_tax = $item[$line_tax_key];
+	        $line_total = $item[$line_total_key];
+	        $line_tax_data = $item[$tax_data_container];
+		} else {
+			$tax_class = $item['tax_class'];
+			$line_total = $item['line_total'];
+			$line_tax = $item['line_tax'];
+			$line_tax_data = maybe_unserialize( isset( $item['line_tax_data'] ) ? $item['line_tax_data'] : '' );
+		}
 
 		// first try the easy wc2.2+ way, using line_tax_data
-		if ( !empty( $line_tax_data ) && isset($line_tax_data['total']) ) {
+		if ( !empty( $line_tax_data ) && isset($line_tax_data[$tax_data_key]) ) {
 			$tax_rates = array();
 
-			$line_taxes = $line_tax_data['subtotal'];
+			$line_taxes = $line_tax_data[$tax_data_key];
 			foreach ( $line_taxes as $tax_id => $tax ) {
 				if ( isset($tax) && $tax !== '' ) {
 					$tax_rate = $this->get_tax_rate_by_id( $tax_id, $order );
-					if ( $tax_rate !== false && $force_calculation !== false ) {
+					if ( $tax_rate !== false && $force_calculation === false ) {
 						$tax_rates[] = $tax_rate . ' %';
 					} else {
 						$tax_rates[] = $this->calculate_tax_rate( $line_total, $line_tax );
@@ -626,7 +638,7 @@ abstract class Order_Document_Methods extends Order_Document {
 				}
 			}
 
-			$tax_rates = implode(' ,', $tax_rates );
+			$tax_rates = implode(', ', $tax_rates );
 			return $tax_rates;
 		}
 
@@ -692,7 +704,7 @@ abstract class Order_Document_Methods extends Order_Document {
 	}
 
 	public function get_tax_rates_from_order( $order ) {
-		if ( !empty( $order ) && method_exists( $order, 'get_version' ) && version_compare( $order->get_version(), '3.7', '>=' ) ) {
+		if ( !empty( $order ) && method_exists( $order, 'get_version' ) && version_compare( $order->get_version(), '3.7', '>=' ) && version_compare( WC_VERSION, '3.7', '>=' ) ) {
 			$tax_rates = array();
 			$tax_items = $order->get_items( array('tax') );
 
@@ -701,7 +713,20 @@ abstract class Order_Document_Methods extends Order_Document {
 			}
 
 			foreach( $tax_items as $tax_item_key => $tax_item ) {
-				$tax_rates[ $tax_item->get_rate_id() ] = $tax_item->get_rate_percent();
+				if ( is_callable( array( $order, 'get_created_via' ) ) && $order->get_created_via() == 'subscription' ) {
+					// subscription renewals didn't properly record the rate_percent property between WC3.7 and WCS3.0.1
+					// so we use a fallback if the rate_percent = 0 and the amount != 0
+					$rate_percent = $tax_item->get_rate_percent();
+					$tax_amount = $tax_item->get_tax_total() + $tax_item->get_shipping_tax_total();
+					if ( $tax_amount > 0 && $rate_percent > 0 ) {
+						$tax_rates[ $tax_item->get_rate_id() ] = $rate_percent;
+					} else {
+						continue; // not setting the rate will let the plugin fall back to the rate from the settings
+					}
+				} else {
+					$tax_rates[ $tax_item->get_rate_id() ] = $tax_item->get_rate_percent();
+				}
+
 			}
 			return $tax_rates;
 		} else {
@@ -855,7 +880,7 @@ abstract class Order_Document_Methods extends Order_Document {
 							$tax_string_array[] = sprintf( '%s %s', $tax_amount, $tax->label );
 						}
 					} else {
-						$tax_string_array[] = sprintf( '%s %s', wc_price( $this->order->get_total_tax() - $this->order->get_total_tax_refunded(), array( 'currency' => WCX_Order::get_prop( $this->order, 'currency' ) ) ), WC()->countries->tax_or_vat() );
+						$tax_string_array[] = sprintf( '%s %s', wc_price( $this->order->get_total_tax(), array( 'currency' => WCX_Order::get_prop( $this->order, 'currency' ) ) ), WC()->countries->tax_or_vat() );
 					}
 					if ( ! empty( $tax_string_array ) ) {
 						if ( version_compare( WOOCOMMERCE_VERSION, '2.6', '>=' ) ) {

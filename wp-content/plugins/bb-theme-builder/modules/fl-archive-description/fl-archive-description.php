@@ -11,10 +11,10 @@ class FLArchiveDescriptionModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Archive Description', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the description for the current archive.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'Archives', 'fl-theme-builder' ),
+			'name'            => __( 'Archive Description', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the description for the current archive.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'Archives', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_DIR . 'modules/fl-archive-description/',
 			'url'             => FL_THEME_BUILDER_URL . 'modules/fl-archive-description/',

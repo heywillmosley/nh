@@ -3,13 +3,13 @@
  * Plugin Name: WooCommerce Menu Cart
  * Plugin URI: www.wpovernight.com/plugins
  * Description: Extension for your e-commerce plugin (WooCommerce, WP-Ecommerce, Easy Digital Downloads, Eshop or Jigoshop) that places a cart icon with number of items and total cost in the menu bar. Activate the plugin, set your options and you're ready to go! Will automatically conform to your theme styles.
- * Version: 2.7.6
+ * Version: 2.7.7
  * Author: Jeremiah Prummer, Ewout Fernhout
  * Author URI: www.wpovernight.com/
  * License: GPL2
  * Text Domain: wp-menu-cart
  * WC requires at least: 2.0.0
- * WC tested up to: 3.8.0
+ * WC tested up to: 3.9.0
  */
 
 class WpMenuCart {	 
@@ -296,7 +296,7 @@ class WpMenuCart {
 			'wpmenucart',
 			plugins_url( '/javascript/wpmenucart.js' , __FILE__ ),
 			array( 'jquery' ),
-			'2.7.6',
+			'2.7.7',
 			true
 		);
 
@@ -326,7 +326,7 @@ class WpMenuCart {
 			'wpmenucart-edd-ajax',
 			plugins_url( '/javascript/wpmenucart-edd-ajax.js', __FILE__ ),
 			array( 'jquery' ),
-			'2.7.6'
+			'2.7.7'
 		);
 
 		wp_localize_script(
@@ -418,13 +418,19 @@ class WpMenuCart {
 	public function add_itemcart_to_menu( $items ) {
 		// WooCommerce specific: check if woocommerce cart object is actually loaded
 		if ( isset($this->options['shop_plugin']) && $this->options['shop_plugin'] == 'woocommerce' ) {
-			global $woocommerce;
-			if (empty($woocommerce) || !is_object($woocommerce) || !isset($woocommerce->cart) || !is_object($woocommerce->cart)) {
-				return $items; // nothing to load data from, return menu without cart item
+			if ( function_exists( 'WC' ) ) {
+				if ( empty( WC()->cart ) ) {
+					return $items; // nothing to load data from, return menu without cart item
+				}
+			} else {
+				global $woocommerce;
+				if ( empty($woocommerce) || !is_object($woocommerce) || !isset($woocommerce->cart) || !is_object($woocommerce->cart) ) {
+					return $items; // nothing to load data from, return menu without cart item
+				}
 			}
 		}
 
-		$classes = 'wpmenucartli wpmenucart-display-'.$this->options['items_alignment'];
+		$classes = 'menu-item wpmenucartli wpmenucart-display-'.$this->options['items_alignment'];
 		
 		if ($this->get_common_li_classes($items) != '')
 			$classes .= ' ' . $this->get_common_li_classes($items);

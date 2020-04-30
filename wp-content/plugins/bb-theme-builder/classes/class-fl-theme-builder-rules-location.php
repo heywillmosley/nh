@@ -92,7 +92,7 @@ final class FLThemeBuilderRulesLocation {
 		global $post;
 
 		if ( ! did_action( 'wp' ) ) {
-			_doing_it_wrong( __CLASS__ . '::get_current_page_location', __( 'Must be called on or after the wp action.', 'fl-theme-builder' ), '1.0' );
+			_doing_it_wrong( __CLASS__ . '::get_current_page_location', __( 'Must be called on or after the wp action.', 'bb-theme-builder' ), '1.0' );
 		}
 
 		if ( null != self::$current_page_location ) {
@@ -380,6 +380,26 @@ final class FLThemeBuilderRulesLocation {
 			}
 		}
 
+		// make sure two of same type and location are not being edited.
+		if ( 'post:fl-theme-layout' === $location['location'] && isset( $_GET['builder'] ) ) {
+			$id = str_replace( $location['location'] . ':', '', $location['object'] );
+			if ( is_numeric( $id ) && count( $posts ) > 1 && $posts[0]['id'] !== $id ) {
+				// loop through posts and move to top if not.
+				foreach ( $posts as $k => $post ) {
+					if ( $post['id'] === $id ) {
+						unset( $posts[ $k ] );
+						array_unshift( $posts, $post );
+					}
+				}
+			}
+		}
+
+		// if we are editing the header or footer there should be just one location post
+		if ( isset( $posts[0] ) && count( $posts ) > 1 && isset( $_GET['builder'] ) ) {
+			if ( 'header' === $posts[0]['type'] || 'footer' === $posts[0]['type'] ) {
+				$posts = array_slice( $posts, 0, 1 );
+			}
+		}
 		return $posts;
 	}
 
@@ -668,41 +688,41 @@ final class FLThemeBuilderRulesLocation {
 		// Sorted by post type.
 		$by_post_type = array(
 			'general' => array(
-				'label'     => __( 'General', 'fl-theme-builder' ),
+				'label'     => __( 'General', 'bb-theme-builder' ),
 				'locations' => array(
 					'site'    => array(
 						'id'    => 'site',
-						'label' => esc_html__( 'Entire Site', 'fl-theme-builder' ),
+						'label' => esc_html__( 'Entire Site', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'single'  => array(
 						'id'    => 'single',
-						'label' => esc_html__( 'All Singular', 'fl-theme-builder' ),
+						'label' => esc_html__( 'All Singular', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'archive' => array(
 						'id'    => 'archive',
-						'label' => esc_html__( 'All Archives', 'fl-theme-builder' ),
+						'label' => esc_html__( 'All Archives', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'author'  => array(
 						'id'    => 'author',
-						'label' => esc_html__( 'Author Archives', 'fl-theme-builder' ),
+						'label' => esc_html__( 'Author Archives', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'date'    => array(
 						'id'    => 'date',
-						'label' => esc_html__( 'Date Archives', 'fl-theme-builder' ),
+						'label' => esc_html__( 'Date Archives', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'search'  => array(
 						'id'    => 'search',
-						'label' => esc_html__( 'Search Results', 'fl-theme-builder' ),
+						'label' => esc_html__( 'Search Results', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 					'404'     => array(
 						'id'    => '404',
-						'label' => esc_html__( '404 Page', 'fl-theme-builder' ),
+						'label' => esc_html__( '404 Page', 'bb-theme-builder' ),
 						'type'  => 'general',
 					),
 				),
@@ -753,7 +773,7 @@ final class FLThemeBuilderRulesLocation {
 				$by_post_type[ $post_type_slug ]['locations'][ $post_type_slug . ':post:' . $post_type_slug ] = array( // @codingStandardsIgnoreLine
 					'id'    => $post_type_slug . ':post:' . $post_type_slug,
 					/* translators: %s: singlular post type name */
-					'label' => sprintf( esc_html_x( '%s Parent', '%s is a singular post type name', 'fl-theme-builder' ), $post_type->labels->singular_name ),
+					'label' => sprintf( esc_html_x( '%s Parent', '%s is a singular post type name', 'bb-theme-builder' ), $post_type->labels->singular_name ),
 					'type'  => 'post',
 					'count' => $count,
 				);
@@ -762,7 +782,7 @@ final class FLThemeBuilderRulesLocation {
 				$by_post_type[ $post_type_slug ]['locations'][ $post_type_slug . ':ancestor:' . $post_type_slug ] = array( // @codingStandardsIgnoreLine
 					'id'    => $post_type_slug . ':ancestor:' . $post_type_slug,
 					/* translators: %s: singlular post type name */
-					'label' => sprintf( esc_html_x( '%s Ancestor', '%s is a singular post type name', 'fl-theme-builder' ), $post_type->labels->singular_name ),
+					'label' => sprintf( esc_html_x( '%s Ancestor', '%s is a singular post type name', 'bb-theme-builder' ), $post_type->labels->singular_name ),
 					'type'  => 'post',
 					'count' => $count,
 				);
@@ -771,7 +791,7 @@ final class FLThemeBuilderRulesLocation {
 			// Add the post type archive.
 			$by_post_type[ $post_type_slug . '_archive' ] = array(
 				/* translators: %s: singlular post type name */
-				'label'     => sprintf( esc_html_x( '%s Archives', '%s is a singular post type name', 'fl-theme-builder' ), $post_type->labels->singular_name ),
+				'label'     => sprintf( esc_html_x( '%s Archives', '%s is a singular post type name', 'bb-theme-builder' ), $post_type->labels->singular_name ),
 				'locations' => array(),
 			);
 
@@ -780,7 +800,7 @@ final class FLThemeBuilderRulesLocation {
 				$by_template_type['archive'][ $post_type_slug ] = array(
 					'id'    => $post_type_slug,
 					/* translators: %s: singlular post type name */
-					'label' => sprintf( esc_html_x( '%s Archive', '%s is a singular post type name', 'fl-theme-builder' ), $post_type->labels->singular_name ),
+					'label' => sprintf( esc_html_x( '%s Archive', '%s is a singular post type name', 'bb-theme-builder' ), $post_type->labels->singular_name ),
 					'type'  => 'archive',
 				);
 
@@ -809,7 +829,7 @@ final class FLThemeBuilderRulesLocation {
 				$by_post_type[ $post_type_slug . '_archive' ]['locations'][ $taxonomy_slug ] = array( // @codingStandardsIgnoreLine
 					'id'    => $taxonomy_slug,
 					/* translators: 1: post type label, 2: taxonomy label */
-					'label' => sprintf( esc_html_x( '%1$s %2$s Archive', '%1$s is post type label. %2$s is taxonomy label.', 'fl-theme-builder' ), $post_type->labels->singular_name, $label ),
+					'label' => sprintf( esc_html_x( '%1$s %2$s Archive', '%1$s is post type label. %2$s is taxonomy label.', 'bb-theme-builder' ), $post_type->labels->singular_name, $label ),
 					'type'  => 'taxonomy',
 					'count' => wp_count_terms( $taxonomy_slug ),
 				);
@@ -1141,7 +1161,7 @@ final class FLThemeBuilderRulesLocation {
 			'general'  => array(
 				'none' => array(
 					'id'    => 'none',
-					'label' => __( 'None', 'fl-theme-builder' ),
+					'label' => __( 'None', 'bb-theme-builder' ),
 					'type'  => 'general',
 				),
 			),
@@ -1193,7 +1213,7 @@ final class FLThemeBuilderRulesLocation {
 					if ( 'archive' == $parts[1] || 'search' == $parts[1] ) {
 						$preview['general']['search'] = array(
 							'id'    => 'search',
-							'label' => __( 'Search Results', 'fl-theme-builder' ),
+							'label' => __( 'Search Results', 'bb-theme-builder' ),
 							'type'  => 'general',
 						);
 					}
@@ -1201,7 +1221,7 @@ final class FLThemeBuilderRulesLocation {
 					if ( 'author' == $parts[1] ) {
 						$preview['general']['author'] = array(
 							'id'    => 'author',
-							'label' => __( 'Author Archives', 'fl-theme-builder' ),
+							'label' => __( 'Author Archives', 'bb-theme-builder' ),
 							'type'  => 'general',
 						);
 					}
@@ -1520,7 +1540,7 @@ final class FLThemeBuilderRulesLocation {
 			$label = self::get_saved_label( $saved, true );
 		}
 		if ( ! $label ) {
-			$label = __( 'None', 'fl-theme-builder' );
+			$label = __( 'None', 'bb-theme-builder' );
 		}
 
 		if ( empty( $locations['post'] ) && empty( $locations['archive'] ) && empty( $locations['taxonomy'] ) ) {

@@ -13,7 +13,7 @@ final class FLPageDataEDD {
 	 */
 	static public function init() {
 		FLPageData::add_group( 'edd', array(
-			'label' => __( 'Easy Digital Downloads', 'fl-theme-builder' ),
+			'label' => __( 'Easy Digital Downloads', 'bb-theme-builder' ),
 		) );
 	}
 
@@ -34,7 +34,7 @@ final class FLPageDataEDD {
 		$item_props = edd_add_schema_microdata() ? ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"' : '';
 
 		if ( edd_is_free_download( $post_id ) ) {
-			$price = __( 'Free', 'fl-theme-builder' );
+			$price = __( 'Free', 'bb-theme-builder' );
 		} elseif ( edd_has_variable_prices( $post_id ) ) {
 			$low   = edd_currency_filter( edd_format_amount( edd_get_lowest_price_option( $post_id ) ) );
 			$high  = edd_currency_filter( edd_format_amount( edd_get_highest_price_option( $post_id ) ) );

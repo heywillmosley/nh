@@ -4,7 +4,7 @@
  * Post Title
  */
 FLPageData::add_post_property( 'title', array(
-	'label'       => __( 'Post Title', 'fl-theme-builder' ),
+	'label'       => __( 'Post Title', 'bb-theme-builder' ),
 	'group'       => 'posts',
 	'type'        => 'string',
 	'getter'      => 'get_the_title',
@@ -15,7 +15,7 @@ FLPageData::add_post_property( 'title', array(
  * Post ID
  */
 FLPageData::add_post_property( 'id', array(
-	'label'  => __( 'Post ID', 'fl-theme-builder' ),
+	'label'  => __( 'Post ID', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_id',
@@ -25,7 +25,7 @@ FLPageData::add_post_property( 'id', array(
  * Post Excerpt
  */
 FLPageData::add_post_property( 'excerpt', array(
-	'label'       => __( 'Post Excerpt', 'fl-theme-builder' ),
+	'label'       => __( 'Post Excerpt', 'bb-theme-builder' ),
 	'group'       => 'posts',
 	'type'        => 'string',
 	'getter'      => 'FLPageDataPost::get_excerpt',
@@ -35,15 +35,15 @@ FLPageData::add_post_property( 'excerpt', array(
 FLPageData::add_post_property_settings_fields( 'excerpt', array(
 	'length' => array(
 		'type'        => 'text',
-		'label'       => __( 'Length', 'fl-theme-builder' ),
+		'label'       => __( 'Length', 'bb-theme-builder' ),
 		'default'     => '55',
 		'size'        => '5',
-		'description' => __( 'Words', 'fl-theme-builder' ),
+		'description' => __( 'Words', 'bb-theme-builder' ),
 		'placeholder' => '55',
 	),
 	'more'   => array(
 		'type'        => 'text',
-		'label'       => __( 'More Text', 'fl-theme-builder' ),
+		'label'       => __( 'More Text', 'bb-theme-builder' ),
 		'placeholder' => '...',
 	),
 ) );
@@ -52,7 +52,7 @@ FLPageData::add_post_property_settings_fields( 'excerpt', array(
  * Post Content
  */
 FLPageData::add_post_property( 'content', array(
-	'label'       => __( 'Post Content', 'fl-theme-builder' ),
+	'label'       => __( 'Post Content', 'bb-theme-builder' ),
 	'group'       => 'posts',
 	'type'        => 'string',
 	'getter'      => 'FLPageDataPost::get_content',
@@ -63,7 +63,7 @@ FLPageData::add_post_property( 'content', array(
  * Post Link
  */
 FLPageData::add_post_property( 'link', array(
-	'label'  => __( 'Post Link', 'fl-theme-builder' ),
+	'label'  => __( 'Post Link', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => array( 'string' ),
 	'getter' => 'FLPageDataPost::get_link',
@@ -72,11 +72,11 @@ FLPageData::add_post_property( 'link', array(
 FLPageData::add_post_property_settings_fields( 'link', array(
 	'text'        => array(
 		'type'    => 'select',
-		'label'   => __( 'Link Text', 'fl-theme-builder' ),
+		'label'   => __( 'Link Text', 'bb-theme-builder' ),
 		'default' => 'title',
 		'options' => array(
-			'title'  => __( 'Post Title', 'fl-theme-builder' ),
-			'custom' => __( 'Custom', 'fl-theme-builder' ),
+			'title'  => __( 'Post Title', 'bb-theme-builder' ),
+			'custom' => __( 'Custom', 'bb-theme-builder' ),
 		),
 		'toggle'  => array(
 			'custom' => array(
@@ -86,8 +86,8 @@ FLPageData::add_post_property_settings_fields( 'link', array(
 	),
 	'custom_text' => array(
 		'type'    => 'text',
-		'label'   => __( 'Custom Text', 'fl-theme-builder' ),
-		'default' => __( 'Read More...', 'fl-theme-builder' ),
+		'label'   => __( 'Custom Text', 'bb-theme-builder' ),
+		'default' => __( 'Read More...', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -95,7 +95,7 @@ FLPageData::add_post_property_settings_fields( 'link', array(
  * Post URL
  */
 FLPageData::add_post_property( 'url', array(
-	'label'  => __( 'Post URL', 'fl-theme-builder' ),
+	'label'  => __( 'Post URL', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => array( 'url' ),
 	'getter' => 'get_permalink',
@@ -105,7 +105,7 @@ FLPageData::add_post_property( 'url', array(
  * Post ID
  */
 FLPageData::add_post_property( 'slug', array(
-	'label'  => __( 'Post Slug', 'fl-theme-builder' ),
+	'label'  => __( 'Post Slug', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_slug',
@@ -115,7 +115,7 @@ FLPageData::add_post_property( 'slug', array(
  * Post Date
  */
 FLPageData::add_post_property( 'date', array(
-	'label'  => __( 'Post Date', 'fl-theme-builder' ),
+	'label'  => __( 'Post Date', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_date',
@@ -124,18 +124,18 @@ FLPageData::add_post_property( 'date', array(
 FLPageData::add_post_property_settings_fields( 'date', array(
 	'format' => array(
 		'type'    => 'select',
-		'label'   => __( 'Date Format', 'fl-theme-builder' ),
+		'label'   => __( 'Date Format', 'bb-theme-builder' ),
 		'default' => '',
 		'options' => array(
-			''       => __( 'Default', 'fl-theme-builder' ),
-			'M j, Y' => date( 'M j, Y' ),
-			'F j, Y' => date( 'F j, Y' ),
-			'm/d/Y'  => date( 'm/d/Y' ),
-			'm-d-Y'  => date( 'm-d-Y' ),
-			'd M Y'  => date( 'd M Y' ),
-			'd F Y'  => date( 'd F Y' ),
-			'Y-m-d'  => date( 'Y-m-d' ),
-			'Y/m/d'  => date( 'Y/m/d' ),
+			''       => __( 'Default', 'bb-theme-builder' ),
+			'M j, Y' => gmdate( 'M j, Y' ),
+			'F j, Y' => gmdate( 'F j, Y' ),
+			'm/d/Y'  => gmdate( 'm/d/Y' ),
+			'm-d-Y'  => gmdate( 'm-d-Y' ),
+			'd M Y'  => gmdate( 'd M Y' ),
+			'd F Y'  => gmdate( 'd F Y' ),
+			'Y-m-d'  => gmdate( 'Y-m-d' ),
+			'Y/m/d'  => gmdate( 'Y/m/d' ),
 		),
 	),
 ) );
@@ -144,7 +144,7 @@ FLPageData::add_post_property_settings_fields( 'date', array(
  * Post Modified Date
  */
 FLPageData::add_post_property( 'modified_date', array(
-	'label'  => __( 'Post Modified Date', 'fl-theme-builder' ),
+	'label'  => __( 'Post Modified Date', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_modified_date',
@@ -153,19 +153,19 @@ FLPageData::add_post_property( 'modified_date', array(
 FLPageData::add_post_property_settings_fields( 'modified_date', array(
 	'format' => array(
 		'type'    => 'select',
-		'label'   => __( 'Modified Date Format', 'fl-theme-builder' ),
+		'label'   => __( 'Modified Date Format', 'bb-theme-builder' ),
 		'default' => '',
 		'options' => array(
-			''       => __( 'Default', 'fl-theme-builder' ),
-			'M j, Y' => date( 'M j, Y' ),
-			'F j, Y' => date( 'F j, Y' ),
-			'm/d/Y'  => date( 'm/d/Y' ),
-			'm-d-Y'  => date( 'm-d-Y' ),
-			'd M Y'  => date( 'd M Y' ),
-			'd F Y'  => date( 'd F Y' ),
-			'Y-m-d'  => date( 'Y-m-d' ),
-			'Y/m/d'  => date( 'Y/m/d' ),
-			'human'  => __( '3 days ago', 'fl-theme-builder' ),
+			''       => __( 'Default', 'bb-theme-builder' ),
+			'M j, Y' => gmdate( 'M j, Y' ),
+			'F j, Y' => gmdate( 'F j, Y' ),
+			'm/d/Y'  => gmdate( 'm/d/Y' ),
+			'm-d-Y'  => gmdate( 'm-d-Y' ),
+			'd M Y'  => gmdate( 'd M Y' ),
+			'd F Y'  => gmdate( 'd F Y' ),
+			'Y-m-d'  => gmdate( 'Y-m-d' ),
+			'Y/m/d'  => gmdate( 'Y/m/d' ),
+			'human'  => __( '3 days ago', 'bb-theme-builder' ),
 		),
 	),
 ) );
@@ -174,7 +174,7 @@ FLPageData::add_post_property_settings_fields( 'modified_date', array(
  * Post Featured Image
  */
 FLPageData::add_post_property( 'featured_image', array(
-	'label'  => __( 'Post Featured Image', 'fl-theme-builder' ),
+	'label'  => __( 'Post Featured Image', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_featured_image',
@@ -183,20 +183,20 @@ FLPageData::add_post_property( 'featured_image', array(
 FLPageData::add_post_property_settings_fields( 'featured_image', array(
 	'size'    => array(
 		'type'    => 'photo-sizes',
-		'label'   => __( 'Size', 'fl-theme-builder' ),
+		'label'   => __( 'Size', 'bb-theme-builder' ),
 		'default' => 'thumbnail',
 	),
 	'display' => array(
 		'type'    => 'select',
-		'label'   => __( 'Display', 'fl-theme-builder' ),
+		'label'   => __( 'Display', 'bb-theme-builder' ),
 		'default' => 'tag',
 		'options' => array(
-			'tag'         => __( 'Image Tag', 'fl-theme-builder' ),
-			'url'         => __( 'URL', 'fl-theme-builder' ),
-			'title'       => __( 'Title', 'fl-theme-builder' ),
-			'caption'     => __( 'Caption', 'fl-theme-builder' ),
-			'description' => __( 'Description', 'fl-theme-builder' ),
-			'alt'         => __( 'Alt Text', 'fl-theme-builder' ),
+			'tag'         => __( 'Image Tag', 'bb-theme-builder' ),
+			'url'         => __( 'URL', 'bb-theme-builder' ),
+			'title'       => __( 'Title', 'bb-theme-builder' ),
+			'caption'     => __( 'Caption', 'bb-theme-builder' ),
+			'description' => __( 'Description', 'bb-theme-builder' ),
+			'alt'         => __( 'Alt Text', 'bb-theme-builder' ),
 		),
 		'toggle'  => array(
 			'tag' => array(
@@ -209,24 +209,24 @@ FLPageData::add_post_property_settings_fields( 'featured_image', array(
 	),
 	'align'   => array(
 		'type'    => 'select',
-		'label'   => __( 'Alignment', 'fl-theme-builder' ),
+		'label'   => __( 'Alignment', 'bb-theme-builder' ),
 		'default' => 'default',
 		'options' => array(
-			'default' => __( 'Default', 'fl-theme-builder' ),
-			'left'    => __( 'Left', 'fl-theme-builder' ),
-			'center'  => __( 'Center', 'fl-theme-builder' ),
-			'right'   => __( 'Right', 'fl-theme-builder' ),
+			'default' => __( 'Default', 'bb-theme-builder' ),
+			'left'    => __( 'Left', 'bb-theme-builder' ),
+			'center'  => __( 'Center', 'bb-theme-builder' ),
+			'right'   => __( 'Right', 'bb-theme-builder' ),
 		),
 	),
 	'linked'  => array(
 		'type'    => 'select',
-		'label'   => __( 'Linked', 'fl-theme-builder' ),
+		'label'   => __( 'Linked', 'bb-theme-builder' ),
 		'default' => 'yes',
 		'options' => array(
-			'yes' => __( 'Yes', 'fl-theme-builder' ),
-			'no'  => __( 'No', 'fl-theme-builder' ),
+			'yes' => __( 'Yes', 'bb-theme-builder' ),
+			'no'  => __( 'No', 'bb-theme-builder' ),
 		),
-		'help'    => __( 'Link the image to the post.', 'fl-theme-builder' ),
+		'help'    => __( 'Link the image to the post.', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -234,7 +234,7 @@ FLPageData::add_post_property_settings_fields( 'featured_image', array(
  * Post Featured Image URL
  */
 FLPageData::add_post_property( 'featured_image_url', array(
-	'label'  => __( 'Post Featured Image', 'fl-theme-builder' ),
+	'label'  => __( 'Post Featured Image', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'photo',
 	'getter' => 'FLPageDataPost::get_featured_image_url',
@@ -243,12 +243,12 @@ FLPageData::add_post_property( 'featured_image_url', array(
 FLPageData::add_post_property_settings_fields( 'featured_image_url', array(
 	'size'        => array(
 		'type'    => 'photo-sizes',
-		'label'   => __( 'Size', 'fl-theme-builder' ),
+		'label'   => __( 'Size', 'bb-theme-builder' ),
 		'default' => 'thumbnail',
 	),
 	'default_img' => array(
 		'type'  => 'photo',
-		'label' => __( 'Default Image', 'fl-theme-builder' ),
+		'label' => __( 'Default Image', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -256,7 +256,7 @@ FLPageData::add_post_property_settings_fields( 'featured_image_url', array(
  * Post Attached Images
  */
 FLPageData::add_post_property( 'attached_images', array(
-	'label'  => __( 'Post Attached Images', 'fl-theme-builder' ),
+	'label'  => __( 'Post Attached Images', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'multiple-photos',
 	'getter' => 'FLPageDataPost::get_attached_images',
@@ -266,7 +266,7 @@ FLPageData::add_post_property( 'attached_images', array(
  * Post Terms List
  */
 FLPageData::add_post_property( 'terms_list', array(
-	'label'  => __( 'Post Terms List', 'fl-theme-builder' ),
+	'label'  => __( 'Post Terms List', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => array( 'string' ),
 	'getter' => 'FLPageDataPost::get_terms_list',
@@ -275,19 +275,19 @@ FLPageData::add_post_property( 'terms_list', array(
 FLPageData::add_post_property_settings_fields( 'terms_list', array(
 	'taxonomy'  => array(
 		'type'    => 'select',
-		'label'   => __( 'Taxonomy', 'fl-theme-builder' ),
+		'label'   => __( 'Taxonomy', 'bb-theme-builder' ),
 		'default' => 'category',
 		'options' => FLPageDataPost::get_taxonomy_options(),
 	),
 	'html_list' => array(
 		'type'    => 'select',
-		'label'   => __( 'Layout', 'fl-theme-builder' ),
+		'label'   => __( 'Layout', 'bb-theme-builder' ),
 		'default' => 'no',
 		'options' => array(
-			'no'  => __( 'Use Separator', 'fl-theme-builder' ),
-			'ol'  => __( 'Ordered List', 'fl-theme-builder' ),
-			'ul'  => __( 'Unordered List', 'fl-theme-builder' ),
-			'div' => __( 'Div / Spans', 'fl-theme-builder' ),
+			'no'  => __( 'Use Separator', 'bb-theme-builder' ),
+			'ol'  => __( 'Ordered List', 'bb-theme-builder' ),
+			'ul'  => __( 'Unordered List', 'bb-theme-builder' ),
+			'div' => __( 'Div / Spans', 'bb-theme-builder' ),
 		),
 		'toggle'  => array(
 			'no' => array(
@@ -297,25 +297,25 @@ FLPageData::add_post_property_settings_fields( 'terms_list', array(
 	),
 	'separator' => array(
 		'type'    => 'text',
-		'label'   => __( 'Separator', 'fl-theme-builder' ),
-		'default' => __( ', ', 'fl-theme-builder' ),
+		'label'   => __( 'Separator', 'bb-theme-builder' ),
+		'default' => __( ', ', 'bb-theme-builder' ),
 	),
 	'limit'     => array(
 		'type'        => 'text',
 		'placeholder' => '3',
 		'label'       => __( 'Limit', 'fl-theme-buider' ),
 		'default'     => '',
-		'help'        => __( 'Limit number of terms returned.', 'fl-theme-builder' ),
+		'help'        => __( 'Limit number of terms returned.', 'bb-theme-builder' ),
 	),
 	'linked'    => array(
 		'type'    => 'select',
-		'label'   => __( 'Linked', 'fl-theme-builder' ),
+		'label'   => __( 'Linked', 'bb-theme-builder' ),
 		'default' => 'yes',
 		'options' => array(
-			'yes' => __( 'Yes', 'fl-theme-builder' ),
-			'no'  => __( 'No', 'fl-theme-builder' ),
+			'yes' => __( 'Yes', 'bb-theme-builder' ),
+			'no'  => __( 'No', 'bb-theme-builder' ),
 		),
-		'help'    => __( 'Link terms to their archive page.', 'fl-theme-builder' ),
+		'help'    => __( 'Link terms to their archive page.', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -323,7 +323,7 @@ FLPageData::add_post_property_settings_fields( 'terms_list', array(
  * Comments Number
  */
 FLPageData::add_post_property( 'comments_number', array(
-	'label'  => __( 'Comments Number', 'fl-theme-builder' ),
+	'label'  => __( 'Comments Number', 'bb-theme-builder' ),
 	'group'  => 'comments',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_comments_number',
@@ -332,28 +332,28 @@ FLPageData::add_post_property( 'comments_number', array(
 FLPageData::add_post_property_settings_fields( 'comments_number', array(
 	'link'      => array(
 		'type'    => 'select',
-		'label'   => __( 'Link', 'fl-theme-builder' ),
+		'label'   => __( 'Link', 'bb-theme-builder' ),
 		'default' => 'yes',
 		'options' => array(
-			'yes' => __( 'Yes', 'fl-theme-builder' ),
-			'no'  => __( 'No', 'fl-theme-builder' ),
+			'yes' => __( 'Yes', 'bb-theme-builder' ),
+			'no'  => __( 'No', 'bb-theme-builder' ),
 		),
-		'help'    => __( 'Link the comments text to the comments section for this post.', 'fl-theme-builder' ),
+		'help'    => __( 'Link the comments text to the comments section for this post.', 'bb-theme-builder' ),
 	),
 	'none_text' => array(
 		'type'    => 'text',
-		'label'   => __( 'No Comments Text', 'fl-theme-builder' ),
-		'default' => __( 'No Comments', 'fl-theme-builder' ),
+		'label'   => __( 'No Comments Text', 'bb-theme-builder' ),
+		'default' => __( 'No Comments', 'bb-theme-builder' ),
 	),
 	'one_text'  => array(
 		'type'    => 'text',
-		'label'   => __( 'One Comment Text', 'fl-theme-builder' ),
-		'default' => __( '1 Comment', 'fl-theme-builder' ),
+		'label'   => __( 'One Comment Text', 'bb-theme-builder' ),
+		'default' => __( '1 Comment', 'bb-theme-builder' ),
 	),
 	'more_text' => array(
 		'type'    => 'text',
-		'label'   => __( 'Comments Text', 'fl-theme-builder' ),
-		'default' => __( '% Comments', 'fl-theme-builder' ),
+		'label'   => __( 'Comments Text', 'bb-theme-builder' ),
+		'default' => __( '% Comments', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -361,7 +361,7 @@ FLPageData::add_post_property_settings_fields( 'comments_number', array(
  * Comments URL
  */
 FLPageData::add_post_property( 'comments_url', array(
-	'label'  => __( 'Comments URL', 'fl-theme-builder' ),
+	'label'  => __( 'Comments URL', 'bb-theme-builder' ),
 	'group'  => 'comments',
 	'type'   => array( 'url' ),
 	'getter' => 'FLPageDataPost::get_comments_url',
@@ -371,7 +371,7 @@ FLPageData::add_post_property( 'comments_url', array(
  * Author Name
  */
 FLPageData::add_post_property( 'author_name', array(
-	'label'  => __( 'Author Name', 'fl-theme-builder' ),
+	'label'  => __( 'Author Name', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_author_name',
@@ -380,40 +380,40 @@ FLPageData::add_post_property( 'author_name', array(
 FLPageData::add_post_property_settings_fields( 'author_name', array(
 	'type'      => array(
 		'type'    => 'select',
-		'label'   => __( 'Type', 'fl-theme-builder' ),
+		'label'   => __( 'Type', 'bb-theme-builder' ),
 		'default' => 'display',
 		'options' => array(
-			'display'   => __( 'Display Name', 'fl-theme-builder' ),
-			'first'     => __( 'First Name', 'fl-theme-builder' ),
-			'last'      => __( 'Last Name', 'fl-theme-builder' ),
-			'firstlast' => __( 'First &amp; Last Name', 'fl-theme-builder' ),
-			'lastfirst' => __( 'Last, First Name', 'fl-theme-builder' ),
-			'nickname'  => __( 'Nickname', 'fl-theme-builder' ),
-			'username'  => __( 'Username', 'fl-theme-builder' ),
+			'display'   => __( 'Display Name', 'bb-theme-builder' ),
+			'first'     => __( 'First Name', 'bb-theme-builder' ),
+			'last'      => __( 'Last Name', 'bb-theme-builder' ),
+			'firstlast' => __( 'First &amp; Last Name', 'bb-theme-builder' ),
+			'lastfirst' => __( 'Last, First Name', 'bb-theme-builder' ),
+			'nickname'  => __( 'Nickname', 'bb-theme-builder' ),
+			'username'  => __( 'Username', 'bb-theme-builder' ),
 		),
 	),
 	'link'      => array(
 		'type'    => 'select',
-		'label'   => __( 'Link', 'fl-theme-builder' ),
+		'label'   => __( 'Link', 'bb-theme-builder' ),
 		'default' => 'no',
 		'options' => array(
-			'yes' => __( 'Yes', 'fl-theme-builder' ),
-			'no'  => __( 'No', 'fl-theme-builder' ),
+			'yes' => __( 'Yes', 'bb-theme-builder' ),
+			'no'  => __( 'No', 'bb-theme-builder' ),
 		),
 		'toggle'  => array(
 			'yes' => array(
 				'fields' => array( 'link_type' ),
 			),
 		),
-		'help'    => __( 'Link to the archive or website for this author.', 'fl-theme-builder' ),
+		'help'    => __( 'Link to the archive or website for this author.', 'bb-theme-builder' ),
 	),
 	'link_type' => array(
 		'type'    => 'select',
-		'label'   => __( 'Link Type', 'fl-theme-builder' ),
+		'label'   => __( 'Link Type', 'bb-theme-builder' ),
 		'default' => 'archive',
 		'options' => array(
-			'archive' => __( 'Post Archive', 'fl-theme-builder' ),
-			'website' => __( 'Website', 'fl-theme-builder' ),
+			'archive' => __( 'Post Archive', 'bb-theme-builder' ),
+			'website' => __( 'Website', 'bb-theme-builder' ),
 		),
 	),
 ) );
@@ -422,7 +422,7 @@ FLPageData::add_post_property_settings_fields( 'author_name', array(
  * Author Bio
  */
 FLPageData::add_post_property( 'author_bio', array(
-	'label'  => __( 'Author Bio', 'fl-theme-builder' ),
+	'label'  => __( 'Author Bio', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => 'string',
 	'getter' => 'FLPageDataPost::get_author_bio',
@@ -432,7 +432,7 @@ FLPageData::add_post_property( 'author_bio', array(
  * Author URL
  */
 FLPageData::add_post_property( 'author_url', array(
-	'label'  => __( 'Author URL', 'fl-theme-builder' ),
+	'label'  => __( 'Author URL', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => array( 'url' ),
 	'getter' => 'FLPageDataPost::get_author_url',
@@ -441,11 +441,11 @@ FLPageData::add_post_property( 'author_url', array(
 FLPageData::add_post_property_settings_fields( 'author_url', array(
 	'type' => array(
 		'type'    => 'select',
-		'label'   => __( 'Type', 'fl-theme-builder' ),
+		'label'   => __( 'Type', 'bb-theme-builder' ),
 		'default' => 'archive',
 		'options' => array(
-			'archive' => __( 'Post Archive', 'fl-theme-builder' ),
-			'website' => __( 'Website', 'fl-theme-builder' ),
+			'archive' => __( 'Post Archive', 'bb-theme-builder' ),
+			'website' => __( 'Website', 'bb-theme-builder' ),
 		),
 	),
 ) );
@@ -454,7 +454,7 @@ FLPageData::add_post_property_settings_fields( 'author_url', array(
  * Author Picture
  */
 FLPageData::add_post_property( 'author_profile_picture', array(
-	'label'  => __( 'Author Picture', 'fl-theme-builder' ),
+	'label'  => __( 'Author Picture', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => array( 'string' ),
 	'getter' => 'FLPageDataPost::get_author_profile_picture',
@@ -463,31 +463,31 @@ FLPageData::add_post_property( 'author_profile_picture', array(
 FLPageData::add_post_property_settings_fields( 'author_profile_picture', array(
 	'link'      => array(
 		'type'    => 'select',
-		'label'   => __( 'Link', 'fl-theme-builder' ),
+		'label'   => __( 'Link', 'bb-theme-builder' ),
 		'default' => 'no',
 		'options' => array(
-			'yes' => __( 'Yes', 'fl-theme-builder' ),
-			'no'  => __( 'No', 'fl-theme-builder' ),
+			'yes' => __( 'Yes', 'bb-theme-builder' ),
+			'no'  => __( 'No', 'bb-theme-builder' ),
 		),
 		'toggle'  => array(
 			'yes' => array(
 				'fields' => array( 'link_type' ),
 			),
 		),
-		'help'    => __( 'Link to the archive or website for this author.', 'fl-theme-builder' ),
+		'help'    => __( 'Link to the archive or website for this author.', 'bb-theme-builder' ),
 	),
 	'link_type' => array(
 		'type'    => 'select',
-		'label'   => __( 'Link Type', 'fl-theme-builder' ),
+		'label'   => __( 'Link Type', 'bb-theme-builder' ),
 		'default' => 'archive',
 		'options' => array(
-			'archive' => __( 'Post Archive', 'fl-theme-builder' ),
-			'website' => __( 'Website', 'fl-theme-builder' ),
+			'archive' => __( 'Post Archive', 'bb-theme-builder' ),
+			'website' => __( 'Website', 'bb-theme-builder' ),
 		),
 	),
 	'size'      => array(
 		'type'        => 'text',
-		'label'       => __( 'Size', 'fl-theme-builder' ),
+		'label'       => __( 'Size', 'bb-theme-builder' ),
 		'default'     => '100',
 		'size'        => '5',
 		'description' => 'px',
@@ -499,7 +499,7 @@ FLPageData::add_post_property_settings_fields( 'author_profile_picture', array(
  * Author Picture URL
  */
 FLPageData::add_post_property( 'author_profile_picture_url', array(
-	'label'  => __( 'Author Picture', 'fl-theme-builder' ),
+	'label'  => __( 'Author Picture', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => array( 'photo' ),
 	'getter' => 'FLPageDataPost::get_author_profile_picture_url',
@@ -508,7 +508,7 @@ FLPageData::add_post_property( 'author_profile_picture_url', array(
 FLPageData::add_post_property_settings_fields( 'author_profile_picture_url', array(
 	'size'        => array(
 		'type'        => 'text',
-		'label'       => __( 'Size', 'fl-theme-builder' ),
+		'label'       => __( 'Size', 'bb-theme-builder' ),
 		'default'     => '100',
 		'size'        => '5',
 		'description' => 'px',
@@ -516,7 +516,7 @@ FLPageData::add_post_property_settings_fields( 'author_profile_picture_url', arr
 	),
 	'default_img' => array(
 		'type'  => 'photo',
-		'label' => __( 'Default Image', 'fl-theme-builder' ),
+		'label' => __( 'Default Image', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -524,7 +524,7 @@ FLPageData::add_post_property_settings_fields( 'author_profile_picture_url', arr
  * Author Meta
  */
 FLPageData::add_post_property( 'author_meta', array(
-	'label'  => __( 'Author Meta', 'fl-theme-builder' ),
+	'label'  => __( 'Author Meta', 'bb-theme-builder' ),
 	'group'  => 'author',
 	'type'   => 'all',
 	'getter' => 'FLPageDataPost::get_author_meta',
@@ -533,7 +533,7 @@ FLPageData::add_post_property( 'author_meta', array(
 FLPageData::add_post_property_settings_fields( 'author_meta', array(
 	'key' => array(
 		'type'  => 'text',
-		'label' => __( 'Key', 'fl-theme-builder' ),
+		'label' => __( 'Key', 'bb-theme-builder' ),
 	),
 ) );
 
@@ -541,7 +541,7 @@ FLPageData::add_post_property_settings_fields( 'author_meta', array(
  * Custom Field
  */
 FLPageData::add_post_property( 'custom_field', array(
-	'label'  => __( 'Post Custom Field', 'fl-theme-builder' ),
+	'label'  => __( 'Post Custom Field', 'bb-theme-builder' ),
 	'group'  => 'posts',
 	'type'   => 'all',
 	'getter' => 'FLPageDataPost::get_custom_field',
@@ -550,6 +550,6 @@ FLPageData::add_post_property( 'custom_field', array(
 FLPageData::add_post_property_settings_fields( 'custom_field', array(
 	'key' => array(
 		'type'  => 'text',
-		'label' => __( 'Key', 'fl-theme-builder' ),
+		'label' => __( 'Key', 'bb-theme-builder' ),
 	),
 ) );

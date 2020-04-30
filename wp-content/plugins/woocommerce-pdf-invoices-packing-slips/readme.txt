@@ -3,9 +3,9 @@ Contributors: pomegranate
 Donate link: https://wpovernight.com/downloads/woocommerce-pdf-invoices-packing-slips-bundle/
 Tags: woocommerce, pdf, invoices, packing slips, print, delivery notes, invoice, packing slip, export, email, bulk, automatic
 Requires at least: 3.5
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 5.3
-Stable tag: 2.3.5
+Stable tag: 2.4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,54 @@ There's a setting on the Status tab of the settings page that allows you to togg
 6. Set shop name, address, header logo, etc.
 
 == Changelog ==
+
+= 2.4.7 =
+* Fix: missing order number in filename when invoice number not enabled
+* Dev: Added action hook for document save method (`wpo_wcpdf_save_document`)
+* Dev: Added action hook for printing custom data in PDF invoice data panel (`wpo_wcpdf_meta_box_after_document_data`)
+* Tested up to WooCommerce 4.0 & WP 5.4
+
+= 2.4.6 =
+* Fix: Locale determination for admins on their own my account page
+* Fix: Action buttons icon alignment in WP5.3+
+* Fix: Add bulk actions via native WP methods
+* Tweak: minimize calls to WooCommerce mailer class when loading settings
+
+= 2.4.5 =
+* Fix: Prevent errors for subscription tax fallback on refunds
+
+= 2.4.4 =
+* Fix: German Market thumbnail settings conflict
+* Fix: Correctly sanitize wizard text input
+* Fix: Link to documentation for increasing memory
+* Fix: Fallback for subscription renewal tax rates
+
+= 2.4.3 =
+* Fix: Prevent errors unsetting a non-existing setting
+* Fix: Potential crash on improperly initiated documents 
+* Fix: Reversed tax rate calculation arguments
+* Fix: Support tax rate functions for non-line items
+* Fix: comma position on multiple tax rates
+* Fix: Setup wizard styles
+* Translations: Added lv locale for Latvian (keeping lv_LV as fallback)
+* Translations: Updated bundled Czech translations
+* Tested up to WooCommerce 3.9
+
+= 2.4.2 =
+* Fix: 'No' option in new date & number visibility setting
+* Fix: Resetting headers caused unintended caching of PDF files on some hosts
+
+= 2.4.1 =
+* Fix: Creating invoices for draft orders would crash plugin
+* Tweak: Include time in default invoice date
+
+= 2.4.0 =
+* Feature: Option to use order number & date for invoice number & date
+* Fix: prevent errors during update when WC not active
+* Fix: don't auto create invoice number when manually entered & directly changing order status
+* Fix: invoice tax amount for refunded orders (in combination with WooCommerce tax setting "as a single total")
+* Tweak: Default to today's date when editing empty invoice date
+
 
 = 2.3.5 =
 * Feature: Accept single order ID for wcpdf_get_document function

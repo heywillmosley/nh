@@ -58,7 +58,7 @@ if ( ! class_exists('BeRocket_custom_post_sortable_addon_class') ) {
             }
         }
         public function sortable_get_custom_post($args) {
-            if( is_admin() ) {
+            if( is_admin() && $this->post_name == berocket_isset($_GET['post_type']) ) {
                 $posts_not_ordered = new WP_Query($args);
                 $posts_not_ordered = $posts_not_ordered->posts;
             }
@@ -67,7 +67,7 @@ if ( ! class_exists('BeRocket_custom_post_sortable_addon_class') ) {
                 'orderby'          => 'meta_value_num',
                 'order'            => 'ASC',
             ));
-            if( is_admin() ) {
+            if( is_admin() && $this->post_name == berocket_isset($_GET['post_type']) ) {
                 $posts_ordered = new WP_Query($args);
                 $posts_ordered = $posts_ordered->posts;
                 $posts_fix = array_diff($posts_not_ordered, $posts_ordered);

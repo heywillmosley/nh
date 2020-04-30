@@ -4,6 +4,10 @@
  * @since TBD
  * @class FLTheEventsCalendarCountdownModule
  */
+
+if ( ! class_exists( 'Tribe__Events__Pro__Main' ) ) {
+	return;
+}
 class FLTheEventsCalendarCountdownModule extends FLBuilderModule {
 
 	/**
@@ -12,10 +16,10 @@ class FLTheEventsCalendarCountdownModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Event Countdown', 'fl-theme-builder' ),
-			'description'     => __( 'Displays a countdown timer for the current event.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'The Events Calendar', 'fl-theme-builder' ),
+			'name'            => __( 'Event Countdown', 'bb-theme-builder' ),
+			'description'     => __( 'Displays a countdown timer for the current event.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'The Events Calendar', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_DIR . 'modules/fl-the-events-calendar-countdown/',
 			'url'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_URL . 'modules/fl-the-events-calendar-countdown/',
@@ -26,19 +30,19 @@ class FLTheEventsCalendarCountdownModule extends FLBuilderModule {
 
 FLBuilder::register_module( 'FLTheEventsCalendarCountdownModule', array(
 	'general' => array(
-		'title'    => __( 'Style', 'fl-theme-builder' ),
+		'title'    => __( 'Style', 'bb-theme-builder' ),
 		'sections' => array(
 			'general' => array(
 				'title'  => '',
 				'fields' => array(
 					'align'        => array(
 						'type'    => 'select',
-						'label'   => __( 'Alignment', 'fl-theme-builder' ),
+						'label'   => __( 'Alignment', 'bb-theme-builder' ),
 						'default' => 'left',
 						'options' => array(
-							'left'   => __( 'Left', 'fl-theme-builder' ),
-							'center' => __( 'Center', 'fl-theme-builder' ),
-							'right'  => __( 'Right', 'fl-theme-builder' ),
+							'left'   => __( 'Left', 'bb-theme-builder' ),
+							'center' => __( 'Center', 'bb-theme-builder' ),
+							'right'  => __( 'Right', 'bb-theme-builder' ),
 						),
 						'preview' => array(
 							'type'     => 'css',
@@ -48,11 +52,11 @@ FLBuilder::register_module( 'FLTheEventsCalendarCountdownModule', array(
 					),
 					'show_seconds' => array(
 						'type'    => 'select',
-						'label'   => __( 'Show Seconds', 'fl-theme-builder' ),
+						'label'   => __( 'Show Seconds', 'bb-theme-builder' ),
 						'default' => '1',
 						'options' => array(
-							'1' => __( 'Yes', 'fl-theme-builder' ),
-							'0' => __( 'No', 'fl-theme-builder' ),
+							'1' => __( 'Yes', 'bb-theme-builder' ),
+							'0' => __( 'No', 'bb-theme-builder' ),
 						),
 					),
 				),

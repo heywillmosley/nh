@@ -256,18 +256,18 @@ final class BB_Logic_REST_WordPress {
 	static public function archives() {
 		$response = array(
 			array(
-				'label'   => __( 'General', 'fl-theme-builder' ),
+				'label'   => __( 'General', 'bb-theme-builder' ),
 				'options' => array(
 					array(
-						'label' => __( 'Author Archives', 'fl-theme-builder' ),
+						'label' => __( 'Author Archives', 'bb-theme-builder' ),
 						'value' => 'general/author',
 					),
 					array(
-						'label' => __( 'Date Archives', 'fl-theme-builder' ),
+						'label' => __( 'Date Archives', 'bb-theme-builder' ),
 						'value' => 'general/date',
 					),
 					array(
-						'label' => __( 'Search Archives', 'fl-theme-builder' ),
+						'label' => __( 'Search Archives', 'bb-theme-builder' ),
 						'value' => 'general/search',
 					),
 				),
@@ -287,7 +287,7 @@ final class BB_Logic_REST_WordPress {
 			if ( 'post' == $slug || ! empty( $type->has_archive ) ) {
 				$group['options'][] = array(
 					/* translators: %s: post type singular name */
-					'label' => sprintf( _x( '%s Archive', '%s post type singular name', 'fl-theme-builder' ), $type->labels->singular_name ),
+					'label' => sprintf( _x( '%s Archive', '%s post type singular name', 'bb-theme-builder' ), $type->labels->singular_name ),
 					'value' => "post/$slug",
 				);
 			}

@@ -12,10 +12,10 @@ class FLTheEventsCalendarDetailsModule extends FLBuilderModule {
 	 */
 	public function __construct() {
 		parent::__construct(array(
-			'name'            => __( 'Event Details', 'fl-theme-builder' ),
-			'description'     => __( 'Displays the details for the current event.', 'fl-theme-builder' ),
-			'group'           => __( 'Themer Modules', 'fl-theme-builder' ),
-			'category'        => __( 'The Events Calendar', 'fl-theme-builder' ),
+			'name'            => __( 'Event Details', 'bb-theme-builder' ),
+			'description'     => __( 'Displays the details for the current event.', 'bb-theme-builder' ),
+			'group'           => __( 'Themer Modules', 'bb-theme-builder' ),
+			'category'        => __( 'The Events Calendar', 'bb-theme-builder' ),
 			'partial_refresh' => true,
 			'dir'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_DIR . 'modules/fl-the-events-calendar-details/',
 			'url'             => FL_THEME_BUILDER_THE_EVENTS_CALENDAR_URL . 'modules/fl-the-events-calendar-details/',

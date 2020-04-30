@@ -28,7 +28,7 @@ final class FLThemeBuilderAdminMenu {
 	 */
 	static public function register( $menu ) {
 		$menu[50] = array(
-			__( 'Themer Layouts', 'fl-theme-builder' ),
+			__( 'Themer Layouts', 'bb-theme-builder' ),
 			'edit_posts',
 			'edit.php?post_type=fl-theme-layout',
 		);

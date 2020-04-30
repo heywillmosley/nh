@@ -52,11 +52,11 @@ final class FLThemeBuilderPostModules {
 
 		$form['layout']['sections']['general']['fields']['post_layout'] = array(
 			'type'    => 'select',
-			'label'   => __( 'Post Layout', 'fl-theme-builder' ),
+			'label'   => __( 'Post Layout', 'bb-theme-builder' ),
 			'default' => 'default',
 			'options' => array(
-				'default' => __( 'Default', 'fl-theme-builder' ),
-				'custom'  => __( 'Custom', 'fl-theme-builder' ),
+				'default' => __( 'Default', 'bb-theme-builder' ),
+				'custom'  => __( 'Custom', 'bb-theme-builder' ),
 			),
 			'toggle'  => array(
 				'custom' => array(
@@ -67,17 +67,17 @@ final class FLThemeBuilderPostModules {
 
 		$form['layout']['sections']['general']['fields']['custom_post_layout'] = array(
 			'type'         => 'form',
-			'label'        => __( 'Custom Post Layout', 'fl-theme-builder' ),
+			'label'        => __( 'Custom Post Layout', 'bb-theme-builder' ),
 			'form'         => 'custom_post_layout',
 			'preview_text' => null,
 			'multiple'     => false,
 		);
 
 		FLBuilder::register_settings_form( 'custom_post_layout', array(
-			'title' => __( 'Custom Post Layout', 'fl-theme-builder' ),
+			'title' => __( 'Custom Post Layout', 'bb-theme-builder' ),
 			'tabs'  => array(
 				'html' => array(
-					'title'    => __( 'HTML', 'fl-theme-builder' ),
+					'title'    => __( 'HTML', 'bb-theme-builder' ),
 					'sections' => array(
 						'html' => array(
 							'title'  => '',
@@ -98,7 +98,7 @@ final class FLThemeBuilderPostModules {
 					),
 				),
 				'css'  => array(
-					'title'    => __( 'CSS', 'fl-theme-builder' ),
+					'title'    => __( 'CSS', 'bb-theme-builder' ),
 					'sections' => array(
 						'css' => array(
 							'title'  => '',
@@ -151,7 +151,10 @@ final class FLThemeBuilderPostModules {
 				$custom  = '.fl-node-' . $module->node . ' { ';
 				$custom .= $module->settings->custom_post_layout->css;
 				$custom .= ' }';
-				$css    .= @$less->compile( $custom ); // @codingStandardsIgnoreLine
+				if ( method_exists( 'FLBuilder', 'maybe_do_shortcode' ) ) {
+					$custom = FLBuilder::maybe_do_shortcode( $custom );
+				}
+				$css .= @$less->compile( $custom ); // @codingStandardsIgnoreLine
 			} catch ( Exception $e ) {
 				$css .= $module->settings->custom_post_layout->css;
 			}

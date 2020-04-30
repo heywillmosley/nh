@@ -118,8 +118,10 @@ class WC_Emails {
 	/**
 	 * Queues transactional email so it's not sent in current request if enabled,
 	 * otherwise falls back to send now.
+	 *
+	 * @param mixed ...$args Optional arguments.
 	 */
-	public static function queue_transactional_email() {
+	public static function queue_transactional_email( ...$args ) {
 		if ( is_a( self::$background_emailer, 'WC_Background_Emailer' ) ) {
 			self::$background_emailer->push_to_queue(
 				array(
@@ -128,7 +130,7 @@ class WC_Emails {
 				)
 			);
 		} else {
-			call_user_func_array( array( __CLASS__, 'send_transactional_email' ), func_get_args() ); // phpcs:ignore PHPCompatibility.FunctionUse.ArgumentFunctionsUsage.InParameterList
+			self::send_transactional_email( ...$args );
 		}
 	}
 
@@ -428,7 +430,7 @@ class WC_Emails {
 	 * @param string   $email         Email address.
 	 */
 	public function order_downloads( $order, $sent_to_admin = false, $plain_text = false, $email = '' ) {
-		$show_downloads = $order->has_downloadable_item() && $order->is_download_permitted() && ! $sent_to_admin;
+		$show_downloads = $order->has_downloadable_item() && $order->is_download_permitted() && ! $sent_to_admin && ! is_a( $email, 'WC_Email_Customer_Refunded_Order' );
 
 		if ( ! $show_downloads ) {
 			return;

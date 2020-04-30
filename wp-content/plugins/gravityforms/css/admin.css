@@ -536,8 +536,8 @@ td.content_center {
 	text-align: center !important;
 }
 
-tr img.gform_active_icon,
-img[src*="active"]{
+tr img[src$='/images/active0.png'],
+tr img[src$='/images/active1.png'] {
 	width: 25px;
 	height: auto;
 	display: -moz-inline-stack;
@@ -2181,6 +2181,35 @@ a.button-primary.gfbutton {
 	border-radius: 16px !important;
 }
 
+/* Password Visibility */
+.ginput_container_password span {
+	position: relative;
+}
+
+.ginput_container_password span button {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	border: none;
+	padding: 3px 0;
+	pointer-events: none;
+	position: absolute;
+	right: 1px;
+	text-align: center;
+	top: 1px;
+	width: 30px;
+}
+
+.ginput_container_password span button .dashicons {
+	font-size: 16px;
+	height: 16px;
+	width: 16px;
+}
+
+.ginput_container_password span.ginput_left button {
+	right: 21px;
+}
+
 /* password strength */
 
 .gfield_password_strength {
@@ -3553,6 +3582,7 @@ ul#gf_form_toolbar_links .gf_submenu ul li a {
 	background: transparent none;
 	padding: 6px 10px;
 	line-height: 24px;
+	display: block;
 }
 
 ul#gf_form_toolbar_links .gf_submenu ul li:hover {
@@ -4848,9 +4878,9 @@ div.wrap.gf_browser_chrome .gfield_checkbox li input {
 
 #entry_list_form .column-is_starred,
 #form_list_form .column-is_active{
-    width: 40px;
+    width: 19px;
 	vertical-align: top;
-	padding: 8px 10px;
+	padding: 9px 31px 8px 10px;
 }
 
 

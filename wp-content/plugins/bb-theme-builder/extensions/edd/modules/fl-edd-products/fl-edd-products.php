@@ -7,10 +7,10 @@
  */
 FLBuilder::register_module_alias( 'fl-edd-products', array(
 	'module'      => 'post-grid',
-	'name'        => __( 'Products', 'fl-theme-builder' ),
-	'description' => __( 'Displays a grid of products for the current archive.', 'fl-theme-builder' ),
-	'group'       => __( 'Themer Modules', 'fl-theme-builder' ),
-	'category'    => __( 'Easy Digital Downloads', 'fl-theme-builder' ),
+	'name'        => __( 'Products', 'bb-theme-builder' ),
+	'description' => __( 'Displays a grid of products for the current archive.', 'bb-theme-builder' ),
+	'group'       => __( 'Themer Modules', 'bb-theme-builder' ),
+	'category'    => __( 'Easy Digital Downloads', 'bb-theme-builder' ),
 	'enabled'     => FLThemeBuilderLayoutData::current_post_is( 'archive' ),
 	'settings'    => array(
 		'layout'              => 'columns',

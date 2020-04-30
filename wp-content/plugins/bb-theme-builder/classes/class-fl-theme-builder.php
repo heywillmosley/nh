@@ -27,9 +27,9 @@ final class FLThemeBuilder {
 	static public function register_user_access_settings() {
 		FLBuilderUserAccess::register_setting( 'theme_builder_editing', array(
 			'default'     => array( 'administrator' ),
-			'group'       => __( 'Admin', 'fl-theme-builder' ),
-			'label'       => __( 'Themer Layout Editing', 'fl-theme-builder' ),
-			'description' => __( 'The selected roles will be able to edit Themer layouts.', 'fl-theme-builder' ),
+			'group'       => __( 'Admin', 'bb-theme-builder' ),
+			'label'       => __( 'Themer Layout Editing', 'bb-theme-builder' ),
+			'description' => __( 'The selected roles will be able to edit Themer layouts.', 'bb-theme-builder' ),
 			'order'       => '110',
 		) );
 	}

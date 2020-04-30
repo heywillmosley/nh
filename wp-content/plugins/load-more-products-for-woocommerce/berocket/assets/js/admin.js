@@ -60,12 +60,15 @@ var br_something_changed = false;
             var block = $(this).data('block');
             if( block != 'redirect_link' ) {
                 event.preventDefault();
+                $(this).trigger('brlinktab_open');
                 $('.br_framework_settings ul.side a.active').removeClass('active');
                 $('.nav-block-active').removeClass('nav-block-active');
                 $(this).addClass('active');
                 $('.'+$(this).data('block')+'-block').addClass('nav-block-active');
                 $('.br_framework_settings .content .title').html( $(this).html() );
                 window.history.replaceState(null, null, $(this).attr('href'));
+                $(this).trigger('brlinktab_opened');
+                $('.'+$(this).data('block')+'-block').trigger('brtab_opened');
             }
             berocket_save_button_side();
         });
@@ -603,6 +606,7 @@ jQuery(document).on('click', function() {
         });
     }
     $(window).on('resize', berocket_addon_list_resize_all);
+    $(document).on('brtab_opened', berocket_addon_list_resize_all);
     $(document).ready( function () {
         berocket_addon_list_resize_all();
         $(document).on('change', '.berocket_addons_list input', function() {
@@ -624,6 +628,7 @@ jQuery(document).on('change', '.br_cond_type', function(event) {
     html_need = html_need.replace(/%id%/g, id);
     html_need = html_need.replace(/%current_id%/g, current_id);
     html_need = html_need.replace(/%name%/g, condition_name);
+    html_need = html_need.replace(/data-name=/g, 'name=');
     $parent.find('.br_current_cond').html(html_need);
 });
 jQuery(document).on('click', '.berocket_add_condition', function() {

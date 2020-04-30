@@ -3,7 +3,7 @@
 	<div class="fl-theme-builder-preview-select-title">
 		<i class="fas fa-caret-down"></i>
 		<div>
-			<?php echo __( 'Preview As', 'fl-theme-builder' ) . ': '; ?>
+			<?php echo __( 'Preview As', 'bb-theme-builder' ) . ': '; ?>
 			<span><?php echo $label; ?></span>
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 		<?php endforeach; ?>
 		<?php if ( ! empty( $locations['archive'] ) ) : ?>
 		<div class="fl-theme-builder-preview-select-item">
-			<div class="fl-theme-builder-preview-select-item-title"><?php _e( 'Archives', 'fl-theme-builder' ); ?><i class="fas fa-caret-down"></i></div>
+			<div class="fl-theme-builder-preview-select-item-title"><?php _e( 'Archives', 'bb-theme-builder' ); ?><i class="fas fa-caret-down"></i></div>
 			<div class="fl-theme-builder-preview-select-item-children">
 				<?php foreach ( $locations['archive'] as $data ) : ?>
 				<div class="fl-theme-builder-preview-select-item-child" data-location="archive:<?php echo $data['id']; ?>"><?php echo $data['label']; ?></div>

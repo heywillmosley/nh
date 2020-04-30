@@ -278,6 +278,9 @@ add_shortcode('webinar_dates', 'heywillmosley_webinar');
 
 function heywillmosley_webinar( $atts ) {
 
+  // Ensure timezone is set to ET
+  date_default_timezone_set('America/New_York');
+
     // set up default parameters
     extract( shortcode_atts( array(
      'start_date' => FALSE, // will default to today's date
@@ -315,13 +318,14 @@ function heywillmosley_webinar( $atts ) {
             break;
         
         if( $count == 0 )
-            $date = strtotime( "$start_date" );
+            $date = strtotime( "$start_date + 13 hours" );
         else {
             $date = strtotime( "$start_date +$interval_count $type" );
             $interval_count = $initial_interval + $interval_count;
         }
         
         if( strtotime("now") < $date  ) {
+
             $pretty_date = date('l F d, Y', $date );
             $url_date = date('m-d-Y', $date );
             $render .= "<tr>";
@@ -353,7 +357,7 @@ function heywillmosley_webinar( $atts ) {
 
 function redirect_webinar_direct_access( ) {
 
-    if( is_page( 238950 ) ) { // webinar request page // Prod 238950 // Dev 4973
+    if( is_page( 238950 && !is_admin() ) ) { // webinar request page // Prod 238950 // Dev 4973
         if ( ! isset( $_GET[ 'd' ] ) || empty( $_GET[ 'd' ] ) ) {  // if date isn't set
             wp_redirect( home_url( '/webinar/' ) );
             exit();
@@ -362,3 +366,126 @@ function redirect_webinar_direct_access( ) {
 }
 
 add_action( 'template_redirect', 'redirect_webinar_direct_access' );
+
+/*
+ * 20200415 WM & IS : Handled redirection if someone stumbles on to the page accidentally
+ * Tested to ensure it worked
+ * 20200415 IS : Worked on zoom / vimeo get arguments and centering
+ * 20200414 WM & IS : Created zoom viewer shortcode
+ */
+function heywillmosley_webinar_viewer() {
+
+	$type = $_GET['type']; // is a a zoom or vimeo
+
+  // Render based on type
+	switch ( $type ) {
+
+		case "vimeo":  // if the link is a vimeo link
+			$url = "https://player.vimeo.com/video/" . $_GET['id'];
+			
+			$render = "<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 75%; height: auto; margin: 0 auto;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>";
+			$render .= "<div class='embed-container'><iframe src='$url' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>";
+			$render .= "</div>";
+
+			break;
+			
+		case "zoom":  //if the link is a zoom link
+			$url = "https://zoom.us/rec/share/" . $_GET['id'];
+			
+			$render = "<div class='iframe-container' style='overflow: hidden; padding-top: 56.25%; position: relative;'>";
+			$render .= "<iframe allow='microphone; camera' style='border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;' src='$url' frameborder='0'></iframe>";
+			$render .= "</div>";
+			
+			break;
+			
+		default:  //if it's not any of the above
+
+	} // end switch
+	
+	echo $render;
+
+} // end heywillmosley_webinar_viewer
+
+add_shortcode('webinar_viewer', 'heywillmosley_webinar_viewer');
+//echo heywillmosley_webinar();
+
+function redirect_webinar_viewer( ) {
+
+
+  if( is_page( 247411 ) && !is_admin() ) { // is webinar viewer page // Dev page 247100 Prod page 247411
+
+    if ( !isset( $_GET[ 'type' ] ) ) {  // if date isn't set
+
+        wp_redirect( home_url( '/webinars/' ) );
+        exit();
+    }
+  }
+}
+// Redirect if Get isn't set
+add_action( 'template_redirect', 'redirect_webinar_viewer' );
+
+/* 
+ * New Human Radio
+*/
+ 
+function radio_post_type() {
+ 
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Albums', 'New Human Radio Albums', 'twentytwenty' ),
+        'singular_name'       => _x( 'Album', 'New Human Radio Album', 'twentytwenty' ),
+        'menu_name'           => __( 'Albums', 'twentytwenty' ),
+        'parent_item_colon'   => __( 'Parent Album', 'twentytwenty' ),
+        'all_items'           => __( 'All Albums', 'twentytwenty' ),
+        'view_item'           => __( 'View Album', 'twentytwenty' ),
+        'add_new_item'        => __( 'Add New Album', 'twentytwenty' ),
+        'add_new'             => __( 'Add New', 'twentytwenty' ),
+        'edit_item'           => __( 'Edit Album', 'twentytwenty' ),
+        'update_item'         => __( 'Update Album', 'twentytwenty' ),
+        'search_items'        => __( 'Search Album', 'twentytwenty' ),
+        'not_found'           => __( 'Not Found', 'twentytwenty' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'twentytwenty' ),
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'albums', 'twentytwenty' ),
+        'description'         => __( 'New Human Radio albums with sounds for the SLT.', 'twentytwenty' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'sounds' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-format-audio',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+ 
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'albums', $args );
+ 
+}
+ 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+ 
+add_action( 'init', 'radio_post_type', 0 );

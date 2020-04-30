@@ -85,9 +85,10 @@ abstract class GFFeedAddOn extends GFAddOn {
 		add_filter( 'gform_entry_post_save', array( $this, 'maybe_process_feed' ), 10, 2 );
 		add_action( 'gform_after_delete_form', array( $this, 'delete_feeds' ) );
 
-		// Register GFFrontendFeeds
-		if( $this->_supports_frontend_feeds && ! has_action( 'gform_register_init_scripts', array( __class__, 'register_frontend_feeds_init_script' ) ) ) {
-			add_action( 'gform_register_init_scripts', array( __class__, 'register_frontend_feeds_init_script' ) );
+		// Register GFFrontendFeeds.
+		if ( $this->_supports_frontend_feeds && ! has_action( 'gform_register_init_scripts', array( __class__, 'register_frontend_feeds_init_script' ) ) ) {
+			// Use priority 20 so other add-ons that support frontend feeds can all load their scripts first.
+			add_action( 'gform_register_init_scripts', array( __class__, 'register_frontend_feeds_init_script' ), 20 );
 		}
 
 	}
@@ -1131,7 +1132,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 		echo $title;
 
 		$feed = $this->get_feed( $feed_id );
-		$this->set_settings( $feed['meta'] );
+		$this->set_settings( rgar( $feed, 'meta' ) );
 
 		GFCommon::display_admin_message();
 
@@ -1249,9 +1250,9 @@ abstract class GFFeedAddOn extends GFAddOn {
 			return $feed_id;
 		}
 
-		// store a copy of the previous settings for cases where action would only happen if value has changed
+		// store a copy of the previous settings for cases where action would only happen if value has changed.
 		$feed = $this->get_feed( $feed_id );
-		$this->set_previous_settings( $feed['meta'] );
+		$this->set_previous_settings( rgar( $feed, 'meta' ) );
 
 		$settings = $this->get_posted_settings();
 		$sections = $this->get_feed_settings_fields();
@@ -1778,6 +1779,17 @@ abstract class GFFeedAddOn extends GFAddOn {
     }
 
 	//--------------- Notes ------------------
+
+	/**
+	 * Writes to the add-on log and adds an entry note when a feed processing error occurs.
+	 *
+	 * @since 1.9.12
+	 *
+	 * @param string $error_message The error message.
+	 * @param array  $feed          The feed which was being processed when the error occurred.
+	 * @param array  $entry         The entry which was being processed when the error occurred.
+	 * @param array  $form          The form which was being processed when the error occurred.
+	 */
 	public function add_feed_error( $error_message, $feed, $entry, $form ) {
 
 		/* Log debug error before we prepend the error name. */
@@ -1786,17 +1798,27 @@ abstract class GFFeedAddOn extends GFAddOn {
 		$this->log_error( $method . '(): ' . $error_message );
 
 		/* Prepend feed name to the error message. */
-		$feed_name     = rgars( $feed, 'meta/feed_name' ) ? rgars( $feed, 'meta/feed_name' ) : rgars( $feed, 'meta/feedName' );
-		$error_message = $feed_name . ': ' . $error_message;
+		$feed_name          = rgars( $feed, 'meta/feed_name' ) ? rgars( $feed, 'meta/feed_name' ) : rgars( $feed, 'meta/feedName' );
+		$note_error_message = $feed_name . ': ' . $error_message;
 
 		/* Add error note to the entry. */
-		$this->add_note( $entry['id'], $error_message, 'error' );
+		$this->add_note( $entry['id'], $note_error_message, 'error' );
 
 		/* Get Add-On slug */
 		$slug = str_replace( 'gravityforms', '', $this->_slug );
 
-		/* Process any error actions. */
-		gf_do_action( array( "gform_{$slug}_error", $form['id'] ), $feed, $entry, $form );
+		/**
+		 * Process any error actions.
+		 *
+		 * @since 1.9.12
+		 * @since 2.4.15 Added $error_message as the fourth param.
+		 *
+		 * @param array  $feed          The feed which was being processed when the error occurred.
+		 * @param array  $entry         The entry which was being processed when the error occurred.
+		 * @param array  $feed          The form which was being processed when the error occurred.
+		 * @param string $error_message The error message.
+		 */
+		gf_do_action( array( "gform_{$slug}_error", $form['id'] ), $feed, $entry, $form, $error_message );
 
 	}
 
@@ -1941,11 +1963,16 @@ abstract class GFFeedAddOn extends GFAddOn {
 	 *
 	 * @since 2.4
 	 *
-	 * @param array $form The current Form Object
+	 * @param array $form The current Form Object.
 	 *
 	 * @return bool Returns true if one ore more feeds were registered, false if no feeds were registered
 	 */
 	public function register_frontend_feeds( $form ) {
+
+		// Don't register frontend feeds if $form ID is empty.
+		if ( empty( $form['id'] ) ) {
+			return false;
+		}
 
 		if ( ! isset( self::$_frontend_feeds[ $form['id'] ] ) ) {
 			self::$_frontend_feeds[ $form['id'] ] = array();

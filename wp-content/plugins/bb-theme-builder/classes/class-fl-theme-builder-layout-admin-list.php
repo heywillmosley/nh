@@ -17,6 +17,8 @@ final class FLThemeBuilderLayoutAdminList {
 		// Actions
 		add_action( 'pre_get_posts', __CLASS__ . '::order_by_type' );
 		add_action( 'manage_fl-theme-layout_posts_custom_column', __CLASS__ . '::manage_column_content', 10, 2 );
+		add_action( 'admin_enqueue_scripts', __CLASS__ . '::admin_enqueue_scripts' );
+		add_action( 'wp_ajax_fl_template_switch', __CLASS__ . '::switch_status' );
 
 		// Filters
 		add_filter( 'manage_fl-theme-layout_posts_columns', __CLASS__ . '::manage_column_headings' );
@@ -49,6 +51,46 @@ final class FLThemeBuilderLayoutAdminList {
 		}
 	}
 
+	static public function admin_enqueue_scripts() {
+		global $pagenow;
+
+		$screen = get_current_screen();
+
+		if ( 'edit.php' === $pagenow && 'fl-theme-layout' == $screen->post_type ) {
+
+			wp_enqueue_style( 'fl-pretty-checkbox', plugins_url( 'css/pretty-checkbox.css', FL_THEME_BUILDER_FILE ) );
+
+			wp_enqueue_script( 'fl-theme-builder-lists', plugins_url( 'js/fl-theme-builder-template-list.js', FL_THEME_BUILDER_FILE ) );
+			$args = array(
+				'change_to_draft'   => __( 'Unpublish this layout', 'bb-theme-builder' ),
+				'change_to_publish' => __( 'Publish this layout', 'bb-theme-builder' ),
+				'nonce'             => wp_create_nonce( 'fl_builder_templates_status_nonce' ),
+			);
+			wp_localize_script( 'fl-theme-builder-lists', 'fl_builder_templates_status', $args );
+		}
+	}
+	public static function switch_status() {
+
+		check_admin_referer( 'fl_builder_templates_status_nonce' );
+
+		$post_id = $_POST['id'];
+		$status  = $_POST['status'];
+
+		$old = get_post_status( $post_id );
+
+		if ( $status !== $old ) {
+			$args = array(
+				'ID'          => $post_id,
+				'post_status' => $status,
+			);
+
+			$result = wp_update_post( $args );
+		}
+
+		echo json_encode( $result );
+		exit;
+	}
+
 	/**
 	 * Adds or removes list table column headings.
 	 *
@@ -59,10 +101,11 @@ final class FLThemeBuilderLayoutAdminList {
 	static public function manage_column_headings( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['taxonomy-fl-builder-template-category'] = __( 'Categories', 'fl-theme-builder' );
-		$columns['fl_type']                               = __( 'Type', 'fl-theme-builder' );
-		$columns['fl_location']                           = __( 'Location', 'fl-theme-builder' );
-		$columns['fl_user_rules']                         = __( 'Users', 'fl-theme-builder' );
+		$columns['fl_enabled']                            = __( 'Published', 'bb-theme-builder' );
+		$columns['taxonomy-fl-builder-template-category'] = __( 'Categories', 'bb-theme-builder' );
+		$columns['fl_type']                               = __( 'Type', 'bb-theme-builder' );
+		$columns['fl_location']                           = __( 'Location', 'bb-theme-builder' );
+		$columns['fl_user_rules']                         = __( 'Users', 'bb-theme-builder' );
 		return $columns;
 	}
 
@@ -87,6 +130,13 @@ final class FLThemeBuilderLayoutAdminList {
 	 * @return array
 	 */
 	static public function manage_column_content( $column, $post_id ) {
+
+		if ( 'fl_enabled' === $column ) {
+			$status  = get_post_status( $post_id );
+			$checked = 'publish' === $status ? ' checked' : '';
+			printf( '<div class="pretty p-switch p-fill"><input type="checkbox"%s data-id=%s /><div class="state p-success"><label></label></div></div>', $checked, $post_id );
+		}
+
 		if ( 'fl_type' == $column ) {
 
 			$type = get_post_meta( $post_id, '_fl_theme_layout_type', true );
@@ -96,7 +146,7 @@ final class FLThemeBuilderLayoutAdminList {
 				echo ucwords( $type );
 
 				if ( ! FLThemeBuilderLayoutData::is_layout_supported( $post_id ) ) {
-					echo ' <strong style="color:#a00;">(' . __( 'Unsupported', 'fl-theme-builder' ) . ')</strong>';
+					echo ' <strong style="color:#a00;">(' . __( 'Unsupported', 'bb-theme-builder' ) . ')</strong>';
 				}
 			}
 		}
@@ -115,7 +165,7 @@ final class FLThemeBuilderLayoutAdminList {
 			$user_rules = FLThemeBuilderRulesUser::get_ordered_saved( $post_id );
 
 			if ( 0 === count( $user_rules ) ) {
-				_e( 'All', 'fl-theme-builder' );
+				_e( 'All', 'bb-theme-builder' );
 			} else {
 
 				foreach ( $user_rules as $label => $user_rule ) {

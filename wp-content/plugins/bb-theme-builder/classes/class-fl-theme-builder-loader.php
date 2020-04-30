@@ -81,7 +81,7 @@ final class FLThemeBuilderLoader {
 	 * @return void
 	 */
 	static private function define_constants() {
-		define( 'FL_THEME_BUILDER_VERSION', '1.2.4.2' );
+		define( 'FL_THEME_BUILDER_VERSION', '1.3.0.1' );
 		define( 'FL_THEME_BUILDER_FILE', trailingslashit( dirname( dirname( __FILE__ ) ) ) . 'bb-theme-builder.php' );
 		define( 'FL_THEME_BUILDER_DIR', plugin_dir_path( FL_THEME_BUILDER_FILE ) );
 		define( 'FL_THEME_BUILDER_URL', plugins_url( '/', FL_THEME_BUILDER_FILE ) );
@@ -110,6 +110,7 @@ final class FLThemeBuilderLoader {
 		require_once FL_THEME_BUILDER_DIR . 'classes/class-fl-theme-builder-post-modules.php';
 		require_once FL_THEME_BUILDER_DIR . 'classes/class-fl-theme-builder-rules-location.php';
 		require_once FL_THEME_BUILDER_DIR . 'classes/class-fl-theme-builder-rules-user.php';
+		require_once FL_THEME_BUILDER_DIR . 'classes/class-fl-theme-builder-logic-i18n.php';
 
 		// Includes
 		if ( ! strstr( FL_THEME_BUILDER_VERSION, 'FL_THEME_BUILDER_VERSION' ) ) {
@@ -173,7 +174,7 @@ final class FLThemeBuilderLoader {
 			}
 
 			// Load the module if we have a path.
-			if ( $load_path ) {
+			if ( $load_path && class_exists( 'FLBuilderModule' ) ) {
 				self::$loaded_modules[] = $slug;
 				require_once $load_path;
 			}
@@ -229,19 +230,19 @@ final class FLThemeBuilderLoader {
 		if ( ! class_exists( 'FLBuilder' ) ) {
 			$url = admin_url( 'plugins.php' );
 			/* translators: %s: url */
-			$message = __( 'The Beaver Builder plugin must be active in order to use Beaver Themer. Please <a href="%s">activate it</a> before continuing.', 'fl-theme-builder' );
+			$message = __( 'The Beaver Builder plugin must be active in order to use Beaver Themer. Please <a href="%s">activate it</a> before continuing.', 'bb-theme-builder' );
 		} elseif ( true === FL_BUILDER_LITE ) {
 			$url = 'https://www.wpbeaverbuilder.com';
 			/* translators: %s: url */
-			$message = __( 'Beaver Themer is not compatible with the lite version of Beaver Builder. Please <a href="%s">purchase a premium version</a> before continuing.', 'fl-theme-builder' );
+			$message = __( 'Beaver Themer is not compatible with the lite version of Beaver Builder. Please <a href="%s">purchase a premium version</a> before continuing.', 'bb-theme-builder' );
 		} elseif ( ( '{FL_BUILDER_VERSION}' != FL_BUILDER_VERSION && version_compare( FL_BUILDER_VERSION, '1.10-alpha.1', '<' ) ) || ! class_exists( 'FLBuilderUserAccess' ) ) {
 			$url = admin_url( 'plugins.php' );
 			/* translators: %s: url */
-			$message = __( 'Beaver Themer is only compatible with Beaver Builder 1.10 and above. Please <a href="%s">update</a> before continuing.', 'fl-theme-builder' );
+			$message = __( 'Beaver Themer is only compatible with Beaver Builder 1.10 and above. Please <a href="%s">update</a> before continuing.', 'bb-theme-builder' );
 		} elseif ( version_compare( phpversion(), '5.3', '<' ) ) {
 			$url = 'http://www.wpupdatephp.com/contact-host/';
 			/* translators: %s: url */
-			$message = __( 'Beaver Themer requires PHP 5.3 or above. Please <a href="%s">update your PHP version</a> before continuing.', 'fl-theme-builder' );
+			$message = __( 'Beaver Themer requires PHP 5.3 or above. Please <a href="%s">update your PHP version</a> before continuing.', 'bb-theme-builder' );
 		}
 
 		if ( $message ) {

@@ -228,7 +228,7 @@ final class FLThemeBuilderLayoutRenderer {
 			$url  = $cache_dir['url'] . $key . '-layout-bundle.css';
 
 			if ( ! file_exists( $path ) ) {
-				file_put_contents( $path, $css );
+				fl_builder_filesystem()->file_put_contents( $path, $css );
 			}
 
 			wp_enqueue_style( 'fl-builder-layout-bundle-' . $key, $url, array(), $version );
@@ -242,7 +242,7 @@ final class FLThemeBuilderLayoutRenderer {
 			$url  = $cache_dir['url'] . $key . '-layout-bundle.js';
 
 			if ( ! file_exists( $path ) ) {
-				file_put_contents( $path, $js );
+				fl_builder_filesystem()->file_put_contents( $path, $js );
 			}
 
 			wp_enqueue_script( 'fl-builder-layout-bundle-' . $key, $url, array( 'jquery' ), $version, true );
@@ -365,13 +365,14 @@ final class FLThemeBuilderLayoutRenderer {
 		$settings = FLThemeBuilderLayoutData::get_settings( $ids[0] );
 
 		FLBuilder::render_content_by_id( $ids[0], $tag, array(
-			'itemscope'       => 'itemscope',
-			'itemtype'        => 'http://schema.org/WPHeader',
-			'data-type'       => 'header',
-			'data-sticky'     => $settings['sticky'],
-			'data-shrink'     => $settings['shrink'],
-			'data-overlay'    => $settings['overlay'],
-			'data-overlay-bg' => $settings['overlay_bg'],
+			'itemscope'              => 'itemscope',
+			'itemtype'               => 'http://schema.org/WPHeader',
+			'data-type'              => 'header',
+			'data-sticky'            => $settings['sticky'],
+			'data-sticky-breakpoint' => apply_filters( 'fl_theme_builder_sticky_header_breakpoint', 'medium' ),
+			'data-shrink'            => $settings['shrink'],
+			'data-overlay'           => $settings['overlay'],
+			'data-overlay-bg'        => $settings['overlay_bg'],
 		) );
 
 		do_action( 'fl_theme_builder_after_render_header', $ids[0] );
@@ -498,7 +499,7 @@ final class FLThemeBuilderLayoutRenderer {
 	 * @return string
 	 */
 	static public function override_the_content( $content ) {
-		return '<div style="padding: 200px 100px; text-align:center; opacity:0.5;">' . __( 'Content Area', 'fl-theme-builder' ) . '</div>';
+		return '<div style="padding: 200px 100px; text-align:center; opacity:0.5;">' . __( 'Content Area', 'bb-theme-builder' ) . '</div>';
 	}
 }
 

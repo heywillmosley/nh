@@ -469,6 +469,7 @@ final class BB_Logic_Rules_WordPress {
 	 */
 	static public function post( $rule ) {
 		$post = self::get_post();
+
 		if ( $post ) {
 			return BB_Logic_Rules::evaluate_rule( array(
 				'value'    => $post->ID,
@@ -476,6 +477,11 @@ final class BB_Logic_Rules_WordPress {
 				'compare'  => absint( $rule->post ),
 			) );
 		}
+
+		if ( 'does_not_equal' === $rule->operator ) {
+			return true;
+		}
+
 		return false;
 	}
 

@@ -67,7 +67,7 @@ final class FLThemeBuildeEDDArchive {
 			echo '<div class="edd fl-post-module-edd-button fl-post-grid-edd-button">';
 
 			if ( edd_has_variable_prices( get_the_ID() ) ) {
-				echo '<a href="' . get_permalink() . '" class="edd-add-to-cart button blue edd-submit">' . __( 'Select Options', 'fl-theme-builder' ) . '</a>';
+				echo '<a href="' . get_permalink() . '" class="edd-add-to-cart button blue edd-submit">' . __( 'Select Options', 'bb-theme-builder' ) . '</a>';
 			} else {
 				echo FLPageData::get_value( 'post', 'edd_add_to_cart_button' );
 			}
@@ -103,7 +103,7 @@ final class FLThemeBuildeEDDArchive {
 			echo '<div class="edd fl-post-module-edd-button fl-post-feed-edd-button">';
 
 			if ( edd_has_variable_prices( get_the_ID() ) ) {
-				echo '<a href="' . get_permalink() . '" class="edd-add-to-cart button blue edd-submit">' . __( 'Select Options', 'fl-theme-builder' ) . '</a>';
+				echo '<a href="' . get_permalink() . '" class="edd-add-to-cart button blue edd-submit">' . __( 'Select Options', 'bb-theme-builder' ) . '</a>';
 			} else {
 				echo FLPageData::get_value( 'post', 'edd_add_to_cart_button' );
 			}
@@ -141,31 +141,31 @@ final class FLThemeBuildeEDDArchive {
 		}
 
 		$form['layout']['sections']['edd'] = array(
-			'title'  => __( 'Easy Digital Downloads', 'fl-theme-builder' ),
+			'title'  => __( 'Easy Digital Downloads', 'bb-theme-builder' ),
 			'fields' => array(
 				'edd_price'  => array(
 					'type'    => 'select',
-					'label'   => __( 'Download Price', 'fl-theme-builder' ),
+					'label'   => __( 'Download Price', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 				'edd_button' => array(
 					'type'    => 'select',
-					'label'   => __( 'Cart Button', 'fl-theme-builder' ),
+					'label'   => __( 'Cart Button', 'bb-theme-builder' ),
 					'default' => 'hide',
 					'options' => array(
-						'show' => __( 'Show', 'fl-theme-builder' ),
-						'hide' => __( 'Hide', 'fl-theme-builder' ),
+						'show' => __( 'Show', 'bb-theme-builder' ),
+						'hide' => __( 'Hide', 'bb-theme-builder' ),
 					),
 				),
 			),
 		);
 
 		$form['style']['sections']['edd'] = array(
-			'title'  => __( 'Easy Digital Downloads', 'fl-theme-builder' ),
+			'title'  => __( 'Easy Digital Downloads', 'bb-theme-builder' ),
 			'fields' => array(
 				'edd_price_color'     => array(
 					'type'       => 'color',
@@ -184,7 +184,7 @@ final class FLThemeBuildeEDDArchive {
 		);
 
 		$form['style']['sections']['edd_button'] = array(
-			'title'  => __( 'Easy Digital Downloads Cart Button', 'fl-theme-builder' ),
+			'title'  => __( 'Easy Digital Downloads Cart Button', 'bb-theme-builder' ),
 			'fields' => array(
 				'edd_button_bg_color'   => array(
 					'type'       => 'color',

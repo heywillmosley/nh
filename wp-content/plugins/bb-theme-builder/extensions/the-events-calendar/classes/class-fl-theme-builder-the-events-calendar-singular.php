@@ -45,7 +45,6 @@ final class FLThemeBuilderTheEventsCalendarSingular {
 		$is_single_venue      = 'tribe_venue' === $post_type || ( $is_venue_preview && $is_theme_layout );
 
 		if ( $is_single_event || $is_single_organizer || $is_single_venue ) {
-
 			/* Post Type */
 			if ( $is_single_event ) {
 				self::$post_type = 'tribe_events';
@@ -64,6 +63,12 @@ final class FLThemeBuilderTheEventsCalendarSingular {
 			add_filter( 'body_class', __CLASS__ . '::body_class' );
 			add_filter( 'fl_theme_builder_content_attrs', __CLASS__ . '::content_attrs' );
 			add_filter( 'fl_builder_content_classes', __CLASS__ . '::content_classes' );
+		}
+
+		$themer_location = FLThemeBuilderLayoutData::get_current_page_layouts();
+
+		if ( isset( $themer_location['singular'] ) ) {
+			add_filter( 'tribe_events_views_v2_should_hijack_page_template', '__return_false' );
 		}
 
 		if ( $is_single_organizer || $is_single_venue ) {

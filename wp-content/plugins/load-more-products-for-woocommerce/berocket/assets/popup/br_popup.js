@@ -21,6 +21,7 @@
             jQuery(this).trigger('br_popup-after_reset_option', this);
         };
         this.create_popup = function() {
+            jQuery(this).trigger('br_popup-before_create_popup', this);
             var settings = this.data('br_popup_settings');
 
             $popup_html  = '<div id="br_popup" class="br_popup animated'+this.builder.popup_class(settings)+'" style="'+this.builder.popup_style(settings)+'">';

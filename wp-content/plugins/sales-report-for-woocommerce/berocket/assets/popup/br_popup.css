@@ -73,7 +73,8 @@ body.hide_scroll {
 #br_popup .br_popup_close:hover {
 	opacity: 0.80;
 }
-#br_popup.counting .br_popup_close {
+#br_popup.counting .br_popup_close,
+#br_popup.cannot_be_closed .br_popup_close {
 	display: none;
 }
 #br_popup .counters.after_close {

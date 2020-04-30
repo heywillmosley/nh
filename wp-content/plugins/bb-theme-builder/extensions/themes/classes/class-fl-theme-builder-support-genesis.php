@@ -34,51 +34,51 @@ final class FLThemeBuilderSupportGenesis {
 	static public function register_part_hooks() {
 		return array(
 			array(
-				'label' => __( 'Page', 'fl-theme-builder' ),
+				'label' => __( 'Page', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before' => __( 'Page Open', 'fl-theme-builder' ),
-					'genesis_after'  => __( 'Page Close', 'fl-theme-builder' ),
+					'genesis_before' => __( 'Page Open', 'bb-theme-builder' ),
+					'genesis_after'  => __( 'Page Close', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Header', 'fl-theme-builder' ),
+				'label' => __( 'Header', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before_header' => __( 'Before Header', 'fl-theme-builder' ),
-					'genesis_header_right'  => __( 'Header Right', 'fl-theme-builder' ),
-					'genesis_after_header'  => __( 'After Header', 'fl-theme-builder' ),
+					'genesis_before_header' => __( 'Before Header', 'bb-theme-builder' ),
+					'genesis_header_right'  => __( 'Header Right', 'bb-theme-builder' ),
+					'genesis_after_header'  => __( 'After Header', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Content', 'fl-theme-builder' ),
+				'label' => __( 'Content', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before_content' => __( 'Before Content', 'fl-theme-builder' ),
-					'genesis_after_content'  => __( 'After Content', 'fl-theme-builder' ),
+					'genesis_before_content' => __( 'Before Content', 'bb-theme-builder' ),
+					'genesis_after_content'  => __( 'After Content', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Footer', 'fl-theme-builder' ),
+				'label' => __( 'Footer', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before_footer' => __( 'Before Footer', 'fl-theme-builder' ),
-					'genesis_after_footer'  => __( 'After Footer', 'fl-theme-builder' ),
+					'genesis_before_footer' => __( 'Before Footer', 'bb-theme-builder' ),
+					'genesis_after_footer'  => __( 'After Footer', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Sidebar', 'fl-theme-builder' ),
+				'label' => __( 'Sidebar', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before_sidebar_widget_area' => __( 'Before Sidebar', 'fl-theme-builder' ),
-					'genesis_after_sidebar_widget_area'  => __( 'After Sidebar', 'fl-theme-builder' ),
+					'genesis_before_sidebar_widget_area' => __( 'Before Sidebar', 'bb-theme-builder' ),
+					'genesis_after_sidebar_widget_area'  => __( 'After Sidebar', 'bb-theme-builder' ),
 				),
 			),
 			array(
-				'label' => __( 'Posts', 'fl-theme-builder' ),
+				'label' => __( 'Posts', 'bb-theme-builder' ),
 				'hooks' => array(
-					'genesis_before_loop'   => __( 'Before Loop', 'fl-theme-builder' ),
-					'genesis_before_entry'  => __( 'Before Post', 'fl-theme-builder' ),
-					'genesis_entry_header'  => __( 'Post Header', 'fl-theme-builder' ),
-					'genesis_entry_content' => __( 'Post Content', 'fl-theme-builder' ),
-					'genesis_entry_footer'  => __( 'Post Footer', 'fl-theme-builder' ),
-					'genesis_after_entry'   => __( 'After Post', 'fl-theme-builder' ),
-					'genesis_after_loop'    => __( 'After Loop', 'fl-theme-builder' ),
+					'genesis_before_loop'   => __( 'Before Loop', 'bb-theme-builder' ),
+					'genesis_before_entry'  => __( 'Before Post', 'bb-theme-builder' ),
+					'genesis_entry_header'  => __( 'Post Header', 'bb-theme-builder' ),
+					'genesis_entry_content' => __( 'Post Content', 'bb-theme-builder' ),
+					'genesis_entry_footer'  => __( 'Post Footer', 'bb-theme-builder' ),
+					'genesis_after_entry'   => __( 'After Post', 'bb-theme-builder' ),
+					'genesis_after_loop'    => __( 'After Loop', 'bb-theme-builder' ),
 				),
 			),
 		);
@@ -119,7 +119,7 @@ final class FLThemeBuilderSupportGenesis {
 
 		if ( FLThemeBuilderLayoutData::current_post_is( array( 'singular', 'archive', '404' ) ) ) {
 			$templates = array_merge( $templates, array(
-				'fl-theme-layout-full-width.php' => __( 'Full Width', 'fl-theme-builder' ),
+				'fl-theme-layout-full-width.php' => __( 'Full Width', 'bb-theme-builder' ),
 			) );
 		}
 

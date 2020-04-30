@@ -8,7 +8,7 @@ if ( class_exists( 'Tribe__Tickets__Main' ) ) {
 
 	if ( ! empty( $override ) && file_exists( $override ) ) {
 		echo '<div id="view-tickets" style="height: 1px;"></div>';
-		echo '<a class="fl-view-tickets-form" href="#">' . __( 'View tickets form', 'fl-theme-builder' ) . '</a>';
+		echo '<a class="fl-view-tickets-form" href="#">' . __( 'View tickets form', 'bb-theme-builder' ) . '</a>';
 		include $override;
 	} else {
 		$view->inject_link_template();

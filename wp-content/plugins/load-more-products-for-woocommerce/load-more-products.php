@@ -3,15 +3,15 @@
  * Plugin Name: WooCommerce Load More Products
  * Plugin URI: https://wordpress.org/plugins/load-more-products-for-woocommerce/?utm_source=free_plugin&utm_medium=plugins&utm_campaign=BeRocket_LMP
  * Description: Infinite Scrolling, AJAX Products Loading. Free version.
- * Version: 1.1.6.4
+ * Version: 1.1.6.6.1
  * Author: BeRocket
  * Requires at least: 4.0
  * Author URI: https://berocket.com?utm_source=free_plugin&utm_medium=plugins&utm_campaign=BeRocket_LMP
  * Text Domain: BeRocket_LMP_domain
  * Domain Path: /languages/
- * WC tested up to: 3.7.1
+ * WC tested up to: 3.9.1
  */
-define( 'BeRocket_Load_More_Products_version', '1.1.6.4' );
+define( 'BeRocket_Load_More_Products_version', '1.1.6.6.1' );
 require_once(plugin_dir_path( __FILE__ ).'main.php');
 
 /*if( ! function_exists('BeRocket_generate_sales_2018') ) {

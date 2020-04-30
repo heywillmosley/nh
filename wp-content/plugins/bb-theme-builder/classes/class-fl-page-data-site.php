@@ -49,11 +49,11 @@ final class FLPageDataSite {
 
 		$fields['user'] = array(
 			'type'    => 'select',
-			'label'   => __( 'User', 'fl-theme-builder' ),
+			'label'   => __( 'User', 'bb-theme-builder' ),
 			'default' => 'current',
 			'options' => array(
-				'current'  => __( 'Current User', 'fl-theme-builder' ),
-				'specific' => __( 'Specific User', 'fl-theme-builder' ),
+				'current'  => __( 'Current User', 'bb-theme-builder' ),
+				'specific' => __( 'Specific User', 'bb-theme-builder' ),
 			),
 			'toggle'  => array(
 				'specific' => array(
@@ -64,7 +64,7 @@ final class FLPageDataSite {
 
 		$fields['user_id'] = array(
 			'type'  => 'text',
-			'label' => __( 'User ID', 'fl-theme-builder' ),
+			'label' => __( 'User ID', 'bb-theme-builder' ),
 			'size'  => 10,
 		);
 
@@ -247,7 +247,7 @@ final class FLPageDataSite {
 		if ( ! is_string( $settings->format ) || '' == $settings->format ) {
 			$settings->format = 'Y';
 		}
-		return date( $settings->format );
+		return gmdate( $settings->format );
 	}
 
 	/**

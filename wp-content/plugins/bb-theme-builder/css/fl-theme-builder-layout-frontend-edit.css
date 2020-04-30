@@ -62,6 +62,7 @@
 .fl-theme-builder-preview-select-item-children img {
 	height: auto !important;
     margin-top: 10px !important;
+    margin-left: 10px !important;
 }
 .fl-theme-builder-preview-select-item-child {
 	color: #b3b3b3;

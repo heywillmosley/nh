@@ -29,18 +29,6 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 	);
 
 	/**
-	 * SQL columns to select in the db query and their mapping to SQL code.
-	 *
-	 * @var array
-	 */
-	protected $report_columns = array(
-		'customers_count'     => 'COUNT( * ) as customers_count',
-		'avg_orders_count'    => 'AVG( orders_count ) as avg_orders_count',
-		'avg_total_spend'     => 'AVG( total_spend ) as avg_total_spend',
-		'avg_avg_order_value' => 'AVG( avg_order_value ) as avg_avg_order_value',
-	);
-
-	/**
 	 * Cache identifier.
 	 *
 	 * @var string
@@ -48,10 +36,22 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 	protected $cache_key = 'customers_stats';
 
 	/**
-	 * Constructor.
+	 * Data store context used to pass to filters.
+	 *
+	 * @var string
 	 */
-	public function __construct() {
-		// This space intentionally left blank (to avoid parent constructor).
+	protected $context = 'customers_stats';
+
+	/**
+	 * Assign report columns once full table name has been assigned.
+	 */
+	protected function assign_report_columns() {
+		$this->report_columns = array(
+			'customers_count'     => 'COUNT( * ) as customers_count',
+			'avg_orders_count'    => 'AVG( orders_count ) as avg_orders_count',
+			'avg_total_spend'     => 'AVG( total_spend ) as avg_total_spend',
+			'avg_avg_order_value' => 'AVG( avg_order_value ) as avg_avg_order_value',
+		);
 	}
 
 	/**
@@ -63,7 +63,7 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 	public function get_data( $query_args ) {
 		global $wpdb;
 
-		$customers_table_name = $wpdb->prefix . self::TABLE_NAME;
+		$customers_table_name = self::get_db_table_name();
 
 		// These defaults are only partially applied when used via REST API, as that has its own defaults.
 		$defaults   = array(
@@ -84,6 +84,8 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 		$data      = $this->get_cached_data( $cache_key );
 
 		if ( false === $data ) {
+			$this->initialize_queries();
+
 			$data = (object) array(
 				'customers_count'     => 0,
 				'avg_orders_count'    => 0,
@@ -91,36 +93,28 @@ class DataStore extends CustomersDataStore implements DataStoreInterface {
 				'avg_avg_order_value' => 0.0,
 			);
 
-			$selections       = $this->selected_columns( $query_args );
-			$sql_query_params = $this->get_sql_query_params( $query_args );
+			$selections = $this->selected_columns( $query_args );
+			$this->add_sql_query_params( $query_args );
+			// Clear SQL clauses set for parent class queries that are different here.
+			$this->subquery->clear_sql_clause( 'select' );
+			$this->subquery->add_sql_clause( 'select', 'SUM( total_sales ) AS total_spend,' );
+			$this->subquery->add_sql_clause(
+				'select',
+				'SUM( CASE WHEN parent_id = 0 THEN 1 END ) as orders_count,'
+			);
+			$this->subquery->add_sql_clause(
+				'select',
+				'CASE WHEN SUM( CASE WHEN parent_id = 0 THEN 1 ELSE 0 END ) = 0 THEN NULL ELSE SUM( total_sales ) / SUM( CASE WHEN parent_id = 0 THEN 1 ELSE 0 END ) END AS avg_order_value'
+			);
+
+			$this->clear_sql_clause( array( 'order_by', 'limit' ) );
+			$this->add_sql_clause( 'select', $selections );
+			$this->add_sql_clause( 'from', "({$this->subquery->get_query_statement()}) AS tt" );
 
 			$report_data = $wpdb->get_results(
-				"SELECT {$selections} FROM
-				(
-					SELECT
-						(
-							CASE WHEN COUNT( order_id ) = 0
-								THEN NULL
-								ELSE COUNT( order_id )
-							END
-						) as orders_count,
-      					SUM( gross_total ) as total_spend, 
-						( SUM( gross_total ) / COUNT( order_id ) ) as avg_order_value
-					FROM
-						{$customers_table_name}
-						{$sql_query_params['from_clause']}
-					WHERE
-						1=1
-						{$sql_query_params['where_time_clause']}
-						{$sql_query_params['where_clause']}
-					GROUP BY
-						{$customers_table_name}.customer_id
-					HAVING
-						1=1
-						{$sql_query_params['having_clause']}
-				) as tt",
+				$this->get_query_statement(), // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
 				ARRAY_A
-			); // WPCS: cache ok, DB call ok, unprepared SQL ok.
+			);
 
 			if ( null === $report_data ) {
 				return $data;

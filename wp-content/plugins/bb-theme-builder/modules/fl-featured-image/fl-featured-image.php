@@ -7,10 +7,10 @@
  */
 FLBuilder::register_module_alias( 'fl-featured-image', array(
 	'module'      => 'photo',
-	'name'        => __( 'Featured Image', 'fl-theme-builder' ),
-	'description' => __( 'Displays the featured image for the current post.', 'fl-theme-builder' ),
-	'group'       => __( 'Themer Modules', 'fl-theme-builder' ),
-	'category'    => __( 'Posts', 'fl-theme-builder' ),
+	'name'        => __( 'Featured Image', 'bb-theme-builder' ),
+	'description' => __( 'Displays the featured image for the current post.', 'bb-theme-builder' ),
+	'group'       => __( 'Themer Modules', 'bb-theme-builder' ),
+	'category'    => __( 'Posts', 'bb-theme-builder' ),
 	'enabled'     => FLThemeBuilderLayoutData::current_post_is( 'singular' ),
 	'settings'    => array(
 		'connections' => array(

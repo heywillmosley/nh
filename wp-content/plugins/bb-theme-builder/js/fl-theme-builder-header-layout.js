@@ -49,6 +49,14 @@
 		hasAdminBar : false,
 
 		/**
+		 * A reference of the sticky and shrink header breakpoint.
+		 *
+		 * @since 1.2.5
+		 * @property {Number} breakpointWidth
+		 */
+		breakpointWidth: 0,
+
+		/**
 		 * Initializes header layout logic.
 		 *
 		 * @since 1.0
@@ -56,18 +64,27 @@
 		 */
 		init: function()
 		{
-			var editing = $( 'html.fl-builder-edit' ).length,
-				header  = $( '.fl-builder-content[data-type=header]' );
+			var editing    = $( 'html.fl-builder-edit' ).length,
+				header     = $( '.fl-builder-content[data-type=header]' ),
+				breakpoint = null;
 
 			if ( ! editing && header.length ) {
 
 				header.imagesLoaded( $.proxy( function() {
 
-					this.win    	 = $( window );
-					this.body   	 = $( 'body' );
-					this.header 	 = header.eq( 0 );
+					this.win         = $( window );
+					this.body        = $( 'body' );
+					this.header      = header.eq( 0 );
 					this.overlay     = !! Number( header.attr( 'data-overlay' ) );
 					this.hasAdminBar = !! $( 'body.admin-bar' ).length;
+					breakpoint       = this.header.data('sticky-breakpoint');
+
+					if ( typeof FLBuilderLayoutConfig.breakpoints[ breakpoint ] !== undefined ) {
+						this.breakpointWidth = FLBuilderLayoutConfig.breakpoints[ breakpoint ];
+					}
+					else {
+						this.breakpointWidth = FLBuilderLayoutConfig.breakpoints.medium;
+					}
 
 					if ( Number( header.attr( 'data-sticky' ) ) ) {
 
@@ -95,7 +112,7 @@
 		 */
 		_initSticky: function()
 		{
-			if ( this.win.width() >= FLBuilderLayoutConfig.breakpoints.medium ) {
+			if ( this.win.width() >= this.breakpointWidth ) {
 				this.win.on( 'scroll.fl-theme-builder-header-sticky', $.proxy( this._doSticky, this ) );
 				this._doSticky();
 			} else {
@@ -154,7 +171,7 @@
 		 */
 		_initShrink: function()
 		{
-			if ( this.win.width() >= FLBuilderLayoutConfig.breakpoints.medium ) {
+			if ( this.win.width() >= this.breakpointWidth ) {
 				this.win.on( 'scroll.fl-theme-builder-header-shrink', $.proxy( this._doShrink, this ) );
 				this._setImageMaxHeight();
 			} else {

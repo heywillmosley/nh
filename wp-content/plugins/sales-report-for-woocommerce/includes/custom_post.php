@@ -514,7 +514,7 @@ class BeRocket_sales_report_custom_post extends BeRocket_custom_post_class {
         $current_timestamp = $current_datetime->getTimestamp();
         //OTHER DATE DATA
         $week_day = $send_datetime->format('w');
-        $date_data_array = array(
+        $date_data_array = apply_filters('berocket_report_prepare_date_array_for_post', array(
             'last_datetime' => $last_datetime,
             'send_date' => $send_date,
             'send_datetime' => $send_datetime,
@@ -522,7 +522,7 @@ class BeRocket_sales_report_custom_post extends BeRocket_custom_post_class {
             'current_datetime' => $current_datetime,
             'current_timestamp' => $current_timestamp,
             'timezone_string' => $timezone_string,
-        );
+        ), $post_id, $settings, $options);
         return $date_data_array;
     }
     public static function start_and_end_time_for_post($post_id, $date_data_array, $settings, $options) {
@@ -559,7 +559,7 @@ class BeRocket_sales_report_custom_post extends BeRocket_custom_post_class {
         $date_data_array['start_datetime'] = $start_datetime;
         $date_data_array['end_date'] = $end_date;
         $date_data_array['end_datetime'] = $end_datetime;
-        return $date_data_array;
+        return apply_filters('berocket_report_start_and_end_time_for_post', $date_data_array, $post_id, $settings, $options);
     }
     public function manage_edit_columns ( $columns ) {
         $columns = parent::manage_edit_columns($columns);
